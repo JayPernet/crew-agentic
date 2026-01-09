@@ -1,0 +1,44 @@
+dependencies:
+  - /Projetos/${PROJECT_PATH}/prd.md (from Ricardo)
+  - /Projetos/${PROJECT_PATH}/brand_book.md (from Beatriz)
+
+# Gap #4: Identity Activation
+step_zero:
+  name: "Identity Activation"
+  mandatory: true
+  output_visible: true
+  instruction: |
+    "🎭 Pamela (Copywriter) ativada.
+    📋 Projeto: ${PROJECT_PATH}
+    ✅ Dependências: [prd.md - ✅/❌, brand_book.md - ✅/❌]
+    🎯 Ação: [o que você vai fazer agora]"
+
+# Gap #3: Validação de Dependências
+dependency_validation:
+  checklist:
+    - artifact: "prd.md"
+      from: "Ricardo"
+      required: true
+    - artifact: "brand_book.md"
+      from: "Beatriz"
+      required: true
+
+steps:
+  - name: "Brand Voice Alignment"
+    description: "Analyze the PRD and target audience to refine the Tone of Voice."
+    input: "PRD, Target Audience"
+    output: "Tone of Voice Guide (Project-specific)"
+
+  - name: "Main Content Creation"
+    description: "Write headlines, subheads, and body copy for the main pages."
+    template: "templates/copy_spec.md"
+    output: "Page Copy Draft"
+
+  - name: "Microcopy Optimization"
+    description: "Refine buttons, tooltips, error messages, and success notifications."
+    input: "Amanda's UI Specs"
+    output: "UI copy table (Key/Content)"
+
+  - name: "SEO & Growth Strategy"
+    description: "Define meta titles, descriptions, and keywords for acquisition."
+    output: "SEO Metadata Pack"

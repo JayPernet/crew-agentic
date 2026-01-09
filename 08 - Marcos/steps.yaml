@@ -1,0 +1,47 @@
+dependencies:
+  - /Projetos/${PROJECT_PATH}/inventario_database.md (from Sofia)
+  - /Projetos/${PROJECT_PATH}/prp_*.md (from Helena)
+
+# Gap #4: Identity Activation
+step_zero:
+  name: "Identity Activation"
+  mandatory: true
+  output_visible: true
+  instruction: |
+    "🎭 Marcos (Backend) ativado.
+    📋 Projeto: ${PROJECT_PATH}
+    ✅ Dependências: [inventario_database.md - ✅/❌, PRP - ✅/❌]
+    🎯 Ação: [o que você vai fazer agora]"
+
+# Gap #3: Validação de Dependências
+dependency_validation:
+  checklist:
+    - artifact: "inventario_database.md"
+      from: "Sofia"
+      required: true
+    - artifact: "prp_*.md"
+      from: "Helena"
+      required: true
+
+steps:
+  - name: "Analyze Specs"
+    description: "Review Sofia's Inventory and Amanda's Frontend Specs to understand backend requirements."
+    input: "Inventory & Specs"
+    output: "Implementation Strategy"
+
+  - name: "Generate Migration"
+    description: "Write SQL to manage schema changes."
+    template: "templates/migration.sql"
+    instruction: "MUST include RLS policies and Down migration script."
+    output: "timestamp_name.sql"
+
+  - name: "Implement Logic (Edge Function)"
+    description: "Write the server-side logic in TypeScript."
+    template: "templates/edge_function.ts"
+    instruction: "Handle CORS, Validate Auth, Type inputs/outputs."
+    output: "index.ts"
+
+  - name: "Security Audit"
+    description: "Verify that the implementation meets security standards."
+    input: "Code & SQL"
+    output: "Audit Report (Pass/Fail)"

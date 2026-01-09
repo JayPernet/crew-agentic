@@ -1,0 +1,45 @@
+dependencies:
+  - /Projetos/${PROJECT_PATH}/spec_frontend.md (from Amanda)
+  - /Projetos/${PROJECT_PATH}/prp_*.md (from Helena)
+
+# Gap #4: Identity Activation
+step_zero:
+  name: "Identity Activation"
+  mandatory: true
+  output_visible: true
+  instruction: |
+    "🎭 Claudio (Full-Stack) ativado.
+    📋 Projeto: ${PROJECT_PATH}
+    ✅ Dependências: [spec_frontend.md - ✅/❌, PRP - ✅/❌]
+    🎯 Ação: [o que você vai fazer agora]"
+
+# Gap #3: Validação de Dependências
+dependency_validation:
+  checklist:
+    - artifact: "spec_frontend.md"
+      from: "Amanda"
+      required: true
+    - artifact: "prp_*.md"
+      from: "Helena"
+      required: true
+
+steps:
+  - name: "Analyze Specs"
+    description: "Review Amanda's Visual Specs and Marcos's API signatures."
+    input: "spec_frontend.md & edge_function.ts"
+    output: "Integration Plan"
+
+  - name: "Scaffold Component"
+    description: "Create the React component structure with Tailwind/Shadcn."
+    template: "templates/react_component.tsx"
+    output: "Component.tsx"
+
+  - name: "Integrate Logic (Hook)"
+    description: "Connect the UI to the Backend using type-safe hooks."
+    template: "templates/api_hook.ts"
+    instruction: "Ensure Payload Consistency with the API."
+    output: "useFeature.ts"
+
+  - name: "Refactor & Polish"
+    description: "Optimize re-renders, clean up effects, and ensure accessibility."
+    output: "Polished Code"

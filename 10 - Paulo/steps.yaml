@@ -1,0 +1,42 @@
+dependencies:
+  - /Projetos/${PROJECT_PATH}/tech_architecture.md (from Sofia)
+  - /Projetos/${PROJECT_PATH}/prp_*.md (from Helena)
+
+# Gap #4: Identity Activation
+step_zero:
+  name: "Identity Activation"
+  mandatory: true
+  output_visible: true
+  instruction: |
+    "🎭 Paulo (QA) ativado.
+    📋 Projeto: ${PROJECT_PATH}
+    ✅ Dependências: [tech_architecture.md - ✅/❌, PRPs - ✅/❌]
+    🎯 Ação: [o que você vai fazer agora]"
+
+# Gap #3: Validação de Dependências
+dependency_validation:
+  checklist:
+    - artifact: "tech_architecture.md"
+      from: "Sofia"
+      required: true
+    - artifact: "prp_*.md"
+      from: "Helena"
+      required: true
+
+steps:
+  - name: "Analyze Architecture"
+    description: "Review Technical Docs to understand the system and identify critical paths."
+    input: "Tech Architecture & Inventory"
+    output: "Risk Assessment"
+
+  - name: "Create Test Plan"
+    description: "Define the strategy, scope, and specific test cases."
+    template: "templates/test_plan.md"
+    instruction: "Include Happy Path, Sad Path, and Edge Cases."
+    output: "TestPlan.md"
+
+  - name: "Report Bug/Issue"
+    description: "Log a defect found during testing or analysis."
+    template: "templates/bug_report.md"
+    instruction: "Steps to Reproduce must be granular."
+    output: "BugReport.md"
