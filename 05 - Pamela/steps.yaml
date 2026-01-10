@@ -1,6 +1,7 @@
 dependencies:
-  - /Projetos/${PROJECT_PATH}/prd.md (from Ricardo)
-  - /Projetos/${PROJECT_PATH}/brand_book.md (from Beatriz)
+  - /Projetos/${PROJECT_PATH}/docs/02-produto/prd_master.md (from Ricardo)
+  - /Projetos/${PROJECT_PATH}/docs/04-design/brand_book.md (from Beatriz)
+  - /Projetos/${PROJECT_PATH}/docs/01-briefing/project_brief.md (from Gabriel)
 
 # Gap #4: Identity Activation
 step_zero:
@@ -8,37 +9,41 @@ step_zero:
   mandatory: true
   output_visible: true
   instruction: |
-    "🎭 Pamela (Copywriter) ativada.
+    "🎭 Pamela (UX Writer) ativada.
     📋 Projeto: ${PROJECT_PATH}
-    ✅ Dependências: [prd.md - ✅/❌, brand_book.md - ✅/❌]
+    ✅ Dependências: [docs/02-produto/prd_master.md, docs/04-design/brand_book.md, docs/01-briefing/project_brief.md - ✅/❌]
     🎯 Ação: [o que você vai fazer agora]"
 
 # Gap #3: Validação de Dependências
 dependency_validation:
   checklist:
-    - artifact: "prd.md"
+    - artifact: "docs/02-produto/prd_master.md"
       from: "Ricardo"
       required: true
-    - artifact: "brand_book.md"
+    - artifact: "docs/04-design/brand_book.md"
       from: "Beatriz"
+      required: true
+    - artifact: "docs/01-briefing/project_brief.md"
+      from: "Gabriel"
       required: true
 
 steps:
-  - name: "Brand Voice Alignment"
-    description: "Analyze the PRD and target audience to refine the Tone of Voice."
-    input: "PRD, Target Audience"
-    output: "Tone of Voice Guide (Project-specific)"
+  - name: "Voice & Tone Definition"
+    description: "Analyze the Project Brief (Hack/Hate/Customization) to define the emotional tone (e.g., Empathetic vs. Aggressive)."
+    input: "docs/01-briefing/project_brief.md"
+    output: "Tone of Voice Guide"
 
-  - name: "Main Content Creation"
-    description: "Write headlines, subheads, and body copy for the main pages."
+  - name: "UX Writing (Microcopy)"
+    description: "Write interface text for the User Stories defined in the PRD. Focus on buttons, empty states, and error messages."
+    input: "docs/02-produto/prd_master.md (User Stories)"
     template: "templates/copy_spec.md"
-    output: "Page Copy Draft"
+    output: "docs/05-copy/copy_spec.md"
 
-  - name: "Microcopy Optimization"
-    description: "Refine buttons, tooltips, error messages, and success notifications."
-    input: "Amanda's UI Specs"
-    output: "UI copy table (Key/Content)"
+  - name: "Landing Page Copy (If needed)"
+    description: "If PRD includes a Marketing Site, write the sales copy."
+    condition: "PRD mentions Landing Page"
+    output: "Landing Page Copy"
 
-  - name: "SEO & Growth Strategy"
-    description: "Define meta titles, descriptions, and keywords for acquisition."
-    output: "SEO Metadata Pack"
+  - name: "SEO Metadata"
+    description: "Define meta titles and descriptions."
+    output: "SEO Pack"

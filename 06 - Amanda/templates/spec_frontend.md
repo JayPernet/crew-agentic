@@ -1,5 +1,9 @@
 # Frontend Spec - [Nome da Funcionalidade]
 
+## 0. Context & Links
+**User Story Relacionada:** [US-XXX]
+**Objetivo:** [Breve descrição do fluxo]
+
 ## 1. Layout & Structure
 **Grid/Container:** [Ex: Max-width 1200px, 12-col grid]
 **Responsiveness:**

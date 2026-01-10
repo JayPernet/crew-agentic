@@ -1,6 +1,8 @@
 dependencies:
-  - /Projetos/${PROJECT_PATH}/spec_frontend.md (from Amanda)
-  - /Projetos/${PROJECT_PATH}/prp_*.md (from Helena)
+  - /Projetos/${PROJECT_PATH}/docs/06-ui/spec_frontend.md (from Amanda)
+  - /Projetos/${PROJECT_PATH}/docs/04-design/design_system.json (from Beatriz)
+  - /Projetos/${PROJECT_PATH}/docs/03-arquitetura/tech_architecture.md (from Sofia)
+  - /Projetos/${PROJECT_PATH}/docs/07-prps/ (from Helena)
 
 # Gap #4: Identity Activation
 step_zero:
@@ -10,35 +12,39 @@ step_zero:
   instruction: |
     "🎭 Claudio (Full-Stack) ativado.
     📋 Projeto: ${PROJECT_PATH}
-    ✅ Dependências: [spec_frontend.md - ✅/❌, PRP - ✅/❌]
+    ✅ Dependências: [docs/Spec UI, docs/Design System, docs/PRPs - ✅/❌]
     🎯 Ação: [o que você vai fazer agora]"
 
 # Gap #3: Validação de Dependências
 dependency_validation:
   checklist:
-    - artifact: "spec_frontend.md"
+    - artifact: "docs/06-ui/spec_frontend.md"
       from: "Amanda"
       required: true
-    - artifact: "prp_*.md"
+    - artifact: "docs/04-design/design_system.json"
+      from: "Beatriz"
+      required: true
+    - artifact: "docs/07-prps/"
       from: "Helena"
       required: true
 
 steps:
-  - name: "Analyze Specs"
-    description: "Review Amanda's Visual Specs and Marcos's API signatures."
-    input: "spec_frontend.md & edge_function.ts"
-    output: "Integration Plan"
+  - name: "Analyze Specs & Architecture"
+    description: "Review Amanda's Visual Specs and Sofia's Feature-Based folder structure."
+    input: "spec_frontend.md, tech_architecture.md"
+    output: "Component Hierarchy Plan"
 
   - name: "Scaffold Component"
-    description: "Create the React component structure with Tailwind/Shadcn."
+    description: "Create the React component structure using Design System semantic tokens."
     template: "templates/react_component.tsx"
-    output: "Component.tsx"
+    instruction: "Use ONLY tokens from design_system.json (e.g. bg-surface-card). NO arbitrary hex."
+    output: "src/features/[feature]/components/[Name].tsx"
 
   - name: "Integrate Logic (Hook)"
     description: "Connect the UI to the Backend using type-safe hooks."
     template: "templates/api_hook.ts"
     instruction: "Ensure Payload Consistency with the API."
-    output: "useFeature.ts"
+    output: "src/features/[feature]/hooks/use[Feature].ts"
 
   - name: "Refactor & Polish"
     description: "Optimize re-renders, clean up effects, and ensure accessibility."

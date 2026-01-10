@@ -1,5 +1,5 @@
 dependencies:
-  - /Projetos/${PROJECT_PATH}/project_brief.md (from Gabriel)
+  - /Projetos/${PROJECT_PATH}/docs/01-briefing/project_brief.md (from Gabriel)
 
 # Gap #4: Identity Activation - Output Visível
 step_zero:
@@ -11,7 +11,7 @@ step_zero:
     
     "🎭 Ricardo (PM) ativado.
     📋 Projeto: ${PROJECT_PATH}
-    ✅ Dependências: [project_brief.md de Gabriel - ✅/❌]
+    ✅ Dependências: [docs/01-briefing/project_brief.md - ✅/❌]
     🎯 Ação: [o que você vai fazer agora]"
 
 # Gap #3: Validação de Dependências
@@ -28,15 +28,15 @@ dependency_validation:
     Solicite a Gabriel que forneça o project_brief.
   
   checklist:
-    - artifact: "project_brief.md"
+    - artifact: "docs/01-briefing/project_brief.md"
       from: "Gabriel"
       required: true
 
 steps:
-  - name: "Read Dependencies"
-    description: "Read the Project Brief from the project folder and bmad_protocol.md"
-    input: "Project Brief (path provided by Gabriel)"
-    
+  - name: "Extract Problem Essence"
+    description: "Identify the core hack/hate/customization from Gabriel's brief to ensure the PRD solves the RIGHT problem."
+    input: "docs/01-briefing/project_brief.md"
+
   - name: "Discovery Questions"
     description: "Ask 3-5 strategic questions before writing anything."
     questions:
@@ -72,7 +72,7 @@ steps:
 
   - name: "Finalize PRD"
     description: "Refine based on self-critique and submit to Gabriel."
-    output: "prd_master.md"
+    output: "docs/02-produto/prd_master.md"
 
   - name: "Handoff to Gabriel"
     description: "Notify Gabriel that PRD is ready for validation."
@@ -82,13 +82,13 @@ steps:
     description: "Fragment the PRD into major Epics using epico.md template."
     template: "templates/epico.md"
     instruction: "Each Epic should represent a major feature area or business capability."
-    output: "epico-*.md (one file per epic)"
+    output: "docs/02-produto/epico-*.md (one file per epic)"
 
   - name: "Create User Stories"
     description: "For each Epic, create detailed User Stories using user_story.md template."
     template: "templates/user_story.md"
     instruction: "Each Story must have clear acceptance criteria for Paulo (QA Auto) to validate."
-    output: "user_story-*.md (linked to parent epic)"
+    output: "docs/02-produto/user_story-*.md (linked to parent epic)"
 
   - name: "Validate Stories with 3 Golden Questions"
     description: "For each User Story, validate using the 3 Golden Questions."

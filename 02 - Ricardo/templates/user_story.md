@@ -34,16 +34,14 @@
 - [ ] Deploy em ambiente de staging
 - [ ] PO aprovou a funcionalidade
 
-## Technical Notes (Para Sofia/Helena)
-**Backend (Marcos):**
-- Endpoint necessário: `POST /api/...`
-- Tabelas afetadas: `users`, `...`
-- RLS policies: [descrever]
+## Data & Business Logic (Para Sofia)
+**Necessidades de Dados (O QUÊ, não ONDE):**
+- [Ex: O sistema precisa guardar o histórico de preços]
+- [Ex: Precisamos saber quem aprovou a compra]
 
-**Frontend (Claudio):**
-- Componentes necessários: `Button`, `Card`, `...`
-- Estados da UI: Loading, Success, Error, Empty
-- Validações client-side: [descrever]
+**Regras de Negócio:**
+- [Ex: O preço não pode ser negativo]
+- [Ex: Apenas gerentes podem ver relatórios financeiros]
 
 ## UI/UX Notes (Para Amanda)
 - Tela afetada: [nome da tela]

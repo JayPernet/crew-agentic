@@ -1,16 +1,37 @@
 # Arquitetura Técnica - [Nome do Projeto]
 
-## 1. Visão Geral
-[Descrição de alto nível do sistema e seus objetivos técnicos]
+## 1. Feature-Based Planning
+**Mapeamento de Funcionalidades Técnicas:**
+- Users should be able to: [Ação 1]
+- Users should be able to: [Ação 2]
 
-## 2. Stack Tecnológico
-- **Frontend:** [React, Vue, etc.]
-- **Backend/BaaS:** [Supabase, Firebase, Node.js]
-- **Database:** [PostgreSQL, MongoDB]
-- **Styling:** [Tailwind, CSS Modules]
-- **Deploy:** [Vercel, Netlify, AWS]
+## 2. Stack Tecnológico & Princípios
+- **Frontend:** [React, Vite, TypeScript]
+- **Backend/BaaS:** [Supabase]
+- **Styling:** [Tailwind CSS + Shadcn UI]
+- **Filosofia:** [KISS, YAGNI, DRY]
 
-## 3. Diagrama de Arquitetura (Mermaid)
+## 3. Folder Structure (Feature-Based)
+*Organize por FEATURE, não por TIPO.*
+
+```text
+src/
+  /features/
+    /[feature-name-1]/
+      /components/
+      /hooks/
+      /services/
+      /types/
+    /[feature-name-2]/
+      /components/
+      /hooks/
+  /shared/
+    /components/ (General UI: Buttons, Inputs)
+    /hooks/
+    /lib/
+```
+
+## 4. Diagrama de Arquitetura (Mermaid)
 ```mermaid
 graph TD
     User[Usuário] --> Client[Cliente Web]

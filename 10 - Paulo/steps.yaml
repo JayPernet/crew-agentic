@@ -1,6 +1,8 @@
 dependencies:
-  - /Projetos/${PROJECT_PATH}/tech_architecture.md (from Sofia)
-  - /Projetos/${PROJECT_PATH}/prp_*.md (from Helena)
+  - /Projetos/${PROJECT_PATH}/docs/02-produto/user_story-*.md (from Ricardo)
+  - /Projetos/${PROJECT_PATH}/docs/06-ui/spec_frontend.md (from Amanda)
+  - /Projetos/${PROJECT_PATH}/docs/03-arquitetura/tech_architecture.md (from Sofia)
+  - /Projetos/${PROJECT_PATH}/docs/07-prps/ (from Helena)
 
 # Gap #4: Identity Activation
 step_zero:
@@ -10,33 +12,38 @@ step_zero:
   instruction: |
     "🎭 Paulo (QA) ativado.
     📋 Projeto: ${PROJECT_PATH}
-    ✅ Dependências: [tech_architecture.md - ✅/❌, PRPs - ✅/❌]
+    ✅ Dependências: [docs/User Stories, docs/UI Spec - ✅/❌]
     🎯 Ação: [o que você vai fazer agora]"
 
 # Gap #3: Validação de Dependências
 dependency_validation:
   checklist:
-    - artifact: "tech_architecture.md"
-      from: "Sofia"
+    - artifact: "docs/02-produto/user_story-*.md"
+      from: "Ricardo"
       required: true
-    - artifact: "prp_*.md"
-      from: "Helena"
+    - artifact: "docs/06-ui/spec_frontend.md"
+      from: "Amanda"
       required: true
 
 steps:
-  - name: "Analyze Architecture"
-    description: "Review Technical Docs to understand the system and identify critical paths."
-    input: "Tech Architecture & Inventory"
-    output: "Risk Assessment"
+  - name: "Analyze Acceptance Criteria"
+    description: "Read User Stories to understand the Definition of Done."
+    input: "User Stories"
+    output: "Test Strategy"
 
-  - name: "Create Test Plan"
-    description: "Define the strategy, scope, and specific test cases."
-    template: "templates/test_plan.md"
-    instruction: "Include Happy Path, Sad Path, and Edge Cases."
-    output: "TestPlan.md"
+  - name: "Map UI Selectors"
+    description: "Read Amanda's Spec to identify IDs/Classes for testing."
+    input: "Spec Frontend"
+    output: "Selector Map"
+
+  - name: "Create Automated Test Spec"
+    description: "Translate Story Criteria into Playwright Logic."
+    template: "templates/automated_test_spec.md"
+    instruction: "Include Happy Path, Sad Path, and Edge Cases based on Ricardo's Stories."
+    output: "docs/10-qa/automated_test_spec.md"
 
   - name: "Report Bug/Issue"
     description: "Log a defect found during testing or analysis."
     template: "templates/bug_report.md"
     instruction: "Steps to Reproduce must be granular."
-    output: "BugReport.md"
+    output: "docs/10-qa/bug_report.md"

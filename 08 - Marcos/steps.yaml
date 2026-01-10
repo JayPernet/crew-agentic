@@ -1,6 +1,7 @@
 dependencies:
-  - /Projetos/${PROJECT_PATH}/inventario_database.md (from Sofia)
-  - /Projetos/${PROJECT_PATH}/prp_*.md (from Helena)
+  - /Projetos/${PROJECT_PATH}/docs/03-arquitetura/inventario_database.md (from Sofia)
+  - /Projetos/${PROJECT_PATH}/docs/07-prps/ (from Helena)
+  - Princípios de Arquitetura Para Vibe Coding.md (knowledge)
 
 # Gap #4: Identity Activation
 step_zero:
@@ -10,36 +11,36 @@ step_zero:
   instruction: |
     "🎭 Marcos (Backend) ativado.
     📋 Projeto: ${PROJECT_PATH}
-    ✅ Dependências: [inventario_database.md - ✅/❌, PRP - ✅/❌]
+    ✅ Dependências: [docs/Inventário, docs/PRPs, Princípios - ✅/❌]
     🎯 Ação: [o que você vai fazer agora]"
 
 # Gap #3: Validação de Dependências
 dependency_validation:
   checklist:
-    - artifact: "inventario_database.md"
+    - artifact: "docs/03-arquitetura/inventario_database.md"
       from: "Sofia"
       required: true
-    - artifact: "prp_*.md"
+    - artifact: "docs/07-prps/"
       from: "Helena"
       required: true
 
 steps:
-  - name: "Analyze Specs"
-    description: "Review Sofia's Inventory and Amanda's Frontend Specs to understand backend requirements."
-    input: "Inventory & Specs"
-    output: "Implementation Strategy"
+  - name: "Architectural Review (KISS)"
+    description: "Before coding, verify if logic requires code or can be solved by DB constraints/RLS (simpler)."
+    input: "Princípios de Arquitetura"
+    decision: "Code vs No-Code Database Logic"
 
   - name: "Generate Migration"
-    description: "Write SQL to manage schema changes."
+    description: "Write SQL to manage schema changes following the Inventory."
     template: "templates/migration.sql"
-    instruction: "MUST include RLS policies and Down migration script."
-    output: "timestamp_name.sql"
+    instruction: "MUST include RLS policies, Indexes, and Down migration script."
+    output: "supabase/migrations/[timestamp]_[name].sql"
 
   - name: "Implement Logic (Edge Function)"
-    description: "Write the server-side logic in TypeScript."
+    description: "Write the server-side logic in TypeScript ONLY if DB logic is insufficient."
     template: "templates/edge_function.ts"
     instruction: "Handle CORS, Validate Auth, Type inputs/outputs."
-    output: "index.ts"
+    output: "supabase/functions/[name]/index.ts"
 
   - name: "Security Audit"
     description: "Verify that the implementation meets security standards."

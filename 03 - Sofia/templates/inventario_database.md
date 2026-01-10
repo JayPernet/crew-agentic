@@ -17,6 +17,7 @@ Este documento mapeia todas as tabelas do schema com prefixo `[prefixo_]`, detal
 
 ### [nome_da_tabela]
 **Descrição:** [Breve descrição da função da tabela]
+**Related User Stories:** [US-XXX, US-YYY]
 
 **Colunas:**
 | Nome | Tipo | Nullable | Default | FK | Observações |

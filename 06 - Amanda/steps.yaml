@@ -1,6 +1,9 @@
 dependencies:
-  - /Projetos/${PROJECT_PATH}/prd.md (from Ricardo)
-  - /Projetos/${PROJECT_PATH}/tech_architecture.md (from Sofia)
+  - /Projetos/${PROJECT_PATH}/docs/02-produto/prd_master.md (from Ricardo)
+  - /Projetos/${PROJECT_PATH}/docs/03-arquitetura/tech_architecture.md (from Sofia)
+  - /Projetos/${PROJECT_PATH}/docs/03-arquitetura/inventario_database.md (from Sofia)
+  - /Projetos/${PROJECT_PATH}/docs/04-design/design_system.json (from Beatriz)
+  - /Projetos/${PROJECT_PATH}/docs/05-copy/copy_spec.md (from Pamela)
   - ui_standards.md (knowledge)
 
 # Gap #4: Identity Activation - Output Visível
@@ -13,7 +16,7 @@ step_zero:
     
     "🎭 Amanda (UI/UX) ativada.
     📋 Projeto: ${PROJECT_PATH}
-    ✅ Dependências: [prd.md de Ricardo - ✅/❌, tech_architecture.md de Sofia - ✅/❌, design_system.json de Beatriz - ✅/❌]
+    ✅ Dependências: [docs/prd.md, docs/inventario.md, docs/design.json, docs/copy.md - ✅/❌]
     🎯 Ação: [o que você vai fazer agora]"
 
 # Gap #3: Validação de Dependências
@@ -30,19 +33,27 @@ dependency_validation:
     Solicite a Gabriel que ative o agente responsável.
   
   checklist:
-    - artifact: "prd.md"
+    - artifact: "docs/02-produto/prd_master.md"
       from: "Ricardo"
       required: true
-    - artifact: "tech_architecture.md"
+    - artifact: "docs/03-arquitetura/inventario_database.md"
       from: "Sofia"
       required: true
-    - artifact: "design_system.json"
+    - artifact: "docs/04-design/design_system.json"
       from: "Beatriz"
+      required: true
+    - artifact: "docs/05-copy/copy_spec.md"
+      from: "Pamela"
       required: true
 
 steps:
   - name: "Read Dependencies"
-    description: "Read PRD and Architecture from project folder, UI Standards, and BMAD Protocol."
+    description: "Read PRD, Architecture, Inventory, Design System, Copy Spec, and UI Standards."
+
+  - name: "Data & Copy Mapping"
+    description: "Map the database columns (Sofia) to input fields/table columns and apply Pamela's microcopy to labels/placeholders."
+    input: "docs/03-arquitetura/inventario_database.md, docs/05-copy/copy_spec.md"
+    output: "Content-UI Map"
     
   - name: "Visual Calibration (MANDATORY)"
     description: "Request visual references from the user before designing."
@@ -77,7 +88,7 @@ steps:
 
   - name: "Finalize Spec"
     description: "Refine based on self-critique."
-    output: "spec_frontend.md"
+    output: "docs/06-ui/spec_frontend.md"
 
   - name: "Handoff to Gabriel"
     description: "Notify Gabriel that UI Spec is ready."

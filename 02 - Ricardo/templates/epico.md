@@ -137,40 +137,6 @@
 
 ---
 
-## ⏱️ Estimativa
-
-**Complexidade:** [Alta / Média / Baixa]
-
-**Estimativa de esforço:**
-- Design (UX/UI): [X dias/horas]
-- Desenvolvimento Frontend: [X dias/horas]
-- Desenvolvimento Backend: [X dias/horas]
-- QA/Testes: [X dias/horas]
-- **Total estimado:** [X dias/horas]
-
-**Premissas da estimativa:**
-- [Premissa 1: ex: "Time com 2 desenvolvedores"]
-- [Premissa 2: ex: "Sem mudanças de escopo"]
-
-**Riscos que podem impactar o prazo:**
-- [Risco 1 e plano de mitigação]
-- [Risco 2 e plano de mitigação]
-
----
-
-## 📸 Referências Visuais (Opcional)
-
-**Mockups/Wireframes:**
-- [Link ou anexo]
-
-**Fluxogramas:**
-- [Link ou anexo]
-
-**Exemplos de referência:**
-- [Screenshots de concorrentes ou inspirações]
-
----
-
 ## 📝 Notas Adicionais
 
 **Considerações técnicas:**

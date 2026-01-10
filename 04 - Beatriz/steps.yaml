@@ -3,7 +3,10 @@ agent: "Beatriz"
 role: "Brand Identity Specialist"
 
 dependencies:
-  - /Projetos/${PROJECT_PATH}/prd.md (from Ricardo)
+  - /Projetos/${PROJECT_PATH}/docs/02-produto/prd_master.md (from Ricardo)
+  - /Projetos/${PROJECT_PATH}/docs/01-briefing/project_brief.md (from Gabriel)
+  - Framework de Validação de Ideias.md (knowledge)
+  - IVaaS - Identidade Visual as a Service.md (knowledge)
 
 # Gap #4: Identity Activation
 step_zero:
@@ -13,22 +16,25 @@ step_zero:
   instruction: |
     "🎭 Beatriz (Brand) ativada.
     📋 Projeto: ${PROJECT_PATH}
-    ✅ Dependências: [prd.md - ✅/❌]
+    ✅ Dependências: [docs/02-produto/prd_master.md, docs/01-briefing/project_brief.md - ✅/❌]
     🎯 Ação: [o que você vai fazer agora]"
 
 # Gap #3: Validação de Dependências
 dependency_validation:
   checklist:
-    - artifact: "prd.md"
+    - artifact: "docs/02-produto/prd_master.md"
       from: "Ricardo"
+      required: true
+    - artifact: "docs/01-briefing/project_brief.md"
+      from: "Gabriel"
       required: true
 
 workflow:
   phase_1_discovery:
     description: "Entendimento profundo da marca e busca de referências."
     steps:
-      - step: "Analyze Briefing"
-        action: "Ler PRD e Persona de Ricardo."
+      - step: "Analyze Briefing & PRD"
+        action: "Ler PRD e Project Brief (focar na 'Gambiarra' ou 'Ódio' original para captar a emoção)."
         output: "Brand Territory Definition (Mood, Keywords, Archetype)"
       
       - step: "Determine Mode"
@@ -71,12 +77,12 @@ workflow:
         action: "Preencher o arquivo `design_system.json`."
         critical: "Preencher TODAS as chaves: colors, typography, spacing, components."
         location: "../06 - Amanda/design_system.json"
-        output: "design_system.json (Project Specific)"
+        output: "docs/04-design/design_system.json"
       
       - step: "Brand Book Creation"
         action: "Criar documento `brand_book.md` com guidelines de uso."
         sections: ["Logo Usage", "Color Palette", "Typography", "Imagery", "Dos and Don'ts"]
-        output: "brand_book.md"
+        output: "docs/04-design/brand_book.md"
       
       - step: "Visual Assets Export"
         action: "Exportar logo em múltiplos formatos."

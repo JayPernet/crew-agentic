@@ -1,6 +1,9 @@
 dependencies:
-  - /Projetos/${PROJECT_PATH}/prd.md (from Ricardo)
+  - /Projetos/${PROJECT_PATH}/docs/02-produto/prd_master.md (from Ricardo)
+  - /Projetos/${PROJECT_PATH}/docs/01-briefing/project_brief.md (from Gabriel)
   - tech_stack_mandate.md (knowledge)
+  - Princípios de Arquitetura Para Vibe Coding.md (knowledge)
+  - Framework de Validação de Ideias.md (knowledge)
 
 # Gap #4: Identity Activation - Output Visível
 step_zero:
@@ -12,7 +15,7 @@ step_zero:
     
     "🎭 Sofia (CTO) ativada.
     📋 Projeto: ${PROJECT_PATH}
-    ✅ Dependências: [prd.md de Ricardo - ✅/❌]
+    ✅ Dependências: [docs/02-produto/prd_master.md, docs/01-briefing/project_brief.md, Princípios de Arquitetura - ✅/❌]
     🎯 Ação: [o que você vai fazer agora]"
 
 # Gap #3: Validação de Dependências
@@ -23,28 +26,35 @@ dependency_validation:
     1. Projeto atual: Qual é o nome/path do projeto?
     2. Para cada dependência:
        - O arquivo EXISTE? ✅/❌
-       - Ricardo CONFIRMOU entrega? ✅/❌
+       - Gabriel/Ricardo CONFIRMARAM entrega? ✅/❌
     
     Se QUALQUER dependência está ❌, não prossiga.
     Solicite a Gabriel que ative Ricardo primeiro.
   
   checklist:
-    - artifact: "prd.md"
+    - artifact: "docs/02-produto/prd_master.md"
       from: "Ricardo"
+      required: true
+    - artifact: "docs/01-briefing/project_brief.md"
+      from: "Gabriel"
       required: true
 
 steps:
-  - name: "Read Dependencies"
-    description: "Read PRD from project folder, Tech Stack Mandate, and BMAD Protocol."
+  - name: "Read Dependencies & Architecture Principles"
+    description: "Read PRD, Project Brief, Tech Stack Mandate, and mandatory Architecture Principles (KISS, YAGNI, DRY, Feature-Based Structure)."
     
-  - name: "Feasibility Analysis"
-    description: "Review PRD for technical risks and expensive features."
+  - name: "KISS/YAGNI Feasibility Analysis"
+    description: "Review PRD for technical risks and 'Just-in-case' features. Kill unnecessary complexity."
     checklist:
-      - "Are there features that require complex infrastructure?"
-      - "Are there scalability concerns?"
-      - "Are there security risks?"
-      - "Does this align with our tech stack?"
-    output: "Feasibility Report"
+      - "Are there features that violate YAGNI (not needed now)?"
+      - "Is the proposed solution the simplest possible (KISS)?"
+      - "Can we reuse existing logic (DRY)?"
+      - "Are there security/RLS risks?"
+    output: "Feasibility Report (Simplicity Audit)"
+
+  - name: "Feature-Based Structure Mapping"
+    description: "Define the folder structure organized by Feature, not by file type."
+    output: "Folder Structure Plan"
 
   - name: "Propose Trade-offs"
     description: "For expensive/risky features, suggest alternatives."
@@ -74,8 +84,8 @@ steps:
   - name: "Finalize Architecture"
     description: "Refine based on self-critique."
     output:
-      - "tech_architecture.md"
-      - "database_inventory.md"
+      - "docs/03-arquitetura/tech_architecture.md"
+      - "docs/03-arquitetura/inventario_database.md"
 
   - name: "Handoff to Gabriel"
     description: "Notify Gabriel that Architecture is ready."

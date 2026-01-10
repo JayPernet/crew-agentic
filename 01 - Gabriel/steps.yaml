@@ -15,10 +15,19 @@ step_zero:
     Como Orchestrator, VOCÊ define o ${PROJECT_PATH} no início de cada engajamento.
 
 steps:
-  - name: "Receive Idea & Create Brief"
-    description: "User provides raw idea. Create a structured Project Brief."
-    input: "User's idea (unstructured)"
-    output: "Project Brief (structured summary)"
+  - name: "Validate Idea (The 3 Questions)"
+    description: "Interrogate the user using the 'Framework de Validação de Ideias.md'. Identify if the idea comes from a Hack, Hate, or Customization."
+    input: "User's initial thought"
+    questions:
+      - "Qual gambiarra você está fazendo hoje para resolver isso?"
+      - "O que você odeia na solução atual mas tolera?"
+      - "Como você está customizando ferramentas existentes?"
+    output: "Validation Verdict (Proceed/Kill)"
+
+  - name: "Create Project Brief"
+    description: "If validated, document the origin and goal."
+    template: "templates/project_brief.md"
+    output: "docs/01-briefing/project_brief.md"
 
   - name: "Assign Discovery to Ricardo"
     description: "Pass the brief to Ricardo for strategic discovery."

@@ -1,7 +1,15 @@
 dependencies:
-  - /Projetos/${PROJECT_PATH}/prd.md (from Ricardo)
-  - /Projetos/${PROJECT_PATH}/inventario_database.md (from Sofia)
-  - /Projetos/${PROJECT_PATH}/spec_frontend.md (from Amanda)
+  - /Projetos/${PROJECT_PATH}/docs/02-produto/prd_master.md (from Ricardo)
+  - /Projetos/${PROJECT_PATH}/docs/03-arquitetura/inventario_database.md (from Sofia)
+  - /Projetos/${PROJECT_PATH}/docs/03-arquitetura/tech_architecture.md (from Sofia)
+  - /Projetos/${PROJECT_PATH}/docs/06-ui/spec_frontend.md (from Amanda)
+  - /Projetos/${PROJECT_PATH}/docs/05-copy/copy_spec.md (from Pamela)
+  - /Projetos/${PROJECT_PATH}/docs/01-briefing/project_brief.md (from Gabriel)
+  - guia-sharding.md (knowledge)
+  - prp_patterns.md (knowledge)
+  - prp_creation_guide.md (knowledge)
+  - Princípios de Arquitetura Para Vibe Coding.md (knowledge)
+  - prompt-prp.md (knowledge)
 
 # Gap #4: Identity Activation - Output Visível
 step_zero:
@@ -13,7 +21,7 @@ step_zero:
     
     "🎭 Helena (Prompt Engineer) ativada.
     📋 Projeto: ${PROJECT_PATH}
-    ✅ Dependências: [prd.md - ✅/❌, inventario_database.md - ✅/❌, spec_frontend.md - ✅/❌]
+    ✅ Dependências: [docs/PRD, docs/Inventário, docs/Spec UI, docs/Copy, docs/Briefing - ✅/❌]
     🎯 Ação: [o que você vai fazer agora]"
 
 # Gap #3: Validação de Dependências
@@ -30,32 +38,34 @@ dependency_validation:
     Solicite a Gabriel que ative o agente responsável.
   
   checklist:
-    - artifact: "prd.md"
+    - artifact: "docs/02-produto/prd_master.md"
       from: "Ricardo"
       required: true
-    - artifact: "inventario_database.md"
+    - artifact: "docs/03-arquitetura/inventario_database.md"
       from: "Sofia"
       required: true
-    - artifact: "spec_frontend.md"
+    - artifact: "docs/06-ui/spec_frontend.md"
       from: "Amanda"
+      required: true
+    - artifact: "docs/05-copy/copy_spec.md"
+      from: "Pamela"
       required: true
 
 steps:
-  - name: "Requirement Dissection"
-    description: "Deep dive into the PRD, Epics, and User Stories to map all functional and technical requirements."
-    input: "PRD, Epics, User Stories"
-    output: "Dissection Map (Hierarchy of tasks)"
+  - name: "Requirement Dissection & Sharding"
+    description: "Deep dive into the PRD and apply 'Guia de Sharding' to break complex features into small, manageable PRPs."
+    input: "docs/02-produto/prd_master.md, Guia de Sharding"
+    output: "Dissection Map (Fragmented missions)"
 
-  - name: "Dependency Mapping"
-    description: "Identify which PRPs must come first (e.g., Database/Auth before UI)."
-    input: "Dissection Map"
-    output: "Priority List"
+  - name: "Technical Alignment"
+    description: "Ensure PRPs follow the 'Feature-Based Folder Structure' and 'KISS' principles from Sofia."
+    input: "docs/03-arquitetura/tech_architecture.md, Princípios de Arquitetura"
 
   - name: "PRP Generation"
-    description: "Generate surgical instructions for the AI following the StarIAup standard."
+    description: "Generate surgical instructions using the prp.md template, including Amanda's UI and Pamela's Copy."
     template: "templates/prp.md"
-    instruction: "Follow the prompt-prp.md patterns. Focus on WHAT, not HOW."
-    output: "Completed PRP-[ID]"
+    instruction: "Follow prp_patterns.md. Ensure NO PLACEHOLDERS for copy or data structure."
+    output: "docs/07-prps/Completed PRP-[ID].md"
 
   - name: "Pace Supervision"
     description: "Evaluate if the development is moving at the correct pace and if context is being maintained."
