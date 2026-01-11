@@ -3,6 +3,7 @@ dependencies:
   - /Projetos/${PROJECT_PATH}/docs/03-arquitetura/tech_architecture.md (from Sofia)
   - /Projetos/${PROJECT_PATH}/docs/03-arquitetura/inventario_database.md (from Sofia)
   - /Projetos/${PROJECT_PATH}/docs/04-design/design_system.json (from Beatriz)
+  - /Projetos/${PROJECT_PATH}/docs/04-design/design_system_preview.html (from Beatriz)
   - /Projetos/${PROJECT_PATH}/docs/05-copy/copy_spec.md (from Pamela)
   - ui_standards.md (knowledge)
 
@@ -16,7 +17,7 @@ step_zero:
     
     "🎭 Amanda (UI/UX) ativada.
     📋 Projeto: ${PROJECT_PATH}
-    ✅ Dependências: [docs/prd.md, docs/inventario.md, docs/design.json, docs/copy.md - ✅/❌]
+    ✅ Dependências: [docs/prd.md, docs/inventario.md, docs/design.json, docs/design_preview.html, docs/copy.md - ✅/❌]
     🎯 Ação: [o que você vai fazer agora]"
 
 # Gap #3: Validação de Dependências
@@ -42,13 +43,16 @@ dependency_validation:
     - artifact: "docs/04-design/design_system.json"
       from: "Beatriz"
       required: true
+    - artifact: "docs/04-design/design_system_preview.html"
+      from: "Beatriz"
+      required: true
     - artifact: "docs/05-copy/copy_spec.md"
       from: "Pamela"
       required: true
 
 steps:
   - name: "Read Dependencies"
-    description: "Read PRD, Architecture, Inventory, Design System, Copy Spec, and UI Standards."
+    description: "Read PRD, Architecture, Inventory, Design System (JSON + HTML Preview), Copy Spec, and UI Standards."
 
   - name: "Data & Copy Mapping"
     description: "Map the database columns (Sofia) to input fields/table columns and apply Pamela's microcopy to labels/placeholders."
