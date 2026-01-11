@@ -31,8 +31,8 @@ This repository contains the **Specialized Agent Crew** for the Vibe Code method
 ## 👥 The Crew
 
 ### Strategy Layer
-- **01 - Gabriel (Orchestrator):** Initiates projects, configures repositories, and sets the stage.
-- **02 - Ricardo (PM):** Defines the product. Creates PRDs, Epics, and User Stories with acceptance criteria.
+- **01 - Gabriel (Orchestrator):** Initiates projects, maintains the `STATE.md`, configures repositories, and sets the stage.
+- **02 - Ricardo (PM):** Defines the product. Creates PRDs, Epics, User Stories, and manages the `ROADMAP.md`.
 - **03 - Sofia (CTO):** Supreme technical authority. Defines architecture, data inventory, and RLS.
 
 ### Design Layer
@@ -41,7 +41,7 @@ This repository contains the **Specialized Agent Crew** for the Vibe Code method
 - **06 - Amanda (UI/UX):** Visual translator. Creates frontend specs and page workflows.
 
 ### Execution Layer
-- **07 - Helena (Prompt Engineer):** AI maestro. Transforms requirements into surgical PRPs.
+- **07 - Helena (Prompt Engineer):** AI maestro. Transforms requirements into surgical PRPs (using XML-structured prompts for precision).
 - **08 - Marcos (Backend):** Server-side executor. Implements migrations, APIs, and security.
 - **09 - Claudio (Full-Stack):** Integrator. Creates React components and connects with backend.
 
@@ -134,36 +134,96 @@ Invoke **Gabriel** with your idea. He will create the `project_brief.md`.
 
 ---
 
-## 🎓 Core Principles
+## ⚡ GSD Protocol Integration
 
-1. **Technical Hierarchy:** Sofia is the authority. Marcos and Claudio obey without deviation.
-2. **Single Source of Truth:** The Database Inventory is the only source of truth about data.
-3. **Documentation as Code:** Outdated documentation = broken code.
-4. **QA Driven:** Acceptance criteria are defined BEFORE code is written.
-5. **Vibe Manifesto:** Each agent has personality and executes internal monologue before acting.
+
+
+To maximize efficiency and minimize "context drift" (when AI loses focus due to long conversations), the Crew adopts the **Get Shit Done (GSD)** protocol:
+
+
+
+1.  **Atomic Contexts:** Agents in the Execution Layer (Marcos/Claudio) must work in fresh, isolated sessions for each task. No long conversation histories.
+
+2.  **Living State (`STATE.md`):** Gabriel maintains a living document tracking the project's pulse, context, and active phase, ensuring no agent works with outdated information.
+
+3.  **Brownfield Mapping:** For existing projects, Sofia executes a "Reconnaissance" protocol to map `ARCHITECTURE.md` and `CONVENTIONS.md` before any code is touched.
+
+4.  **Atomic Commits:** Every single task completed by Marcos or Claudio results in an isolated, verifiable git commit.
+
+
 
 ---
+
+
+
+## 🎓 Core Principles
+
+
+
+1.  **Technical Hierarchy:** Sofia is the authority. Marcos and Claudio obey without deviation.
+
+2.  **Single Source of Truth:** The Database Inventory is the only source of truth about data. `STATE.md` is the source of truth for progress.
+
+3.  **Documentation as Code:** Outdated documentation = broken code.
+
+4.  **QA Driven:** Acceptance criteria are defined BEFORE code is written.
+
+5.  **Vibe Manifesto:** Each agent has personality and executes internal monologue before acting.
+
+6.  **Fresh Contexts:** Never feed an execution agent the entire history. Feed them the Plan + Context + Standards.
+
+
+
+---
+
+
 
 ## 📚 Complete Documentation
 
+
+
 See `knowledge/Documentação Completa - Metodologia Vibe Code | StarIAup.md` for:
+
 - Glossary of terms
+
 - Detailed responsibilities of each agent
+
 - Visual flowcharts
+
 - Comparison with traditional development
+
+
 
 ---
 
+
+
 ## 🙏 Credits
+
+
 
 This methodology didn't emerge from nowhere. It's the result of **consuming, adapting, and versioning** the work of giants who came before:
 
+
+
 ### Fundamental Influences (~65-78% of the structure)
 
+
+
+**[GlitterCowboy (Get Shit Done)](https://github.com/glittercowboy/get-shit-done)**  
+
+The GSD system provided the protocols for **Context Engineering** and **Atomic Execution**. The idea of breaking plans into XML-structured tasks and executing them in fresh "subagent" windows to avoid token waste and hallucinations is central to our Execution Layer.
+
+
+
 **[Brian (BMAD Method)](https://github.com/bmadcode)**  
+
 The concept of **agentic construction** with AI comes directly from BMAD. Versioning development by stages with specific "personas" and their own execution steps is the foundation of the methodology.
 
+
+
 **[Deborah Folloni (DebGPT)](https://x.com/dfolloni)**  
+
 Deborah, with all her free content on YouTube, was indirectly responsible for more than half of the methodology's fundamental principles. How each file should be structured, the KISS, DRY, SOLID concepts, among others, were learned from her content.
 
 ### Our Contribution

@@ -1,73 +1,26 @@
-# User Story Template
+# User Story: {{Story Name}}
+**ID:** {{US-XXX}}
+**Parent Epic:** [Link to Epic File]
 
-## Story ID: [US-XXX-YY]
+## 1. The Story
+**As a** [Role],
+**I want to** [Action],
+**So that** [Benefit/Value].
 
-## User Story
-**Como** [tipo de usuário],  
-**Eu quero** [ação/funcionalidade],  
-**Para que** [benefício/valor].
+## 2. Acceptance Criteria (The Definition of Done)
+*Critical for QA and Dev. Be specific.*
 
-## Acceptance Criteria (Critérios de Aceite)
+- [ ] **Scenario 1:** [Description]
+  - Given [Context]
+  - When [Action]
+  - Then [Result]
 
-### Cenário 1: [Nome do cenário - Happy Path]
-**Dado que** [contexto inicial]  
-**Quando** [ação do usuário]  
-**Então** [resultado esperado]
+- [ ] **Scenario 2:** [Description]
+  - Given [Context]
+  - When [Action]
+  - Then [Result]
 
-### Cenário 2: [Nome do cenário - Validação]
-**Dado que** [contexto inicial]  
-**Quando** [ação inválida do usuário]  
-**Então** [mensagem de erro ou comportamento esperado]
-
-### Cenário 3: [Nome do cenário - Edge Case]
-**Dado que** [contexto inicial]  
-**Quando** [situação de borda]  
-**Então** [comportamento esperado]
-
-## Definition of Done (DoD)
-- [ ] Código implementado e revisado
-- [ ] Testes unitários escritos e passando
-- [ ] Testes de integração (se aplicável)
-- [ ] UI implementada conforme spec de Amanda
-- [ ] Documentação atualizada (se necessário)
-- [ ] Paulo (QA Auto) validou os critérios de aceite
-- [ ] Deploy em ambiente de staging
-- [ ] PO aprovou a funcionalidade
-
-## Data & Business Logic (Para Sofia)
-**Necessidades de Dados (O QUÊ, não ONDE):**
-- [Ex: O sistema precisa guardar o histórico de preços]
-- [Ex: Precisamos saber quem aprovou a compra]
-
-**Regras de Negócio:**
-- [Ex: O preço não pode ser negativo]
-- [Ex: Apenas gerentes podem ver relatórios financeiros]
-
-## UI/UX Notes (Para Amanda)
-- Tela afetada: [nome da tela]
-- Interações: [hover, click, drag, etc]
-- Feedback visual: [toast, modal, inline error]
-- Responsividade: Desktop + Mobile
-
-## Dependencies
-**Depende de:**
-- [ ] [US-XXX-01] - [Título da story bloqueadora]
-- [ ] [EPIC-YYY] - [Título do épico bloqueador]
-
-**Bloqueia:**
-- [ ] [US-XXX-03] - [Título da story dependente]
-
-## Priority
-- **MoSCoW:** [Must Have / Should Have / Could Have / Won't Have]
-- **Estimativa de esforço:** [XS / S / M / L / XL]
-
-## Assumptions
-- Premissa 1
-- Premissa 2
-
----
-
-**Criado por:** Ricardo (PM)  
-**Epic:** [EPIC-XXX]  
-**Data:** [YYYY-MM-DD]  
-**Última atualização:** [YYYY-MM-DD]
+## 3. Technical Constraints & Notes
+*(Input for Sofia)*
+- [Constraint 1]
+- [Edge Case to consider]

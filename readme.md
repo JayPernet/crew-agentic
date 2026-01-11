@@ -31,8 +31,8 @@ Este repositório contém a **Crew de Agentes Especialistas** da metodologia Vib
 ## 👥 A Crew
 
 ### Camada de Estratégia
-- **01 - Gabriel (Orchestrator):** Inicia projetos, configura repositórios e prepara o terreno.
-- **02 - Ricardo (PM):** Define o produto. Cria PRDs, Épicos e User Stories com critérios de aceite.
+- **01 - Gabriel (Orchestrator):** Inicia projetos, mantém o `STATE.md`, configura repositórios e prepara o terreno.
+- **02 - Ricardo (PM):** Define o produto. Cria PRDs, Épicos, User Stories e gerencia o `ROADMAP.md`.
 - **03 - Sofia (CTO):** Autoridade técnica suprema. Define arquitetura, inventário de dados e RLS.
 
 ### Camada de Design
@@ -41,7 +41,7 @@ Este repositório contém a **Crew de Agentes Especialistas** da metodologia Vib
 - **06 - Amanda (UI/UX):** Tradutora visual. Cria specs de frontend e workflows de página.
 
 ### Camada de Execução
-- **07 - Helena (Prompt Engineer):** Maestra da IA. Transforma requisitos em PRPs cirúrgicos.
+- **07 - Helena (Prompt Engineer):** Maestra da IA. Transforma requisitos em PRPs cirúrgicos (usando prompts estruturados em XML para precisão).
 - **08 - Marcos (Backend):** Executor do servidor. Implementa migrations, APIs e segurança.
 - **09 - Claudio (Full-Stack):** Integrador. Cria componentes React e conecta com backend.
 
@@ -134,13 +134,25 @@ Invoque **Gabriel** com sua ideia. Ele criará o `project_brief.md`.
 
 ---
 
+## ⚡ Integração Protocolo GSD
+
+Para maximizar a eficiência e minimizar a "perda de contexto" (quando a IA perde o foco devido a longas conversas), a Crew adota o protocolo **Get Shit Done (GSD)**:
+
+1.  **Contextos Atômicos:** Agentes da Camada de Execução (Marcos/Claudio) devem trabalhar em sessões novas e isoladas para cada tarefa. Sem históricos de conversa longos.
+2.  **Estado Vivo (`STATE.md`):** Gabriel mantém um documento vivo rastreando o pulso, contexto e fase ativa do projeto, garantindo que nenhum agente trabalhe com informações desatualizadas.
+3.  **Mapeamento de Legado (Brownfield):** Para projetos existentes, Sofia executa um protocolo de "Reconhecimento" para mapear `ARCHITECTURE.md` e `CONVENTIONS.md` antes que qualquer código seja tocado.
+4.  **Commits Atômicos:** Cada tarefa concluída por Marcos ou Claudio resulta em um git commit isolado e verificável.
+
+---
+
 ## 🎓 Princípios Fundamentais
 
-1. **Hierarquia Técnica:** Sofia é a autoridade. Marcos e Claudio obedecem sem desvios.
-2. **Single Source of Truth:** O Inventário de Database é a única fonte de verdade sobre dados.
-3. **Documentation as Code:** Documentação desatualizada = código quebrado.
-4. **QA Driven:** Critérios de aceite são definidos ANTES do código ser escrito.
-5. **Vibe Manifesto:** Cada agente tem personalidade e executa monólogo interno antes de agir.
+1.  **Hierarquia Técnica:** Sofia é a autoridade. Marcos e Claudio obedecem sem desvios.
+2.  **Single Source of Truth:** O Inventário de Database é a única fonte de verdade sobre dados. `STATE.md` é a fonte da verdade para o progresso.
+3.  **Documentation as Code:** Documentação desatualizada = código quebrado.
+4.  **QA Driven:** Critérios de aceite são definidos ANTES do código ser escrito.
+5.  **Vibe Manifesto:** Cada agente tem personalidade e executa monólogo interno antes de agir.
+6.  **Contextos Frescos:** Nunca alimente um agente de execução com todo o histórico. Alimente-o com o Plano + Contexto + Padrões.
 
 ---
 
@@ -159,6 +171,9 @@ Consulte `knowledge/Documentação Completa - Metodologia Vibe Code | StarIAup.m
 Esta metodologia não nasceu do zero. Ela é o resultado de **consumir, adaptar e versionar** o trabalho de gigantes que vieram antes:
 
 ### Influências Fundamentais (~65-78% da estrutura)
+
+**[GlitterCowboy (Get Shit Done)](https://github.com/glittercowboy/get-shit-done)**  
+O sistema GSD forneceu os protocolos para **Engenharia de Contexto** e **Execução Atômica**. A ideia de quebrar planos em tarefas estruturadas em XML e executá-las em janelas de "subagentes" limpas para evitar desperdício de tokens e alucinações é central para nossa Camada de Execução.
 
 **[Brian (BMAD Method)](https://github.com/bmadcode)**  
 O conceito de **construção agentica** com IA vêm diretamente do BMAD. Versionar o desenvolvimento por etapas com "personas" específicas seus próprios passos de execução é a sustentação da metodologia.

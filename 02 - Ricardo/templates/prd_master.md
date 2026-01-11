@@ -1,61 +1,34 @@
-# PRD - [Nome do Projeto]
+# Master Product Requirements Document (PRD)
 
-# PRD Master - [Nome do Projeto]
+## 1. Product Overview
+**Project Name:** {{Project Name}}
+**Vision:** {{High-level vision based on Gabriel's Briefing}}
+**Target Audience:** {{Who are we building for?}}
 
-**Versão:** 1.0.0
-**Status:** [Em Definição / Aprovado / Em Execução]
-**Responsável:** Ricardo (PM)
+## 2. Business Goals & Metrics
+*What does success look like?*
+- [Metric 1]
+- [Metric 2]
 
----
+## 3. Scope Definition (MoSCoW)
+**Must Have (MVP):**
+- [Feature A]
+- [Feature B]
 
-## 1. Visão Geral do Produto
+**Should Have (v1.1):**
+- [Feature C]
 
-**Problema:**
-[Qual a dor principal que estamos resolvendo?]
+**Won't Have (Out of Scope):**
+- [Feature X]
 
-**Solução:**
-[Visão autoral da solução. O que é o produto?]
+## 4. Epic Map
+*High-level breakdown of the system modules.*
 
-**Objetivos de Negócio:**
-1. [Objetivo 1]
-2. [Objetivo 2]
-3. [Objetivo 3]
+| ID | Epic Name | Description | Link |
+|:---|:---|:---|:---|
+| EPC-01 | [Name] | [Brief Description] | [Link to file] |
+| EPC-02 | [Name] | [Brief Description] | [Link to file] |
 
----
-
-## 2. Personas
-- **[Persona 1]:** [Descrição]
-- **[Persona 2]:** [Descrição]
-
----
-
-## 3. Índice de Épicos (Documentação Fragmentada)
-
-Este PRD é fragmentado para melhor execução agente-a-agente.
-
-| ID | Nome do Épico | Status | Link |
-|----|---------------|--------|------|
-| 01 | [Nome] | [Status] | [Link] |
-| 02 | [Nome] | [Status] | [Link] |
-| 03 | [Nome] | [Status] | [Link] |
-
----
-
-## 4. Requisitos Globais
-
-**Requisitos Não-Funcionais (NFRs) do Projeto:**
-- **Performance:** [Ex: < 2s]
-- **Segurança:** [Ex: RLS em tudo]
-- **Stack:** [Next.js, Supabase, etc]
-
----
-
-## 5. Roadmap Macro
-
-- [ ] **Fase 1:** [Descrição]
-- [ ] **Fase 2:** [Descrição]
-- [ ] **Fase 3:** [Descrição]
-
----
-
-*Este é um documento vivo. Atualize a lista de épicos conforme novos documentos `epico-[N].md` forem criados.*
+## 5. Strategic Assumptions
+*What are we assuming to be true?*
+- [Assumption 1]
