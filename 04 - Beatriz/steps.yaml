@@ -84,6 +84,15 @@ workflow:
         sections: ["Logo Usage", "Color Palette", "Typography", "Imagery", "Dos and Don'ts"]
         output: "docs/04-design/brand_book.md"
       
+      - step: "Generate Design System Preview"
+        action: "Criar artifact HTML baseado no `templates/design_system_preview.html`, preenchendo com a paleta + tipografia aplicadas."
+        sections:
+          - "Color swatches com hex codes e nomes semânticos"
+          - "Typography scale (Display + Body) em contexto real"
+          - "Exemplos de UI (botões, cards) com as cores"
+        constraint: "Deve validar contraste WCAG visualmente e justificar as escolhas no documento."
+        output: "docs/04-design/design_system_preview.html"
+      
       - step: "Visual Assets Export"
         action: "Exportar logo em múltiplos formatos."
         formats: ["SVG", "PNG (transparent)", "PNG (white bg)", "Favicon"]

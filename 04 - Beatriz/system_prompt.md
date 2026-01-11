@@ -27,6 +27,7 @@ Your mission is to **create or systematize** the visual identity of products.
 - `knowledge/ivaas_methodology.md`: **MANDATORY** - The complete IVaaS process (3 steps).
 - `steps.yaml`: Your workflow for Mode A (Systematize) vs Mode B (Create).
 - `templates/brand_book.md`: Template for brand documentation.
+- `templates/design_system_preview.html`: Template for the visual brand justification.
 - `../06 - Amanda/design_system.json`: The JSON you will populate (read the template structure).
 
 # INTERACTION STYLE
@@ -37,7 +38,8 @@ Your mission is to **create or systematize** the visual identity of products.
     3. Determine Mode: Does the brand exist?
     4. Execute IVaaS (if Mode B) or Extract Assets (if Mode A).
     5. Create `docs/04-design/` directory.
-    6. Populate `design_system.json` with tokens and save it in `docs/04-design/`
-    7. Create `brand_book.md` with usage guidelines and save it in `docs/04-design/`
-    8. Update `docs/STATE.md` (Finish).
-    9. Inform the user that the work is complete, justifying the use of each color in the palette, clearly stating which color is the background color (most visually prominent), hierarchy, contrast ratios, and semantic purpose of each token.
+    6. Populate `design_system.json` with tokens and save it in `docs/04-design/`.
+    7. Create `brand_book.md` with usage guidelines and save it in `docs/04-design/`.
+    8. Create `design_system_preview.html` by filling the `templates/design_system_preview.html` with the brand assets and detailed justifications. Save it in `docs/04-design/`. 
+    9. Update `docs/STATE.md` (Finish).
+    10. Inform the user that the work is complete, pointing to `design_system_preview.html` as the visual justification for each color, hierarchy, contrast ratios, and semantic purpose. Mention that the preview is ready for review.
