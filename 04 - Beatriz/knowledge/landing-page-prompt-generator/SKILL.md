@@ -1,17 +1,17 @@
 ---
 name: landing-page-prompt-generator
-description: Generate detailed prompts for Replit Design Mode to build beautiful landing pages. Guides users through a two-phase workflow - first extracting design tokens (colors, typography, spacing) from a reference screenshot, then generating section-by-section build prompts with animations and component-based UI mockups. Triggers on requests like "create landing page", "generate Replit prompt", "build landing page section", "design mode prompt", or when user wants to recreate a landing page design. Ensures UI mockups are built as real React components (not AI-generated images) for crisp, professional results.
+description: Generate detailed prompts for AI Code Editors (like Lovable, v0, Bolt, etc.) to build beautiful landing pages. Guides users through a two-phase workflow - first extracting design tokens (colors, typography, spacing) from a reference screenshot, then generating section-by-section build prompts with animations and component-based UI mockups. Triggers on requests like "create landing page", "generate vibe coding prompt", "build landing page section", "design mode prompt", or when user wants to recreate a landing page design. Ensures UI mockups are built as real React components (not AI-generated images) for crisp, professional results.
 ---
 
 # Landing Page Prompt Generator
 
 ## Purpose
-This skill helps users create beautiful landing pages by generating detailed prompts for Replit Design Mode. It guides users through a two-phase workflow: first extracting design tokens from a reference design, then generating section-by-section build prompts.
+This skill helps users create beautiful landing pages by generating detailed prompts for AI Code Editors / Vibe Coding tools. It guides users through a two-phase workflow: first extracting design tokens from a reference design, then generating section-by-section build prompts.
 
 ## When to Use This Skill
 Activate this skill when the user:
-- Wants to create a landing page using Replit Design Mode
-- Mentions "landing page prompt", "Replit design mode", or "generate landing page"
+- Wants to create a landing page using an AI Code Editor (Lovable, v0, Bolt, etc.)
+- Mentions "landing page prompt", "design mode", or "generate landing page"
 - Asks for help building a website section by section
 - References this skill by name ("landing-page-prompt-generator")
 
@@ -23,7 +23,7 @@ Activate this skill when the user:
 ├─────────────────────────────────────────────────────────────────┤
 │ 1. User provides reference screenshot (full landing page)       │
 │ 2. Gemini generates Style Token Extractor prompt                │
-│ 3. User runs prompt in Replit → configures global.css           │
+│ 3. User runs prompt in AI Editor → configures global.css        │
 │ 4. User confirms completion                                     │
 └─────────────────────────────────────────────────────────────────┘
                               ↓
@@ -33,7 +33,7 @@ Activate this skill when the user:
 │ 5. User provides: full landing page copy + target section       │
 │ 6. User provides: screenshot of that section                    │
 │ 7. Gemini generates Section Builder prompt                      │
-│ 8. User runs prompt in Replit → builds section                  │
+│ 8. User runs prompt in AI Editor → builds section               │
 │ 9. User requests next section → repeat from step 6              │
 └─────────────────────────────────────────────────────────────────┘
 ```
@@ -71,7 +71,7 @@ Then, I'll generate detailed prompts for each section of your landing page.
 
 Please share a **screenshot of a landing page design** you want to use as a visual reference. This should be a full-page screenshot showing the overall aesthetic you're going for.
 
-I'll analyze it and generate a prompt that configures your design tokens in `global.css`.
+I'll analyze it and generate a prompt that configures your design tokens in `global.css` (or equivalent style configuration).
 ```
 
 ### Phase 1: Design Token Extraction
@@ -104,7 +104,7 @@ Once a valid screenshot is provided:
 
 After outputting the prompt:
 ```
-Copy the prompt above and paste it into Replit Design Mode. It will configure your `global.css` with all the design tokens extracted from your reference.
+Copy the prompt above and paste it into your AI Code Editor. It will configure your `global.css` (or theme file) with all the design tokens extracted from your reference.
 
 **When you're done**, come back and tell me "Phase 1 complete" or "Done with tokens" — then we'll move to building your sections.
 ```
@@ -177,7 +177,7 @@ Once all requirements are met:
 
 After outputting the prompt:
 ```
-Copy the prompt above and paste it into Replit Design Mode. It will build the [SECTION NAME] section with all the components, styling, and animations specified.
+Copy the prompt above and paste it into your AI Code Editor. It will build the [SECTION NAME] section with all the components, styling, and animations specified.
 
 ---
 
@@ -247,7 +247,7 @@ USER: [Attaches full landing page screenshot]
 
 Gemini: [Generates Style Token Extractor prompt]
 
-USER: Done! Ran it in Replit.
+USER: Done! Ran it in my AI Editor.
 
 Gemini: [Asks for landing page copy + first section + screenshot]
 
@@ -273,7 +273,7 @@ Gemini: [Generates Section Builder prompt for Features]
 ```
 I notice you're asking me to build a section, but we haven't set up your design tokens yet.
 
-Without design tokens in `global.css`, your sections won't have consistent styling.
+Without design tokens in `global.css` (or equivalent), your sections won't have consistent styling.
 
 Would you like to:
 1. **Start with Phase 1** — Share a reference screenshot and I'll generate the design token prompt
@@ -281,7 +281,6 @@ Would you like to:
 
 Which would you prefer?
 ```
-
 **User provides low-quality screenshot:**
 ```
 The screenshot you shared seems [blurry/cropped/unclear]. For best results, please share a clear, full-resolution screenshot of the [section/landing page].
