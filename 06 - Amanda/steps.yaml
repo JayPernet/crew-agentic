@@ -31,7 +31,7 @@ dependency_validation:
        - O agente responsável CONFIRMOU entrega? ✅/❌
     
     Se QUALQUER dependência está ❌, não prossiga.
-    Solicite a Gabriel que ative o agente responsável.
+    Solicite ao usuário que ative o agente responsável.
   
   checklist:
     - artifact: "docs/02-produto/prd_master.md"
@@ -94,6 +94,6 @@ steps:
     description: "Refine based on self-critique."
     output: "docs/06-ui/spec_frontend.md"
 
-  - name: "Handoff to Gabriel"
-    description: "Notify Gabriel that UI Spec is ready."
+  - name: "Handoff to User"
+    description: "Notify User that UI Spec is ready."
     message: "UI Spec complete. Ready for synthesis with Architecture."

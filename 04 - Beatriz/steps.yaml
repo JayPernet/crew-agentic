@@ -109,11 +109,11 @@ workflow:
           - "Spacing philosophy documented"
           - "Component styles (buttons, cards) defined"
       
-      - step: "Notify Amanda"
+      - step: "Notify User (for Amanda)"
         action: "Informar que design_system.json está pronto para uso."
         message: "Design system populated. Ready for UI implementation."
       
-      - step: "Notify Pamela"
+      - step: "Notify User (for Pamela)"
         action: "Entregar Tone of Voice Visual."
         output: "Visual personality keywords for copy alignment"
 

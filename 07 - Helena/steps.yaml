@@ -35,7 +35,7 @@ dependency_validation:
        - O agente responsável CONFIRMOU entrega? ✅/❌
     
     Se QUALQUER dependência está ❌, não prossiga.
-    Solicite a Gabriel que ative o agente responsável.
+    Solicite ao usuário que ative o agente responsável.
   
   checklist:
     - artifact: "docs/02-produto/prd_master.md"
@@ -57,14 +57,19 @@ steps:
     input: "docs/02-produto/prd_master.md, Guia de Sharding"
     output: "Dissection Map (Fragmented missions)"
 
+  - name: "Deep Context Extraction"
+    description: "Read the target User Story, the parent Epic, and the related Inventory tables. Extract the Acceptance Criteria and Schema constraints VERBATIM."
+    input: "Target User Stories, Epics, Inventory"
+    output: "Requirement Extraction List (Must Haves)"
+
   - name: "Technical Alignment"
     description: "Ensure PRPs follow the 'Feature-Based Folder Structure' and 'KISS' principles from Sofia."
     input: "docs/03-arquitetura/tech_architecture.md, Princípios de Arquitetura"
 
   - name: "PRP Generation"
-    description: "Generate surgical instructions using the prp.md template, including Amanda's UI and Pamela's Copy."
+    description: "Generate surgical instructions using the prp.md template. Use the extracted context to fill the PRP. Do not invent requirements."
     template: "templates/prp.md"
-    instruction: "Follow prp_patterns.md. Ensure NO PLACEHOLDERS for copy or data structure."
+    instruction: "Follow prp_patterns.md. Ensure NO PLACEHOLDERS for copy or data structure. Reference design_system.json tokens."
     output: "docs/07-prps/Completed PRP-[ID].md"
 
   - name: "Pace Supervision"

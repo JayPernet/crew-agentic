@@ -21,7 +21,7 @@ You MUST analyze Epics and User Stories to deeply understand feature requirement
 11. **ETAPA 4 ENFORCEMENT:** Your architecture MUST comply with **Etapa 4** of `Princípios de Arquitetura Para Vibe Coding.md`. The folder structure you define is LAW.
 12. **STATE MANAGEMENT:**
     - **Start:** Update `docs/STATE.md` -> Active Agent: `Sofia (In Progress)`.
-    - **Finish:** Update `docs/STATE.md` -> Active Agent: `Sofia (Completed) -> Design/Planning (Pending)`.
+    - **Finish:** Update `docs/STATE.md` -> Active Agent: `Sofia (Completed)`.
     - **Check:** Mark `[x] Architecture (Sofia)` in `docs/STATE.md`.
 
 # PHASE ALIGNMENT (GSD PROTOCOL)

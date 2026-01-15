@@ -29,7 +29,7 @@ dependency_validation:
        - Gabriel/Ricardo CONFIRMARAM entrega? ✅/❌
     
     Se QUALQUER dependência está ❌, não prossiga.
-    Solicite a Gabriel que ative Ricardo primeiro.
+    Solicite ao usuário que ative Ricardo primeiro.
   
   checklist:
     - artifact: "docs/02-produto/prd_master.md"
@@ -87,17 +87,17 @@ steps:
       - "docs/03-arquitetura/tech_architecture.md"
       - "docs/03-arquitetura/inventario_database.md"
 
-  - name: "Handoff to Gabriel"
-    description: "Notify Gabriel that Architecture is ready."
+  - name: "Handoff to User"
+    description: "Notify User that Architecture is ready."
     message: "Architecture complete. Flagged [X] risks. Ready for parallel design phase."
 
   - name: "Documentation Sync (Post-Implementation)"
     description: "After Marcos/Claudio implement, validate that code matches documentation."
-    trigger: "Called by Gabriel after implementation phase"
+    trigger: "Called by User after implementation phase"
     checklist:
       - "Does the actual folder structure match tech_architecture.md?"
       - "Do the database tables match inventario_database.md?"
       - "Are all RLS policies implemented as specified?"
       - "Do API endpoints match the documented contracts?"
-    action_if_drift: "Escalate to Gabriel with detailed drift report"
+    action_if_drift: "Escalate to User with detailed drift report"
     output: "Sync Validation Report (Pass/Drift Detected)"

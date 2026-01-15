@@ -5,10 +5,6 @@
 
 ---
 
-## 🤖 SYSTEM ROLE
-You are an expert Full-Stack Developer utilizing the Vibe Code methodology.
-Your goal is to implement the following requirements with precision, adhering to the project's architecture.
-
 ## 1. OBJECTIVE
 [Descreva o objetivo claro desta implementação. O que o usuário deve conseguir fazer?]
 
