@@ -24,7 +24,7 @@ Este repositório contém a **Crew de Agentes Especialistas** da metodologia Vib
 - Documentação desatualizada causa alucinações da IA
 - Ausência de QA automatizado resulta em bugs em produção
 
-**Nossa Solução:** Uma crew de 10 agentes especializados com hierarquia clara, documentação como "Single Source of Truth" e validação automatizada em cada etapa.
+**Nossa Solução:** Uma crew de 8 agentes especializados com hierarquia clara, documentação como "Single Source of Truth" e validação automatizada em cada etapa.
 
 ---
 
@@ -42,11 +42,11 @@ Este repositório contém a **Crew de Agentes Especialistas** da metodologia Vib
 
 ### Camada de Execução
 - **07 - Helena (Prompt Engineer):** Maestra da IA. Transforma requisitos em PRPs cirúrgicos (usando prompts estruturados em XML para precisão).
-- **08 - Marcos (Backend):** Executor do servidor. Implementa migrations, APIs e segurança.
-- **09 - Claudio (Full-Stack):** Integrador. Cria componentes React e conecta com backend.
+
+> **Nota:** Os agentes de implementação (Marcos e Claudio) foram removidos. A execução de código agora é feita diretamente por agentes de código como Antigravity/Gemini, que consomem os documentos gerados pela crew.
 
 ### Camada de Qualidade
-- **10 - Paulo (QA Auto):** Advogado do Diabo automatizado. Valida com Browser Testing (Playwright).
+- **08 - Paulo (QA Auto):** Advogado do Diabo automatizado. Valida com Browser Testing (Playwright).
 
 ---
 
@@ -102,11 +102,7 @@ PO (Ideia) → Gabriel (Briefing) → Ricardo (PRD + Stories)
                                         ↓
                                   Helena (PRPs)
                                         ↓
-                            ┌───────────┴───────────┐
-                            ↓                       ↓
-                      Marcos (Backend)        Claudio (Frontend)
-                            ↓                       ↓
-                            └───────────┬───────────┘
+                            Antigravity / Gemini (Code)
                                         ↓
                                   Paulo (QA Auto)
                                         ↓
@@ -127,7 +123,7 @@ Invoque **Gabriel** com sua ideia. Ele criará o `project_brief.md`.
 **Sofia** define a estrutura técnica. **Beatriz** e **Pamela** definem identidade. **Amanda** projeta as telas.
 
 ### 4. Execução
-**Helena** cria os PRPs. **Marcos** e **Claudio** implementam seguindo estritamente a arquitetura da Sofia.
+**Helena** cria os PRPs. Agentes de código (Antigravity/Gemini) implementam seguindo estritamente a arquitetura da Sofia e os documentos gerados.
 
 ### 5. Validação
 **Paulo** executa testes automatizados contra os critérios de aceite das User Stories.
@@ -138,16 +134,16 @@ Invoque **Gabriel** com sua ideia. Ele criará o `project_brief.md`.
 
 Para maximizar a eficiência e minimizar a "perda de contexto" (quando a IA perde o foco devido a longas conversas), a Crew adota o protocolo **Get Shit Done (GSD)**:
 
-1.  **Contextos Atômicos:** Agentes da Camada de Execução (Marcos/Claudio) devem trabalhar em sessões novas e isoladas para cada tarefa. Sem históricos de conversa longos.
+1.  **Contextos Atômicos:** Agentes de código devem trabalhar em sessões novas e isoladas para cada tarefa. Sem históricos de conversa longos.
 2.  **Estado Vivo (`STATE.md`):** Gabriel mantém um documento vivo rastreando o pulso, contexto e fase ativa do projeto, garantindo que nenhum agente trabalhe com informações desatualizadas.
 3.  **Mapeamento de Legado (Brownfield):** Para projetos existentes, Sofia executa um protocolo de "Reconhecimento" para mapear `ARCHITECTURE.md` e `CONVENTIONS.md` antes que qualquer código seja tocado.
-4.  **Commits Atômicos:** Cada tarefa concluída por Marcos ou Claudio resulta em um git commit isolado e verificável.
+4.  **Commits Atômicos:** Cada tarefa concluída pelo agente de código resulta em um git commit isolado e verificável.
 
 ---
 
 ## 🎓 Princípios Fundamentais
 
-1.  **Hierarquia Técnica:** Sofia é a autoridade. Marcos e Claudio obedecem sem desvios.
+1.  **Hierarquia Técnica:** Sofia é a autoridade. Agentes de código obedecem sem desvios.
 2.  **Single Source of Truth:** O Inventário de Database é a única fonte de verdade sobre dados. `STATE.md` é a fonte da verdade para o progresso.
 3.  **Documentation as Code:** Documentação desatualizada = código quebrado.
 4.  **QA Driven:** Critérios de aceite são definidos ANTES do código ser escrito.

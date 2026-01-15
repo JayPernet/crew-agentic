@@ -1,107 +1,91 @@
 # Inventário de Database - [Nome do Projeto]
 
-Este documento mapeia todas as tabelas do schema com prefixo `[prefixo_]`, detalhando colunas, tipos, constraints e relacionamentos.
-*(Atualizado em: [Data] às [Hora])*
+**Single Source of Truth** para o schema do banco de dados. Este documento guia a implementação e as migrações.
 
 ---
 
-> [!IMPORTANT]  
-> **Status de Segurança:** Todas as tabelas listadas possuem **RLS (Row Level Security)** habilitado.
-> - `admin`: Acesso total
-> - `analyst`: Escopo de time/organização
-> - `client`: Escopo de dono (apenas seus dados)
+## 1. Convenções & Padrões
+*   **Case**: `snake_case` para tabelas e colunas.
+*   **Timestamps**: Todas as tabelas devem ter `created_at` e `updated_at` (automático via trigger).
+*   **IDs**: `uuid` (v4) ou `bigint` (Identity) dependendo da escala. Padrão: `uuid`.
+*   **Foreign Keys**: Nome explícito `[tabela_origem]_[coluna_id]`.
 
 ---
 
-## 1. Core Tables (Estruturais)
-
-### [nome_da_tabela]
-**Descrição:** [Breve descrição da função da tabela]
-**Related User Stories:** [US-XXX, US-YYY]
-
-**Colunas:**
-| Nome | Tipo | Nullable | Default | FK | Observações |
-|------|------|----------|---------|-----|-------------|
-| id | uuid | NO | gen_random_uuid() | - | Primary key |
-| [coluna] | [tipo] | [YES/NO] | [valor] | [tabela(coluna) [ação]] | [nota] |
-
-**Frontend Usage (Payloads):**
-- `[Componente.tsx]`: [OPERAÇÃO] ([colunas usadas])
-  - [Descrição do uso]
-  - [Regras de negócio aplicadas]
-
-**Storage Bucket (se aplicável):**
-- Nome: `[nome-do-bucket]`
-- Public: [true/false]
-- Size limit: [tamanho]
-- Allowed types: [tipos permitidos]
-
-**Relacionamentos de Saída (Esta tabela referencia):**
-- `[coluna]` -> `[tabela_destino.coluna]` ([ação: CASCADE/SET NULL/NO ACTION])
-
-**Relacionamentos de Entrada (Referenciado por):**
-- `[tabela_origem].[coluna]` (ação)
-
-**Índices:**
-- `idx_[nome]` on `[coluna(s)]` - [Razão do índice]
-
-**Triggers:**
-- `[nome_trigger]`: [Descrição da automação]
+## 2. Diagrama ER (Mermaid)
+```mermaid
+erDiagram
+    Users ||--o{ Posts : "creates"
+    Posts ||--|{ Comments : "has"
+    %% Adicione o diagrama aqui
+```
 
 ---
 
-## 2. Feature Tables (Funcionalidades)
+## 3. Detalhamento das Tabelas
 
-[Repetir estrutura acima para cada grupo de tabelas]
+### [nome_tabela]
+**Descrição**: [Propósito da tabela]
+**Tipo**: [Core / Feature / Dictionary]
 
----
+| Coluna | Tipo | Nullable | Default | PK/FK | Descrição/Restrições |
+| :--- | :--- | :---: | :--- | :--- | :--- |
+| `id` | `uuid` | ❌ | `gen_random_uuid()` | **PK** | Identificador único |
+| `created_at` | `timestamptz` | ❌ | `now()` | - | Data de criação |
+| `updated_at` | `timestamptz` | ❌ | `now()` | - | Data de atualização |
+| `[coluna]` | `[tipo]` | [✅/❌] | - | [FK] | [Descrição e Checks] |
 
-## 3. Enums e Types Customizados
+**Índices & Performance:**
+*   [ ] `idx_[tabela]_[coluna]` (B-Tree): Otimiza queries de filtro por [coluna].
+*   [ ] `idx_[tabela]_[fk]` (B-Tree): Otimiza joins com [tabela estrangeira].
 
-### [nome_do_enum]
-**Valores:** `'valor1'`, `'valor2'`, `'valor3'`
-**Usado em:** `[tabela.coluna]`
-**Descrição:** [Significado de cada valor]
-
----
-
-## 4. Políticas RLS
-
-### [nome_da_tabela]
-
-**Policy: `[nome_policy]`**
-- **Operação:** [SELECT/INSERT/UPDATE/DELETE]
-- **Role:** [admin/analyst/client]
-- **Condição:** `[expressão SQL]`
-- **Descrição:** [O que essa policy permite/bloqueia]
-
----
-
-## 5. Performance Optimization
-
-**Índices Críticos Criados:**
-- `[tabela]([coluna])`: Otimiza JOINs em [contexto]
-- `[tabela]([coluna1], [coluna2])`: Otimiza queries com filtros combinados
-
-**Observações de Performance:**
-- [Notas sobre queries lentas evitadas]
-- [Recomendações de uso]
+**Políticas de Segurança (RLS Analysis):**
+*   **Enable RLS**: [YES]
+*   **Roles**: `anon`, `authenticated`, `service_role`
+*   **Policies**:
+    *   `SELECT`: [Quem pode ver? Ex: `auth.uid() == user_id`]
+    *   `INSERT`: [Quem pode criar? Ex: `auth.uid() == user_id`]
+    *   `UPDATE`: [Quem pode editar?]
+    *   `DELETE`: [Quem pode deletar?]
 
 ---
 
-## 6. Environment Mapping (Migration-Ready)
+## 4. Programmability (Functions, Triggers, Views)
 
-**Local → Test → Production:**
-| Tabela | Local DB | Test DB | Prod DB | Migration Script |
-|--------|----------|---------|---------|------------------|
-| [nome_tabela] | `dev_[prefixo]_[nome]` | `test_[prefixo]_[nome]` | `prod_[prefixo]_[nome]` | `migrations/[timestamp]_[nome].sql` |
+### Triggers
+*   **Nome**: `handle_updated_at`
+*   **Tabela**: `ALL`
+*   **Evento**: `BEFORE UPDATE`
+*   **Ação**: Garante que `updated_at` seja atualizado automaticamente.
 
-**Migration Checklist:**
-- [ ] Todas as tabelas têm script de migração
-- [ ] RLS policies estão no script
-- [ ] Índices estão documentados
-- [ ] Dados de seed estão preparados (se aplicável)
+### Database Functions (RPC)
+*   **Nome**: `[nome_funcao]`
+*   **Args**: `[argumentos]`
+*   **Retorno**: `[tipo]`
+*   **Lógica**: [Descrição do que a função faz, ex: transação complexa]
 
 ---
 
-*Gerado via [Ferramenta] - [Data e Hora]*
+## 5. Storage Buckets (File Object Storage)
+*   **Bucket**: `[nome-bucket]`
+*   **Public**: [Sim/Não]
+*   **Policies**:
+    *   `UI acess`: [Regra de visualização]
+    *   `Upload`: [Regra de upload (tamanho, tipos)]
+
+---
+
+## 6. Dados Semente (Seed Data)
+*   Enums/Tipos estáticos que precisam ser inseridos na inicialização.
+*   [Lista de valores essenciais]
+
+---
+
+## 7. Migration Roadmap
+*   **Fase 1 (MVP)**: Tabelas Core + Auth.
+*   **Fase 2**: [Feature X] tables.
+*   **Fase 3**: Otimizações de índice e Views analíticas.
+
+---
+
+*Última Revisão por Sofia: [Data]*

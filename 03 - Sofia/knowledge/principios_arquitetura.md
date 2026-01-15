@@ -38,7 +38,7 @@ Isso é uma referência direta ao que inserir no `design_system.json` pois a mod
 
 ### K.I.S.S (Keep It Simple, Stupid)
 
-Temos um **inimigo** na nossa metodologia de desenvolvimento: overengineer.
+Temos um **inimigo** na nossa metodologia de desenvolvimento, além da pressa: overengineer.
 Sabemos que existem inúmeras maneiras de se chegar no mesmo resultado e **indiscutivelmente**, a mais simples é a melhor. Você pode fazer uma implementação com 1.500 linhas e chegar exatamente no mesmo resultado com 150 linhas.
 
 Não faça o mais complexo para resolver o mais simples. Na dúvida, keep it simple, stupid! >.<
@@ -124,7 +124,7 @@ Por que isso é melhor? Eu vou citar 5, mas existem muitos outros motivos:
 
 Eu sei que no início pode parecer trabalhoso seguir todos esses princípios. O comportamento comum é iniciar e finalizar logo, eu entendo.
 
-Mas esses minutos que se "perdem" planejando e organizando vão economizar HORAS (às vezes DIAS) de trabalho depois.
+Mas esses minutos investindo em planejamento e organização vão economizar HORAS (às vezes DIAS e até SEMANAS) de trabalho depois.
 
 Portanto, lembre-se de inserir esses princípios no workflow:
 - Planning claro antes de começar
