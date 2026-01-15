@@ -106,7 +106,7 @@ Exemplo para ilustrar: Imagine que você está fazendo uma integração com a AP
 
 Por que isso não é bom? Porque **cada parte do seu código deve cuidar de UMA coisa só**. E esse arquivo tem três responsabilidades distintas dentro dele. Misturar responsabilidades dentro de um arquivo dificulta muito a manutenção/ extensão. 
 
-Uma regra é **pensar se quando eu mudar uma parte do código, se a outra parte será afetada também**. Se sim, mantenha elas juntas. Se não, separe.
+Uma regra é pensar **"quando eu mudar uma parte do código, a outra parte será afetada também?"**. Se sim, mantenha elas juntas. Se não, separe.
 
 Como ficaria o exemplo anterior, se feito da maneira correta:
 - email-template.ts: Um arquivo para o template do email (criando outros arquivos de template de email, conforme necessidade)
