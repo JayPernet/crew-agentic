@@ -72,7 +72,7 @@ agentes/
 │   │   └── tech_architecture.md      # Technical Architecture
 │   └── ...
 ├── ...
-├── 10 - Paulo/
+├── 08 - Paulo/
 │   ├── knowledge/
 │   │   ├── browser_testing_patterns.md
 │   │   └── acceptance_criteria_mapping.md
