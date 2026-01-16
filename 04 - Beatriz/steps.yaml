@@ -23,10 +23,8 @@ step_zero:
 dependency_validation:
   checklist:
     - artifact: "docs/02-produto/prd_master.md"
-      from: "Ricardo"
       required: true
     - artifact: "docs/01-briefing/project_brief.md"
-      from: "Gabriel"
       required: true
 
 workflow:
@@ -73,10 +71,9 @@ workflow:
   phase_3_systematization:
     description: "Transformação da identidade em sistema."
     steps:
-      - step: "Populate Design System"
-        action: "Preencher o arquivo `design_system.json`."
-        critical: "Preencher TODAS as chaves: colors, typography, spacing, components."
-        location: "../06 - Amanda/design_system.json"
+      - step: "Populate Initial Design System"
+        action: "Preencher o arquivo `design_system.json` com os tokens da fundação da marca."
+        critical: "Preencher chaves fundamentais: colors, typography, spacing. Deixar 'components' para a equipe de UI/UX."
         output: "docs/04-design/design_system.json"
       
       - step: "Brand Book Creation"
@@ -99,21 +96,20 @@ workflow:
         output: "Logo files"
 
   phase_4_handoff:
-    description: "Entrega para Amanda e Pamela."
+    description: "Handoff to downstream teams."
     steps:
-      - step: "Validate JSON Completeness"
-        action: "Verificar se todos os tokens estão preenchidos."
+      - step: "Validate JSON Foundational Completeness"
+        action: "Verificar se os tokens fundamentais estão preenchidos."
         checklist:
           - "Primary, accent, neutral colors defined"
           - "Heading and body fonts specified"
           - "Spacing philosophy documented"
-          - "Component styles (buttons, cards) defined"
       
-      - step: "Notify User (for Amanda)"
-        action: "Informar que design_system.json está pronto para uso."
-        message: "Design system populated. Ready for UI implementation."
+      - step: "Notify User (for UI/UX)"
+        action: "Informar que o design system inicial está pronto para finalização."
+        message: "Foundational design system tokens (colors, fonts) are defined. Ready for the UI/UX team to finalize with UI components."
       
-      - step: "Notify User (for Pamela)"
+      - step: "Notify User (for Copywriting)"
         action: "Entregar Tone of Voice Visual."
         output: "Visual personality keywords for copy alignment"
 

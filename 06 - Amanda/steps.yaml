@@ -1,10 +1,10 @@
 dependencies:
-  - /Projetos/${PROJECT_PATH}/docs/02-produto/prd_master.md (from Ricardo)
-  - /Projetos/${PROJECT_PATH}/docs/03-arquitetura/tech_architecture.md (from Sofia)
-  - /Projetos/${PROJECT_PATH}/docs/03-arquitetura/inventario_database.md (from Sofia)
-  - /Projetos/${PROJECT_PATH}/docs/04-design/design_system.json (from Beatriz)
-  - /Projetos/${PROJECT_PATH}/docs/04-design/design_system_preview.html (from Beatriz)
-  - /Projetos/${PROJECT_PATH}/docs/05-copy/copy_spec.md (from Pamela)
+  - /Projetos/${PROJECT_PATH}/docs/02-produto/prd_master.md
+  - /Projetos/${PROJECT_PATH}/docs/03-arquitetura/tech_architecture.md
+  - /Projetos/${PROJECT_PATH}/docs/03-arquitetura/inventario_database.md
+  - /Projetos/${PROJECT_PATH}/docs/04-design/design_system.json
+  - /Projetos/${PROJECT_PATH}/docs/04-design/design_system_preview.html
+  - /Projetos/${PROJECT_PATH}/docs/05-copy/copy_spec.md
   - ui_standards.md (knowledge)
 
 # Gap #4: Identity Activation - Output Visível
@@ -28,34 +28,33 @@ dependency_validation:
     1. Projeto atual: Qual é o nome/path do projeto?
     2. Para cada dependência:
        - O arquivo EXISTE? ✅/❌
-       - O agente responsável CONFIRMOU entrega? ✅/❌
     
     Se QUALQUER dependência está ❌, não prossiga.
-    Solicite ao usuário que ative o agente responsável.
+    Solicite ao usuário que gere os artefatos necessários primeiro.
   
   checklist:
     - artifact: "docs/02-produto/prd_master.md"
-      from: "Ricardo"
       required: true
     - artifact: "docs/03-arquitetura/inventario_database.md"
-      from: "Sofia"
       required: true
     - artifact: "docs/04-design/design_system.json"
-      from: "Beatriz"
       required: true
     - artifact: "docs/04-design/design_system_preview.html"
-      from: "Beatriz"
       required: true
     - artifact: "docs/05-copy/copy_spec.md"
-      from: "Pamela"
       required: true
 
 steps:
   - name: "Read Dependencies"
-    description: "Read PRD, Architecture, Inventory, Design System (JSON + HTML Preview), Copy Spec, and UI Standards."
+    description: "Read PRD, Architecture, Inventory, Initial Design System (JSON + HTML Preview), Copy Spec, and UI Standards."
+
+  - name: "Finalize Design System"
+    description: "Take the initial design system from the brand team and complete it by defining all UI components, interactions, and states."
+    action: "Open docs/04-design/design_system.json and fully populate the 'components' section (buttons, cards, inputs, etc.) with detailed specs for hover, focus, and motion."
+    output: "Finalized docs/04-design/design_system.json"
 
   - name: "Data & Copy Mapping"
-    description: "Map the database columns (Sofia) to input fields/table columns and apply Pamela's microcopy to labels/placeholders."
+    description: "Map the database columns to input fields/table columns and apply the approved microcopy to labels/placeholders."
     input: "docs/03-arquitetura/inventario_database.md, docs/05-copy/copy_spec.md"
     output: "Content-UI Map"
     
@@ -68,7 +67,7 @@ steps:
     output: "Visual Reference Collection"
 
   - name: "Review Technical Constraints"
-    description: "Check Sofia's architecture for UI constraints."
+    description: "Check the technical architecture for UI constraints."
     checklist:
       - "What components are available? (Shadcn UI)"
       - "What data structures exist? (affects table design)"

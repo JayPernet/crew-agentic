@@ -16,7 +16,7 @@
 
 ## 3. TECHNICAL SPECS (Reference: Sofia)
 **Database Interactions:**
-- **Tables:** `[tabela_inventario]` (See `inventario_database.md`)
+- **Tables:** `[tabela_inventario]` (See `../../docs/03-architecture/inventario_database.md`)
 - **RLS Context:** [Ex: User can only edit their own profile]
 - **Queries needed:** [Ex: Select by ID, Update Status]
 
@@ -44,7 +44,7 @@ src/types/[Name].ts
 ```
 
 ## 6. IMPLEMENTATION STEPS (Chain of Thought)
-1.  **Database:** Create/Verify migrations matches `inventario_database.md`.
+1.  **Database:** Create/Verify migrations matches `../../docs/03-architecture/inventario_database.md`.
 2.  **Types:** Define TypeScript interfaces for the data.
 3.  **Logic:** Implement the data fetching/mutation hook.
 4.  **UI:** Build the visual component using Tailwind/Shadcn.

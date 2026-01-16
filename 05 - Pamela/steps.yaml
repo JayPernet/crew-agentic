@@ -1,7 +1,7 @@
 dependencies:
-  - /Projetos/${PROJECT_PATH}/docs/02-produto/prd_master.md (from Ricardo)
-  - /Projetos/${PROJECT_PATH}/docs/04-design/brand_book.md (from Beatriz)
-  - /Projetos/${PROJECT_PATH}/docs/01-briefing/project_brief.md (from Gabriel)
+  - /Projetos/${PROJECT_PATH}/docs/02-produto/prd_master.md
+  - /Projetos/${PROJECT_PATH}/docs/04-design/brand_book.md
+  - /Projetos/${PROJECT_PATH}/docs/01-briefing/project_brief.md
 
 # Gap #4: Identity Activation
 step_zero:
@@ -18,13 +18,10 @@ step_zero:
 dependency_validation:
   checklist:
     - artifact: "docs/02-produto/prd_master.md"
-      from: "Ricardo"
       required: true
     - artifact: "docs/04-design/brand_book.md"
-      from: "Beatriz"
       required: true
     - artifact: "docs/01-briefing/project_brief.md"
-      from: "Gabriel"
       required: true
 
 steps:

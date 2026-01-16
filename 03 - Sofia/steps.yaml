@@ -1,6 +1,6 @@
 dependencies:
-  - /Projetos/${PROJECT_PATH}/docs/02-produto/prd_master.md (from Ricardo)
-  - /Projetos/${PROJECT_PATH}/docs/01-briefing/project_brief.md (from Gabriel)
+  - /Projetos/${PROJECT_PATH}/docs/02-produto/prd_master.md
+  - /Projetos/${PROJECT_PATH}/docs/01-briefing/project_brief.md
   - tech_stack_mandate.md (knowledge)
   - Princípios de Arquitetura Para Vibe Coding.md (knowledge)
   - Framework de Validação de Ideias.md (knowledge)
@@ -26,17 +26,14 @@ dependency_validation:
     1. Projeto atual: Qual é o nome/path do projeto?
     2. Para cada dependência:
        - O arquivo EXISTE? ✅/❌
-       - Gabriel/Ricardo CONFIRMARAM entrega? ✅/❌
     
     Se QUALQUER dependência está ❌, não prossiga.
-    Solicite ao usuário que ative Ricardo primeiro.
+    Solicite ao usuário que gere os artefatos necessários primeiro.
   
   checklist:
     - artifact: "docs/02-produto/prd_master.md"
-      from: "Ricardo"
       required: true
     - artifact: "docs/01-briefing/project_brief.md"
-      from: "Gabriel"
       required: true
 
 steps:

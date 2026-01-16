@@ -47,7 +47,7 @@
 - **E** saio do campo de e-mail
 - **Então** eu devo ver uma mensagem de erro de validação abaixo do campo, como "Por favor, insira um e-mail válido".
 
-## 4. Notas de Implementação (Input para Devs / Sofia)
+## 4. Notas de Implementação (Input para Devs)
 *Detalhes técnicos, sugestões de abordagem ou perguntas que precisam ser respondidas.*
 
 - **Abordagem Sugerida:** `(Ex: Gerar um token JWT de uso único com expiração de 1 hora para o link de redefinição.)`

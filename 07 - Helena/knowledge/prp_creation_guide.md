@@ -117,7 +117,7 @@ Before executing any PRP, validate:
 - [ ] Folder structure defined
 
 ## Integration with Inventory
-Every PRP must reference the `inventario_database.md`:
+Every PRP must reference the `../../docs/03-architecture/`../../docs/03-architecture/inventario_database.md``:
 - Which tables are used
 - What columns are read/written
 - What RLS policies apply
