@@ -45,8 +45,7 @@ Este repositório contém a **Crew de Agentes Especialistas** da metodologia Vib
 
 > **Nota:** Os agentes de implementação (Marcos e Claudio) foram removidos. A execução de código agora é feita diretamente por agentes de código como Antigravity/Gemini, que consomem os documentos gerados pela crew.
 
-### Camada de Qualidade
-- **08 - Paulo (QA Auto):** Advogado do Diabo automatizado. Valida com Browser Testing (Playwright).
+
 
 ---
 
@@ -72,12 +71,7 @@ agentes/
 │   │   └── tech_architecture.md      # Arquitetura Técnica
 │   └── ...
 ├── ...
-├── 08 - Paulo/
-│   ├── knowledge/
-│   │   ├── browser_testing_patterns.md
-│   │   └── acceptance_criteria_mapping.md
-│   └── templates/
-│       └── automated_test_spec.md
+
 └── knowledge/                 # Conhecimento global compartilhado
     ├── Documentação Completa - Metodologia Vibe Code | StarIAup.md
     ├── Princípios de Arquitetura Para Vibe Coding.md
@@ -102,9 +96,7 @@ PO (Ideia) → Gabriel (Briefing) → Ricardo (PRD + Stories)
                                         ↓
                                   Helena (PRPs)
                                         ↓
-                            Antigravity / Gemini (Code)
-                                        ↓
-                                  Paulo (QA Auto)
+                            Antigravity / Gemini (Code + QA)
                                         ↓
                                     Deploy ✅
 ```
@@ -126,7 +118,8 @@ Invoque **Gabriel** com sua ideia. Ele criará o `project_brief.md`.
 **Helena** cria os PRPs. Agentes de código (Antigravity/Gemini) implementam seguindo estritamente a arquitetura da Sofia e os documentos gerados.
 
 ### 5. Validação
-**Paulo** executa testes automatizados contra os critérios de aceite das User Stories.
+### 5. Validação Integrada
+**Antigravity/Gemini** executa testes automatizados e validações de browser (Playwright) durante o próprio ciclo de implementação, garantindo que o código entregue já passou pelos critérios de aceite.
 
 ---
 
@@ -182,7 +175,7 @@ A Deborah, com todo seu conteudo gratuito no youtube, foi a responsável indiret
 Extraímos e adaptamos os principais conceitos das metodologias de DebGPT e BMAD para criar uma metodologia que seja viável para o Vibe Coding. De forma objetiva, traduzimos o que, pra nós, fazia mais sentido e implementamos:
 
 - Hierarquia técnica rígida (Sofia como autoridade)
-- Especialização de QA Auto (Paulo com Browser Testing)
+- Validação Integrada (QA embutido no agente de execução)
 - Templates estruturados para Épicos e User Stories
 - Fluxo de validação distribuída (dependency_validation)
 - Step Zero visível (personificação forçada)

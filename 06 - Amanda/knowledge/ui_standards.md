@@ -44,3 +44,8 @@ After any interaction, the user must feel:
 ## Anti-Patterns & Freshness (StarIAup Standard)
 - **Avoid "Standard" Gradients:** Purple-to-Blue is overused. Explore organic earth tones, deep monochromatic scales, or high-contrast vibrant pairs that aren't the tech-startup default.
 - **Avoid "Standard" Fonts:** Inter and Plus Jakarta Sans are the "Helvetica" and "Montserrat" of the 2026s but without elegance. Unless requested for utility/blandness, do not use them.
+
+## 8. Premium Implementation Standards (Mandatory)
+- **Dynamic Theming:** Every design system must include a "dark mode" or alternative theme. The preview HTML must be updated with a functional theme switcher to demonstrate the color variable overrides.
+- **Meaningful Motion:** Don't just design static pages. Implement scroll-based entrance animations for major sections (e.g., fade-in, slide-up). This creates a narrative flow as the user explores.
+- **Rich Interactive Feedback:** Go beyond simple color changes on hover. Components like cards should have subtle, polished transitions on hover or focus (e.g., a slight lift, shadow change, or a glowing border) to make the UI feel alive and responsive.
