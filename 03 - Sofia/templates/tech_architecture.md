@@ -10,6 +10,7 @@
 2.  **Separation of Concerns**: UI, Lógica (Hooks) e Dados (Services) devem estar desacoplados.
 3.  **Single Source of Truth**: O estado deve ter um dono claro (Server State vs Client State).
 4.  **Security by Design**: RLS e validação de schema (Zod) em todas as pontas.
+5.  **Nomenclatura com prefixo**: Toda e qualquer table a ser criada nesse projeto deve possuir o prexifo "$nomeProjeto_" (ex.: "projeto1_", "projeto2_" etc)
 
 ---
 

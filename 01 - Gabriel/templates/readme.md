@@ -7,6 +7,6 @@
 
 # Sobre o projeto
 
-<forneça uma breve descrição>
+<forneça uma descrição sobre o que está sendo construído>
 
 

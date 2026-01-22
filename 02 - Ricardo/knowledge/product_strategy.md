@@ -1,99 +1,99 @@
-# Guia de Estratégia de Produto e Boas Práticas
+# Product Strategy and Best Practices Guide
 
-Este guia serve como uma referência para os princípios e métodos que norteiam a criação e evolução de produtos na StarIAup.
+This guide serves as a reference for the principles and methods that guide product creation and evolution at StarIAup.
 
 ---
 
-## 1. A Fundação: Visão e Pesquisa
+## 1. The Foundation: Vision and Research
 
-### 1.1. Visão do Produto
-A visão é a nossa "Estrela Norte". É a declaração aspiracional que descreve o impacto que queremos causar no mundo. Ela deve ser inspiradora e guiar todas as nossas decisões.
+### 1.1. Product Vision
+Vision is our "North Star". It is the aspirational statement that describes the impact we want to have on the world. It should be inspiring and guide all our decisions.
 
-- **Visão:** O "porquê" de longo prazo. Ex: "Tornar a alimentação saudável e personalizada acessível a todos."
-- **Missão:** O "como" alcançaremos a visão. Ex: "Construindo uma plataforma inteligente que cria planos de refeição adaptados às necessidades de cada indivíduo."
+- **Vision:** The long-term "why". Ex: "Make healthy and personalized nutrition accessible to everyone."
+- **Mission:** The "how" we will achieve the vision. Ex: "Building an intelligent platform that creates meal plans adapted to each individual's needs."
 
-### 1.2. Pesquisa e Descoberta (Discovery)
-Não construímos produtos com base em achismos. A estratégia começa com um profundo entendimento do problema, do mercado e do usuário.
+### 1.2. Research and Discovery
+We don't build products based on assumptions. Strategy starts with a deep understanding of the problem, the market, and the user.
 
-- **Pesquisa de Usuário (User Research):** O objetivo é entender as "dores", necessidades e o comportamento do usuário, não perguntar quais features ele quer.
-  - **Técnicas:** Entrevistas, observação contextual, surveys, personas.
-- **Análise Competitiva:** Mapear concorrentes diretos e indiretos para identificar oportunidades, ameaças e diferenciais.
+- **User Research:** The goal is to understand user "pain points", needs, and behavior, not to ask what features they want.
+  - **Techniques:** Interviews, contextual observation, surveys, personas.
+- **Competitive Analysis:** Map direct and indirect competitors to identify opportunities, threats, and differentiators.
 
-## 2. Definindo o Sucesso: Metas e Métricas
+## 2. Defining Success: Goals and Metrics
 
 ### 2.1. OKRs (Objectives and Key Results)
-OKRs alinham a equipe em torno de metas claras e mensuráveis.
+OKRs align the team around clear and measurable goals.
 
-- **Objective (Objetivo):** O que queremos alcançar? Deve ser qualitativo, ambicioso e inspirador.
-  - *Exemplo:* "Lançar um MVP de sucesso que valide nossa proposta de valor."
-- **Key Results (Resultados-Chave):** Como saberemos que alcançamos o objetivo? Devem ser quantitativos e mensuráveis.
-  - *Exemplo KR1:* "Atingir uma taxa de retenção de 40% na primeira semana (D7)."
-  - *Exemplo KR2:* "Alcançar uma nota de satisfação (CSAT) de 8/10 entre os primeiros 100 usuários."
+- **Objective:** What do we want to achieve? Should be qualitative, ambitious, and inspiring.
+  - *Example:* "Launch a successful MVP that validates our value proposition."
+- **Key Results:** How will we know we've achieved the objective? Should be quantitative and measurable.
+  - *Example KR1:* "Achieve a 40% retention rate in the first week (D7)."
+  - *Example KR2:* "Reach a satisfaction score (CSAT) of 8/10 among the first 100 users."
 
-### 2.2. Métricas que Importam
-Foque em métricas acionáveis, que refletem o comportamento real do usuário e o valor do negócio. Evite "métricas de vaidade".
+### 2.2. Metrics that Matter
+Focus on actionable metrics that reflect real user behavior and business value. Avoid "vanity metrics".
 
-- **Métricas Acionáveis:** Taxa de conversão, retenção, tempo de tarefa, engajamento por feature.
-- **Métricas de Vaidade:** Total de downloads, número de registros, page views (sem contexto).
+- **Actionable Metrics:** Conversion rate, retention, task time, engagement per feature.
+- **Vanity Metrics:** Total downloads, number of registrations, page views (without context).
 
-## 3. Da Ideia ao Backlog: User Stories
+## 3. From Idea to Backlog: User Stories
 
-### 3.1. Escrevendo User Stories de Qualidade
-Uma User Story (História de Usuário) descreve uma funcionalidade da perspectiva de quem a deseja.
+### 3.1. Writing Quality User Stories
+A User Story describes a functionality from the perspective of the person who wants it.
 
-- **Formato Padrão:** "Como um [TIPO DE USUÁRIO], eu quero [REALIZAR UMA AÇÃO], para que [EU OBTENHA UM BENEFÍCIO]."
-- **Critério INVEST:** Histórias devem ser:
-  - **I**ndependent (Independentes)
-  - **N**egotiable (Negociáveis)
-  - **V**aluable (Valiosas)
-  - **E**stimable (Estimáveis)
-  - **S**mall (Pequenas)
-  - **T**estable (Testáveis)
+- **Standard Format:** "As a [TYPE OF USER], I want to [PERFORM AN ACTION], so that [I GET A BENEFIT]."
+- **INVEST Criteria:** Stories should be:
+  - **I**ndependent
+  - **N**egotiable
+  - **V**aluable
+  - **E**stimable
+  - **S**mall
+  - **T**estable
 
-### 3.2. Critérios de Aceitação (Acceptance Criteria)
-São as condições que uma história deve satisfazer para ser considerada "concluída". Eles removem a ambiguidade e são a base para os testes.
+### 3.2. Acceptance Criteria
+These are the conditions that a story must satisfy to be considered "done". They remove ambiguity and are the basis for testing.
 
-- **Formato Gherkin:** "Dado [o contexto], Quando [uma ação acontece], Então [o resultado esperado]."
-- **Exemplo (Login):**
-  - **User Story:** "Como um usuário registrado, eu quero fazer login, para que eu possa acessar meu perfil."
-  - **Critério de Aceitação 1:** "Dado que estou na página de login, quando eu insiro meu e-mail e senha corretos e clico em 'Entrar', então eu sou redirecionado para a minha dashboard."
-  - **Critério de Aceitação 2:** "Dado que estou na página de login, quando eu insiro uma senha incorreta, então eu vejo a mensagem 'E-mail ou senha inválidos'."
+- **Gherkin Format:** "Given [the context], When [an action happens], Then [the expected result]."
+- **Example (Login):**
+  - **User Story:** "As a registered user, I want to log in, so that I can access my profile."
+  - **Acceptance Criterion 1:** "Given that I am on the login page, when I enter my correct email and password and click 'Enter', then I am redirected to my dashboard."
+  - **Acceptance Criterion 2:** "Given that I am on the login page, when I enter an incorrect password, then I see the message 'Invalid email or password'."
 
-## 4. A Arte da Priorização: Foco no que Gera Mais Valor
+## 4. The Art of Prioritization: Focus on What Generates More Value
 
-Nenhum time tem recursos infinitos. Priorizar é a chave.
+No team has infinite resources. Prioritizing is key.
 
-### 4.1. Método MoSCoW
-Simples e eficaz para alinhar o time sobre o que é crítico.
+### 4.1. MoSCoW Method
+Simple and effective for aligning the team on what is critical.
 
-- **Must Have:** Essencial para a entrega. Sem isso, o produto não funciona ou é ilegal. Inegociável.
-- **Should Have:** Importante, mas não vital. A ausência enfraquece o produto, mas não o quebra.
-- **Could Have:** Desejável, "nice to have". Melhora a experiência, mas tem baixo impacto se não for feito.
-- **Won't Have:** O que foi explicitamente decidido que **não** será feito nesta versão/release.
+- **Must Have:** Essential for delivery. Without this, the product doesn't work or is illegal. Non-negotiable.
+- **Should Have:** Important, but not vital. Its absence weakens the product, but doesn't break it.
+- **Could Have:** Desirable, "nice to have". Improves the experience, but has low impact if not done.
+- **Won't Have:** What has been explicitly decided will **not** be done in this version/release.
 
-### 4.2. Método RICE
-Framework para priorização mais objetiva e baseada em dados.
+### 4.2. RICE Method
+Framework for more objective and data-driven prioritization.
 
-- **R**each (Alcance): Quantas pessoas serão impactadas por esta feature em um período de tempo? (Ex: 500 usuários/mês)
-- **I**mpact (Impacto): Qual o tamanho do impacto para esses usuários? (Use uma escala: 3 = massivo, 2 = alto, 1 = médio, 0.5 = baixo)
-- **C**onfidence (Confiança): Quão confiante você está nas suas estimativas de alcance e impacto? (100%, 80%, 50%)
-- **E**ffort (Esforço): Quanto tempo de trabalho (pessoa-semana, story points) isso vai exigir?
+- **R**each: How many people will be impacted by this feature in a time period? (Ex: 500 users/month)
+- **I**mpact: What is the size of the impact for these users? (Use a scale: 3 = massive, 2 = high, 1 = medium, 0.5 = low)
+- **C**onfidence: How confident are you in your reach and impact estimates? (100%, 80%, 50%)
+- **E**ffort: How much work time (person-week, story points) will this require?
 
-**Fórmula: `(Reach × Impact × Confidence) / Effort = Pontuação RICE`**
+**Formula: `(Reach × Impact × Confidence) / Effort = RICE Score`**
 
-## 5. Gerenciando o Escopo e o Futuro
+## 5. Managing Scope and the Future
 
-### 5.1. O MVP (Minimum Viable Product)
-O MVP não é um produto ruim ou incompleto. É a **menor versão do produto que pode ser lançada para entregar valor ao usuário e gerar aprendizado validado para o negócio.**
+### 5.1. The MVP (Minimum Viable Product)
+The MVP is not a bad or incomplete product. It is the **smallest version of the product that can be launched to deliver value to the user and generate validated learning for the business.**
 
-### 5.2. Roadmapping Estratégico
-Um bom roadmap comunica a estratégia, não apenas uma lista de features com datas.
+### 5.2. Strategic Roadmapping
+A good roadmap communicates strategy, not just a list of features with dates.
 
-- **Roadmap Baseado em Temas/Objetivos:** Em vez de "Q1: Feature de Login, Feature de Perfil", use "Q1: Foco em Aquisição e Onboarding". Isso dá autonomia ao time para encontrar a melhor solução para o objetivo.
+- **Theme/Objective-Based Roadmap:** Instead of "Q1: Login Feature, Profile Feature", use "Q1: Focus on Acquisition and Onboarding". This gives the team autonomy to find the best solution for the objective.
 
-### 5.3. Lidando com "Feature Creep" (Aumento de Escopo)
-O desejo por "só mais uma coisinha" é natural. Saiba como gerenciá-lo.
+### 5.3. Dealing with "Feature Creep" (Scope Increase)
+The desire for "just one more thing" is natural. Know how to manage it.
 
-- **Pergunte "Por quê?":** Qual problema do usuário essa nova ideia resolve? Como ela se conecta com nosso objetivo atual?
-- **Use o "Estacionamento de Ideias" (Parking Lot):** Crie um lugar para anotar boas ideias que não são prioridade agora. Isso mostra que a ideia foi ouvida, mas mantém o foco.
-- **Argumente com Dados:** "Entendo a ideia, mas nossos dados mostram que 90% dos usuários estão com dificuldade no fluxo X. Proponho mantermos o foco nisso por enquanto."
+- **Ask "Why?":** What user problem does this new idea solve? How does it connect with our current objective?
+- **Use the "Parking Lot":** Create a place to write down good ideas that aren't a priority now. This shows that the idea was heard, but keeps the focus.
+- **Argue with Data:** "I understand the idea, but our data shows that 90% of users are struggling with flow X. I propose we keep our focus on that for now."
