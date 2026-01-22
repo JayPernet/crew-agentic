@@ -6,6 +6,8 @@ dependencies:
   - /Projetos/${PROJECT_PATH}/docs/04-design/design_system_preview.html
   - /Projetos/${PROJECT_PATH}/docs/05-copy/copy_spec.md
   - ui_standards.md (knowledge)
+  - threejs_guide.md (knowledge)
+  - gsap_guide.md (knowledge)
 
 # Gap #4: Identity Activation - Output Visível
 step_zero:
