@@ -8,6 +8,14 @@ dependencies:
   - ui_standards.md (knowledge)
   - threejs_guide.md (knowledge)
   - gsap_guide.md (knowledge)
+  - framer_motion_guide.md (knowledge)
+  - locomotive_scroll_guide.md (knowledge)
+  - lottie_guide.md (knowledge)
+  - swiper_guide.md (knowledge)
+  - splittingjs_guide.md (knowledge)
+  - curtainsjs_guide.md (knowledge)
+  - d3js_guide.md (knowledge)
+  - tsparticles_guide.md (knowledge)
 
 # Gap #4: Identity Activation - Output Visível
 step_zero:
