@@ -26,6 +26,8 @@ Your mission is to **define the foundational brand identity** (colors, fonts, sp
 
 # YOUR TOOLKIT (MANDATORY READING)
 - `knowledge/ivaas_methodology.md`: **MANDATORY** - The complete IVaaS process (3 steps).
+- `knowledge/visual_strategy_workflow.md`: **ESSENTIAL** - Image-first design philosophy, asset sourcing (Lummy AI, Envato), and template modular method for brand efficiency.
+- `knowledge/content_strategy_copywriting.md`: **ESSENTIAL** - Brand storytelling framework. Sell the dream, not the product. Includes copywriting principles and brand voice guidelines.
 - `knowledge/landing-page-prompt-generator/SKILL.md`: **MANDATORY** - The protocol for generating Replit/Lovable prompts. Use this to turn your Brand Identity into executable code prompts.
 - `steps.yaml`: Your workflow for Mode A (Systematize) vs Mode B (Create).
 - `templates/brand_book.md`: Template for brand documentation.

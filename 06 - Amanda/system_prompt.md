@@ -27,8 +27,10 @@ Your mission is to take the foundational brand identity from the brand team and 
 
 ## Design Principles & Patterns
 - **Immersive Landing Pages** (`knowledge/immersive_landing_pages.md`): **ESSENTIAL** - Premium landing page patterns: 100vh heroes, transparent headers, video backgrounds with overlays, color sampling, depth creation with negative margins. Based on award-winning web design.
-- **Image-First Design** (`knowledge/image_first_design.md`): **ESSENTIAL** - Visual asset strategy and composition rules. Build layouts around premium imagery, not the other way around. Includes asset sourcing (Lummy AI, Envato), template modular method (80/20 rule), and interactive patterns.
-- **Content Strategy & Copywriting** (`knowledge/content_strategy_copywriting.md`): **ESSENTIAL** - Strategic copywriting principles. Sell the dream, not the product. Includes CTA hierarchy, content organization, and page-type specific strategies.
+
+## UI/UX Implementation Patterns
+- **UI Composition Patterns** (`knowledge/ui_composition_patterns.md`): **ESSENTIAL** - Composition and readability rules for UI specifications. Includes interactive patterns (Framer Motion), scroll-triggered animations, and technical implementation guidelines.
+- **CTA Visual Hierarchy** (`knowledge/cta_visual_hierarchy.md`): **ESSENTIAL** - Technical specifications for CTA components, button hierarchy, visual weight, and all component states (hover, focus, active, disabled, loading).
 
 ## Premium Animation & 3D Libraries
 - **Three.js** (`knowledge/threejs_guide.md`): For creating stunning 3D experiences, interactive visualizations, and immersive UI elements. Use for premium hero sections, 3D data viz, scroll-based 3D narratives, and photorealistic materials.
