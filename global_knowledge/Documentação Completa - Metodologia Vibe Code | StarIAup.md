@@ -42,8 +42,8 @@ Antes de codar, garantimos qualidade na origem:
 Uma vez planejado, inicia-se a execução guiada por IA:
 
 1. **Prompt Engineering:** O **Prompt Engineer** transforma requisitos em instruções cirúrgicas (PRPs) para a IA.
-2. **Implementação:** Desenvolvedores Backend e Frontend executam o código seguindo estritamente a arquitetura e os PRPs.
-3. **QA Automatizado:** O QA valida as entregas contra os critérios de aceitação usando testes automatizados.
+2. **Implementação:** O **Agente de Código (Antigravity/Gemini)** executa o código seguindo estritamente a arquitetura e os PRPs.
+3. **QA Automatizado:** O Agente de Código valida as entregas contra os critérios de aceitação usando testes automatizados de browser (Playwright).
 
 ---
 
@@ -90,27 +90,11 @@ Com isso, conseguimos desenvolver landing pages, saas, sistemas até mesmo outro
 
 ---
 
-**Marcos - Backend Developer Sênior**
-- O executor do "lado servidor". Especialista em segurança, performance e dados.
-- Implementa as tabelas, RLS policies, migrations e Edge Functions definidas pela Sofia.
-- **Subordinação Técnica:** Segue estritamente a arquitetura da Sofia.
-- Obsessivo por segurança: "Nunca confie no cliente".
-
----
-
-**Claudio - Programador Sênior Full-Stack**
-- O integrador. Especialista em React, componentes e conexão com APIs.
-- Implementa as interfaces desenhadas pela Amanda e conecta com o backend do Marcos.
-- **Subordinação Técnica:** Segue a arquitetura de pastas da Sofia e o Design System.
-- Focado em código limpo, componentização e tratamento de erros.
-
----
-
-**Paulo - QA Auto Engineer**
-- O "Advogado do Diabo" automatizado. Especialista em Browser Testing (Playwright).
-- Valida se a implementação atende aos **Critérios de Aceite** das User Stories.
-- Executa testes automatizados que simulam o comportamento do usuário real.
-- Garante que "funciona na minha máquina" não seja uma desculpa aceitável.
+**Antigravity / Gemini - Code Agent**
+- O executor técnico. Especialista em Full-Stack, segurança, performance e dados.
+- Implementa as tabelas, RLS policies, migrations, Edge Functions e interfaces.
+- **Subordinação Técnica:** Segue estritamente a arquitetura da Sofia e o design da Amanda.
+- Valida a entrega executando testes automatizados de navegador (Playwright).
 
 ---
 
@@ -157,13 +141,9 @@ graph TD
     
     Ama -->|spec_frontend.md| Hel[HELENA 07]
     
-    Hel -->|prp_*.md| Mar[MARCOS 08]
-    Hel -->|prp_*.md| Cla[CLAUDIO 09]
+    Hel -->|prp_*.md| Ant[ANTIGRAVITY 09]
     
-    Mar -->|migration.sql<br>edge_function.ts| Pau[PAULO 10]
-    Cla -->|components/*.tsx<br>pages/*.tsx| Pau
-    
-    Paulo -->|automated_test_spec.md<br>bug_report.md| End((FIM))
+    Ant -->|Implemented Code<br>QA Results| End((FIM))
 ```
 
 GABRIEL (01) → project_brief.md
@@ -185,15 +165,8 @@ spec_frontend.md
       ▼
 HELENA (07) → prp_*.md
       │
-      ├──────────────────────┐
-      ▼                      ▼
-MARCOS (08)              CLAUDIO (09)
-migration.sql            *.tsx, *.ts
-edge_function.ts         
-      │                      │
-      ├──────────────────────┤
-      ▼                      ▼
-PAULO (10) → automated_test_spec.md, bug_report.md
+      ▼
+ANTIGRAVITY (09) → Code Implementations & QA
 
 
 Para ficar ainda mais claro:
@@ -204,9 +177,7 @@ Para ficar ainda mais claro:
 05 - Pamela/       ← Copywriter (paralelo Sofia/Beatriz)
 06 - Amanda/       ← UI/UX
 07 - Helena/       ← Prompt Engineer
-08 - Marcos/       ← Backend
-09 - Claudio/      ← Full-Stack
-10 - Paulo/        ← QA Auto (ÚLTIMO)
+09 - Antigravity/  ← Code Agent (Implementação + QA)
 knowledge/         ← Global
 
 ---
@@ -237,14 +208,8 @@ knowledge/         ← Global
 7. **Helena (Prompt Engineer):**
    * **O que faz:** Prepara a execução. Pega as Stories (Ricardo) e a Arquitetura (Sofia) e cria os PRPs (Product Requirement Prompts), que são as instruções cirúrgicas para a geração de código.
 
-8. **Marcos (Backend):**
-   * **O que faz:** Executa o Backend. Implementa tabelas, migrations, edge functions e segurança seguindo estritamente as definições da Sofia e os PRPs da Helena.
-
-9. **Claudio (Frontend):**
-   * **O que faz:** Executa o Frontend. Cria componentes, páginas e integrações seguindo o design da Amanda, a arquitetura da Sofia e os PRPs da Helena.
-
-10. **Paulo (QA Auto):**
-   * **O que faz:** Valida a entrega. Executa testes automatizados de navegador para verificar se a implementação do Marcos e Claudio cumpre os critérios de aceitação definidos nas User Stories do Ricardo.
+8. **Antigravity / Gemini (Code Agent):**
+   * **O que faz:** Executa a implementação técnica (Backend e Frontend) e valida a entrega com testes automatizados de navegador, garantindo o cumprimento dos critérios de aceitação.
 
 ---
 

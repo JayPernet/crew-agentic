@@ -89,7 +89,7 @@ steps:
     message: "Architecture complete. Flagged [X] risks. Ready for parallel design phase."
 
   - name: "Documentation Sync (Post-Implementation)"
-    description: "After Marcos/Claudio implement, validate that code matches documentation."
+    description: "After implementation, validate that code matches documentation."
     trigger: "Called by User after implementation phase"
     checklist:
       - "Does the actual folder structure match tech_architecture.md?"

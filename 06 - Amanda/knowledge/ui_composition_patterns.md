@@ -235,6 +235,30 @@ When the brand team provides an image where the subject positioning conflicts wi
 2. Centered elements use perfect squares (e.g., 400x400px icon container)
 3. Button widths consistent across page (e.g., min-width 200px)
 
+## 4. Modern Aesthetic Secrets: Transparent Design
+
+### Transparent Web Design
+Removing visual barriers between navigation and content to create a seamless, premium interface.
+
+#### Transparent Menus
+- **Concept**: A transparent header allows the hero section’s background (image or video) to occupy the full screen.
+- **Impact**: Creates a more immersive, "cinematic" experience.
+- **Spec**: `position: absolute; top: 0; width: 100%; background: transparent;`
+
+#### Negative Margins (The "Bleed" Effect)
+- **Concept**: Applying negative margins to headers or footers to let elements bleed into other sections.
+- **Impact**: Makes sections feel integrated and fluid rather than isolated blocks.
+- **Spec**: `margin-top: -50px;` or `-100px` on sections to overlap previous backgrounds.
+
+### Video Backgrounds for Storytelling
+
+#### Emotional Connection
+- **Rule**: Background videos should not just show the product; they must "sell the dream" of the lifestyle (e.g., the feeling of a road trip).
+
+#### Technical Specifications
+- **Contrast**: A dark overlay is **mandatory** over video to ensure text readability.
+- **Performance**: Document that high-quality video (even via YouTube/Vimeo) can impact page load; specify compression requirements.
+
 ### Mobile Grid (<768px)
 - **Container**: 100% width, 24px side padding
 - **Columns**: Single column (100%)

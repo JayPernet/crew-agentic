@@ -42,8 +42,9 @@ Este repositório contém a **Crew de Agentes Especialistas** da metodologia Vib
 
 ### Camada de Execução
 - **07 - Helena (Prompt Engineer):** Maestra da IA. Transforma requisitos em PRPs cirúrgicos (usando prompts estruturados em XML para precisão).
+- **09 - Antigravity / Gemini (Code Agent):** Executa o código e realiza QA automatizado consumindo os documentos gerados pela crew.
 
-> **Nota:** Os agentes de implementação (Marcos e Claudio) foram removidos. A execução de código agora é feita diretamente por agentes de código como Antigravity/Gemini, que consomem os documentos gerados pela crew.
+---
 
 
 

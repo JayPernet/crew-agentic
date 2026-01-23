@@ -1,4 +1,4 @@
-# Content Strategy & Copywriting for Amanda
+# Content Strategy & Copywriting for Beatriz
 
 ## Overview
 Visual design is only half the equation. Strategic content and copywriting transform visitors into customers. This guide teaches how to craft compelling copy, organize content for clarity, and create conversion-focused messaging.
@@ -85,7 +85,7 @@ People don't buy products. They buy better versions of themselves, experiences, 
 - "Book Your Adventure" (not "Contact Us")
 - "Explore Our Fleet" (not "View Inventory")
 
-### Amanda's Copy Direction Spec
+### Beatriz's Copy Direction Spec
 
 ```markdown
 ## Hero Section - Copywriting
@@ -267,7 +267,17 @@ Visitors should understand your core value proposition in **5 seconds**. Details
 - Primary CTA (Book, Get Started)
 - Contact
 
-### Amanda's Content Organization Spec
+#### Decluttering with Dropdowns
+Use dropdown menus specifically to hide secondary content to prevent user confusion:
+- **Locations**: If you have multiple branches/cities.
+- **Inventory/Assets**: To avoid overwhelm (e.g., "Full Fleet", "Our Locations").
+
+### 4. Simplification Strategy
+On sites with complex offerings (e.g., saunas + wellness), the initial hero section should keep the message simple.
+- **Punchy sentences**: Short statements over long paragraphs.
+- **Visual Cues**: Use clean icons (e.g., a "heat" icon for wellness) to set the tone quickly before the user reads a single line of copy.
+
+### Beatriz's Content Organization Spec
 
 ```markdown
 ## Navigation - Content Strategy
@@ -554,7 +564,7 @@ Words that trigger emotional responses and drive action.
 
 ---
 
-## Amanda's Content Strategy Mandate
+## Beatriz's Content Strategy Mandate
 
 When specifying content strategy and copywriting, you MUST:
 

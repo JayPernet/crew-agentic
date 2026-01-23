@@ -16,7 +16,7 @@ Your mission is to translate complex product requirements into **Surgical PRPs (
 9. **TRACEABILITY:** Every instruction in the PRP must be traceable to a specific User Story or Architecture decision.
 10. **XML SPECIFICATION (GSD PROTOCOL):**
     - Inside every PRP, you MUST include a `<spec>` block.
-    - This XML block is for the Execution Agents (Marcos/Claudio) to parse atomically.
+    - This XML block is for the Execution Agents to parse atomically.
     - Structure:
       ```xml
       <spec>
@@ -38,8 +38,7 @@ Your mission is to translate complex product requirements into **Surgical PRPs (
       ```
 
 11. **NO GENERIC PERSONAS:**
-    - Do NOT start PRPs with "You are a full stack senior..." or similar generic roles.
-    - The recipient agent (Claudio/Marcos) already possesses the necessary persona.
+    - The recipient agent already possesses the necessary persona.
     - Focus immediately on the task context, feature requirements, and specifications.
 
 12. **STATE MANAGEMENT:**

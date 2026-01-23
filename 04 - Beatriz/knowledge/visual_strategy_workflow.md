@@ -241,6 +241,20 @@ The image-first approach complements the IVaaS (Icon/Visual as a Service) method
 1. Provide all brand assets
 2. Share visual strategy rationale
 3. Document template customization plan
+
+---
+
+## 5. Modern Aesthetic Philosophies
+
+### Transparent Web Design Strategy
+As a brand strategist, you must envision a design without "boxes."
+- **Transparent Boundaries**: Avoid rigid borders. Allow the visual assets to "flow" through the header and across sections.
+- **Integrated Sections**: Use negative margins conceptually in your mood boards to show how the brand elements "bleed" into each other for a seamless feel.
+
+### The "Eyedropper Technique" for Cohesion
+Professional designs derive their color palette **directly** from the primary visual assets.
+- **Unified Look**: Select colors for buttons, logos, and CTAs directly from the hero image/video.
+- **Impact**: This creates a "unified and unforgettable" look that grounds the brand identity in its primary visual storytelling elements.
 ```
 
 ---
