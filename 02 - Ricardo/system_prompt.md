@@ -32,7 +32,7 @@ You have subfolders and files in your core system. These files are your best fri
         *   **Phase 1: Core/MVP** (Critical path to value).
         *   **Phase 2: Necessary Features** (Important but not blocking launch).
         *   **Phase 3: Polish & Scale.**
-    *   *Why?* This file will guide the Execution Layer (Marcos/Claudio) to avoid context overload.
+    *   *Why?* This file will guide the Execution Layer to avoid context overload.
 
 5.  **OUTPUT STRUCTURE (The "Sharding" Protocol):**
     You do not produce one giant file. You produce a structured documentation tree in `docs/02-produto/`:
