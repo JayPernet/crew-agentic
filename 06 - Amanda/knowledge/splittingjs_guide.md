@@ -85,133 +85,49 @@ Result:
 </h1>
 ```
 
-```javascript
-import Splitting from 'splitting';
-import gsap from 'gsap';
-
-Splitting();
-
-gsap.from('.reveal-text .char', {
-  opacity: 0,
-  y: 50,
-  stagger: 0.05,
-  duration: 0.6,
-  ease: 'back.out(1.7)'
-});
-```
-
 ```css
 .reveal-text .char {
   display: inline-block;
   opacity: 0;
+  animation: fadeInUp 0.6s both;
+  animation-delay: calc(var(--char-index) * 50ms);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 ```
 
-### Pattern 2: Word Fade In
+### Pattern 2: Word Fade In (CSS)
 ```html
 <p class="fade-words" data-splitting="words">
   Each word fades in sequentially for dramatic effect
 </p>
 ```
 
-```javascript
-Splitting();
+```css
+.fade-words .word {
+  display: inline-block;
+  opacity: 0;
+  animation: fadeIn 0.8s both;
+  animation-delay: calc(var(--word-index) * 100ms);
+}
 
-gsap.from('.fade-words .word', {
-  opacity: 0,
-  y: 20,
-  stagger: 0.1,
-  duration: 0.8,
-  ease: 'power3.out'
-});
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
 ```
 
-### Pattern 3: Line by Line Reveal
-```html
-<div class="reveal-lines" data-splitting="lines">
-  First line appears
-  Then the second line
-  Finally the third line
-</div>
-```
-
-```javascript
-Splitting();
-
-gsap.from('.reveal-lines .line', {
-  opacity: 0,
-  x: -50,
-  stagger: 0.2,
-  duration: 1,
-  ease: 'power2.out'
-});
-```
-
-### Pattern 4: Scramble/Glitch Effect
-```html
-<h2 class="glitch-text" data-splitting>CYBERPUNK</h2>
-```
-
-```javascript
-Splitting();
-
-const chars = document.querySelectorAll('.glitch-text .char');
-
-chars.forEach((char, i) => {
-  gsap.from(char, {
-    opacity: 0,
-    x: gsap.utils.random(-100, 100),
-    y: gsap.utils.random(-100, 100),
-    rotation: gsap.utils.random(-180, 180),
-    delay: i * 0.02,
-    duration: 0.6,
-    ease: 'back.out(2)'
-  });
-});
-```
-
-### Pattern 5: Scroll-Triggered Text Reveal
-```html
-<h3 class="scroll-text" data-splitting>
-  Appears on scroll
-</h3>
-```
-
-```javascript
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-gsap.registerPlugin(ScrollTrigger);
-
-Splitting();
-
-gsap.from('.scroll-text .char', {
-  opacity: 0,
-  y: 30,
-  stagger: 0.03,
-  duration: 0.5,
-  scrollTrigger: {
-    trigger: '.scroll-text',
-    start: 'top 80%'
-  }
-});
-```
-
-### Pattern 6: Rotating Char Effect
-```html
-<h1 class="rotate-text" data-splitting>INNOVATION</h1>
-```
-
-```javascript
-Splitting();
-
-gsap.from('.rotate-text .char', {
-  rotationX: -90,
-  opacity: 0,
-  stagger: 0.05,
-  duration: 0.8,
-  ease: 'back.out(1.4)',
-  transformOrigin: 'top center'
-});
-```
+### Pattern 3: Framer Motion + Splitting (Recommended)
+```jsx
+/* See Pattern 7 below for Framer Motion integration */
 
 ```css
 .rotate-text {
@@ -383,39 +299,15 @@ useEffect(() => {
 ```markdown
 ## Typography Animations Spec
 
-### Text Reveal Variants
+### Text Reveal Variants (CSS Based)
 
 1. **Fade In Up (Default)**
-   ```javascript
-   Splitting();
-   gsap.from('.text .char', {
-     opacity: 0,
-     y: 20,
-     stagger: var(--animation-stagger-tight),
-     duration: var(--animation-timing-normal)
-   });
-   ```
+   - Animation: fadeInUp 0.6s
+   - Stagger: 0.05s per character
 
-2. **Glitch Entry**
-   ```javascript
-   gsap.from('.glitch .char', {
-     opacity: 0,
-     x: 'random(-50, 50)',
-     y: 'random(-50, 50)',
-     stagger: 0.02,
-     duration: 0.6
-   });
-   ```
-
-3. **Rotate X**
-   ```javascript
-   gsap.from('.rotate .char', {
-     rotateX: -90,
-     opacity: 0,
-     stagger: 0.05,
-     duration: 0.8
-   });
-   ```
+2. **Sequential Word Reveal**
+   - Animation: fadeIn 0.4s
+   - Stagger: 0.1s per word
 ```
 
 ## Amanda's Splitting.js Mandate
@@ -446,4 +338,4 @@ When specifying text animations with Splitting:
 
 ---
 
-**Remember**: Splitting.js is the **FOUNDATION** for premium text animations. It does one thing perfectly: divides text into animatable pieces. Pair it with GSAP or Framer Motion for stunning results that feel hand-crafted and intentional.
+**Remember**: Splitting.js is the **FOUNDATION** for premium text animations. It does one thing perfectly: divides text into animatable pieces. Pair it with Framer Motion or pure CSS animations for stunning results that feel hand-crafted and intentional.

@@ -252,56 +252,9 @@ Pin element during scroll:
 }
 ```
 
-## Integration with GSAP
+## Integration with Animation Libraries
 
-Combine for ultimate control:
-
-```javascript
-import LocomotiveScroll from 'locomotive-scroll';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
-
-const locoScroll = new LocomotiveScroll({
-  el: document.querySelector('[data-scroll-container]'),
-  smooth: true
-});
-
-// Sync Locomotive with GSAP ScrollTrigger
-locoScroll.on('scroll', ScrollTrigger.update);
-
-ScrollTrigger.scrollerProxy('[data-scroll-container]', {
-  scrollTop(value) {
-    return arguments.length
-      ? locoScroll.scrollTo(value, 0, 0)
-      : locoScroll.scroll.instance.scroll.y;
-  },
-  getBoundingClientRect() {
-    return {
-      top: 0,
-      left: 0,
-      width: window.innerWidth,
-      height: window.innerHeight
-    };
-  }
-});
-
-// Now use GSAP animations with Locomotive scroll
-gsap.to('.element', {
-  scrollTrigger: {
-    trigger: '.element',
-    scroller: '[data-scroll-container]',
-    start: 'top bottom',
-    end: 'top top',
-    scrub: true
-  },
-  scale: 2
-});
-
-ScrollTrigger.addEventListener('refresh', () => locoScroll.update());
-ScrollTrigger.refresh();
-```
+While Locomotive Scroll handles the smooth scrolling and viewport detection, you should use **Framer Motion** for elements that need complex interaction or layout animations once they enter the viewport.
 
 ## React Integration
 
@@ -429,7 +382,7 @@ When specifying Locomotive Scroll:
 2. **Document trigger classes**: Specify CSS for `data-scroll-class`
 3. **Plan layer hierarchy**: Background (negative speed) → Content (1) → Foreground (positive)
 4. **Consider mobile**: Decide if smooth scroll works on touch devices
-5. **Combine with GSAP**: Use Locomotive for smooth scroll, GSAP for complex animations
+5. **Combine with Framer Motion**: Use Locomotive for smooth scroll, Framer Motion for complex animations
 
 ## Use Cases
 
