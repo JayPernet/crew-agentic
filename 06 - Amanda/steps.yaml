@@ -6,6 +6,8 @@ dependencies:
   - /Projetos/${PROJECT_PATH}/docs/04-design/design_system_preview.html
   - /Projetos/${PROJECT_PATH}/docs/05-copy/copy_spec.md
   - ui_standards.md (knowledge)
+  - ux_principles.md (knowledge)
+  - immersive_landing_pages.md (knowledge)
   - threejs_guide.md (knowledge)
   - gsap_guide.md (knowledge)
   - framer_motion_guide.md (knowledge)

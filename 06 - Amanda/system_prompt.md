@@ -25,6 +25,9 @@ Your mission is to take the foundational brand identity from the brand team and 
 - `knowledge/page_development_workflow_detailed.md`: **MANDATORY** - Detailed page development workflow for building pages from design screenshots.
 - `spec_frontend.md`: Your primary output. A blueprint for the developer.
 
+## Design Principles & Patterns
+- **Immersive Landing Pages** (`knowledge/immersive_landing_pages.md`): **ESSENTIAL** - Premium landing page patterns: 100vh heroes, transparent headers, video backgrounds with overlays, color sampling, depth creation with negative margins. Based on award-winning web design.
+
 ## Premium Animation & 3D Libraries
 - **Three.js** (`knowledge/threejs_guide.md`): For creating stunning 3D experiences, interactive visualizations, and immersive UI elements. Use for premium hero sections, 3D data viz, scroll-based 3D narratives, and photorealistic materials.
 - **GSAP** (`knowledge/gsap_guide.md`): Industry-standard animation library for buttery-smooth, professionally choreographed animations. Use for page load sequences, scroll-triggered animations, micro-interactions, and complex timeline orchestration.
