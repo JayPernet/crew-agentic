@@ -200,7 +200,6 @@ When the brand team provides an image where the subject positioning conflicts wi
   }
 }
 ```
-```
 
 ---
 
