@@ -616,7 +616,7 @@ When specifying UI composition patterns, you MUST:
 6. **Reference brand assets**
    - Note when brand team provides images
    - Document color extraction from brand palette
-   - Link to `design_system.json` tokens
+   - Link to `design_system.tokens.js` tokens
 
 ---
 

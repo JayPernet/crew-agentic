@@ -85,7 +85,7 @@ Com isso, conseguimos desenvolver landing pages, saas, sistemas até mesmo outro
 **Amanda - UI/UX Designer**
 - Tradutora visual. Converte requisitos e identidade de marca em interfaces funcionais.
 - Cria especificações de frontend (`spec_frontend.md`) e workflows de página.
-- Utiliza o `design_system.json` da Beatriz para garantir consistência visual.
+- Utiliza o `design_system.tokens.js` da Beatriz para garantir consistência visual.
 - Define a experiência do usuário (UX) antes de uma única linha de código ser escrita.
 
 ---
@@ -114,7 +114,7 @@ Com isso, conseguimos desenvolver landing pages, saas, sistemas até mesmo outro
 
 **Beatriz - Brand Identity Specialist**
 - A guardiã da marca. Define a "alma" visual do projeto.
-- Cria o **Brand Book** e o **`design_system.json`** (cores, tipografia, tokens).
+- Cria o **Brand Book** e o **`design_system.tokens.js`** (cores, tipografia, tokens).
 - Garante que o produto não seja apenas funcional, mas tenha identidade.
 
 ---
@@ -136,7 +136,7 @@ graph TD
     Ric --> Pam[PAMELA 05]
     
     Sof -->|inventario_database.md<br>tech_architecture.md| Ama[AMANDA 06]
-    Bea -->|design_system.json<br>brand_book.md| Ama
+    Bea -->|design_system.tokens.js<br>brand_book.md| Ama
     Pam -->|copy_spec.md| Ama
     
     Ama -->|spec_frontend.md| Hel[HELENA 07]
@@ -154,12 +154,12 @@ RICARDO (02) → prd_master.md, epico-*.md, user_story.md
       ├──────────────────────┬─────────────────────────┐
       ▼                      ▼                         ▼
 SOFIA (03)               BEATRIZ (04)              PAMELA (05)
-inventario_database.md   design_system.json        copy_spec.md
+inventario_database.md   design_system.tokens.js        copy_spec.md
 tech_architecture.md     brand_book.md             
       │                      │
       ├──────────────────────┤
       ▼                      ▼
-AMANDA (06) ← design_system.json + inventario_database.md
+AMANDA (06) ← design_system.tokens.js + inventario_database.md
 spec_frontend.md
       │
       ▼
@@ -197,7 +197,7 @@ knowledge/         ← Global
    * **O que faz:** Define "COMO" será feito tecnicamente. Cria a Arquitetura Técnica e o Inventário de Database (`inventario_database.md`). Define as regras de RLS e a estrutura de pastas que todos devem seguir.
 
 4. **Beatriz (Brand):**
-   * **O que faz:** Define a identidade visual base. Entrega o `design_system.json` e o Brand Book, estabelecendo as fundações estéticas para a Amanda.
+   * **O que faz:** Define a identidade visual base. Entrega o `design_system.tokens.js` e o Brand Book, estabelecendo as fundações estéticas para a Amanda.
 
 5. **Pamela (Copy):**
    * **O que faz:** Define a voz e o texto estratégico. Entrega o `copy_spec.md` para guiar os textos das interfaces que a Amanda vai projetar.

@@ -185,7 +185,7 @@ This approach allows designers to skip repetitive structural work while maintain
 ### Handoff to UI/UX Team
 - Provide template files with brand assets injected
 - Document all customization points
-- Include `design_system.json` with brand tokens
+- Include `design_system.tokens.js` with brand tokens
 - Share `design_system_preview.html` for visual reference
 ```
 
@@ -230,7 +230,7 @@ The image-first approach complements the IVaaS (Icon/Visual as a Service) method
 3. Document brand asset injection points
 
 ### Phase 4: Brand System Creation
-1. Populate `design_system.json` with:
+1. Populate `design_system.tokens.js` with:
    - Colors extracted from images
    - Typography that complements visual style
    - Spacing that matches template rhythm
@@ -337,7 +337,7 @@ When defining brand visual strategy, you MUST:
    - Document brand asset injection points
 
 4. **Create brand system**
-   - Populate `design_system.json` with visual-informed tokens
+   - Populate `design_system.tokens.js` with visual-informed tokens
    - Create `design_system_preview.html`
    - Write `brand_book.md` with visual guidelines
 

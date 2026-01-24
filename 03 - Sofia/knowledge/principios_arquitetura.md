@@ -32,7 +32,7 @@ Imagine o seguinte exemplo: você tem quatro botões na página, e, em cada um d
 
 Como seria mais inteligente fazer isso: criar uma variável de cor separada, e fazer os seus quatro botões importarem aquela variável do mesmo lugar. Assim, você só precisa trocar essa variável uma vez. É uma maneira muito mais modular e inteligente de fazer isso e eu cuidadosamente.
 
-Isso é uma referência direta ao que inserir no `design_system.json` pois a modularidade se complementa.
+Isso é uma referência direta ao que inserir no `design_system.tokens.js` pois a modularidade se complementa.
 
 ## Etapa 3
 

@@ -74,9 +74,9 @@ workflow:
     description: "Transformação da identidade em sistema."
     steps:
       - step: "Populate Initial Design System"
-        action: "Preencher o arquivo `design_system.json` com os tokens da fundação da marca."
+        action: "Preencher o arquivo `design_system.tokens.js` com os tokens da fundação da marca."
         critical: "Preencher chaves fundamentais: colors, typography, spacing. Deixar 'components' para a equipe de UI/UX."
-        output: "docs/04-design/design_system.json"
+        output: "docs/04-design/design_system.tokens.js"
       
       - step: "Brand Book Creation"
         action: "Criar documento `brand_book.md` com guidelines de uso."

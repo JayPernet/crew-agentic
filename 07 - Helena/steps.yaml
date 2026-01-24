@@ -69,7 +69,7 @@ steps:
   - name: "PRP Generation"
     description: "Generate surgical instructions using the prp.md template. Use the extracted context to fill the PRP. Do not invent requirements."
     template: "templates/prp.md"
-    instruction: "Follow prp_patterns.md. Ensure NO PLACEHOLDERS for copy or data structure. Reference design_system.json tokens."
+    instruction: "Follow prp_patterns.md. Ensure NO PLACEHOLDERS for copy or data structure. Reference design_system.tokens.js tokens."
     output: "docs/07-prps/Completed PRP-[ID].md"
 
   - name: "Pace Supervision"

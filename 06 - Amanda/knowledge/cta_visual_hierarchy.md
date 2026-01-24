@@ -653,7 +653,7 @@ When specifying CTA components, you MUST:
 
 6. **Reference brand tokens**
    - Use var(--color-primary) not hardcoded colors
-   - Link to design_system.json
+   - Link to design_system.tokens.js
    - Note when brand team defines colors
 
 ---

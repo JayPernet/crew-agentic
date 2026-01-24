@@ -1,6 +1,32 @@
-{
-    "_INSTRUÇÃO_MANDATÓRIA": "🚨 NÃO SOBRESCREVA ESTE TEMPLATE! Sempre crie uma cópia deste arquivo para a pasta do seu projeto e edite a cópia. Este é um template base que deve permanecer intacto para reutilização futura.",
-    "designPrinciples": {
+// 🚨 NÃO SOBRESCREVA ESTE TEMPLATE!
+// Sempre crie uma cópia deste arquivo para a pasta do seu projeto e edite a cópia.
+// Este é um template base que deve permanecer intacto para reutilização futura.
+
+// Paleta de cores primitiva.
+// Estes são os valores brutos que serão referenciados pelos tokens semânticos.
+const primitiveColors = {
+    brand: {
+        "50": "#HEX",
+        "100": "#HEX",
+        "500": "#HEX (Main)",
+        "900": "#HEX"
+    },
+    neutral: {
+        "0": "#FFFFFF",
+        "50": "#FAFAFA",
+        "100": "#F5F5F5",
+        "200": "#E5E5E5",
+        "800": "#HEX (Dark Text)",
+        "900": "#HEX (Black)"
+    },
+    accent: {
+        "main": "#HEX",
+        "contrast": "#HEX"
+    }
+};
+
+export const tokens = {
+    designPrinciples: {
         "overall": "[STRING] Descreva a essência e personalidade do design em 2-3 frases. Deve capturar o feeling emocional e a relação que você quer estabelecer com o usuário. Ex: 'Premium fintech with warmth' ou 'Energetic fitness platform that motivates'",
         "keywords": [
             "[ARRAY DE STRINGS] 5-8 palavras-chave que descrevem a identidade visual",
@@ -11,69 +37,50 @@
             "Exemplos: generic SaaS look, overly corporate, cluttered, childish, aggressive"
         ]
     },
-    "colorPalette": {
-        "_instructions": "Defina tokens semânticos baseados na função da cor. NÃO use apenas nomes de cor (blue, red). Use a função (primary-action, surface-card).",
-        "primitive": {
-            "_note": "Paleta base (Raw values). Apenas referenciada pelos tokens semânticos abaixo.",
-            "brand": {
-                "50": "#HEX",
-                "100": "#HEX",
-                "500": "#HEX (Main)",
-                "900": "#HEX"
-            },
-            "neutral": {
-                "0": "#FFFFFF",
-                "50": "#FAFAFA",
-                "100": "#F5F5F5",
-                "200": "#E5E5E5",
-                "800": "#HEX (Dark Text)",
-                "900": "#HEX (Black)"
-            },
-            "accent": {
-                "main": "#HEX",
-                "contrast": "#HEX"
-            }
-        },
-        "semantic": {
+    // Defina tokens semânticos baseados na função da cor.
+    // NÃO use apenas nomes de cor (blue, red). Use a função (primary-action, surface-card).
+    colorPalette: {
+        primitive: primitiveColors,
+        semantic: {
             "background": {
-                "page": "[DEFINE_TOKEN] (Ex: neutral-50)",
-                "surface": "[DEFINE_TOKEN] (Ex: white)",
-                "surfaceHighlight": "[DEFINE_TOKEN] (Ex: neutral-100)",
-                "overlay": "[DEFINE_TOKEN] (Ex: black/50%)"
+                "page": "primitiveColors.neutral[50]", // Ex: "neutral-50"
+                "surface": "primitiveColors.neutral[0]", // Ex: "white"
+                "surfaceHighlight": "primitiveColors.neutral[100]", // Ex: "neutral-100"
+                "overlay": "rgba(0, 0, 0, 0.5)" // Ex: "black/50%"
             },
             "text": {
-                "heading": "[DEFINE_TOKEN] (Ex: neutral-900)",
-                "body": "[DEFINE_TOKEN] (Ex: neutral-700)",
-                "muted": "[DEFINE_TOKEN] (Ex: neutral-500)",
-                "onPrimary": "[DEFINE_TOKEN] (Ex: white)"
+                "heading": "primitiveColors.neutral[900]", // Ex: "neutral-900"
+                "body": "primitiveColors.neutral[800]", // Ex: "neutral-700"
+                "muted": "primitiveColors.neutral[500]", // Ex: "neutral-500"
+                "onPrimary": "primitiveColors.neutral[0]" // Ex: "white"
             },
             "border": {
-                "subtle": "[DEFINE_TOKEN] (Ex: neutral-200)",
-                "default": "[DEFINE_TOKEN] (Ex: neutral-300)",
-                "focus": "[DEFINE_TOKEN] (Ex: brand-500)"
+                "subtle": "primitiveColors.neutral[200]", // Ex: "neutral-200"
+                "default": "primitiveColors.neutral[300]", // Ex: "neutral-300"
+                "focus": "primitiveColors.brand[500]" // Ex: "brand-500"
             },
             "action": {
                 "primary": {
-                    "default": "[DEFINE_TOKEN] (Ex: brand-600)",
-                    "hover": "[DEFINE_TOKEN] (Ex: brand-700)",
-                    "disabled": "[DEFINE_TOKEN] (Ex: neutral-300)"
+                    "default": "primitiveColors.brand[500]", // Ex: "brand-600"
+                    "hover": "primitiveColors.brand[900]", // Ex: "brand-700"
+                    "disabled": "primitiveColors.neutral[200]" // Ex: "neutral-300"
                 },
                 "secondary": {
-                    "default": "[DEFINE_TOKEN] (Ex: white)",
-                    "hover": "[DEFINE_TOKEN] (Ex: neutral-50)",
-                    "border": "[DEFINE_TOKEN] (Ex: neutral-300)"
+                    "default": "primitiveColors.neutral[0]", // Ex: "white"
+                    "hover": "primitiveColors.neutral[50]", // Ex: "neutral-50"
+                    "border": "primitiveColors.neutral[200]" // Ex: "neutral-300"
                 }
             },
             "status": {
-                "success": "[DEFINE_TOKEN] (Ex: green-600)",
-                "error": "[DEFINE_TOKEN] (Ex: red-600)",
-                "warning": "[DEFINE_TOKEN] (Ex: amber-500)",
-                "info": "[DEFINE_TOKEN] (Ex: blue-500)"
+                "success": "#HEX (Ex: green-600)",
+                "error": "#HEX (Ex: red-600)",
+                "warning": "#HEX (Ex: amber-500)",
+                "info": "#HEX (Ex: blue-500)"
             }
         }
     },
-    "typography": {
-        "_instructions": "Defina 2 famílias tipográficas: uma para headings, outra para body text",
+    // Defina 2 famílias tipográficas: uma para headings, outra para body text
+    typography: {
         "fontFamilies": {
             "headings": {
                 "family": "Nome da fonte para títulos. Ex: 'Playfair Display', 'Montserrat', 'Inter'",
@@ -85,10 +92,10 @@
                 "weight": "Peso. Ex: '400 for body, 500-600 for emphasis'"
             }
         },
+        // Escala tipográfica responsiva. Use clamp() para fluidez entre mobile/desktop
         "scale": {
-            "_note": "Escala tipográfica responsiva. Use clamp() para fluidez entre mobile/desktop",
             "hero-h1": {
-                "size": "clamp(min-mobile, ideal, max-desktop). Ex: clamp(2.5rem, 5vw, 4rem)",
+                "size": "clamp(2.5rem, 5vw, 4rem)",
                 "lineHeight": "1.1 - 1.3 para headlines",
                 "letterSpacing": "-0.02em a 0 para títulos grandes"
             },
@@ -116,17 +123,17 @@
             "example": "Exemplo de headline com ênfase aplicada"
         }
     },
-    "spacing": {
-        "_instructions": "Sistema de espaçamento consistente. Define respiro e hierarquia visual",
+    // Sistema de espaçamento consistente. Define respiro e hierarquia visual
+    spacing: {
         "philosophy": "Descreva a filosofia de espaçamento. Ex: 'Generous breathing room' ou 'Compact and efficient'",
+        // Padding vertical e horizontal das sections principais
         "sectionPadding": {
-            "_note": "Padding vertical e horizontal das sections principais",
-            "vertical": "clamp(min, ideal, max). Ex: clamp(60px, 8vw, 120px)",
+            "vertical": "clamp(60px, 8vw, 120px)",
             "horizontal": "clamp(20px, 5vw, 80px)"
         },
         "containerMaxWidth": "Largura máxima do conteúdo. Ex: '1200px', '1400px', '100%'",
+        // Espaçamentos entre elementos específicos
         "componentSpacing": {
-            "_note": "Espaçamentos entre elementos específicos",
             "betweenSections": "Espaço entre sections. Ex: '0 (sections handle padding)' ou '40px'",
             "betweenHeadingAndContent": "Espaço título→conteúdo. Ex: '24px - 40px'",
             "betweenCards": "Espaço entre cards em grid. Ex: '24px - 32px'",
@@ -137,8 +144,8 @@
             "gutter": "Espaço entre colunas. Ex: '24px', '32px'"
         }
     },
-    "components": {
-        "_instructions": "Componentes reutilizáveis. Defina aparência e comportamento de cada um",
+    // Componentes reutilizáveis. Defina aparência e comportamento de cada um
+    components: {
         "buttons": {
             "primary": {
                 "background": "#HEX da cor primary",
@@ -161,8 +168,8 @@
                 "borderRadius": "Mesmo do primary ou ligeiramente diferente"
             }
         },
+        // Defina 3 variações de cards: default, elevated (mais destaque), subtle (menos destaque)
         "cards": {
-            "_note": "Defina 3 variações de cards: default, elevated (mais destaque), subtle (menos destaque)",
             "default": {
                 "background": "#HEX - geralmente white ou lightest neutral",
                 "borderRadius": "Ex: '12px', '16px', '24px'",
@@ -195,8 +202,8 @@
                 "large": "Ex: '32px', '40px'",
                 "feature": "Para feature cards. Ex: '48px', '56px'"
             },
+            // Se ícones tiverem container/background
             "container": {
-                "_note": "Se ícones tiverem container/background",
                 "background": "#HEX - geralmente lightest neutral ou accent light",
                 "borderRadius": "Ex: '8px', '12px', '50%' (circular)",
                 "padding": "Ex: '12px', '16px'"
@@ -222,8 +229,8 @@
             "focusShadow": "Ex: '0 0 0 3px rgba(primary, 0.1)'"
         }
     },
-    "imagery": {
-        "_instructions": "Diretrizes para imagens, fotos e ilustrações",
+    // Diretrizes para imagens, fotos e ilustrações
+    imagery: {
         "style": "Descreva o estilo visual das imagens. Ex: 'Warm lifestyle photos', 'Minimalist illustrations', 'Bold graphic photography'",
         "treatment": {
             "photos": "Tratamento de fotos. Ex: 'Warm color grade', 'High contrast B&W', 'Soft natural lighting'",
@@ -235,8 +242,8 @@
             "elements": "Elementos visuais específicos. Ex: 'Floating UI cards', 'Data visualization', 'Brand iconography'"
         }
     },
-    "backgrounds": {
-        "_instructions": "Padrões e tratamentos de backgrounds",
+    // Padrões e tratamentos de backgrounds
+    backgrounds: {
         "patterns": {
             "texturedGradient": "Ex: 'Noise texture 2-3% opacity', 'Grain overlay', 'None - flat colors'",
             "meshGradient": "Ex: 'Subtle gradient blend between neutrals', 'Bold color transitions', 'No gradients'"
@@ -247,8 +254,8 @@
             "special": "Backgrounds especiais. Ex: 'Textured cream for trust sections', 'Gradient for pricing'"
         }
     },
-    "animations": {
-        "_instructions": "Filosofia e implementação de animações",
+    // Filosofia e implementação de animações
+    animations: {
         "philosophy": "Descreva abordagem de animação. Ex: 'Subtle and purposeful', 'Bold and energetic', 'Minimal motion'",
         "types": {
             "fadeInUp": {
@@ -272,8 +279,8 @@
             "links": "Ex: 'Underline left to right', 'Color fade', 'Bold on hover'"
         }
     },
-    "layout": {
-        "_instructions": "Estrutura e organização do layout",
+    // Estrutura e organização do layout
+    layout: {
         "philosophy": "Filosofia de layout. Ex: 'Generous spacing, clear hierarchy', 'Compact efficiency', 'Asymmetric and bold'",
         "hero": {
             "layout": "Estrutura do hero. Ex: '50/50 split', 'Centered single column', '60/40 text/image'",
@@ -289,31 +296,31 @@
             "maxWidth": "Ex: '600px', '800px', 'full width'"
         }
     },
-    "trustElements": {
-        "_instructions": "Elementos que constroem credibilidade e confiança",
+    // Elementos que constroem credibilidade e confiança
+    trustElements: {
+        // Barra de logos de clientes/parceiros
         "logoBar": {
-            "_note": "Barra de logos de clientes/parceiros",
             "style": "Ex: 'Grayscale logos', 'Full color', 'Monochrome primary color'",
             "opacity": "Ex: '60-70%', '100%'",
             "size": "Ex: 'Height 24-32px', 'Height 40px'"
         },
+        // Números/estatísticas de impacto
         "stats": {
-            "_note": "Números/estatísticas de impacto",
             "style": "Ex: 'Large serif numbers, small labels', 'Bold sans numbers'",
             "numberSize": "Ex: '3rem - 4rem', '2.5rem'",
             "labelSize": "Ex: '0.875rem', '1rem'"
         },
+        // Checkmarks/bullets para listas de features/benefícios
         "checkmarks": {
-            "_note": "Checkmarks/bullets para listas de features/benefícios",
             "icon": "Ícone usado. Ex: 'Check from Lucide', 'CheckCircle', 'Custom SVG'",
             "color": "#HEX - geralmente primary ou accent",
             "style": "Ex: 'Inline with text', 'Separate with background circle'"
         }
     },
-    "footer": {
+    footer: {
         "background": "#HEX - geralmente white, lightest neutral, ou primary",
         "layout": "Estrutura do footer. Ex: '4-column grid', '3 columns + logo', 'Single centered column'",
         "divider": "Divisor acima do footer. Ex: '1px solid rgba(0,0,0,0.08)', 'None'",
         "bottomBar": "Barra inferior. Ex: 'Copyright + links, small muted text'"
     }
-}
+};

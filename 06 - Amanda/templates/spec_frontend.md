@@ -2,10 +2,10 @@
 
 ## 0. Design System Reference
 > [!IMPORTANT]  
-> **This spec MUST use tokens from `design_system.json`.**  
+> **This spec MUST use tokens from `design_system.tokens.js`.**  
 > All colors, typography, and spacing values below are **token references**, not hardcoded values.
 
-**Design System File:** `../../docs/04-design/design_system.json`
+**Design System File:** `../../docs/04-design/design_system.tokens.js`
 **Visual Preview:** `../../docs/04-design/design_system_preview.html`
 **User Story:** [US-XXX]
 **Objetivo:** [Breve descrição do fluxo]
@@ -13,7 +13,7 @@
 ---
 
 ## 1. Token Mapping (From the Design System)
-> Extract and list the specific tokens you will use from `design_system.json`.
+> Extract and list the specific tokens you will use from `design_system.tokens.js`.
 
 | Token Category | Token Name | Value (for reference) | Usage in this Spec |
 |----------------|------------|----------------------|-------------------|
@@ -96,7 +96,7 @@
 ---
 
 ## 5. Animations & Micro-interactions
-**Source:** `design_system.json` animation philosophy + custom
+**Source:** `design_system.tokens.js` animation philosophy + custom
 
 | Interaction | Animation | Duration | Easing |
 |-------------|-----------|----------|--------|

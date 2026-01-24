@@ -30,7 +30,7 @@ When given a design screenshot or inspiration, identify:
 - Define elevation levels
 
 ### 2. Generate Design Tokens
-Create or update the `design_system.json` with extracted tokens:
+Create or update the `design_system.tokens.js` with extracted tokens:
 - All colors as CSS variables
 - Typography scale using `clamp()` for fluid responsiveness
 - Spacing system based on 8px grid
