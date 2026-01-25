@@ -6,156 +6,475 @@
     <title>Design System Preview - [BRAND_NAME]</title>
     <style>
         /* ==========================================
-           FALLBACK TOKENS & BASE STYLES
+           DESIGN TOKENS - SUBSTITUA PELOS VALORES A SEREM USADOS NO PROJETO
            ========================================== */
         :root {
-            /* Fallback colors */
-            --color-background: #FFFFFF;
-            --color-surface: #F8FAFC;
-            --color-primary: #3B82F6;
-            --color-secondary: #8B5CF6;
-            --color-text-primary: #1E293B;
-            --color-text-secondary: #64748B;
-            --color-border: #E2E8F0;
-            /* Fallback fonts */
-            --font-display: 'Georgia', serif;
-            --font-body: 'Inter', sans-serif;
+            /* CORES - Semântica obrigatória */
+            --color-background: ;           /* Cor dominante (60-70% da tela) */
+            --color-surface: ;              /* Cards, containers elevados */
+            --color-primary: ;              /* Ação principal, CTAs */
+            --color-secondary: ;            /* Ação secundária, highlights */
+            --color-accent: ;               /* Destaques, badges, alertas */
+            --color-text-primary: ;         /* Texto principal */
+            --color-text-secondary: ;       /* Texto secundário, labels */
+            --color-text-muted: ;           /* Placeholders, disabled */
+            --color-border: ;               /* Bordas, divisores */
+            --color-success: ;              /* Estados de sucesso */
+            --color-error: ;                /* Estados de erro */
+            
+            /* TIPOGRAFIA */
+            --font-display: ;      /* Títulos, headings */
+            --font-body: ;         /* Corpo, parágrafos */
+            
+            /* SPACING */
+            --space-xs: ;
+            --space-sm: ;
+            --space-md: ;
+            --space-lg: ;
+            --space-xl: ;
+            --space-2xl: ;
         }
 
-        /* Base styles remain the same */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        /* ==========================================
+           RESET & BASE
+           ========================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: var(--font-body);
             color: var(--color-text-primary);
             background: var(--color-background);
-            line-height: 1.6;
+            line-height: ;
         }
+
+        /* ==========================================
+           TYPOGRAPHY SCALE
+           ========================================== */
         h1, h2, h3, h4, h5, h6 {
             font-family: var(--font-display);
-            line-height: 1.2;
-            margin-bottom: 1rem;
+            line-height: ;
+            margin-bottom: var(--space-md);
         }
-        h1 { font-size: 3rem; } h2 { font-size: 2.25rem; } h3 { font-size: 1.875rem; }
-        p { margin-bottom: 1rem; color: var(--color-text-secondary); }
-        .container { max-width: 1200px; margin: 0 auto; padding: 3rem; }
-        .section { margin-bottom: 3rem; padding: 2rem; background: var(--color-surface); border-radius: 12px; }
-        .section-title { color: var(--color-text-primary); border-bottom: 2px solid var(--color-border); padding-bottom: 0.5rem; margin-bottom: 1.5rem; }
-        .btn { padding: 0.75rem 1.5rem; border-radius: 8px; border: none; font-family: var(--font-body); font-size: 1rem; font-weight: 500; cursor: pointer; transition: all 0.2s; text-decoration: none; }
-        .btn-primary { background: var(--color-primary); color: var(--color-text-on-primary, #FFF); }
-        .btn-primary:hover { opacity: 0.9; }
-        .color-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
-        .color-swatch { border: 1px solid var(--color-border); border-radius: 8px; overflow: hidden; }
-        .color-preview { height: 100px; width: 100%; }
-        .color-info { padding: 1rem; background: white; }
-        .color-name { font-weight: 600; text-transform: capitalize; }
-        .color-hex { font-family: monospace; color: var(--color-text-secondary); }
+
+        h1 { font-size: ; font-weight: ; }
+        h2 { font-size: ; font-weight: ; }
+        h3 { font-size: ; font-weight: ; }
+        h4 { font-size: ; font-weight: ; }
+        h5 { font-size: ; font-weight: ; }
+        h6 { font-size: ; font-weight: ; }
+
+        p {
+            margin-bottom: var(--space-md);
+            color: var(--color-text-secondary);
+        }
+
+        /* ==========================================
+           COMPONENTS
+           ========================================== */
+        .container {
+            max-width: ;
+            margin: ;
+            padding: var(--space-2xl);
+        }
+
+        .section {
+            margin-bottom: var(--space-2xl);
+            padding: var(--space-xl);
+            background: var(--color-surface);
+            border-radius: ;
+        }
+
+        .section-title {
+            color: var(--color-text-primary);
+            border-bottom: ;
+            padding-bottom: var(--space-sm);
+            margin-bottom: var(--space-lg);
+        }
+
+        /* Buttons */
+        .btn {
+            padding: var(--space-sm) var(--space-lg);
+            border-radius: ;
+            border: ;
+            font-family: var(--font-body);
+            font-size: ;
+            font-weight: ;
+            cursor: pointer;
+            transition: ;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: var(--color-primary);
+            color: ;
+        }
+
+        .btn-primary:hover {
+            opacity: ;
+            transform: ;
+        }
+
+        .btn-secondary {
+            background: var(--color-secondary);
+            color: ;
+        }
+
+        .btn-secondary:hover {
+            opacity: ;
+        }
+
+        .btn-outline {
+            background: ;
+            color: var(--color-primary);
+            border: ;
+        }
+
+        .btn-outline:hover {
+            background: var(--color-primary);
+            color: ;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: var(--space-md);
+            flex-wrap: wrap;
+        }
+
+        /* Cards */
+        .card {
+            background: ;
+            border: ;
+            border-radius: ;
+            padding: var(--space-lg);
+            margin-bottom: var(--space-md);
+        }
+
+        .card-title {
+            color: var(--color-text-primary);
+            margin-bottom: var(--space-sm);
+        }
+
+        .card-text {
+            color: var(--color-text-secondary);
+            margin-bottom: var(--space-md);
+        }
+
+        /* Forms */
+        .form-group {
+            margin-bottom: var(--space-lg);
+        }
+
+        label {
+            display: block;
+            margin-bottom: var(--space-xs);
+            color: var(--color-text-primary);
+            font-weight: ;
+        }
+
+        input, textarea {
+            width: ;
+            padding: var(--space-sm) var(--space-md);
+            border: ;
+            border-radius: ;
+            font-family: var(--font-body);
+            font-size: ;
+            color: var(--color-text-primary);
+            background: ;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: ;
+        }
+
+        input::placeholder {
+            color: var(--color-text-muted);
+        }
+
+        /* Badges */
+        .badge {
+            display: inline-block;
+            padding: var(--space-xs) var(--space-sm);
+            border-radius: ;
+            font-size: ;
+            font-weight: ;
+        }
+
+        .badge-primary { background: var(--color-primary); color: ; }
+        .badge-accent { background: var(--color-accent); color: ; }
+        .badge-success { background: var(--color-success); color: ; }
+        .badge-error { background: var(--color-error); color: ; }
+
+        /* Alerts */
+        .alert {
+            padding: var(--space-md);
+            border-radius: ;
+            margin-bottom: var(--space-md);
+            border-left: ;
+        }
+
+        .alert-success {
+            background: ;
+            border-color: var(--color-success);
+            color: var(--color-success);
+        }
+
+        .alert-error {
+            background: ;
+            border-color: var(--color-error);
+            color: var(--color-error);
+        }
+
+        /* Color Palette Display */
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-md);
+            margin-top: var(--space-lg);
+        }
+
+        .color-swatch {
+            border: ;
+            border-radius: ;
+            overflow: hidden;
+        }
+
+        .color-preview {
+            height: ;
+            width: ;
+        }
+
+        .color-info {
+            padding: var(--space-md);
+            background: ;
+        }
+
+        .color-name {
+            font-weight: ;
+            color: var(--color-text-primary);
+            margin-bottom: var(--space-xs);
+        }
+
+        .color-hex {
+            font-family: ;
+            color: var(--color-text-secondary);
+            font-size: ;
+            margin-bottom: var(--space-xs);
+        }
+
+        .color-usage {
+            font-size: ;
+            color: var(--color-text-muted);
+            font-style: ;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: var(--space-2xl) 0;
+            background: ;
+            color: ;
+            border-radius: ;
+            margin-bottom: var(--space-2xl);
+        }
+
+        .hero h1 {
+            color: ;
+            margin-bottom: var(--space-md);
+        }
+
+        .hero p {
+            color: ;
+            font-size: ;
+            margin-bottom: var(--space-xl);
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="section">
-            <h1 id="brand-name">[BRAND_NAME] Design System</h1>
-            <p id="brand-description">Preview dinâmico dos tokens definidos em <strong>design_system.tokens.js</strong></p>
-        </div>
-
-        <div class="section">
-            <h2 class="section-title">Princípios de Design</h2>
-            <p><strong>Keywords:</strong> <span id="keywords"></span></p>
-            <p><strong>Evitar:</strong> <span id="avoid"></span></p>
-        </div>
-
-        <div class="section">
-            <h2 class="section-title">Paleta de Cores Semântica</h2>
-            <div class="color-grid" id="color-palette">
-                <!-- Swatches de cor serão inseridos aqui pelo JavaScript -->
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1>[BRAND_NAME] Design System</h1>
+            <p>Demonstração da hierarquia cromática e semântica</p>
+            <div class="btn-group" style="justify-content: center;">
+                <button class="btn btn-primary">Primary Action</button>
+                <button class="btn btn-outline" style="border-color: ; color: ;">Secondary Action</button>
             </div>
         </div>
 
+        <!-- Typography Section -->
         <div class="section">
             <h2 class="section-title">Tipografia</h2>
-            <div id="typography-info">
-                <!-- Info de tipografia será inserida aqui -->
+            <h1>Heading 1 - Display Font</h1>
+            <h2>Heading 2 - Display Font</h2>
+            <h3>Heading 3 - Display Font</h3>
+            <p>Este é um parágrafo usando a fonte Body. Lorem ipsum dolor sit amet, consectetur adipiscing elit. A tipografia é a base de toda comunicação visual e precisa ser legível em diferentes tamanhos.</p>
+            <p style="color: var(--color-text-muted); font-size: ;">Texto secundário em tamanho menor para labels e metadados.</p>
+        </div>
+
+        <!-- Buttons Section -->
+        <div class="section">
+            <h2 class="section-title">Botões & Ações</h2>
+            <div class="btn-group">
+                <button class="btn btn-primary">Primary Button</button>
+                <button class="btn btn-secondary">Secondary Button</button>
+                <button class="btn btn-outline">Outline Button</button>
             </div>
         </div>
 
+        <!-- Cards Section -->
         <div class="section">
-            <h2 class="section-title">Exemplo de Componente</h2>
-            <button class="btn btn-primary">Ação Primária</button>
+            <h2 class="section-title">Cards & Containers</h2>
+            <div class="card">
+                <h3 class="card-title">Card Title</h3>
+                <p class="card-text">Este card demonstra como o conteúdo fica organizado em containers elevados. A cor de surface contrasta sutilmente com o background.</p>
+                <div style="display: flex; gap: var(--space-sm);">
+                    <span class="badge badge-primary">Primary</span>
+                    <span class="badge badge-accent">Accent</span>
+                    <span class="badge badge-success">Success</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Forms Section -->
+        <div class="section">
+            <h2 class="section-title">Formulários</h2>
+            <div class="form-group">
+                <label for="name">Nome Completo</label>
+                <input type="text" id="name" placeholder="Digite seu nome">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="seu@email.com">
+            </div>
+            <div class="form-group">
+                <label for="message">Mensagem</label>
+                <textarea id="message" rows="4" placeholder="Escreva sua mensagem aqui..."></textarea>
+            </div>
+            <button class="btn btn-primary">Enviar</button>
+        </div>
+
+        <!-- Alerts Section -->
+        <div class="section">
+            <h2 class="section-title">Alertas & Estados</h2>
+            <div class="alert alert-success">
+                ✓ Operação concluída com sucesso! Seus dados foram salvos.
+            </div>
+            <div class="alert alert-error">
+                ✕ Erro ao processar solicitação. Por favor, tente novamente.
+            </div>
+        </div>
+
+        <!-- Color Palette Section -->
+        <div class="section">
+            <h2 class="section-title">Paleta de Cores - Hierarquia Cromática</h2>
+            <p style="margin-bottom: var(--space-lg);">Abaixo está a justificativa semântica de cada cor escolhida:</p>
+            
+            <div class="color-grid">
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: var(--color-background);"></div>
+                    <div class="color-info">
+                        <div class="color-name">Background</div>
+                        <div class="color-hex">[PREENCHER HEX]</div>
+                        <div class="color-usage">Cor dominante (60-70% da interface). Base neutra para todo conteúdo.</div>
+                    </div>
+                </div>
+
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: var(--color-surface);"></div>
+                    <div class="color-info">
+                        <div class="color-name">Surface</div>
+                        <div class="color-hex">[PREENCHER HEX]</div>
+                        <div class="color-usage">Cards e containers elevados. Contraste sutil com background.</div>
+                    </div>
+                </div>
+
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: var(--color-primary);"></div>
+                    <div class="color-info">
+                        <div class="color-name">Primary Action</div>
+                        <div class="color-hex">[PREENCHER HEX]</div>
+                        <div class="color-usage">CTAs principais, links, estados ativos. Contraste 4.5:1 com background.</div>
+                    </div>
+                </div>
+
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: var(--color-secondary);"></div>
+                    <div class="color-info">
+                        <div class="color-name">Secondary Action</div>
+                        <div class="color-hex">[PREENCHER HEX]</div>
+                        <div class="color-usage">Ações secundárias, highlights, elementos decorativos.</div>
+                    </div>
+                </div>
+
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: var(--color-accent);"></div>
+                    <div class="color-info">
+                        <div class="color-name">Accent</div>
+                        <div class="color-hex">[PREENCHER HEX]</div>
+                        <div class="color-usage">Destaques, badges, alertas importantes, call-to-attention.</div>
+                    </div>
+                </div>
+
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: var(--color-text-primary);"></div>
+                    <div class="color-info">
+                        <div class="color-name">Text Primary</div>
+                        <div class="color-hex">[PREENCHER HEX]</div>
+                        <div class="color-usage">Texto principal, headings. Contraste máximo para legibilidade.</div>
+                    </div>
+                </div>
+
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: var(--color-text-secondary);"></div>
+                    <div class="color-info">
+                        <div class="color-name">Text Secondary</div>
+                        <div class="color-hex">[PREENCHER HEX]</div>
+                        <div class="color-usage">Texto secundário, labels, metadados. Contraste WCAG AA.</div>
+                    </div>
+                </div>
+
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: var(--color-border);"></div>
+                    <div class="color-info">
+                        <div class="color-name">Border</div>
+                        <div class="color-hex">[PREENCHER HEX]</div>
+                        <div class="color-usage">Bordas, divisores, separadores visuais sutis.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Font Pairing Section -->
+        <div class="section">
+            <h2 class="section-title">Font Pairing</h2>
+            <div style="display: grid; gap: var(--space-lg);">
+                <div>
+                    <h4>Display Font (Títulos)</h4>
+                    <p style="font-family: var(--font-display); font-size: ; color: var(--color-text-primary);">
+                        The quick brown fox jumps over the lazy dog
+                    </p>
+                    <p style="color: var(--color-text-muted); font-size: ;">
+                        Usado para: H1, H2, H3, títulos de seções, chamadas principais
+                    </p>
+                </div>
+                <div>
+                    <h4>Body Font (Textos)</h4>
+                    <p style="font-family: var(--font-body); font-size: ; color: var(--color-text-secondary);">
+                        The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Esta fonte foi escolhida para garantir legibilidade em blocos longos de texto.
+                    </p>
+                    <p style="color: var(--color-text-muted); font-size: ;">
+                        Usado para: Parágrafos, labels, botões, inputs, textos gerais
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
-
-    <script type="module">
-        // Importa os tokens do novo arquivo.
-        // Se este HTML for movido, o caminho de importação precisa ser ajustado.
-        import { tokens } from './design_system.tokens.js';
-
-        // Função para injetar os tokens na página
-        function applyDesignTokens(tokens) {
-            const root = document.documentElement;
-
-            // 1. Atualiza o título e a descrição
-            document.title = `Design System Preview - ${tokens.designPrinciples.overall}`;
-            document.getElementById('brand-name').textContent = `${tokens.designPrinciples.overall}`;
-            document.getElementById('brand-description').innerHTML = `Preview dinâmico dos tokens definidos em <strong>design_system.tokens.js</strong>. Essência: <em>${tokens.designPrinciples.overall}</em>`;
-            
-            // 2. Preenche os princípios de design
-            document.getElementById('keywords').textContent = tokens.designPrinciples.keywords.join(', ');
-            document.getElementById('avoid').textContent = tokens.designPrinciples.avoid.join(', ');
-
-            // 3. Aplica as cores semânticas como variáveis CSS
-            const paletteContainer = document.getElementById('color-palette');
-            paletteContainer.innerHTML = ''; // Limpa o container
-            for (const [group, colors] of Object.entries(tokens.colorPalette.semantic)) {
-                for (const [name, value] of Object.entries(colors)) {
-                    const tokenName = `--color-${group}-${name}`;
-                    // Tenta avaliar o valor (ex: "primitiveColors.neutral[0]")
-                    let finalValue = value;
-                    try {
-                        // Isso é um truque para avaliar a referência, ex: 'primitiveColors.neutral[50]'
-                        finalValue = new Function('primitiveColors', `return ${value}`)(tokens.colorPalette.primitive);
-                    } catch (e) {
-                        // Se falhar, usa o valor como está (ex: #HEX)
-                        console.warn(`Could not evaluate token value: ${value}. Using it directly.`);
-                    }
-                    
-                    root.style.setProperty(tokenName, finalValue);
-
-                    // Cria o swatch de cor no preview
-                    const swatch = document.createElement('div');
-                    swatch.className = 'color-swatch';
-                    swatch.innerHTML = `
-                        <div class="color-preview" style="background-color: ${finalValue};"></div>
-                        <div class="color-info">
-                            <div class="color-name">${group} ${name}</div>
-                            <div class="color-hex">${finalValue}</div>
-                        </div>
-                    `;
-                    paletteContainer.appendChild(swatch);
-                }
-            }
-             // Aplica a cor do texto do botão primário
-            root.style.setProperty('--color-text-on-primary', tokens.colorPalette.semantic.text.onPrimary);
-            
-            // 4. Aplica as fontes
-            const headingFont = tokens.typography.fontFamilies.headings.family;
-            const bodyFont = tokens.typography.fontFamilies.body.family;
-            root.style.setProperty('--font-display', headingFont);
-            root.style.setProperty('--font-body', bodyFont);
-            
-            const typoContainer = document.getElementById('typography-info');
-            typoContainer.innerHTML = `
-                <h3>Fonte de Título (Display): <span style="font-family: ${headingFont};">${headingFont}</span></h3>
-                <p>Usada para todos os headings (H1, H2, etc).</p>
-                <hr style="margin: 1rem 0; border: 1px solid var(--color-border);">
-                <h3>Fonte de Corpo (Body): <span style="font-family: ${bodyFont};">${bodyFont}</span></h3>
-                <p>Usada para parágrafos e textos gerais, garantindo legibilidade.</p>
-            `;
-
-            console.log('Tokens aplicados com sucesso!', tokens);
-        }
-
-        // Executa a função
-        applyDesignTokens(tokens);
-    </script>
 </body>
 </html>
