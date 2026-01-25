@@ -37,11 +37,12 @@ Este repositório contém a **Crew de Agentes Especialistas** da metodologia Vib
 
 ### Camada de Design
 - **04 - Beatriz (Brand):** Guardiã da identidade visual. Cria Design System e Brand Book.
-- **05 - Pamela (Copy):** Voz do produto. Define tom, microcopy e mensagens.
-- **06 - Amanda (UI/UX):** Tradutora visual. Cria specs de frontend e workflows de página.
+- **05 - Pamela (Copy)::** Voz do produto. Define tom, microcopy e mensagens.
+- **06 - Lucas (Estrategista Frontend):** Arquiteto técnico da UI. Seleciona e valida o stack tecnológico de frontend.
 
 ### Camada de Execução
-- **07 - Helena (Prompt Engineer):** Maestra da IA. Transforma requisitos em PRPs cirúrgicos (usando prompts estruturados em XML para precisão).
+- **07 - Amanda (UI/UX):** Tradutora visual. Cria specs de frontend e workflows de página com base no stack tecnológico selecionado.
+- **08 - Helena (Prompt Engineer):** Maestra da IA. Transforma requisitos em PRPs cirúrgicos (usando prompts estruturados em XML para precisão).
 - **09 - Antigravity / Gemini (Code Agent):** Executa o código e realiza QA automatizado consumindo os documentos gerados pela crew.
 
 ---
@@ -92,6 +93,8 @@ PO (Ideia) → Gabriel (Briefing) → Ricardo (PRD + Stories)
                 Sofia (Arch)        Beatriz (Brand)    Pamela (Copy)
                     ↓                   ↓                   ↓
                     └───────────────────┼───────────────────┘
+                                        ↓
+                                  Lucas (Estrategista FE)
                                         ↓
                                   Amanda (UI/UX)
                                         ↓

@@ -1,0 +1,29 @@
+- step: 1
+  action: "Analisar Requisitos"
+  description: "Receber o Briefing (Gabriel) e o PRD (Ricardo). Dissecar os requisitos funcionais e não-funcionais, com foco especial nas necessidades de interatividade, animação, visualização de dados e experiência do usuário."
+  outputs:
+    - "Lista de desafios técnicos e requisitos de UI."
+
+- step: 2
+  action: "Pesquisar e Avaliar Tecnologias"
+  description: "Com base nos requisitos, pesquisar e avaliar bibliotecas e frameworks. Consultar a base de conhecimento para guias e melhores práticas (D3.js, Three.js, Framer Motion, etc.)."
+  outputs:
+    - "Comparativo de tecnologias (prós e contras para o contexto do projeto)."
+
+- step: 3
+  action: "Definir Stack Frontend"
+  description: "Selecionar a combinação ótima de tecnologias. Considerar a sinergia entre as bibliotecas, o impacto na performance e a familiaridade da equipe."
+  outputs:
+    - "Lista final de bibliotecas e ferramentas."
+
+- step: 4
+  action: "Documentar a Decisão"
+  description: "Preencher o template 'tech_stack_spec.md' localizado em '06 - Lucas/templates/' e salvar o resultado em 'docs/06-frontend-strategy/tech_stack_spec.md'. Justificar cada escolha. Detalhar por que uma tecnologia foi escolhida em detrimento de outra e fornecer links para documentação relevante."
+  outputs:
+    - "Documento de Especificação do Stack Frontend (docs/06-frontend-strategy/tech_stack_spec.md)."
+
+- step: 5
+  action: "Apresentar e Alinhar"
+  description: "Apresentar a especificação para Amanda e Helena, garantindo que elas entendam as ferramentas escolhidas e como elas se encaixam no plano de desenvolvimento."
+  outputs:
+    - "Validação do stack pela equipe de implementação."

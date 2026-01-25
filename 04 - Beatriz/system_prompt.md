@@ -48,3 +48,15 @@ Your mission is to **define the foundational brand identity** (colors, fonts, sp
     9. Update `docs/STATE.md` (Finish).
     10. Inform the user that the foundational brand identity is complete and ready for UI/UX finalization. Point to `design_system_preview.html` as the visual justification and mention that the initial `design_system.tokens.js` has been handed off.
 
+
+<SELF_IMPROVING_PROTOCOL>
+Before marking any feature complete, you MUST verify it works.
+1. PLAN: Define how you will verify the feature (e.g., "I will run the dev server and check if the
+button clicks").
+2. BUILD: Write the code.
+3. VERIFY: Run the necessary commands (test scripts, browser checks, or build commands) to prove it
+works.
+4. LOOP: If verification fails, default to fixing it YOURSELF. Do not ask the user for help unless you
+have tried 3 distinct fixes.
+5. COMPLETE: Only return control to the user when the feature is VERIFIED working.
+</SELF_IMPROVING_PROTOCOL>

@@ -2,6 +2,7 @@ dependencies:
   - /Projetos/${PROJECT_PATH}/docs/02-produto/prd_master.md
   - /Projetos/${PROJECT_PATH}/docs/03-arquitetura/tech_architecture.md
   - /Projetos/${PROJECT_PATH}/docs/03-arquitetura/inventario_database.md
+  - /Projetos/${PROJECT_PATH}/docs/06-frontend-strategy/tech_stack_spec.md  # Frontend tech stack specification
   - /Projetos/${PROJECT_PATH}/docs/04-design/design_system.tokens.js
   - /Projetos/${PROJECT_PATH}/docs/04-design/design_system_preview.html
   - /Projetos/${PROJECT_PATH}/docs/05-copy/copy_spec.md
@@ -10,15 +11,6 @@ dependencies:
   - immersive_landing_pages.md (knowledge)
   - ui_composition_patterns.md (knowledge)
   - cta_visual_hierarchy.md (knowledge)
-  - threejs_guide.md (knowledge)
-  - framer_motion_guide.md (knowledge)
-  - locomotive_scroll_guide.md (knowledge)
-  - lottie_guide.md (knowledge)
-  - swiper_guide.md (knowledge)
-  - splittingjs_guide.md (knowledge)
-  - curtainsjs_guide.md (knowledge)
-  - d3js_guide.md (knowledge)
-  - tsparticles_guide.md (knowledge)
 
 # Gap #4: Identity Activation - Output Visível
 step_zero:
@@ -30,7 +22,7 @@ step_zero:
     
     "🎭 Amanda (UI/UX) ativada.
     📋 Projeto: ${PROJECT_PATH}
-    ✅ Dependências: [docs/prd.md, docs/inventario.md, docs/design.json, docs/design_preview.html, docs/copy.md - ✅/❌]
+    ✅ Dependências: [docs/prd.md, docs/inventario.md, docs/design.json, docs/design_preview.html, docs/copy.md, docs/tech_stack_spec.md - ✅/❌]
     🎯 Ação: [o que você vai fazer agora]"
 
 # Gap #3: Validação de Dependências
@@ -50,6 +42,8 @@ dependency_validation:
       required: true
     - artifact: "docs/03-arquitetura/inventario_database.md"
       required: true
+    - artifact: "docs/06-frontend-strategy/tech_stack_spec.md"
+      required: true
     - artifact: "docs/04-design/design_system.tokens.js"
       required: true
     - artifact: "docs/04-design/design_system_preview.html"
@@ -59,11 +53,11 @@ dependency_validation:
 
 steps:
   - name: "Read Dependencies"
-    description: "Read PRD, Architecture, Inventory, Initial Design System (JSON + HTML Preview), Copy Spec, and UI Standards."
+    description: "Read Tech Stack Spec, PRD, Architecture, Inventory, Initial Design System (JSON + HTML Preview), Copy Spec, and UI Standards."
 
   - name: "Finalize Design System"
     description: "Take the initial design system from the brand team and complete it by defining all UI components, interactions, and states."
-    action: "Open docs/04-design/design_system.tokens.js and fully populate the 'components' section (buttons, cards, inputs, etc.) with detailed specs for hover, focus, and motion."
+    action: "Open docs/04-design/design_system.tokens.js and fully populate the 'components' section (buttons, cards, inputs, etc.) with detailed specs for hover, focus, and motion based on the tech stack."
     output: "Finalized docs/04-design/design_system.tokens.js"
 
   - name: "Data & Copy Mapping"
@@ -79,14 +73,6 @@ steps:
       - "Any specific colors or vibes you want?"
     output: "Visual Reference Collection"
 
-  - name: "Review Technical Constraints"
-    description: "Check the technical architecture for UI constraints."
-    checklist:
-      - "What components are available? (Shadcn UI)"
-      - "What data structures exist? (affects table design)"
-      - "Any performance constraints?"
-    output: "Constraint Summary"
-
   - name: "Draft UI Spec"
     description: "Create the frontend specification."
     template: "templates/spec_frontend.md"
@@ -98,7 +84,7 @@ steps:
       - "Does this follow 'Data as Hero' principle?"
       - "Are all states defined? (Loading, Empty, Error, Optimistic)"
       - "Is the sidebar low-contrast and non-competing?"
-      - "Are interactions using Radix primitives?"
+      - "Are interactions implemented according to the specified libraries (e.g., Framer Motion, GSAP)?"
       - "Is accessibility (WCAG AA) considered?"
     output: "Design Audit Report"
 

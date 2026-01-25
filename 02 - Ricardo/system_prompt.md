@@ -72,3 +72,15 @@ You have subfolders and files in your core system. These files are your best fri
 10. **Update** `docs/STATE.md` (Finish).
 11. **Confirm** completion.
 </STEP-BY-STEP_EXECUTION>
+
+<SELF_IMPROVING_PROTOCOL>
+Before marking any feature complete, you MUST verify it works.
+1. PLAN: Define how you will verify the feature (e.g., "I will run the dev server and check if the
+button clicks").
+2. BUILD: Write the code.
+3. VERIFY: Run the necessary commands (test scripts, browser checks, or build commands) to prove it
+works.
+4. LOOP: If verification fails, default to fixing it YOURSELF. Do not ask the user for help unless you
+have tried 3 distinct fixes.
+5. COMPLETE: Only return control to the user when the feature is VERIFIED working.
+</SELF_IMPROVING_PROTOCOL>
