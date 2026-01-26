@@ -8,11 +8,11 @@
 
 # 🚀 Vibe Code Crew | StarIAup
 
-[🇧🇷 Português](readme.md) | [🇺🇸 English](readme.en.md)
+[🇧🇷 Português](readme.md) | [🇺🇸 English](readme.en.md) [a fazer]
 
 **Desenvolvimento de Software Guiado por IA, Estruturado por Humanos.**
 
-Este repositório contém a **Crew de Agentes Especialistas** da metodologia Vibe Code, desenvolvida pela StarIAup. Uma abordagem revolucionária que combina o poder da IA generativa com processos rigorosos de engenharia de software para **minimizar custos de tokens, eliminar retrabalho e entregar produtos de qualidade**.
+Este repositório contém a **Crew de Prompts** da metodologia Vibe Code, desenvolvida pela StarIAup. Uma abordagem que combina o poder da IA generativa com processos rigorosos de engenharia de software para **minimizar custos de tokens, eliminar retrabalho e entregar produtos de qualidade**.
 
 ---
 
@@ -24,176 +24,53 @@ Este repositório contém a **Crew de Agentes Especialistas** da metodologia Vib
 - Documentação desatualizada causa alucinações da IA
 - Ausência de QA automatizado resulta em bugs em produção
 
-**Nossa Solução:** Uma crew de 8 agentes especializados com hierarquia clara, documentação como "Single Source of Truth" e validação automatizada em cada etapa.
+**Nossa Solução:** Uma "crew" de prompts especializados que transformam a IA em um time de especialistas (PM, Arquiteto, Designer, Dev), garantindo que cada linha de código tenha um porquê estratégico.
 
 ---
 
-## 👥 A Crew
+## ⚡ Agentic Workflow
 
-### Camada de Estratégia
-- **01 - Gabriel (Orchestrator):** Inicia projetos, mantém o `STATE.md`, configura repositórios e prepara o terreno.
-- **02 - Ricardo (PM):** Define o produto. Cria PRDs, Épicos, User Stories e gerencia o `ROADMAP.md`.
-- **03 - Sofia (CTO):** Autoridade técnica suprema. Define arquitetura, inventário de dados e RLS.
-
-### Camada de Design
-- **04 - Beatriz (Brand):** Guardiã da identidade visual. Cria Design System e Brand Book.
-- **05 - Pamela (Copy)::** Voz do produto. Define tom, microcopy e mensagens.
-- **06 - Lucas (Estrategista Frontend):** Arquiteto técnico da UI. Seleciona e valida o stack tecnológico de frontend.
-
-### Camada de Execução
-- **07 - Amanda (UI/UX):** Tradutora visual. Cria specs de frontend e workflows de página com base no stack tecnológico selecionado.
-- **08 - Helena (Prompt Engineer):** Maestra da IA. Transforma requisitos em PRPs cirúrgicos (usando prompts estruturados em XML para precisão).
-- **09 - Antigravity / Gemini (Code Agent):** Executa o código e realiza QA automatizado consumindo os documentos gerados pela crew.
+Diferente de um chat comum, aqui trabalhamos com **Fluxos Agênticos**:
+1.  **Contextos Atômicos:** Cada prompt é projetado para uma sessão nova.
+2.  **Documentação Soberana:** Criamos arquivos em `/docs` que servem como a única fonte de verdade para a IA.
+3.  **Papéis Definidos:** A IA assume personas específicas (PM, CTO, Lead Dev) em cada etapa.
 
 ---
 
+## 🛠 Escolha o seu Destino
 
+Navegue pelos diretórios abaixo para acessar os prompts específicos de cada workflow:
 
----
-
-## 📁 Estrutura do Repositório
-
-```
-agentes/
-├── 01 - Gabriel/
-│   ├── system_prompt.md       # Identidade e missão
-│   ├── steps.yaml             # Workflow de execução
-│   ├── vibe_manifesto.md      # Personalidade e monólogo interno
-│   ├── knowledge/             # Base de conhecimento específica
-│   └── templates/             # Templates de artefatos
-├── 02 - Ricardo/
-│   ├── templates/
-│   │   ├── epico.md           # Template de Épico
-│   │   ├── user_story.md      # Template de User Story
-│   │   └── prd_master.md      # Template de PRD
-│   └── ...
-├── 03 - Sofia/
-│   ├── templates/
-│   │   ├── inventario_database.md    # Inventário de DB
-│   │   └── tech_architecture.md      # Arquitetura Técnica
-│   └── ...
-├── ...
-
-└── knowledge/                 # Conhecimento global compartilhado
-    ├── Documentação Completa - Metodologia Vibe Code | StarIAup.md
-    ├── Princípios de Arquitetura Para Vibe Coding.md
-    ├── bmad_protocol.md
-    └── ...
-```
-
----
-
-## 🔄 Fluxo de Trabalho
-
-```
-PO (Ideia) → Gabriel (Briefing) → Ricardo (PRD + Stories)
-                                        ↓
-                    ┌───────────────────┼───────────────────┐
-                    ↓                   ↓                   ↓
-                Sofia (Arch)        Beatriz (Brand)    Pamela (Copy)
-                    ↓                   ↓                   ↓
-                    └───────────────────┼───────────────────┘
-                                        ↓
-                                  Lucas (Estrategista FE)
-                                        ↓
-                                  Amanda (UI/UX)
-                                        ↓
-                                  Helena (PRPs)
-                                        ↓
-                            Antigravity / Gemini (Code + QA)
-                                        ↓
-                                    Deploy ✅
-```
-
----
-
-## 🛠 Como Usar
-
-### 1. Iniciar um Projeto
-Invoque **Gabriel** com sua ideia. Ele criará o `project_brief.md`.
-
-### 2. Definir Produto
-**Ricardo** transforma o briefing em PRD, Épicos e User Stories.
-
-### 3. Arquitetura e Design
-**Sofia** define a estrutura técnica. **Beatriz** e **Pamela** definem identidade. **Amanda** projeta as telas.
-
-### 4. Execução
-**Helena** cria os PRPs. Agentes de código (Antigravity/Gemini) implementam seguindo estritamente a arquitetura da Sofia e os documentos gerados.
-
-### 5. Validação
-### 5. Validação Integrada
-**Antigravity/Gemini** executa testes automatizados e validações de browser (Playwright) durante o próprio ciclo de implementação, garantindo que o código entregue já passou pelos critérios de aceite.
+| Módulo | Descrição | Link |
+| :--- | :--- | :--- |
+| **Landing Page** | Focado em conversão, estética premium e Hero Sections imersivas. | [Acessar Prompts](./Landing%20Page/readme.md) |
+| **Aplicação Web** | Focado em validação de mercado, arquitetura escalável e sistemas complexos. | [Acessar Prompts](./Aplicação%20Web/readme.md) |
 
 ---
 
 ## ⚡ Integração Protocolo GSD
 
-Para maximizar a eficiência e minimizar a "perda de contexto" (quando a IA perde o foco devido a longas conversas), a Crew adota o protocolo **Get Shit Done (GSD)**:
+Para maximizar a eficiência e minimizar a "perda de contexto", a Crew adota o protocolo **Get Shit Done (GSD)**:
 
-1.  **Contextos Atômicos:** Agentes de código devem trabalhar em sessões novas e isoladas para cada tarefa. Sem históricos de conversa longos.
-2.  **Estado Vivo (`STATE.md`):** Gabriel mantém um documento vivo rastreando o pulso, contexto e fase ativa do projeto, garantindo que nenhum agente trabalhe com informações desatualizadas.
-3.  **Mapeamento de Legado (Brownfield):** Para projetos existentes, Sofia executa um protocolo de "Reconhecimento" para mapear `ARCHITECTURE.md` e `CONVENTIONS.md` antes que qualquer código seja tocado.
-4.  **Commits Atômicos:** Cada tarefa concluída pelo agente de código resulta em um git commit isolado e verificável.
-
----
-
-## 🎓 Princípios Fundamentais
-
-1.  **Hierarquia Técnica:** Sofia é a autoridade. Agentes de código obedecem sem desvios.
-2.  **Single Source of Truth:** O Inventário de Database é a única fonte de verdade sobre dados. `STATE.md` é a fonte da verdade para o progresso.
-3.  **Documentation as Code:** Documentação desatualizada = código quebrado.
-4.  **QA Driven:** Critérios de aceite são definidos ANTES do código ser escrito.
-5.  **Vibe Manifesto:** Cada agente tem personalidade e executa monólogo interno antes de agir.
-6.  **Contextos Frescos:** Nunca alimente um agente de execução com todo o histórico. Alimente-o com o Plano + Contexto + Padrões.
-
----
-
-## 📚 Documentação Completa
-
-Consulte `knowledge/Documentação Completa - Metodologia Vibe Code | StarIAup.md` para:
-- Glossário de termos
-- Responsabilidades detalhadas de cada agente
-- Fluxogramas visuais
-- Comparação com desenvolvimento tradicional
+1.  **Estado Vivo (`STATE.md`):** Um documento vivo rastreando o pulso, contexto e fase ativa do projeto.
+2.  **Mapeamento de Legado:** Protocolo de "Reconhecimento" para projetos existentes.
+3.  **Commits Atômicos:** Cada tarefa concluída gera um commit verificável.
 
 ---
 
 ## 🙏 Créditos
 
-Esta metodologia não nasceu do zero. Ela é o resultado de **consumir, adaptar e versionar** o trabalho de gigantes que vieram antes:
+Esta metodologia é o resultado de **consumir, adaptar e versionar** o trabalho de gigantes:
 
-### Influências Fundamentais (~65-78% da estrutura)
-
-**[GlitterCowboy (Get Shit Done)](https://github.com/glittercowboy/get-shit-done)**  
-O sistema GSD forneceu os protocolos para **Engenharia de Contexto** e **Execução Atômica**. A ideia de quebrar planos em tarefas estruturadas em XML e executá-las em janelas de "subagentes" limpas para evitar desperdício de tokens e alucinações é central para nossa Camada de Execução.
-
-**[Brian (BMAD Method)](https://github.com/bmadcode)**  
-O conceito de **construção agentica** com IA vêm diretamente do BMAD. Versionar o desenvolvimento por etapas com "personas" específicas seus próprios passos de execução é a sustentação da metodologia.
-
-**[Deborah Folloni (DebGPT)](https://x.com/dfolloni)**  
-A Deborah, com todo seu conteudo gratuito no youtube, foi a responsável indireta por mais da metade dos princípios fundamentais da metodologia. A forma como cada arquivo deve ser estruturado, os conceitos KISS, DRY, SOLID, entre outros, foram aprendidos com seu conteúdo.
-
-### Nossa Contribuição
-
-Extraímos e adaptamos os principais conceitos das metodologias de DebGPT e BMAD para criar uma metodologia que seja viável para o Vibe Coding. De forma objetiva, traduzimos o que, pra nós, fazia mais sentido e implementamos:
-
-- Hierarquia técnica rígida (Sofia como autoridade)
-- Validação Integrada (QA embutido no agente de execução)
-- Templates estruturados para Épicos e User Stories
-- Fluxo de validação distribuída (dependency_validation)
-- Step Zero visível (personificação forçada)
-
-**Resultado:** Uma metodologia que respeita suas raízes, mas evolui para resolver problemas reais de custo e qualidade no Vibe Coding.
+- **[GlitterCowboy (Get Shit Done)](https://github.com/glittercowboy/get-shit-done):** Protocolos de Engenharia de Contexto.
+- **[Brian (BMAD Method)](https://github.com/bmadcode):** Conceito de construção agêntica.
+- **[Deborah Folloni (DebGPT)](https://x.com/dfolloni):** Princípios fundamentais de KISS, DRY e estruturação técnica.
 
 ---
 
 ## 📄 Licença
 
-Viva o **open source** e o conhecimento compartilhado. Aceitamos menções honrosas, mas cá pra nós, 
-o que importa é aprender e evoluir juntos. **Use livremente.**
-
-Os arquivos podem sofrer alterações e evoluções constantes.
+Viva o **open source**. Use livremente, aprenda e evolua. **Construa algo fodástico.**
 
 ---
 

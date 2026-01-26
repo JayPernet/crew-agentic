@@ -1,4 +1,4 @@
-# Prompt 2: Component Development
+# Component Development
 
 Add a [COMPONENT NAME] to the project using shadcn/ui.
 
