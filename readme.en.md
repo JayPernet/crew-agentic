@@ -8,7 +8,7 @@
 
 # 🚀 Vibe Code Crew | StarIAup
 
-[🇧🇷 Português](readme.md) | [🇺🇸 English](readme.en.md)
+[🇧🇷 Português](readme.md) | [🇺🇸 English](readme.en.md) [a fazer]
 
 **Desenvolvimento de Software Guiado por IA, Estruturado por Humanos.**
 
