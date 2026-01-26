@@ -37,14 +37,29 @@ Diferente de um chat comum, aqui trabalhamos com **Fluxos Agênticos**:
 
 ---
 
-## 🛠 Escolha o seu Destino
+## 🛠 Como Usar
 
-Navegue pelos diretórios abaixo para acessar os prompts específicos de cada workflow:
+Para iniciar um projeto utilizando esta Crew, siga estes passos:
 
-| Módulo | Descrição | Link |
-| :--- | :--- | :--- |
-| **Landing Page** | Focado em conversão, estética premium e Hero Sections imersivas. | [Acessar Prompts](./Landing%20Page/readme.md) |
-| **Aplicação Web** | Focado em validação de mercado, arquitetura escalável e sistemas complexos. | [Acessar Prompts](./Aplicação%20Web/readme.md) |
+1.  **Clone o Repositório**: Certifique-se de que o seu agente de IA tenha acesso aos arquivos de conhecimento em `/global_knowledge`.
+2.  **Escolha o Workflow**: Decida se vai construir uma [Landing Page](./Landing%20Page/readme.md) ou uma [Aplicação Web](./Aplicação%20Web/readme.md).
+3.  **Siga a Sequência**: Copie o conteúdo dos prompts (`prompt-01.md`, `prompt-02.md`, etc.) um por um para o seu agente de codificação favorito (Windsurf, Cursor, Lovable, etc.).
+4.  **Sessões Atômicas**: Recomendamos abrir uma nova conversa para cada prompt para evitar poluição de contexto.
+5.  **Confie nos Documentos**: Após os primeiros prompts, o seu agente gerará arquivos em `/docs`. Use esses arquivos como contexto para as próximas iterações.
+
+---
+
+## 🏗 Estrutura de Workflows
+
+Navegue pelos diretórios abaixo para acessar os prompts específicos de cada jornada:
+
+### 🎨 [Landing Page](./Landing%20Page/readme.md)
+*Workflow focado em conversão e design de alto impacto.*
+- **Destaque**: Mandatos de Hero Section imersiva (100vh) e composição visual astronômica.
+
+### 🚀 [Aplicação Web](./Aplicação%20Web/readme.md)
+*Workflow focado em validação de mercado e arquitetura escalável.*
+- **Destaque**: Framework de validação de ideias (Gambiarras/Hate) e estrutura baseada em Features.
 
 ---
 
