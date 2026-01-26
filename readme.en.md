@@ -8,85 +8,85 @@
 
 # 🚀 Vibe Code Crew | StarIAup
 
-[🇧🇷 Português](readme.md) | [🇺🇸 English](readme.en.md) [a fazer]
+[🇧🇷 Português](readme.md) | [🇺🇸 English](readme.en.md)
 
-**Desenvolvimento de Software Guiado por IA, Estruturado por Humanos.**
+**AI-Guided Software Development, Human-Structured.**
 
-Este repositório contém a **Crew de Prompts** da metodologia Vibe Code, desenvolvida pela StarIAup. Uma abordagem que combina o poder da IA generativa com processos rigorosos de engenharia de software para **minimizar custos de tokens, eliminar retrabalho e entregar produtos de qualidade**.
+This repository contains the **Prompt Crew** of the Vibe Code methodology, developed by StarIAup. An approach that combines the power of generative AI with rigorous software engineering processes to **minimize token costs, eliminate rework, and deliver quality products**.
 
 ---
 
-## 🎯 O Problema que Resolvemos
+## 🎯 The Problem We Solve
 
-**Vibe Coding tradicional** é caro e caótico:
-- Milhares de tokens desperdiçados em reexecuções
-- Falta de hierarquia técnica gera código inconsistente
-- Documentação desatualizada causa alucinações da IA
-- Ausência de QA automatizado resulta em bugs em produção
+**Traditional Vibe Coding** is expensive and chaotic:
+- Thousands of tokens wasted in re-executions
+- Lack of technical hierarchy generates inconsistent code
+- Outdated documentation causes AI hallucinations
+- Absence of automated QA results in production bugs
 
-**Nossa Solução:** Uma "crew" de prompts especializados que transformam a IA em um time de especialistas (PM, Arquiteto, Designer, Dev), garantindo que cada linha de código tenha um porquê estratégico.
+**Our Solution:** A "crew" of specialized prompts that transform the AI into a team of experts (PM, Architect, Designer, Dev), ensuring that every line of code has a strategic purpose.
 
 ---
 
 ## ⚡ Agentic Workflow
 
-Diferente de um chat comum, aqui trabalhamos com **Fluxos Agênticos**:
-1.  **Contextos Atômicos:** Cada prompt é projetado para uma sessão nova.
-2.  **Documentação Soberana:** Criamos arquivos em `/docs` que servem como a única fonte de verdade para a IA.
-3.  **Papéis Definidos:** A IA assume personas específicas (PM, CTO, Lead Dev) em cada etapa.
+Unlike a regular chat, here we work with **Agentic Flows**:
+1.  **Atomic Contexts:** Each prompt is designed for a new session.
+2.  **Sovereign Documentation:** We create files in `/docs` that serve as the single source of truth for the AI.
+3.  **Defined Roles:** The AI assumes specific personas (PM, CTO, Lead Dev) at each stage.
 
 ---
 
-## 🛠 Como Usar
+## 🛠 How to Use
 
-Para iniciar um projeto utilizando esta Crew, siga estes passos:
+To start a project using this Crew, follow these steps:
 
-1.  **Clone o Repositório**: Certifique-se de que o seu agente de IA tenha acesso aos arquivos de conhecimento em `/global_knowledge`.
-2.  **Escolha o Workflow**: Decida se vai construir uma [Landing Page](./Landing%20Page/readme.md) ou uma [Aplicação Web](./Aplicação%20Web/readme.md).
-3.  **Siga a Sequência**: Copie o conteúdo dos prompts (`prompt-01.md`, `prompt-02.md`, etc.) um por um para o seu agente de codificação favorito (Windsurf, Cursor, Lovable, etc.).
-4.  **Sessões Atômicas**: Recomendamos abrir uma nova conversa para cada prompt para evitar poluição de contexto.
-5.  **Confie nos Documentos**: Após os primeiros prompts, o seu agente gerará arquivos em `/docs`. Use esses arquivos como contexto para as próximas iterações.
+1.  **Clone the Repository**: Ensure your AI agent has access to the knowledge files in `/global_knowledge`.
+2.  **Choose the Workflow**: Decide whether to build a [Landing Page](./Landing%20Page/readme.md) or a [Web Application](./Aplicação%20Web/readme.md).
+3.  **Follow the Sequence**: Copy the content of the prompts (`prompt-01.md`, `prompt-02.md`, etc.) one by one into your favorite coding agent (Windsurf, Cursor, Lovable, etc.).
+4.  **Atomic Sessions**: We recommend opening a new conversation for each prompt to avoid context pollution.
+5.  **Trust the Documents**: After the initial prompts, your agent will generate files in `/docs`. Use these files as context for the next iterations.
 
 ---
 
-## 🏗 Estrutura de Workflows
+## 🏗 Workflow Structure
 
-Navegue pelos diretórios abaixo para acessar os prompts específicos de cada jornada:
+Navigate through the directories below to access the specific prompts for each journey:
 
 ### 🎨 [Landing Page](./Landing%20Page/readme.md)
-*Workflow focado em conversão e design de alto impacto.*
-- **Destaque**: Mandatos de Hero Section imersiva (100vh) e composição visual astronômica.
+*Workflow focused on conversion and high-impact design.*
+- **Highlight**: Immersive Hero Section mandates (100vh) and astronomical visual composition.
 
-### 🚀 [Aplicação Web](./Aplicação%20Web/readme.md)
-*Workflow focado em validação de mercado e arquitetura escalável.*
-- **Destaque**: Framework de validação de ideias (Gambiarras/Hate) e estrutura baseada em Features.
-
----
-
-## ⚡ Integração Protocolo GSD
-
-Para maximizar a eficiência e minimizar a "perda de contexto", a Crew adota o protocolo **Get Shit Done (GSD)**:
-
-1.  **Estado Vivo (`STATE.md`):** Um documento vivo rastreando o pulso, contexto e fase ativa do projeto.
-2.  **Mapeamento de Legado:** Protocolo de "Reconhecimento" para projetos existentes.
-3.  **Commits Atômicos:** Cada tarefa concluída gera um commit verificável.
+### 🚀 [Web Application](./Aplicação%20Web/readme.md)
+*Workflow focused on market validation and scalable architecture.*
+- **Highlight**: Idea validation framework (Hacks/Hate) and Feature-based structure.
 
 ---
 
-## 🙏 Créditos
+## ⚡ GSD Protocol Integration
 
-Esta metodologia é o resultado de **consumir, adaptar e versionar** o trabalho de gigantes:
+To maximize efficiency and minimize "context loss", the Crew adopts the **Get Shit Done (GSD)** protocol:
 
-- **[GlitterCowboy (Get Shit Done)](https://github.com/glittercowboy/get-shit-done):** Protocolos de Engenharia de Contexto.
-- **[Brian (BMAD Method)](https://github.com/bmadcode):** Conceito de construção agêntica.
-- **[Deborah Folloni (DebGPT)](https://x.com/dfolloni):** Princípios fundamentais de KISS, DRY e estruturação técnica.
-
----
-
-## 📄 Licença
-
-Viva o **open source**. Use livremente, aprenda e evolua. **Construa algo fodástico.**
+1.  **Live State (`STATE.md`):** A living document tracking the pulse, context, and active phase of the project.
+2.  **Legacy Mapping:** "Recognition" protocol for existing projects.
+3.  **Atomic Commits:** Each completed task generates a verifiable commit.
 
 ---
 
-**Desenvolvido com 🧠 por StarIAup | 2026**
+## 🙏 Credits
+
+This methodology is the result of **consuming, adapting, and versioning** the work of giants:
+
+- **[GlitterCowboy (Get Shit Done)](https://github.com/glittercowboy/get-shit-done):** Context Engineering Protocols.
+- **[Brian (BMAD Method)](https://github.com/bmadcode):** Agentic construction concept.
+- **[Deborah Folloni (DebGPT)](https://x.com/dfolloni):** Fundamental principles of KISS, DRY, and technical structuring.
+
+---
+
+## 📄 License
+
+Long live **open source**. Use freely, learn, and evolve. **Build something awesome.**
+
+---
+
+**Developed with 🧠 by StarIAup | 2026**
