@@ -30,13 +30,13 @@ Defina a direção artística baseada na metodologia IVaaS.
 - **Visual Narrative**: Explique como as imagens contarão a história definida no Briefing.
 
 ### PASSO 2: Definição do Design System (Tokens)
-Gere o conteúdo completo para o arquivo `design_system.tokens.js`.
+Gere o conteúdo completo para o arquivo `docs/02-design/design_system.tokens.js`.
 - **NÃO SOBRESCREVA O TEMPLATE**, crie uma cópia e preencha-a integralmente dentro do seu output.
 - **Cores**: Use a técnica "Eyedropper" (extraídas das imagens conceituais do Passo 1). Nada de cores arbitrárias.
 - **Tipografia**: Escolha fontes (Google Fonts) que contrastem (Display vs Body) e defina a escala fluida (clamp).
 - **Espaçamento**: Defina o grid de 8pt (4, 8, 16, 24, 32...).
 - **Radius & Shadows**: Defina a "física" dos elementos (vidro, sólido, soft).
-- **Preview HTML**: Gere o arquivo `design_system_preview.html` (copie e adapte o template de `global_knowledge`) para validarmos visualmente as cores e fontes.
+- **Preview HTML**: Gere o arquivo `docs/02-design/design_system_preview.html` (copie e adapte o template de `global_knowledge`) para validarmos visualmente as cores e fontes.
 
 ### PASSO 3: Padrões de Composição (UI Specs)
 Para cada seção crítica (Hero, Features, Testimonials), defina regras de composição baseadas em `ui_composition_patterns.md` e `immersive_landing_pages.md`.
@@ -58,8 +58,8 @@ Gere o arquivo `state.md` atualizado.
 </instructions>
 
 <output_rules>
-1.  **Gere o código completo** do arquivo `design_system.tokens.js` preenchido.
-2.  Use blocos de código separados para cada arquivo gerado (`docs/visual_strategy.md`, `design_system.tokens.js`, `design_system_preview.html`, `state.md`).
+1.  **Gere o código completo** do arquivo `docs/02-design/design_system.tokens.js` preenchido.
+2.  Use blocos de código separados para cada arquivo gerado (`docs/02-design/visual_strategy.md`, `docs/02-design/design_system.tokens.js`, `docs/02-design/design_system_preview.html`, `state.md`).
 3.  Seja específico nas descrições visuais (não diga "azul bonito", diga "Azul Profundo (#0F172A) inspirado no oceano noturno").
 4.  Justifique suas escolhas de design com base nos arquivos de conhecimento (ex: "Usando Margem Negativa conforme `immersive_landing_pages.md`").
 </output_rules>
