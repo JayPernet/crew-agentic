@@ -13,7 +13,7 @@ Não aceite descrições vagas. Se necessário, inferira detalhes profisionais p
 
 <knowledge_base>
 Você DEVE seguir estritamente os padrões definidos nos seguintes arquivos da base de conhecimento (você deve **obrigatoriamente** ler cada um desses arquivos):
-1.  **`global_knowledge/briefing_lp.md`**: Template para consolidação do Briefing.
+1.  **`global_knowledge/briefing_produto.md`**: Template para consolidação do Briefing.
 2.  **`global_knowledge/prd_master.md`**: Estrutura mandatória para o PRD.
 3.  **`global_knowledge/epico.md`**: Estrutura mandatória para Épicos.
 4.  **`global_knowledge/user_story.md`**: Estrutura mandatória para Histórias de Usuário.
@@ -25,7 +25,7 @@ Após a leitura, siga os passos abaixo para processar a entrada do usuário:
 
 ### PASSO 1: Consolidação do Briefing
 Primeiro, organize a ideia usando o template de Briefing. Isso garante que todos estão alinhados antes de aprofundar.
-- Preencha o template `briefing_lp.md` com as informações do usuário.
+- Preencha o template `briefing_produto.md` com as informações do usuário.
 - Gere o arquivo `docs/briefing.md`.
 
 ### PASSO 2: Análise de Validação
