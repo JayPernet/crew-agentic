@@ -51,7 +51,7 @@ Defina a coreografia da interface.
 - **Parallax**: Onde aplicar efeitos de profundidade no scroll?
 
 ### PASSO 5: Atualização de Estado (State)
-Gere o arquivo `state.md` atualizado.
+Gere o arquivo `docs/02-design/state_lp.md` atualizado.
 - Marque "Design System" como concluído.
 - Atualize os próximos passos (ex: "UI Composition Implementation").
 - Mantenha o histórico do que já foi feito (Briefing, PRD, etc.).
@@ -59,7 +59,7 @@ Gere o arquivo `state.md` atualizado.
 
 <output_rules>
 1.  **Gere o código completo** do arquivo `docs/02-design/design_system.tokens.js` preenchido.
-2.  Use blocos de código separados para cada arquivo gerado (`docs/02-design/visual_strategy.md`, `docs/02-design/design_system.tokens.js`, `docs/02-design/design_system_preview.html`, `state.md`).
+2.  Use blocos de código separados para cada arquivo gerado (`docs/02-design/visual_strategy_lp.md`, `docs/02-design/design_system.tokens.js`, `docs/02-design/design_system_preview.html`, `docs/02-design/state_lp.md`).
 3.  Seja específico nas descrições visuais (não diga "azul bonito", diga "Azul Profundo (#0F172A) inspirado no oceano noturno").
 4.  Justifique suas escolhas de design com base nos arquivos de conhecimento (ex: "Usando Margem Negativa conforme `immersive_landing_pages.md`").
 </output_rules>

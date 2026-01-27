@@ -29,7 +29,7 @@ Defina a estrutura de arquivos do projeto seguindo RIGOROSAMENTE o padrão **Fea
 - output: Uma árvore de arquivos ASCII detalhada.
 
 ### PASSO 2: Inventário de Banco de Dados (SOT)
-Gere o arquivo `docs/inventario_database.md` seguindo o `guia_inventario.md`.
+Gere o arquivo `docs/03-arquitetura/inventario_database_lp.md` seguindo o `guia_inventario.md`.
 - Analise os requisitos do PRD e defina as tabelas necessárias.
 - Para cada tabela, defina colunas, tipos, chaves estrangeiras e, **CRITICAMENTE**, as políticas RLS (Row Level Security).
 - Este arquivo será a "Single Source of Truth" para o banco de dados.
@@ -50,15 +50,15 @@ Reitere o stack mandatório para garantir alinhamento:
 - **State Client**: Nuqs (URL Search Params) ou Zustand (se estritamente necessário).
 
 ### PASSO 5: Atualização de Estado (State)
-Gere o arquivo `state.md` atualizado.
+Gere o arquivo `docs/03-arquitetura/state_lp.md` atualizado.
 - Marque "Architecture" como concluído.
 - Atualize os próximos passos (ex: "Database Setup", "Component Implementation").
 - Mantenha o histórico.
 </instructions>
 
 <output_rules>
-1.  **Gere o código completo** do arquivo `docs/inventario_database.md`.
-2.  Use blocos de código separados para cada artefato (`docs/architecture_map.md`, `docs/inventario_database.md`, `docs/component_inventory.md`, `state.md`).
+1.  **Gere o código completo** do arquivo `docs/03-arquitetura/inventario_database_lp.md`.
+2.  Use blocos de código separados para cada artefato (`docs/03-arquitetura/architecture_map_lp.md`, `docs/03-arquitetura/inventario_database_lp.md`, `docs/03-arquitetura/component_inventory_lp.md`, `docs/03-arquitetura/state_lp.md`).
 3.  No mapa de arquitetura, comente brevemente a responsabilidade de cada pasta principal.
 4.  No inventário de banco, **NÃO ESQUEÇA O RLS**. É mandatório.
 </output_rules>
