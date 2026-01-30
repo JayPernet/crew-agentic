@@ -85,7 +85,7 @@ To maximize efficiency and minimize "context loss", the Crew adopts the **Get Sh
 
 This methodology is the result of **consuming, adapting, and versioning** the work of giants:
 
-- **[GlitterCowboy (Get Shit Done)](https://github.com/glittercowboy/get-shit-done):** Context Engineering Protocols.
+- **[Antigravity Awesome Skills](https://github.com/sickn33/antigravity-awesome-skills):** A large part of our knowledge base was inspired and adapted from this incredible repository.
 - **[Brian (BMAD Method)](https://github.com/bmadcode):** Agentic construction concept.
 - **[Deborah Folloni (DebGPT)](https://x.com/dfolloni):** Fundamental principles of KISS, DRY, and technical structuring.
 

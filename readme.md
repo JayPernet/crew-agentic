@@ -85,7 +85,7 @@ Para maximizar a eficiência e minimizar a "perda de contexto", a Crew adota o p
 
 Esta metodologia é o resultado de **consumir, adaptar e versionar** o trabalho de gigantes:
 
-- **[GlitterCowboy (Get Shit Done)](https://github.com/glittercowboy/get-shit-done):** Protocolos de Engenharia de Contexto.
+- **[Antigravity Awesome Skills](https://github.com/sickn33/antigravity-awesome-skills):** Grande parte da nossa base de conhecimento foi inspirada e adaptada deste repositório incrível.
 - **[Brian (BMAD Method)](https://github.com/bmadcode):** Conceito de construção agêntica.
 - **[Deborah Folloni (DebGPT)](https://x.com/dfolloni):** Princípios fundamentais de KISS, DRY e estruturação técnica.
 
