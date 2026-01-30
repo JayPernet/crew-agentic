@@ -46,6 +46,14 @@ To start a project using this Crew, follow these steps:
 3.  **Follow the Sequence**: Copy the content of the prompts (`prompt-01.md`, `prompt-02.md`, etc.) one by one into your favorite coding agent (Windsurf, Cursor, Lovable, etc.).
 4.  **Atomic Sessions**: We recommend opening a new conversation for each prompt to avoid context pollution.
 5.  **Trust the Documents**: After the initial prompts, your agent will generate files in `/docs`. Use these files as context for the next iterations.
+6.  **Maintenance & Evolution**: Use `prompt-06.md` for bug fixes, refactoring, and polishing existing features.
+
+---
+
+## 📚 Knowledge Base (KB)
+
+With over 2500 items, our Knowledge Base is the brain of the Crew. To facilitate navigation and save tokens, use the:
+👉 **[KNOWLEDGE BASE INDEX](./global_knowledge/INDEX.md)**
 
 ---
 
