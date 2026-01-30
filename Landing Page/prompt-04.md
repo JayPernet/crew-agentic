@@ -12,11 +12,19 @@ Esta é a parte mais crítica da Landing Page. Ela deve ser **IMERSIVA**, **FLUI
 </context>
 
 <knowledge_base>
-Você DEVE seguir estritamente os padrões definidos nos seguintes arquivos da base de conhecimento (você deve **obrigatoriamente** ler cada um desses arquivos para executar este prompt com excelência):
-1.  **`global_knowledge/immersive_landing_pages.md`**: MANDATOS para Hero 100vh, Header Transparente e Overlay.
-2.  **`global_knowledge/ui_composition_patterns.md`**: Regras de "Invisible Grid" e Alinhamento.
-3.  **`global_knowledge/design_system.tokens.js`**: Suas cores e fontes (use `design_system_preview.html` como ref).
-4.  **`global_knowledge/component_workflow_detailed.md`**: Como criar componentes shadcn corretamente.
+**📚 Índice de Conhecimento Mandatório**: `global_knowledge/INDEX.yaml`
+
+**Seu Papel (Role)**: `developer`
+
+**IMPORTANTE**: Você DEVE ler TODOS os arquivos listados no INDEX.yaml para `roles.developer.mandatory_reading`.  
+Não pule nenhum. Eles são a base para executar este prompt corretamente.
+
+**Instruções de Leitura**:
+1. Abra `global_knowledge/INDEX.yaml`
+2. Localize a seção `roles.developer.mandatory_reading`
+3. Leia TODOS os arquivos listados, respeitando o `read_order` quando especificado
+4. Use o campo `purpose` para entender o contexto de cada arquivo
+5. Se encontrar um `alias`, use o caminho canônico indicado no YAML
 </knowledge_base>
 
 <instructions>

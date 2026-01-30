@@ -13,11 +13,19 @@ A "Single Source of Truth" são os arquivos em `/docs` e o `state.md`.
 </context>
 
 <knowledge_base>
-Você deve consultar obrigatoriamente:
-1.  **`global_knowledge/Princípios de Arquitetura Para Vibe Coding.md`**: Para garantir que a refatoração segue a estrutura baseada em features.
-2.  **`global_knowledge/clean_code.md`**: Para padrões de nomenclatura e estrutura.
-3.  **`state.md`**: Para entender o contexto atual e onde a intervenção é necessária.
-4.  **`docs/`**: Para entender a arquitetura técnica e as decisões de design anteriores.
+**📚 Índice de Conhecimento Mandatório**: `global_knowledge/INDEX.yaml`
+
+**Seu Papel (Role)**: `qa_engineer`
+
+**IMPORTANTE**: Você DEVE ler TODOS os arquivos listados no INDEX.yaml para `roles.qa_engineer.mandatory_reading`.  
+Não pule nenhum. Eles são a base para executar este prompt corretamente.
+
+**Instruções de Leitura**:
+1. Abra `global_knowledge/INDEX.yaml`
+2. Localize a seção `roles.qa_engineer.mandatory_reading`
+3. Leia TODOS os arquivos listados, respeitando o `read_order` quando especificado
+4. Use o campo `purpose` para entender o contexto de cada arquivo
+5. Se encontrar um `alias`, use o caminho canônico indicado no YAML
 </knowledge_base>
 
 <instructions>

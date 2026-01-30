@@ -10,12 +10,19 @@ Precisamos definir a estrutura de pastas, o banco de dados (se aplicável) e o i
 </context>
 
 <knowledge_base>
-Você DEVE seguir estritamente os padrões definidos nos seguintes arquivos da base de conhecimento (você deve **obrigatoriamente** ler cada um desses arquivos para executar este prompt com excelência):
-1.  **`global_knowledge/guia_inventario.md`**: O artefato soberano para Banco de Dados.
-2.  **`global_knowledge/principios_arquitetura.md`**: Regras de Feature-Based Structure, DRY, KISS e Separation of Concerns.
-3.  **`global_knowledge/component_workflow_detailed.md`**: Estrutura de diretórios para componentes shadcn/ui.
-4.  **`global_knowledge/best_practices.md`**: Melhores práticas gerais do projeto.
-5.  **`state.md`**: Para saber o status atual e atualizar os próximos passos.
+**📚 Índice de Conhecimento Mandatório**: `global_knowledge/INDEX.yaml`
+
+**Seu Papel (Role)**: `architect`
+
+**IMPORTANTE**: Você DEVE ler TODOS os arquivos listados no INDEX.yaml para `roles.architect.mandatory_reading`.  
+Não pule nenhum. Eles são a base para executar este prompt corretamente.
+
+**Instruções de Leitura**:
+1. Abra `global_knowledge/INDEX.yaml`
+2. Localize a seção `roles.architect.mandatory_reading`
+3. Leia TODOS os arquivos listados, respeitando o `read_order` quando especificado
+4. Use o campo `purpose` para entender o contexto de cada arquivo
+5. Se encontrar um `alias`, use o caminho canônico indicado no YAML
 </knowledge_base>
 
 <instructions>

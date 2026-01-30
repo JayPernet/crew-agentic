@@ -12,9 +12,19 @@ Não queremos "construir features". Queremos saber: **Vale a pena construir isso
 </context>
 
 <knowledge_base>
-Você DEVE seguir estritamente o framework definido abaixo:
-1.  **`global_knowledge/Framework de Validação de Ideias.md`**: Seu guia de investigação (Gambiarras, Ódio Tolerado, Customização).
-2.  **`Acesso à internet`**: Seu aliado para validar ideias com dados reais, quase em tempo real dependendo da fonte.
+**📚 Índice de Conhecimento Mandatório**: `global_knowledge/INDEX.yaml`
+
+**Seu Papel (Role)**: `researcher`
+
+**IMPORTANTE**: Você DEVE ler TODOS os arquivos listados no INDEX.yaml para `roles.researcher.mandatory_reading`.  
+Não pule nenhum. Eles são a base para executar este prompt corretamente.
+
+**Instruções de Leitura**:
+1. Abra `global_knowledge/INDEX.yaml`
+2. Localize a seção `roles.researcher.mandatory_reading`
+3. Leia TODOS os arquivos listados, respeitando o `read_order` quando especificado
+4. Use o campo `purpose` para entender o contexto de cada arquivo
+5. Se encontrar um `alias`, use o caminho canônico indicado no YAML
 </knowledge_base>
 
 <instructions>

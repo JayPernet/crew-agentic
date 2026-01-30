@@ -10,14 +10,19 @@ Não queremos wireframes cinzas. Queremos definir a fotografia, a tipografia, as
 </context>
 
 <knowledge_base>
-Você DEVE seguir estritamente os padrões definidos nos seguintes arquivos da base de conhecimento (você deve **obrigatoriamente** ler cada um desses arquivos para executar este prompt com excelência):
-1.  **`global_knowledge/visual_strategy_workflow.md`**: Filosofia Image-First e uso de Templates Modulares.
-2.  **`global_knowledge/ivaas_methodology.md`**: Processo de Identidade Visual as a Service.
-3.  **`global_knowledge/design_system.tokens.js`**: O template sagrado para definição de tokens.
-4.  **`global_knowledge/ui_composition_patterns.md`**: Regras de "Invisible Grid", Negative Margins e Flip de imagens.
-5.  **`global_knowledge/immersive_landing_pages.md`**: Mandates para Hero 100vh, Cabeçalhos Transparentes e Vídeos de Fundo.
-6.  **`global_knowledge/ui_standards.md`**: Regras de contraste e hierarquia.
-7.  **`global_knowledge/design_system_preview.html`**: A vitrine do seu design system.
+**📚 Índice de Conhecimento Mandatório**: `global_knowledge/INDEX.yaml`
+
+**Seu Papel (Role)**: `designer`
+
+**IMPORTANTE**: Você DEVE ler TODOS os arquivos listados no INDEX.yaml para `roles.designer.mandatory_reading`.  
+Não pule nenhum. Eles são a base para executar este prompt corretamente.
+
+**Instruções de Leitura**:
+1. Abra `global_knowledge/INDEX.yaml`
+2. Localize a seção `roles.designer.mandatory_reading`
+3. Leia TODOS os arquivos listados, respeitando o `read_order` quando especificado
+4. Use o campo `purpose` para entender o contexto de cada arquivo
+5. Se encontrar um `alias`, use o caminho canônico indicado no YAML
 </knowledge_base>
 
 <instructions>

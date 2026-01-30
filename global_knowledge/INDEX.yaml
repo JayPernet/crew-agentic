@@ -1,0 +1,503 @@
+metadata:
+  version: "2.0"
+  last_updated: "2026-01-30"
+  total_indexed_files: 909
+  philosophy: |
+    Este INDEX é um MAPA MANDATÓRIO de leitura.
+    Se um arquivo está listado para o seu role, você DEVE lê-lo.
+    Não há leitura opcional ou "sugestões". Tudo é essencial.
+
+# =============================================================================
+# MAPEAMENTO POR ROLE (Papel do Agente)
+# =============================================================================
+
+roles:
+  # ---------------------------------------------------------------------------
+  # RESEARCHER - UX Researcher & Market Analyst (Prompt 01)
+  # ---------------------------------------------------------------------------
+  researcher:
+    description: "Senior UX Researcher & Market Analyst especialista em Product Discovery"
+    prompts: ["prompt-01"]
+    mandatory_reading:
+      - path: "Framework de Validação de Ideias.md"
+        purpose: "Guia de investigação (Gambiarras, Ódio Tolerado, Customização)"
+        read_order: 1
+      - path: "readme.md"
+        purpose: "Template para documentação inicial"
+        read_order: 2
+      - path: "startup-analyst/SKILL.md"
+        purpose: "Metodologia de análise de startups e validação de mercado"
+        read_order: 3
+      - path: "competitive-landscape/SKILL.md"
+        purpose: "Análise de concorrentes e posicionamento"
+        read_order: 4
+      - path: "market-sizing-analysis/SKILL.md"
+        purpose: "Dimensionamento de mercado e oportunidades"
+        read_order: 5
+
+  # ---------------------------------------------------------------------------
+  # PM - Product Manager (Prompt 02)
+  # ---------------------------------------------------------------------------
+  pm:
+    description: "Product Manager Sênior award-winning"
+    prompts: ["prompt-02"]
+    mandatory_reading:
+      # Core Templates
+      - path: "briefing_lp.md"
+        purpose: "Template para consolidação do Briefing (Landing Pages)"
+        read_order: 1
+      - path: "briefing_produto.md"
+        purpose: "Template para consolidação do Briefing (Produtos Web)"
+        read_order: 1
+      - path: "prd_master.md"
+        purpose: "Estrutura mandatória para o PRD"
+        read_order: 2
+      - path: "epico.md"
+        purpose: "Estrutura mandatória para Épicos"
+        read_order: 3
+      - path: "user_story.md"
+        purpose: "Estrutura mandatória para Histórias de Usuário"
+        read_order: 4
+      - path: "Framework de Validação de Ideias.md"
+        purpose: "Para definição de proposta de valor"
+        read_order: 2
+      
+      # Product Management Skills
+      - path: "product-manager-toolkit/SKILL.md"
+        purpose: "Ferramentas e frameworks para PMs"
+        read_order: 5
+      - path: "startup-metrics-framework/SKILL.md"
+        purpose: "Framework de métricas para startups"
+        read_order: 6
+      - path: "business-analyst/SKILL.md"
+        purpose: "Análise de negócios e requisitos"
+        read_order: 7
+      - path: "competitive-landscape/SKILL.md"
+        purpose: "Análise competitiva"
+        read_order: 8
+      - path: "pricing-strategy/SKILL.md"
+        purpose: "Estratégias de precificação"
+        read_order: 9
+
+  # ---------------------------------------------------------------------------
+  # DESIGNER - Creative Director & Design System Architect (Prompt 03)
+  # ---------------------------------------------------------------------------
+  designer:
+    description: "Creative Director & Design System Architect"
+    prompts: ["prompt-03"]
+    mandatory_reading:
+      # Core Design Files
+      - path: "visual_strategy_workflow.md"
+        purpose: "Filosofia Image-First e Templates Modulares"
+        read_order: 1
+      - path: "ivaas_methodology.md"
+        purpose: "Processo de Identidade Visual as a Service"
+        read_order: 1
+      - path: "IVaaS - Identidade Visual as a Service.md"
+        purpose: "Metodologia completa de IVaaS"
+        read_order: 1
+      - path: "design_system.tokens.js"
+        purpose: "Template sagrado para definição de tokens"
+        read_order: 2
+      - path: "ui_composition_patterns.md"
+        purpose: "Regras de Invisible Grid, Negative Margins"
+        read_order: 3
+      - path: "immersive_landing_pages.md"
+        purpose: "Mandates para Hero 100vh, Headers Transparentes"
+        read_order: 3
+      - path: "ui_standards.md"
+        purpose: "Regras de contraste e hierarquia"
+        read_order: 4
+      - path: "design_system_preview.html"
+        purpose: "Vitrine do design system"
+        read_order: 5
+      - path: "design_system_workflow.md"
+        purpose: "Workflow de criação de design systems"
+        read_order: 6
+      - path: "cta_visual_hierarchy.md"
+        purpose: "Hierarquia visual de CTAs para conversão"
+        read_order: 7
+      - path: "ux_principles.md"
+        purpose: "Princípios fundamentais de UX"
+        read_order: 8
+      - path: "brand_book.md"
+        purpose: "Estrutura de brand books"
+        read_order: 9
+      
+      # Animation & Interaction
+      - path: "framer_motion_guide.md"
+        purpose: "Guia de animações com Framer Motion"
+        read_order: 10
+      - path: "lottie_guide.md"
+        purpose: "Animações ricas com Lottie"
+        read_order: 11
+      - path: "locomotive_scroll_guide.md"
+        purpose: "Scroll effects imersivos"
+        read_order: 12
+      - path: "swiper_guide.md"
+        purpose: "Carrosséis e sliders"
+        read_order: 13
+      - path: "tsparticles_guide.md"
+        purpose: "Efeitos de partículas"
+        read_order: 14
+      - path: "threejs_guide.md"
+        purpose: "3D na web com Three.js"
+        read_order: 15
+      - path: "d3js_guide.md"
+        purpose: "Visualizações de dados com D3.js"
+        read_order: 16
+      - path: "curtainsjs_guide.md"
+        purpose: "WebGL effects"
+        read_order: 17
+      - path: "splittingjs_guide.md"
+        purpose: "Text animations"
+        read_order: 18
+      
+      # Design Skills
+      - path: "ui-ux-designer/SKILL.md"
+        purpose: "Fundamentos de UI/UX design"
+        read_order: 19
+      - path: "ui-ux-pro-max/SKILL.md"
+        purpose: "UI/UX avançado"
+        read_order: 20
+      - path: "frontend-design/SKILL.md"
+        purpose: "Design para frontend"
+        read_order: 21
+      - path: "canvas-design/SKILL.md"
+        purpose: "Design com Canvas API"
+        read_order: 22
+      - path: "mobile-design/SKILL.md"
+        purpose: "Design para mobile"
+        read_order: 23
+      - path: "design-orchestration/SKILL.md"
+        purpose: "Orquestração de design systems"
+        read_order: 24
+      - path: "theme-factory/SKILL.md"
+        purpose: "Criação de temas"
+        read_order: 25
+
+  # ---------------------------------------------------------------------------
+  # ARCHITECT - Software Architect & Database Designer (Prompt 04)
+  # ---------------------------------------------------------------------------
+  architect:
+    description: "Software Architect & Database Designer"
+    prompts: ["prompt-04"]
+    mandatory_reading:
+      # Core Architecture
+      - path: "Princípios de Arquitetura Para Vibe Coding.md"
+        purpose: "Regras de Feature-Based Structure, DRY, KISS, YAGNI"
+        read_order: 1
+        aliases: ["principios_arquitetura.md"]
+      - path: "guia_inventario.md"
+        purpose: "Artefato soberano para Banco de Dados"
+        read_order: 2
+      - path: "component_workflow_detailed.md"
+        purpose: "Estrutura de diretórios para componentes"
+        read_order: 3
+      - path: "best_practices.md"
+        purpose: "Melhores práticas gerais do projeto"
+        read_order: 4
+      - path: "sharding_strategy.md"
+        purpose: "Estratégias de sharding para escala"
+        read_order: 5
+      - path: "guia-sharding.md"
+        purpose: "Guia completo de sharding"
+        read_order: 5
+      
+      # Architecture Skills
+      - path: "architecture/SKILL.md"
+        purpose: "Fundamentos de arquitetura de software"
+        read_order: 6
+      - path: "software-architecture/SKILL.md"
+        purpose: "Padrões de arquitetura"
+        read_order: 7
+      - path: "architecture-patterns/SKILL.md"
+        purpose: "Padrões arquiteturais comuns"
+        read_order: 8
+      - path: "architecture-decision-records/SKILL.md"
+        purpose: "Documentação de decisões arquiteturais"
+        read_order: 9
+      - path: "senior-architect/SKILL.md"
+        purpose: "Práticas de arquitetos seniores"
+        read_order: 10
+      - path: "backend-architect/SKILL.md"
+        purpose: "Arquitetura de backend"
+        read_order: 11
+      - path: "cloud-architect/SKILL.md"
+        purpose: "Arquitetura cloud"
+        read_order: 12
+      - path: "microservices-patterns/SKILL.md"
+        purpose: "Padrões de microserviços"
+        read_order: 13
+      - path: "event-sourcing-architect/SKILL.md"
+        purpose: "Event sourcing e CQRS"
+        read_order: 14
+      - path: "monorepo-architect/SKILL.md"
+        purpose: "Arquitetura de monorepos"
+        read_order: 15
+      
+      # Database
+      - path: "database-design/SKILL.md"
+        purpose: "Design de banco de dados"
+        read_order: 16
+      - path: "database-architect/SKILL.md"
+        purpose: "Arquitetura de dados"
+        read_order: 17
+      - path: "postgres-best-practices/SKILL.md"
+        purpose: "Best practices PostgreSQL"
+        read_order: 18
+      - path: "database-optimizer/SKILL.md"
+        purpose: "Otimização de queries"
+        read_order: 19
+
+  # ---------------------------------------------------------------------------
+  # DEVELOPER - Senior Full-Stack Developer (Prompt 05)
+  # ---------------------------------------------------------------------------
+  developer:
+    description: "Senior Full-Stack Developer"
+    prompts: ["prompt-05"]
+    mandatory_reading:
+      # Core Development
+      - path: "prompt-prp.md"
+        purpose: "Metodologia de Product Requirement Prompts"
+        read_order: 1
+      - path: "Princípios de Arquitetura Para Vibe Coding.md"
+        purpose: "Princípios técnicos fundamentais"
+        read_order: 2
+      - path: "clean_code.md"
+        purpose: "Padrões de código limpo"
+        read_order: 3
+      - path: "component_implementation_workflow.md"
+        purpose: "Workflow de implementação de componentes"
+        read_order: 4
+      
+      # Frontend Development
+      - path: "frontend-dev-guidelines/SKILL.md"
+        purpose: "Guidelines de desenvolvimento frontend"
+        read_order: 5
+      - path: "react-best-practices/SKILL.md"
+        purpose: "Best practices React"
+        read_order: 6
+      - path: "nextjs-app-router-patterns/SKILL.md"
+        purpose: "Padrões Next.js App Router"
+        read_order: 7
+      - path: "nextjs-best-practices/SKILL.md"
+        purpose: "Best practices Next.js"
+        read_order: 8
+      - path: "typescript-expert/SKILL.md"
+        purpose: "TypeScript avançado"
+        read_order: 9
+      - path: "tailwind-patterns/SKILL.md"
+        purpose: "Padrões Tailwind CSS"
+        read_order: 10
+      - path: "react-patterns/SKILL.md"
+        purpose: "Padrões React avançados"
+        read_order: 11
+      - path: "react-state-management/SKILL.md"
+        purpose: "Gerenciamento de estado"
+        read_order: 12
+      
+      # Backend Development
+      - path: "backend-dev-guidelines/SKILL.md"
+        purpose: "Guidelines de desenvolvimento backend"
+        read_order: 13
+      - path: "api-design-principles/SKILL.md"
+        purpose: "Princípios de design de APIs"
+        read_order: 14
+      - path: "api-patterns/SKILL.md"
+        purpose: "Padrões de APIs"
+        read_order: 15
+      - path: "nodejs-backend-patterns/SKILL.md"
+        purpose: "Padrões Node.js backend"
+        read_order: 16
+      - path: "fastapi-pro/SKILL.md"
+        purpose: "FastAPI profissional"
+        read_order: 17
+      - path: "nestjs-expert/SKILL.md"
+        purpose: "NestJS expert"
+        read_order: 18
+
+  # ---------------------------------------------------------------------------
+  # QA_ENGINEER - QA Lead & Maintenance Engineer (Prompt 06 - Web App)
+  # ---------------------------------------------------------------------------
+  qa_engineer:
+    description: "QA Lead & Maintenance Engineer"
+    prompts: ["prompt-06 (Aplicação Web)"]
+    mandatory_reading:
+      # Core QA
+      - path: "Princípios de Arquitetura Para Vibe Coding.md"
+        purpose: "Para garantir refatoração baseada em features"
+        read_order: 1
+      - path: "clean_code.md"
+        purpose: "Padrões de nomenclatura e estrutura"
+        read_order: 2
+      - path: "security_checklist.md"
+        purpose: "Checklist de segurança"
+        read_order: 3
+      
+      # Testing Skills
+      - path: "test-automator/SKILL.md"
+        purpose: "Automação de testes"
+        read_order: 4
+      - path: "testing-patterns/SKILL.md"
+        purpose: "Padrões de testes"
+        read_order: 5
+      - path: "tdd-workflow/SKILL.md"
+        purpose: "Test-Driven Development"
+        read_order: 6
+      - path: "e2e-testing-patterns/SKILL.md"
+        purpose: "Testes end-to-end"
+        read_order: 7
+      - path: "webapp-testing/SKILL.md"
+        purpose: "Testes de aplicações web"
+        read_order: 8
+      - path: "debugging-strategies/SKILL.md"
+        purpose: "Estratégias de debugging"
+        read_order: 9
+      - path: "systematic-debugging/SKILL.md"
+        purpose: "Debugging sistemático"
+        read_order: 10
+
+  # ---------------------------------------------------------------------------
+  # CRO_SPECIALIST - Conversion Rate Optimization (Prompt 06 - Landing Page)
+  # ---------------------------------------------------------------------------
+  cro_specialist:
+    description: "Conversion Rate Optimization Specialist"
+    prompts: ["prompt-06 (Landing Page)"]
+    mandatory_reading:
+      # Core CRO
+      - path: "immersive_landing_pages.md"
+        purpose: "Manter impacto visual astronômico"
+        read_order: 1
+      - path: "cta_visual_hierarchy.md"
+        purpose: "Garantir que mudanças não prejudiquem conversão"
+        read_order: 2
+      - path: "framer_motion_guide.md"
+        purpose: "Refinar animações existentes"
+        read_order: 3
+      - path: "content_strategy_copywriting.md"
+        purpose: "Estratégia de conteúdo e copywriting"
+        read_order: 4
+      
+      # CRO Skills
+      - path: "form-cro/SKILL.md"
+        purpose: "Otimização de formulários"
+        read_order: 5
+      - path: "page-cro/SKILL.md"
+        purpose: "Otimização de páginas"
+        read_order: 6
+      - path: "onboarding-cro/SKILL.md"
+        purpose: "Otimização de onboarding"
+        read_order: 7
+      - path: "signup-flow-cro/SKILL.md"
+        purpose: "Otimização de fluxos de signup"
+        read_order: 8
+      - path: "popup-cro/SKILL.md"
+        purpose: "Otimização de popups"
+        read_order: 9
+      - path: "paywall-upgrade-cro/SKILL.md"
+        purpose: "Otimização de paywalls"
+        read_order: 10
+
+# =============================================================================
+# ALIASES - Resolução de Nomes Duplicados
+# =============================================================================
+aliases:
+  "principios_arquitetura.md": "Princípios de Arquitetura Para Vibe Coding.md"
+  "ivaas_methodology.md": "IVaaS - Identidade Visual as a Service.md"
+
+# =============================================================================
+# CATEGORIAS COMPLETAS (Para Referência e Expansão Futura)
+# =============================================================================
+# Estas categorias contêm TODOS os arquivos indexados.
+# Use-as para expandir os mandatory_reading dos roles conforme necessário.
+
+categories:
+  ai_ml:
+    description: "Inteligência Artificial e Machine Learning"
+    file_count: 70
+    key_files:
+      - "langchain-architecture/SKILL.md"
+      - "langgraph/SKILL.md"
+      - "rag-engineer/SKILL.md"
+      - "rag-implementation/SKILL.md"
+      - "llm-app-patterns/SKILL.md"
+      - "autonomous-agents/SKILL.md"
+      - "agent-orchestration-multi-agent-optimize/SKILL.md"
+      - "prompt-engineering/SKILL.md"
+      - "prompt-engineer/SKILL.md"
+
+  backend:
+    description: "Desenvolvimento Backend"
+    file_count: 42
+    key_files:
+      - "backend-dev-guidelines/SKILL.md"
+      - "api-design-principles/SKILL.md"
+      - "api-patterns/SKILL.md"
+      - "nodejs-backend-patterns/SKILL.md"
+      - "fastapi-pro/SKILL.md"
+      - "nestjs-expert/SKILL.md"
+      - "graphql-architect/SKILL.md"
+
+  database:
+    description: "Banco de Dados"
+    file_count: 61
+    key_files:
+      - "database-design/SKILL.md"
+      - "postgres-best-practices/SKILL.md"
+      - "database-optimizer/SKILL.md"
+      - "database-migrations-sql-migrations/SKILL.md"
+      - "sql-optimization-patterns/SKILL.md"
+
+  design_ux:
+    description: "Design e UX"
+    file_count: 142
+    key_files:
+      - "ui-ux-designer/SKILL.md"
+      - "ui-ux-pro-max/SKILL.md"
+      - "frontend-design/SKILL.md"
+      - "mobile-design/SKILL.md"
+      - "canvas-design/SKILL.md"
+
+  devops_infra:
+    description: "DevOps e Infraestrutura"
+    file_count: 27
+    key_files:
+      - "docker-expert/SKILL.md"
+      - "kubernetes-architect/SKILL.md"
+      - "terraform-specialist/SKILL.md"
+      - "cicd-automation-workflow-automate/SKILL.md"
+
+  frontend:
+    description: "Desenvolvimento Frontend"
+    file_count: 82
+    key_files:
+      - "react-best-practices/SKILL.md"
+      - "nextjs-app-router-patterns/SKILL.md"
+      - "typescript-expert/SKILL.md"
+      - "tailwind-patterns/SKILL.md"
+
+  security:
+    description: "Segurança"
+    file_count: 23
+    key_files:
+      - "security-auditor/SKILL.md"
+      - "api-security-best-practices/SKILL.md"
+      - "security-scanning-security-sast/SKILL.md"
+
+  testing_qa:
+    description: "Testes e QA"
+    file_count: 65
+    key_files:
+      - "test-automator/SKILL.md"
+      - "tdd-workflow/SKILL.md"
+      - "e2e-testing-patterns/SKILL.md"
+      - "webapp-testing/SKILL.md"
+
+  mobile:
+    description: "Desenvolvimento Mobile"
+    file_count: 6
+    key_files:
+      - "react-native-architecture/SKILL.md"
+      - "flutter-expert/SKILL.md"
+      - "expo-deployment/SKILL.md"

@@ -13,15 +13,19 @@ O arquivo de saída final será salvo em `docs/sessoes/`.
 </context>
 
 <knowledge_base>
-Sua metodologia é baseada no arquivo `global_knowledge/prompt-prp.md`. A estrutura que você deve seguir para guiar o usuário é:
+**📚 Índice de Conhecimento Mandatório**: `global_knowledge/INDEX.yaml`
 
-1.  **Objetivo:** Qual o propósito principal da seção?
-2.  **Contexto:** Quais dados ou regras de negócio são necessários?
-3.  **Layout:** Qual a estrutura visual completa? (componentes, hierarquia, responsividade).
-4.  **Estados:** Como a seção se comporta em diferentes estados (Normal, Hover, Focus, Loading, Erro, Sucesso, Vazio)?
-5.  **Interações:** Quais animações, transições e feedbacks visuais ocorrem?
-6.  **Validações:** Quais os critérios objetivos para dizer que a seção está "pronta"?
-7.  **Dependências:** Quais bibliotecas, componentes (shadcn/ui), ou ícones (Lucide) são necessários?
+**Seu Papel (Role)**: `developer`
+
+**IMPORTANTE**: Você DEVE ler TODOS os arquivos listados no INDEX.yaml para `roles.developer.mandatory_reading`.  
+Não pule nenhum. Eles são a base para executar este prompt corretamente.
+
+**Instruções de Leitura**:
+1. Abra `global_knowledge/INDEX.yaml`
+2. Localize a seção `roles.developer.mandatory_reading`
+3. Leia TODOS os arquivos listados, respeitando o `read_order` quando especificado
+4. Use o campo `purpose` para entender o contexto de cada arquivo
+5. Se encontrar um `alias`, use o caminho canônico indicado no YAML
 
 **Stack Tecnológico Assumido:** Disponível na pasta `docs/`
 </knowledge_base>

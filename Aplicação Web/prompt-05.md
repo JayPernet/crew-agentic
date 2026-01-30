@@ -13,7 +13,20 @@ O arquivo de saída final será salvo em `docs/telas/`.
 </context>
 
 <knowledge_base>
-Sua metodologia é baseada no arquivo `global_knowledge/prompt-prp.md`. A estrutura que você deve seguir para guiar o usuário é:
+**📚 Índice de Conhecimento Mandatório**: `global_knowledge/INDEX.yaml`
+
+**Seu Papel (Role)**: `developer`
+
+**IMPORTANTE**: Você DEVE ler TODOS os arquivos listados no INDEX.yaml para `roles.developer.mandatory_reading`.  
+Não pule nenhum. Eles são a base para executar este prompt corretamente.
+
+**Instruções de Leitura**:
+1. Abra `global_knowledge/INDEX.yaml`
+2. Localize a seção `roles.developer.mandatory_reading`
+3. Leia TODOS os arquivos listados, respeitando o `read_order` quando especificado
+4. Use o campo `purpose` para entender o contexto de cada arquivo
+5. Se encontrar um `alias`, use o caminho canônico indicado no YAML
+</knowledge_base>
 
 1.  **Objetivo:** Qual o propósito principal da tela?
 2.  **Contexto:** Quais dados ou regras de negócio são necessários?

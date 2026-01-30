@@ -1,6 +1,16 @@
-# 📚 Knowledge Base Index | StarIAup
+# Índice da Base de Conhecimento Global
 
-Este arquivo serve como um mapa para navegar na vasta base de conhecimento geada e curada para o Vibe Coding. Use as categorias abaixo para encontrar o contexto necessário para cada fase do seu projeto.
+> **⚠️ IMPORTANTE**: Este arquivo é uma versão human-readable do índice.  
+> **Para agentes IA**: Use [`INDEX.yaml`](./INDEX.yaml) como fonte canônica e mandatória de leitura.
+
+Este índice organiza os mais de 2500 arquivos da base de conhecimento em categorias lógicas para facilitar a navegação por agentes IA.
+
+## Como Usar (Para Agentes IA)
+
+1. **Leia o `INDEX.yaml`** - Ele contém o mapeamento completo de roles → arquivos mandatórios
+2. **Identifique seu role** - Cada prompt define um role (pm, designer, developer, etc.)
+3. **Leia TODOS os arquivos listados** - Não há leitura opcional. Se está no YAML para seu role, é obrigatório.
+4. **Respeite o `read_order`** - Alguns arquivos têm dependências e devem ser lidos em ordem.
 
 ---
 
