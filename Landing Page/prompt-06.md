@@ -43,9 +43,11 @@ Siga o fluxo abaixo para realizar a manutenção na Landing Page:
 - Implemente melhorias em scroll effects, parallax ou micro-animações que tornem a experiência mais "viva".
 - Otimize assets e código para garantir que o polimento não custe segundos no PageSpeed.
 
-### PASSO 4: Validação de Estado
-- Atualize o `state.md` com as melhorias visuais e técnicas realizadas.
+### PASSO 4: Atualização do AGENTE.md
+- Atualize o `docs/AGENTE.md` com as melhorias visuais e técnicas realizadas.
 - Verifique se a responsividade se manteve impecável em todos os dispositivos.
+- **Metadata**: Atualize para `Status: Finished (Polish)` ou o nível de progresso atual.
+- **CHANGELOG**: Adicione a entrada correspondente às melhorias feitas.
 
 </instructions>
 

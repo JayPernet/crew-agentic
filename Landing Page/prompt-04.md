@@ -38,7 +38,7 @@ Implemente o `components/site-header.tsx`.
 - **Integração**: Deve "flutuar" sobre a Hero Section, sem cortá-la (conforme `immersive_landing_pages.md`).
 
 ### PASSO 2: Estrutura da Hero (100vh Real)
-Implemente o `features/landing/components/hero-section.tsx` (ou caminho equivalente definido no Prompt 03).
+Implemente o `features/landing/components/hero-section.tsx` (ou caminho equivalente).
 - **Altura**: `min-h-screen` ou `h-dvh` (Dynamic Viewport Height) OBRIGATÓRIO.
 - **Background**:
     - Suporte a Vídeo (`<video autoPlay loop muted playsInline>`) ou Imagem Imersiva.
@@ -56,17 +56,22 @@ Atualize o `app/page.tsx` para renderizar a Hero.
 - Garanta que não haja margins brancas ou scroll indesejado.
 - Teste a responsividade (Mobile deve manter a imersão, talvez trocando vídeo por imagem otimizada).
 
-### PASSO 5: Atualização de Estado (State)
-Gere o arquivo `state.md` atualizado.
-- Marque "Hero Section Implementation" como concluído.
-- Atualize os próximos passos (ex: "Features Section Implementation").
+### PASSO 5: Atualização do AGENTE.md (PRP e Status)
+Atualize o arquivo `docs/AGENTE.md` com a implementação da Hero Section.
+- **Seção 5 (PRPs)**: Adicione a subseção `### 5.1 Hero Section` (se não existir) ou detalhe-a com os 7 pontos (Objetivo, Contexto, Layout, Estados, Interações, Validações, Dependências) baseados no que você construiu.
+- **Metadata**: Atualize para `Status: Implementation (Hero)` e `Última Atualização: [Data Atual]`.
+- **CHANGELOG**: Adicione a entrada:
+  ```markdown
+  | [Data Atual] | prompt-04 | Conclusão | Implementação da Hero Section e Header |
+  ```
 </instructions>
 
 <output_rules>
 1.  **Gere o código completo** dos componentes `site-header.tsx`, `hero-section.tsx` e `page.tsx`.
 2.  Use blocos de código separados para cada arquivo.
-3.  No código do Header, inclua a lógica de scroll (hook `useScroll` ou similar).
-4.  No código da Hero, certifique-se de usar a tag `<video>` ou `<img>` com as props de otimização corretas.
+3.  **Gere no AGENTE.md completo atualizado** como o último bloco de código da sua resposta.
+4.  No código do Header, inclua a lógica de scroll (hook `useScroll` ou similar).
+5.  No código da Hero, certifique-se de usar a tag `<video>` ou `<img>` com as props de otimização corretas.
 </output_rules>
 
 <from_user_to_you>
