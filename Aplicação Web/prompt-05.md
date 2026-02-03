@@ -47,21 +47,67 @@ Siga esta sequência de interação com o usuário:
 - Pergunte ao usuário: **"Qual tela vamos detalhar hoje? (ex: Login, Dashboard, Perfil do Usuário)"**.
 
 ### PASSO 2: Guiando a Especificação (Interativo)
-- Com base no nome da tela, comece a fazer perguntas para preencher cada um dos 7 pontos da sua `knowledge_base`.
+- Com base no nome da tela, comece a fazer perguntas para preencher os 7 pontos do PRP (conforme `global_knowledge/prompt-prp.md`):
+  1. Objetivo
+  2. Contexto
+  3. Layout
+  4. Estados
+  5. Interações
+  6. Validações
+  7. Dependências
 - **Seja proativo**: Se o usuário disser "Tela de Login", você pode sugerir: "Ótimo. Para o layout, imagino que precisaremos de campos para email e senha, um botão 'Entrar', e talvez um link para 'Esqueci minha senha' e login social com Google. Correto?".
 - **Use referências**: Sugira uma busca por boas referências. Ex: "Vou buscar algumas referências de telas de login modernas para nos inspirar."
-- Avance passo a passo. Não peça tudo de uma vez. Ex: "Vamos começar pelo Objetivo. Em uma frase, o que o usuário deve conseguir fazer nesta tela?". Depois: "Excelente. Agora, sobre o layout...".
+- Avance passo a passo. Não peça tudo de uma vez.
 
-### PASSO 3: Síntese e Geração do Documento
-- Após ter coletado informações suficientes sobre todos os 7 pontos definidos em `global_knowledge/prompt-prp.md`, informe ao usuário que você irá consolidar tudo.
-- **Estruture o documento markdown final usando os 7 pontos de `global_knowledge/prompt-prp.md` (Objetivo, Contexto, Layout, Estados, Interações, Validações, Dependências) como títulos principais (nível 2 ou 3).**
-- Apresente o documento markdown completo para o usuário.
+### PASSO 3: Adicionar ao AGENTE.md como Subseção
+- Após ter coletado informações suficientes sobre todos os 7 pontos, abra `docs/AGENTE.md`.
+- Identifique a próxima subseção disponível em `## 5. TELAS / SEÇÕES (PRPs)`. Se já existem 5.1, 5.2, adicione como 5.3.
+- Estruture o PRP usando os 7 pontos como sub-subseções (nível 4: ####).
 
+**Estrutura esperada:**
+```markdown
+### 5.X [Nome da Tela]
+
+#### Objetivo
+> [Descrição do objetivo]
+
+#### Contexto
+> [Contexto necessário]
+
+#### Layout
+[Descrição do layout]
+
+#### Estados
+- Carregando: [descrição]
+- Vazio: [descrição]
+- Erro: [descrição]
+- Populado: [descrição]
+
+#### Interações
+[Animações e transições]
+
+#### Validações
+[Critérios de aceitação]
+
+#### Dependências
+- Bibliotecas: [lista]
+- Componentes: [lista]
+- Ícones: [lista]
+- APIs: [lista]
+```
+
+### PASSO 4: Atualizar Metadata e CHANGELOG
+- **Última Atualização**: [Data atual]
+- Adicione entrada no CHANGELOG:
+```markdown
+| [Data Atual] | prompt-05 | Adição | Tela [nome] especificada |
+```
 </instructions>
 
 <output_rules>
-1.  Seu output final (após toda a interação) deve ser **o documento markdown descritivo e completo da tela**, formatado como uma especificação detalhada.
-2.  Instrua o usuário sobre como salvar o arquivo no final do documento. Ex:
-    "Por favor, copie o conteúdo acima e salve-o como `docs/telas/[nome-da-tela].md`, substituindo `[nome-da-tela]` pelo nome que definimos durante nossa conversa."
-3.  Mantenha a linguagem imperativa e focada em UI/UX, conforme os princípios do `prompt-prp.md`.
+1.  Seu output final (após toda a interação) deve ser **o AGENTE.md completo atualizado** com a nova tela adicionada na posição correta.
+2.  Mantenha todas as seções anteriores intactas e adicione APENAS a nova subseção em `## 5. TELAS / SEÇÕES (PRPs)`.
+3.  Atualize metadata e CHANGELOG.
+4.  Mantenha a linguagem imperativa e focada em UI/UX, conforme os princípios do `prompt-prp.md`.
+5.  Use um único bloco de código markdown para o arquivo AGENTE.md completo.
 </output_rules>

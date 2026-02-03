@@ -30,7 +30,7 @@ Não pule nenhum. Eles são a base para executar este prompt corretamente.
 <instructions>
 Siga os passos abaixo para conduzir o Discovery:
 
-### PASSO 1: Ivestigação de Gambiarras (The Hack)
+### PASSO 1: Investigação de Gambiarras (The Hack)
 Interrogue o cenário atual. Onde o usuário (ou mercado) está "remendando" soluções?
 - Qual é o "Excel" que sustenta o processo hoje?
 - Qual é o processo manual doloroso que todos aceitam?
@@ -53,17 +53,38 @@ Com base na análise, emita um parecer.
 - **Sinal Amarelo**: Problema existe, mas soluções atuais são "ok". Risco médio.
 - **Sinal Vermelho**: Solução em busca de um problema. Abortar ou pivotar.
 
-### PASSO 5: Documentação Inicial (Readme)
-Gere o arquivo `readme.md` na raiz do projeto.
+### PASSO 5: Criar AGENTE.md com Discovery
+- Se `docs/AGENTE.md` **não existir**, copie o template de `global_knowledge/AGENTE_template.md` e salve em `docs/AGENTE.md`.
+- Atualize os metadados do documento:
+  - **Tipo**: Aplicação Web
+  - **Status**: Discovery
+  - **Criado**: [Data atual]
+  - **Última Atualização**: [Data atual]
+- Preencha a seção `## 1. BRIEFING` com:
+  - **1.1 Objetivo & Contexto**: Descrição inicial da ideia
+  - **1.2 Análise de Validação**: Integre TODA a análise de Discovery aqui (Passos 1-4):
+    - A. Gambiarra Atual
+    - B. Hate but Tolerate
+    - C. Customização Manual
+    - **Veredicto**: [Sinal Verde/Amarelo/Vermelho com justificativa]
+
+### PASSO 6: Gerar readme.md
+- Gere o arquivo `readme.md` na raiz do projeto (NÃO em `docs/`).
 - Use o template definido em `global_knowledge/readme.md`.
 - Preencha a descrição com o resumo da ideia validada (ou invalidada).
 
+### PASSO 7: Atualizar CHANGELOG
+Adicione uma entrada na seção `## 6. CHANGELOG` do AGENTE.md:
+```markdown
+| [Data Atual] | prompt-01 | Criação | Discovery e validação de mercado realizados |
+```
 </instructions>
 
 <output_rules>
-1.  Gere **APENAS** os arquivos `docs/validation_report.md` e `readme.md`.
-2.  Não gere PRDs, Epics ou User Stories. Isso é responsabilidade do futuro PM.
+1.  Gere **DOIS** arquivos: `docs/AGENTE.md` e `readme.md` (raiz).
+2.  Não gere PRDs, Epics ou User Stories. Isso é responsabilidade do próximo prompt (PM).
 3.  Seja brutalmente honesto no Veredicto. Sua lealdade é com o sucesso do negócio, não com o ego do usuário.
-4.  Estruture o report com: Diagnóstico do Problema, Evidências (Gambiarras/Dores) e Conclusão Estratégica.
+4.  A análise de Discovery deve estar INTEGRADA à seção 1.2 do AGENTE.md, não como arquivo separado.
 5.  O `readme.md` deve conter a arte ASCII e a descrição do projeto.
+6.  Use blocos de código separados para cada arquivo.
 </output_rules>

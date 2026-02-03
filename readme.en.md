@@ -32,8 +32,8 @@ This repository contains the **Prompt Crew** of the Vibe Code methodology, devel
 
 Unlike a regular chat, here we work with **Agentic Flows**:
 1.  **Atomic Contexts:** Each prompt is designed for a new session.
-2.  **Sovereign Documentation:** We create files in `/docs` that serve as the single source of truth for the AI.
-3.  **Defined Roles:** The AI assumes specific personas (PM, CTO, Lead Dev) at each stage.
+2.  **Sovereign Documentation:** We consolidate everything into a single `docs/AGENTE.md` file that serves as the brain and the "Single Source of Truth" for the AI.
+3.  **Defined Roles:** The AI assumes specific personalities (PM, CTO, Lead Dev) at each stage.
 
 ---
 
@@ -45,7 +45,7 @@ To start a project using this Crew, follow these steps:
 2.  **Choose the Workflow**: Decide whether to build a [Landing Page](./Landing%20Page/readme.md) or a [Web Application](./Aplicação%20Web/readme.md).
 3.  **Follow the Sequence**: Copy the content of the prompts (`prompt-01.md`, `prompt-02.md`, etc.) one by one into your favorite coding agent (Windsurf, Cursor, Lovable, etc.).
 4.  **Atomic Sessions**: We recommend opening a new conversation for each prompt to avoid context pollution.
-5.  **Trust the Documents**: After the initial prompts, your agent will generate files in `/docs`. Use these files as context for the next iterations.
+5.  **Trust the AGENTE.md**: After the initial prompts, your agent will create/update the `docs/AGENTE.md` file. Use this file as the central context for all subsequent iterations.
 6.  **Maintenance & Evolution**: Use `prompt-06.md` for bug fixes, refactoring, and polishing existing features.
 
 ---
@@ -53,7 +53,7 @@ To start a project using this Crew, follow these steps:
 ## 📚 Knowledge Base (KB)
 
 With over 2500 items, our Knowledge Base is the brain of the Crew. To facilitate navigation and save tokens, use the:
-👉 **[KNOWLEDGE BASE INDEX](./global_knowledge/INDEX.md)**
+👉 **[KNOWLEDGE BASE INDEX](./global_knowledge/INDEX.yaml)**
 
 ---
 
@@ -71,11 +71,11 @@ Navigate through the directories below to access the specific prompts for each j
 
 ---
 
-## ⚡ GSD Protocol Integration
+## ⚡ Protocol Integration
 
-To maximize efficiency and minimize "context loss", the Crew adopts the **Get Shit Done (GSD)** protocol:
+To maximize efficiency and minimize "context loss", the Crew adopts this protocol:
 
-1.  **Live State (`STATE.md`):** A living document tracking the pulse, context, and active phase of the project.
+1.  **Living Brain (`AGENTE.md`):** A central document tracking briefing, PRD, architecture, and progress in one single place.
 2.  **Legacy Mapping:** "Recognition" protocol for existing projects.
 3.  **Atomic Commits:** Each completed task generates a verifiable commit.
 

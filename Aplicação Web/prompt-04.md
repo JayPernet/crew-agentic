@@ -28,44 +28,71 @@ Não pule nenhum. Eles são a base para executar este prompt corretamente.
 <instructions>
 Siga os passos abaixo sequencialmente para gerar a definição técnica:
 
-### PASSO 1: Estrutura de Pastas (Feature-First)
-Defina a estrutura de arquivos do projeto seguindo RIGOROSAMENTE o padrão **Feature-Based**.
-- **Não agrupe por tipo** (não crie `/hooks` ou `/services` na raiz para lógica de feature).
-- **Agrupe por Domínio**: Ex: `/features/auth/components`, `/features/auth/hooks`, `/features/auth/services`.
-- **Global**: Use `/components/ui` apenas para componentes 'dumb' (shadcn) e `/lib` para utilitários genéricos.
-- output: Uma árvore de arquivos ASCII detalhada.
+### PASSO 1: Atualizar AGENTE.md - Seção 4. INVENTÁRIO DE DATABASE
+Abra o arquivo `docs/AGENTE.md` existente e preencha a seção `## 4. INVENTÁRIO DE DATABASE` com:
 
-### PASSO 2: Inventário de Banco de Dados (SOT)
-Gere o arquivo `docs/03-arquitetura/inventario_database_app.md` seguindo o `guia_inventario.md`.
-- Analise os requisitos do PRD e defina as tabelas necessárias.
-- Para cada tabela, defina colunas, tipos, chaves estrangeiras e, **CRITICAMENTE**, as políticas RLS (Row Level Security).
-- Este arquivo será a "Single Source of Truth" para o banco de dados.
+#### 4.1 Configuração & Ambiente
+- **Ambiente Atual**: [Local / Teste / Produção]
+- **Provider**: [Supabase / PostgreSQL Local]
+- **Database URL**: [URL do banco]
 
-### PASSO 3: Inventário de Componentes UI
-Liste os componentes que precisarão ser construídos ou instalados (shadcn/ui).
-- Classifique em:
-  - **Primitivos**: Botões, Inputs, Cards (instalar do shadcn).
-  - **Compostos**: HeroSection, PricingTable (montar com primitivos).
-- Verifique se os componentes atendem aos requisitos visuais do Prompt 02.
+#### 4.2 Tabelas
+Para cada tabela necessária (analisando os requisitos do PRD):
+- Siga RIGOROSAMENTE a estrutura definida em `guia_inventario.md`
+- Para cada tabela, defina:
+  - Descrição e tipo (Core / Feature / Auxiliar)
+  - Colunas com tipos, constraints e defaults
+  - Índices com justificativas
+  - Foreign Keys
+  - **RLS (Row Level Security) - OBRIGATÓRIO**
+  - Triggers (se aplicável)
 
-### PASSO 4: Stack Tecnológico (Confirmação)
-Reitere o stack mandatório para garantir alinhamento:
-- **Framework**: Next.js 16 (App Router).
-- **Estilo**: Tailwind CSS v4.
-- **Backend/Auth**: Supabase.
-- **State Server**: TanStack Query v5.
-- **State Client**: Nuqs (URL Search Params) ou Zustand (se estritamente necessário).
+**CRÍTICO**: Este será a "Single Source of Truth" para o banco de dados.
 
-### PASSO 5: Atualização de Estado (State)
-Gere o arquivo `docs/03-arquitetura/state_app.md` atualizado.
-- Marque "Architecture" como concluído.
-- Atualize os próximos passos (ex: "Database Setup", "Component Implementation").
-- Mantenha o histórico.
+#### 4.3 Enums & Types
+Liste enums customizados necessários.
+
+#### 4.4 Funções & Stored Procedures
+Documente funções SQL necessárias (para triggers, RLS, etc.).
+
+#### 4.5 Arquitetura de Pastas (Feature-Based)
+Defina a estrutura de arquivos do projeto seguindo RIGOROSAMENTE o padrão **Feature-Based**:
+- **Não agrupe por tipo** (não crie `/hooks` ou `/services` na raiz para lógica de feature)
+- **Agrupe por Domínio**: Ex: `/features/auth/components`, `/features/auth/hooks`, `/features/auth/services`
+- **Global**: Use `/components/ui` apenas para componentes 'dumb' (shadcn) e `/lib` para utilitários genéricos
+
+Gere uma árvore de arquivos ASCII detalhada.
+
+#### 4.6 Inventário de Componentes UI
+Liste os componentes que precisarão ser construídos ou instalados (shadcn/ui):
+- **Primitivos**: Botões, Inputs, Cards (instalar do shadcn)
+- **Compostos**: DashboardLayout, DataTable, etc. (montar com primitivos)
+
+Verifique se os componentes atendem aos requisitos visuais do Prompt 03.
+
+### PASSO 2: Confirmar Stack Tecnológico
+Reitere o stack mandatório dentro de uma subseção do AGENTE.md (pode ser uma nota no final da seção 4):
+- **Framework**: Next.js 16 (App Router)
+- **Estilo**: Tailwind CSS v4
+- **Backend/Auth**: Supabase
+- **State Server**: TanStack Query v5
+- **State Client**: Nuqs (URL Search Params) ou Zustand (se estritamente necessário)
+
+### PASSO 3: Atualizar Metadata do AGENTE.md
+- **Status**: Architecture
+- **Última Atualização**: [Data atual]
+
+### PASSO 4: Atualizar CHANGELOG
+Adicione uma entrada na seção `## 6. CHANGELOG` do AGENTE.md:
+```markdown
+| [Data Atual] | prompt-04 | Atualização | Arquitetura técnica, database e estrutura de pastas definidos |
+```
 </instructions>
 
 <output_rules>
-1.  **Gere o código completo** do arquivo `docs/03-arquitetura/inventario_database_app.md`.
-2.  Use blocos de código separados para cada artefato (`docs/03-arquitetura/architecture_map_app.md`, `docs/03-arquitetura/inventario_database_app.md`, `docs/03-arquitetura/component_inventory_app.md`, `docs/03-arquitetura/state_app.md`).
-3.  No mapa de arquitetura, comente brevemente a responsabilidade de cada pasta principal.
-4.  No inventário de banco, **NÃO ESQUEÇA O RLS**. É mandatório.
+1.  **Gere o AGENTE.md completo atualizado** com a seção 4 (INVENTÁRIO DE DATABASE) preenchida.
+2.  No AGENTE.md, preencha APENAS a seção 4 completa, atualize metadata (Status: Architecture) e CHANGELOG. Mantenha as outras seções intactas.
+3.  No inventário de banco, **NÃO ESQUEÇA O RLS**. É mandatório.
+4.  No mapa de arquitetura (seção 4.5), comente brevemente a responsabilidade de cada pasta principal.
+5.  Use um único bloco de código markdown para o arquivo AGENTE.md completo.
 </output_rules>

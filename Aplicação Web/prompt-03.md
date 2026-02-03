@@ -28,43 +28,44 @@ Não pule nenhum. Eles são a base para executar este prompt corretamente.
 <instructions>
 Siga os passos abaixo sequencialmente para gerar a estratégia visual:
 
-### PASSO 1: Estratégia Visual (Image-First & IVaaS)
-Defina a direção artística baseada na metodologia IVaaS.
-- **Moodboard Conceptual**: Descreva a "vibe" (emoções, temperaturas, texturas).
-- **Estratégia de Imagens**: Defina keywords para busca (Envato/Lummy) e regras de curadoria (ex: "Golden Hour only").
-- **Visual Narrative**: Explique como as imagens contarão a história definida no Briefing.
+### PASSO 1: Atualizar AGENTE.md - Estratégia Visual
+Abra o arquivo `docs/AGENTE.md` existente. 
 
-### PASSO 2: Definição do Design System (Tokens)
-Gere o conteúdo completo para o arquivo `docs/02-design/design_system.tokens.js`.
-- **NÃO SOBRESCREVA O TEMPLATE**, crie uma cópia e preencha-a integralmente dentro do seu output.
-- **Cores**: Use a técnica "Eyedropper" (extraídas das imagens conceituais do Passo 1). Nada de cores arbitrárias.
-- **Tipografia**: Escolha fontes (Google Fonts) que contrastem (Display vs Body) e defina a escala fluida (clamp).
-- **Espaçamento**: Defina o grid de 8pt (4, 8, 16, 24, 32...).
-- **Radius & Shadows**: Defina a "física" dos elementos (vidro, sólido, soft).
-- **Preview HTML**: Gere o arquivo `docs/02-design/design_system_preview.html` (copie e adapte o template de `global_knowledge`) para validarmos visualmente as cores e fontes.
+Para Aplicações Web, não usamos a seção 3 (COPYWRITING - exclusivo de LPs). Porém, adicione notas de estratégia visual na seção 1.4 (Vibe & Tom) se ainda não estiver preenchida:
+- **Moodboard Conceptual**: Descreva a "vibe" (emoções, temperaturas, texturas)
+- **Estratégia de Imagens**: Defina keywords para busca (Envato/Lummy) e regras de curadoria
+- **Visual Narrative**: Explique como as imagens contarão a história definida no Briefing
 
-### PASSO 3: Padrões de Composição (UI Specs)
-Para cada seção crítica (Hero, Features, Testimonials), defina regras de composição baseadas em `ui_composition_patterns.md` e `immersive_landing_pages.md`.
-- **Hero Section**: Mande regras de 100vh, vídeo de fundo (com overlay obrigatório) e header transparente.
-- **Depth**: Especifique onde usar "Negative Margins" para quebrar o grid e criar profundidade.
-- **Invisible Grid**: Defina as linhas de alinhamento vertical para o texto (ex: "Texto sempre alinhado na coluna 2").
+### PASSO 2: Gerar Design System (Arquivos Separados)
+Gere o conteúdo completo para os arquivos:
+- `docs/design_system.tokens.js`
+- `docs/design_system_preview.html`
 
-### PASSO 4: Estratégia de Animação
-Defina a coreografia da interface.
-- **Scroll**: Como os elementos entram? (Framer Motion / Locomotive Scroll).
-- **Micro-interações**: Como os botões reagem ao hover? (Sombra, Scale, Glow).
-- **Parallax**: Onde aplicar efeitos de profundidade no scroll?
+**Design System Tokens:**
+- **Cores**: Use a técnica "Eyedropper" (extraídas das imagens conceituais). Nada de cores arbitrárias
+- **Tipografia**: Escolha fontes (Google Fonts) que contrastem (Display vs Body) e defina a escala fluida (clamp)
+- **Espaçamento**: Defina o grid de 8pt (4, 8, 16, 24, 32...)
+- **Radius & Shadows**: Defina a "física" dos elementos (vidro, sólido, soft)
 
-### PASSO 5: Atualização de Estado (State)
-Gere o arquivo `docs/02-design/state_app.md` atualizado.
-- Marque "Design System" como concluído.
-- Atualize os próximos passos (ex: "UI Composition Implementation").
-- Mantenha o histórico do que já foi feito (Briefing, PRD, etc.).
+**Preview HTML:** Copie e adapte o template de `global_knowledge` para validarmos visualmente as cores e fontes.
+
+### PASSO 3: Atualizar Metadata do AGENTE.md
+- **Status**: Design
+- **Última Atualização**: [Data atual]
+
+### PASSO 4: Atualizar CHANGELOG
+Adicione uma entrada na seção `## 6. CHANGELOG` do AGENTE.md:
+```markdown
+| [Data Atual] | prompt-03 | Atualização | Estratégia visual e design system definidos |
+```
 </instructions>
 
 <output_rules>
-1.  **Gere o código completo** do arquivo `docs/02-design/design_system.tokens.js` preenchido.
-2.  Use blocos de código separados para cada arquivo gerado (`docs/02-design/visual_strategy_app.md`, `docs/02-design/design_system.tokens.js`, `docs/02-design/design_system_preview.html`, `docs/02-design/state_app.md`).
-3.  Seja específico nas descrições visuais (não diga "azul bonito", diga "Azul Profundo (#0F172A) inspirado no oceano noturno").
-4.  Justifique suas escolhas de design com base nos arquivos de conhecimento (ex: "Usando Margem Negativa conforme `immersive_landing_pages.md`").
+1.  **Gere o AGENTE.md completo atualizado** (apenas metadados, seção 1.4 se necessário, e CHANGELOG).
+2.  **Gere os arquivos de Design System separadamente**:
+    - `docs/design_system.tokens.js` (código completo preenchido)
+    - `docs/design_system_preview.html` (HTML completo)
+3.  Use blocos de código separados para cada arquivo: `docs/AGENTE.md`, `docs/design_system.tokens.js`, `docs/design_system_preview.html`.
+4.  Seja específico nas descrições visuais.
+5.  Justifique suas escolhas de design com base nos arquivos de conhecimento.
 </output_rules>

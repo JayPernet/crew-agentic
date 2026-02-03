@@ -109,6 +109,7 @@ Como ficaria o exemplo anterior, se feito da maneira correta:
 - email-template.ts: Um arquivo para o template do email (criando outros arquivos de template de email, conforme necessidade)
 - resend.ts: Um arquivo para a integração com a API do Resend
 - signup.ts: O trigger dentro do fluxo de criação de conta, que chama a integração do resend quando a conta do usuário for criada (podendo ter outros triggers que chamam/ compartilham essa mesma integração).
+
 Por que isso é melhor? Eu vou citar 5, mas existem muitos outros motivos:
 - Mais fácil de encontrar bugs: Problema no template do email? Apenas olha o arquivo de template do email.
 - Mais fácil de manter: Quer mudar a configuração? Só mexe no arquivo de configuração.

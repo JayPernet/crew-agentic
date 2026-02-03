@@ -32,7 +32,7 @@ Este repositório contém a **Crew de Prompts** da metodologia Vibe Code, desenv
 
 Diferente de um chat comum, aqui trabalhamos com **Fluxos Agênticos**:
 1.  **Contextos Atômicos:** Cada prompt é projetado para uma sessão nova.
-2.  **Documentação Soberana:** Criamos arquivos em `/docs` que servem como a única fonte de verdade para a IA.
+2.  **Documentação Soberana:** Consolidamos tudo em um único arquivo `docs/AGENTE.md` que serve como o cérebro e a "Single Source of Truth" para a IA.
 3.  **Papéis Definidos:** A IA assume personas específicas (PM, CTO, Lead Dev) em cada etapa.
 
 ---
@@ -45,7 +45,7 @@ Para iniciar um projeto utilizando esta Crew, siga estes passos:
 2.  **Escolha o Workflow**: Decida se vai construir uma [Landing Page](./Landing%20Page/readme.md) ou uma [Aplicação Web](./Aplicação%20Web/readme.md).
 3.  **Siga a Sequência**: Copie o conteúdo dos prompts (`prompt-01.md`, `prompt-02.md`, etc.) um por um para o seu agente de codificação favorito (Windsurf, Cursor, Lovable, etc.).
 4.  **Sessões Atômicas**: Recomendamos abrir uma nova conversa para cada prompt para evitar poluição de contexto.
-5.  **Confie nos Documentos**: Após os primeiros prompts, o seu agente gerará arquivos em `/docs`. Use esses arquivos como contexto para as próximas iterações.
+5.  **Confie no AGENTE.md**: Após os primeiros prompts, o seu agente criará/atualizará o arquivo `docs/AGENTE.md`. Use este arquivo como contexto central para todas as próximas iterações.
 6.  **Manutenção & Evolução**: Utilize o `prompt-06.md` para correções de bugs, refatoração e polimento de funcionalidades existentes.
 
 ---
@@ -53,7 +53,7 @@ Para iniciar um projeto utilizando esta Crew, siga estes passos:
 ## 📚 Base de Conhecimento (KB)
 
 Com mais de 2500 itens, nossa Knowledge Base é o cérebro da Crew. Para facilitar a navegação e economizar tokens, utilize o:
-👉 **[ÍNDICE DA KNOWLEDGE BASE](./global_knowledge/INDEX.md)**
+👉 **[ÍNDICE DA KNOWLEDGE BASE](./global_knowledge/INDEX.yaml)**
 
 ---
 
@@ -71,11 +71,11 @@ Navegue pelos diretórios abaixo para acessar os prompts específicos de cada jo
 
 ---
 
-## ⚡ Integração Protocolo GSD
+## ⚡ Protocolo de Integração
 
-Para maximizar a eficiência e minimizar a "perda de contexto", a Crew adota o protocolo **Get Shit Done (GSD)**:
+Para maximizar a eficiência e minimizar a "perda de contexto", a Crew adota o esse protocolo:
 
-1.  **Estado Vivo (`STATE.md`):** Um documento vivo rastreando o pulso, contexto e fase ativa do projeto.
+1.  **Documento Vivo (`AGENTE.md`):** Um cérebro central rastreando briefing, PRD, arquitetura e progresso em um único lugar.
 2.  **Mapeamento de Legado:** Protocolo de "Reconhecimento" para projetos existentes.
 3.  **Commits Atômicos:** Cada tarefa concluída gera um commit verificável.
 

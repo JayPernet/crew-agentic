@@ -30,65 +30,68 @@ Não pule nenhum. Eles são a base para executar este prompt corretamente.
 <instructions>
 Após a leitura, siga os passos abaixo para processar a entrada do usuário:
 
-### PASSO 1: Consolidação do Briefing
-Primeiro, organize a ideia usando o template de Briefing. Isso garante que todos estão alinhados antes de aprofundar.
-- Preencha o template `briefing_lp.md` com as informações do usuário.
-- Gere o arquivo `docs/briefing.md`.
+### PASSO 1: Criar ou Atualizar AGENTE.md
+- Se `docs/AGENTE.md` **não existir**, copie o template de `global_knowledge/AGENTE_template.md` e salve em `docs/AGENTE.md`.
+- Atualize os metadados do documento:
+  - **Tipo**: Landing Page
+  - **Status**: Definition
+  - **Criado**: [Data atual]
+  - **Última Atualização**: [Data atual]
 
-### PASSO 2: Análise de Validação
-Analise a ideia sob a ótica do *Framework de Validação* (adicionando esta análise dentro do PRD):
-- Qual é a "Gambiarra" atual?
-- O que é o "Hate but Tolerate"?
-- Qual é a "Customização Manual"?
+### PASSO 2: Preencher Seção 1. BRIEFING
+Preencha a seção `## 1. BRIEFING` do AGENTE.md com as informações consolidadas:
+- **1.1 Objetivo & Contexto**: Objetivo principal e público-alvo
+- **1.2 Análise de Validação**: Aplique o *Framework de Validação*
+  - A. Gambiarra Atual: Como resolvem hoje?
+  - B. Hate but Tolerate: O que detestam mas toleram?
+  - C. Customização Manual: Como adaptam ferramentas existentes?
+- **1.3 Proposta de Valor**: Resumo da proposta única
+- **1.4 Vibe & Tom**: Tom de voz e direção visual
 
-### PASSO 3: Elaboração do PRD Master
-Gere o documento `docs/prd.md` preenchendo o template oficial.
-- **Visão**: Uma frase poderosa.
-- **Público**: Personas detalhadas.
-- **Métricas**: Defina KPIs claros (ex: Taxa de conversão > 5%).
-- **Validação**: Inclua a análise do Passo 2.
+### PASSO 3: Preencher Seção 2. PRD
+Preencha a seção `## 2. PRD (Product Requirements Document)` do AGENTE.md:
+- **2.1 Visão**: Uma frase poderosa
+- **2.2 Público-Alvo & Personas**: Descrição detalhada das personas
+- **2.3 Métricas de Sucesso (KPIs)**: Defina KPIs claros (ex: Taxa de conversão > 5%)
 
-### PASSO 4: Quebra em Épicos
-Identifique as grandes áreas funcionais da Landing Page.
-Para LPs, considere épicos como:
-- *Hero & First Impression*
-- *Social Proof & Trust*
-- *Feature Showcase*
-- *Lead Capture & Conversion*
-Para cada épico, gere o arquivo `docs/epics/epic-0X-[nome].md`.
+### PASSO 4: Preencher Seção 2.4. Épicos & User Stories
+Dentro da seção PRD, preencha a subseção `### 2.4 Épicos & User Stories`:
+- Identifique as grandes áreas funcionais da Landing Page
+- Para LPs, considere épicos como:
+  - *Hero & First Impression*
+  - *Social Proof & Trust*
+  - *Feature Showcase*
+  - *Lead Capture & Conversion*
+- Para cada Épico, crie:
+  - **Descrição**: O que este épico engloba
+  - **Stories**: Liste as user stories no formato "Como [persona], eu quero [ação], para que [benefício]"
+  - **Critérios de Aceitação**: Use formato Gherkin (Dado/Quando/Então) para cada story
 
-### PASSO 5: Detalhamento de User Stories
-Para cada Épico, crie User Stories que cobrem os requisitos.
-Para Landing Pages, foque muito em **Requisitos de Visualização** e **Interação**.
-- Use o formato: "Como [persona], eu quero [ação], para que [benefício]".
-- **CRÍTICO**: Inclua critérios de aceitação no formato **Gherkin** (Dado/Quando/Então).
-- Gere os arquivos em `docs/stories/story-0X-[nome].md`.
+**Estrutura esperada:**
+```markdown
+#### Epic 1: Hero & First Impression
+**Descrição:** Primeira impressão imersiva que captura atenção em 3 segundos
 
-### PASSO 6: Atualização de Estado (State)
-Gere um arquivo de controle para que o próximo agente saiba o que foi feito.
-- Gere o arquivo `state.md` na raiz do projeto.
-- Estrutura esperada:
-  ```markdown
-  # Project State
-  Status: Definition Completed
-  Current Phase: 01 - Product Scope
-  
-  ## Artifacts Created
-  - [x] Briefing Consolidated
-  - [x] PRD
-  - [x] Epics (mínimo de 5)
-  - [x] User Stories (mínimo de 5, para cada Epic)
-  
-  ## Next Steps
-  - [ ] Design System
-  - [ ] Architecture
-  ```
+**Stories:**
+- **Story 1.1:** Como visitante, eu quero ver um hero impactante, para que eu entenda a proposta imediatamente
+  - **Critérios de Aceitação (Gherkin):**
+    - Dado que sou um visitante novo
+    - Quando acesso a landing page
+    - Então vejo um hero de 100vh com vídeo de fundo e headline clara
+```
+
+### PASSO 5: Atualizar CHANGELOG
+Adicione uma entrada na seção `## 6. CHANGELOG` do AGENTE.md:
+```markdown
+| [Data Atual] | prompt-01 | Criação | Briefing e PRD inicial com épicos e stories |
+```
 </instructions>
 
 <output_rules>
-1.  Você deve responder gerando o CONTEÚDO FINAL dos arquivos Markdown.
-2.  Use blocos de código separados para cada arquivo gerado (Briefing, PRD, Épicos, Stories, State).
-3.  Identifique o nome do arquivo no início de cada bloco (ex: `File: docs/prd.md`).
+1.  Você deve responder gerando o CONTEÚDO COMPLETO do arquivo `docs/AGENTE.md`.
+2.  Use um único bloco de código markdown para o arquivo AGENTE.md.
+3.  Identifique o arquivo no início do bloco (ex: `File: docs/AGENTE.md`).
 4.  Não use placeholders como "[inserir texto aqui]". Escreva o conteúdo real, profissional e completo, como se fosse um PO/PM contratado.
 5.  Mantenha o tom profissional, direto e focado em valor.
+6.  Preencha APENAS as seções 1 (BRIEFING), 2 (PRD com Épicos e Stories inline) e 6 (CHANGELOG). Deixe as outras seções com os placeholders do template.
 </output_rules>
