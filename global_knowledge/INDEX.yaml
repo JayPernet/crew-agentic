@@ -173,6 +173,7 @@ roles:
         - app-builder/SKILL.md
         - design-md/SKILL.md
         - design-orchestration/SKILL.md
+        - enhance-prompt/SKILL.md
         - frontend-design/SKILL.md
         - frontend-dev-guidelines/SKILL.md
         - frontend-developer/SKILL.md
@@ -183,12 +184,15 @@ roles:
         - nextjs-app-router-patterns/SKILL.md
         - nextjs-best-practices/SKILL.md
         - react-best-practices/SKILL.md
+        - react-components/SKILL.md
         - react-modernization/SKILL.md
         - react-native-architecture/SKILL.md
         - react-patterns/SKILL.md
         - react-state-management/SKILL.md
         - react-ui-patterns/SKILL.md
+        - remotion/SKILL.md
         - scroll-experience/SKILL.md
+        - shadcn-ui/SKILL.md
         - slack-bot-builder/SKILL.md
         - tailwind-design-system/SKILL.md
         - tailwind-patterns/SKILL.md
@@ -370,6 +374,7 @@ roles:
         - last30days/SKILL.md
         - pypict-skill/SKILL.md
         - slack-gif-creator/SKILL.md
+        - stitch-loop/SKILL.md
         - telegram-mini-app/SKILL.md
       ai_engineering:
         description: Auto-mapped knowledge for ai_engineering

@@ -38,7 +38,7 @@ Implemente o `components/site-header.tsx`.
 - **Integração**: Deve "flutuar" sobre a Hero Section, sem cortá-la (conforme `immersive_landing_pages.md`).
 
 ### PASSO 2: Estrutura da Hero (100vh Real)
-Implemente o `features/landing/components/hero-section.tsx` (ou caminho equivalente).
+Implemente a hero-section:
 - **Altura**: `min-h-screen` ou `h-dvh` (Dynamic Viewport Height) OBRIGATÓRIO.
 - **Background**:
     - Suporte a Vídeo (`<video autoPlay loop muted playsInline>`) ou Imagem Imersiva.
@@ -52,7 +52,7 @@ Posicione o texto e CTA seguindo as regras de composição:
 - **Hierarquia**: H1 (Display) > Subtitle (Muted/Light) > CTA (Accent Color).
 
 ### PASSO 4: Integração na Page
-Atualize o `app/page.tsx` para renderizar a Hero.
+Utilize apenas 1 botão na hero.
 - Garanta que não haja margins brancas ou scroll indesejado.
 - Teste a responsividade (Mobile deve manter a imersão, talvez trocando vídeo por imagem otimizada).
 

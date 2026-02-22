@@ -32,6 +32,7 @@ Este índice organiza os mais de 2500 arquivos da base de conhecimento em catego
 *   [Briefing Landing Page](briefing_lp.md)
 *   [Product Manager Toolkit](product-manager-toolkit/SKILL.md)
 *   [Framework de Métricas para Startups](startup-metrics-framework/SKILL.md)
+*   [Enhance Prompt](enhance-prompt/SKILL.md) - Otimização de prompts para UI/UX.
 
 ## 🎨 3. UI/UX & Design Premium
 *Focado em criar interfaces que dão "WOW" no usuário.*
@@ -44,6 +45,8 @@ Este índice organiza os mais de 2500 arquivos da base de conhecimento em catego
 *   [UX Principles](ux_principles.md)
 *   [Framer Motion Guide](framer_motion_guide.md) - Animações fluidas.
 *   [Lottie Guide](lottie_guide.md) - Animações ricas.
+*   [Stitch DESIGN.md](design-md/SKILL.md) - Documentação de design systems semânticos.
+*   [Remotion Walkthroughs](remotion/SKILL.md) - Vídeos de apresentação de apps.
 
 ## 💻 4. Desenvolvimento Frontend
 *Standards para código cliente moderno.*
@@ -53,6 +56,9 @@ Este índice organiza os mais de 2500 arquivos da base de conhecimento em catego
 *   [Next.js App Router Patterns](nextjs-app-router-patterns/SKILL.md)
 *   [Tailwind Patterns](tailwind-patterns/SKILL.md)
 *   [Typescript Expert](typescript-expert/SKILL.md)
+*   [React Components](react-components/SKILL.md) - Conversão de Stitch para React.
+*   [Shadcn/UI Guide](shadcn-ui/SKILL.md) - Integração com shadcn/ui.
+*   [Stitch Loop Workflow](stitch-loop/SKILL.md) - Geração de sites multi-página.
 
 ## ⚙️ 5. Desenvolvimento Backend & Banco de Dados
 *Lógica de servidor, APIs e persistência.*
