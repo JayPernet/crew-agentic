@@ -26,20 +26,20 @@ roles:
     foundation: webapp-architect/SKILL.md
     implementation: webapp-fullstack-engineer/SKILL.md
     core_reading:
-      - tech_stack_mandate.md
-      - guia_inventario.md
-      - clean_code.md
-      - principios_arquitetura.md
+      - webapp-architect/resources/tech_stack_mandate.md
+      - webapp-architect/resources/guia_inventario.md
+      - webapp-fullstack-engineer/resources/clean_code.md
+      - webapp-architect/resources/principios_arquitetura.md
 
   lp_journey:
     description: "Fluxo para Landing Pages de Alta Conversão"
     foundation: lp-product-manager/SKILL.md
     implementation: lp-frontend-engineer/SKILL.md
     core_reading:
-      - visual_strategy_workflow.md
-      - immersive_landing_pages.md
-      - ui_composition_patterns.md
-      - cta_visual_hierarchy.md
+      - lp-product-manager/resources/visual_strategy_workflow.md
+      - frontend-master/resources/immersive_landing_pages.md
+      - frontend-master/resources/ui_composition_patterns.md
+      - lp-product-manager/resources/cta_visual_hierarchy.md
 
 # ─────────────────────────────────────────────
 # 🧠 SKILLS ESPECIALIZADAS (JIT — carregue conforme necessário)
@@ -333,58 +333,82 @@ skills:
       tags: [salesforce, CRM, LWC]
 
 # ─────────────────────────────────────────────
-# 📚 BASE DE CONHECIMENTO (Arquivos de Referência)
+# 📚 BASE DE CONHECIMENTO (todos residem dentro de /resources/ da skill correspondente)
 # ─────────────────────────────────────────────
 
 knowledge_base:
   project_context:
-    - tech_stack_mandate.md
-    - principios_arquitetura.md
-    - clean_code.md
-    - best_practices.md
-    - guia_inventario.md
-    - sharding_strategy.md
+    skill: webapp-architect
+    files:
+      - resources/principios_arquitetura.md
+      - resources/tech_stack_mandate.md
+      - resources/guia_inventario.md
+      - resources/sharding_strategy.md
+      - resources/guia-sharding.md
 
-  discovery:
-    - "Framework de Validação de Ideias.md"
-    - briefing_produto.md
-    - briefing_lp.md
-    - guia_mestre_briefings.md
-    - prompt-prp.md
-    - epico.md
-    - user_story.md
-    - prd_master.md
+  clean_code:
+    skill: webapp-fullstack-engineer
+    files:
+      - resources/clean_code.md
+      - resources/best_practices.md
+      - resources/component_workflow_detailed.md
+      - resources/component_implementation_workflow.md
+      - resources/design_system_workflow.md
+
+  discovery_product:
+    skill: webapp-architect
+    files:
+      - "resources/Framework de Validação de Ideias.md"
+      - resources/briefing_produto.md
+      - resources/guia_mestre_briefings.md
+      - resources/prd_master.md
+      - resources/prompt-prp.md
+      - resources/epico.md
+      - resources/user_story.md
+
+  discovery_lp:
+    skill: lp-product-manager
+    files:
+      - resources/briefing_lp.md
+      - resources/visual_strategy_workflow.md
+      - resources/content_strategy_copywriting.md
+      - resources/cta_visual_hierarchy.md
 
   visual_design:
-    - "IVaaS - Identidade Visual as a Service.md"
-    - immersive_landing_pages.md
-    - ui_composition_patterns.md
-    - cta_visual_hierarchy.md
-    - visual_strategy_workflow.md
-    - design_system.tokens.js
-    - design_system_preview.html
-    - ui_standards.md
-    - ux_principles.md
-
-  component_workflows:
-    - component_implementation_workflow.md
-    - component_workflow_detailed.md
-    - design_system_workflow.md
+    skill: frontend-master
+    files:
+      - "resources/IVaaS - Identidade Visual as a Service.md"
+      - resources/immersive_landing_pages.md
+      - resources/ui_composition_patterns.md
+      - resources/ui_standards.md
+      - resources/ux_principles.md
+      - resources/brand_book.md
 
   animation_libraries:
-    - framer_motion_guide.md
-    - locomotive_scroll_guide.md
-    - lottie_guide.md
-    - tsparticles_guide.md
-    - curtainsjs_guide.md
-    - threejs_guide.md
-    - d3js_guide.md
-    - splittingjs_guide.md
-    - swiper_guide.md
+    skill: lp-frontend-engineer
+    files:
+      - resources/framer_motion_guide.md
+      - resources/locomotive_scroll_guide.md
+      - resources/lottie_guide.md
+      - resources/tsparticles_guide.md
+      - resources/curtainsjs_guide.md
+      - resources/threejs_guide.md
+      - resources/d3js_guide.md
+      - resources/splittingjs_guide.md
+      - resources/swiper_guide.md
 
   methodology:
-    - wat-workflow.md
+    skill: vibecode-crew
+    files:
+      - resources/wat-workflow.md
+      - template_context/MASTER.md
+      - template_context/briefing.md
+      - template_context/copywriting.md
+      - template_context/ui_inventory.md
+      - template_context/database/db_master.md
+      - template_context/prd/prd_master.md
 
-aliases:
-  principios_arquitetura.md: "Princípios de Arquitetura Para Vibe Coding.md"
-  ivaas_methodology.md: "IVaaS - Identidade Visual as a Service.md"
+  security_reference:
+    skill: security-master
+    files:
+      - resources/security_checklist.md
