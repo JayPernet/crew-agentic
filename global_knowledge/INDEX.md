@@ -1,85 +1,45 @@
-# Índice da Base de Conhecimento Global
+# Índice da Base de Conhecimento Global (StarIAup)
 
 > **⚠️ IMPORTANTE**: Este arquivo é uma versão human-readable do índice.  
 > **Para agentes IA**: Use [`INDEX.yaml`](./INDEX.yaml) como fonte canônica e mandatória de leitura.
 
-Este índice organiza os mais de 2500 arquivos da base de conhecimento em categorias lógicas para facilitar a navegação por agentes IA.
+Este índice organiza a inteligência da Crew em jornadas de desenvolvimento.
 
-## Como Usar (Para Agentes IA)
+## Como Operar a Crew
 
-1. **Leia o `INDEX.yaml`** - Ele contém o mapeamento completo de roles → arquivos mandatórios
-2. **Identifique seu role** - Cada prompt define um role (pm, designer, developer, etc.)
-3. **Leia TODOS os arquivos listados** - Não há leitura opcional. Se está no YAML para seu role, é obrigatório.
-4. **Respeite o `read_order`** - Alguns arquivos têm dependências e devem ser lidos em ordem.
-
----
-
-## 🏗 1. Fundamentos & Metodologia
-*Princípios core que regem toda a construção do projeto.*
-
-*   [Princípios de Arquitetura Para Vibe Coding](Princípios de Arquitetura Para Vibe Coding.md) - **Obrigatório para dev.**
-*   [Framework de Validação de Ideias](Framework de Validação de Ideias.md) - Discovery inicial.
-*   [PRD Master](prd_master.md) - Template de especificação de produto.
-*   [User Story Template](user_story.md) - Padrão para histórias de usuário.
-*   [Épico Template](epico.md) - Padrão para grandes áreas funcionais.
-*   [Clean Code](clean_code.md) - Guia rápido de escrita de código.
-
-## 🔎 2. Product Discovery & PM
-*Ferramentas para validar o "O QUE" e o "PORQUÊ".*
-
-*   [Guia Mestre de Briefings](guia_mestre_briefings.md)
-*   [Briefing Produto](briefing_produto.md)
-*   [Briefing Landing Page](briefing_lp.md)
-*   [Product Manager Toolkit](product-manager-toolkit/SKILL.md)
-*   [Framework de Métricas para Startups](startup-metrics-framework/SKILL.md)
-*   [Enhance Prompt](enhance-prompt/SKILL.md) - Otimização de prompts para UI/UX.
-
-## 🎨 3. UI/UX & Design Premium
-*Focado em criar interfaces que dão "WOW" no usuário.*
-
-*   [IVaaS - Identidade Visual as a Service](IVaaS - Identidade Visual as a Service.md)
-*   [Immersive Landing Pages](immersive_landing_pages.md)
-*   [Hierarquia Visual de CTAs](cta_visual_hierarchy.md)
-*   [Design System Workflow](design_system_workflow.md)
-*   [UI Standards](ui_standards.md)
-*   [UX Principles](ux_principles.md)
-*   [Framer Motion Guide](framer_motion_guide.md) - Animações fluidas.
-*   [Lottie Guide](lottie_guide.md) - Animações ricas.
-*   [Stitch DESIGN.md](design-md/SKILL.md) - Documentação de design systems semânticos.
-*   [Remotion Walkthroughs](remotion/SKILL.md) - Vídeos de apresentação de apps.
-
-## 💻 4. Desenvolvimento Frontend
-*Standards para código cliente moderno.*
-
-*   [Frontend Dev Guidelines](frontend-dev-guidelines/SKILL.md)
-*   [React Best Practices](react-best-practices/SKILL.md)
-*   [Next.js App Router Patterns](nextjs-app-router-patterns/SKILL.md)
-*   [Tailwind Patterns](tailwind-patterns/SKILL.md)
-*   [Typescript Expert](typescript-expert/SKILL.md)
-*   [React Components](react-components/SKILL.md) - Conversão de Stitch para React.
-*   [Shadcn/UI Guide](shadcn-ui/SKILL.md) - Integração com shadcn/ui.
-*   [Stitch Loop Workflow](stitch-loop/SKILL.md) - Geração de sites multi-página.
-
-## ⚙️ 5. Desenvolvimento Backend & Banco de Dados
-*Lógica de servidor, APIs e persistência.*
-
-*   [Backend Dev Guidelines](backend-dev-guidelines/SKILL.md)
-*   [API Design Principles](api-design-principles/SKILL.md)
-*   [API Patterns](api-patterns/SKILL.md)
-*   [PostgreSQL Best Practices](postgres-best-practices/SKILL.md)
-*   [Database Design Patterns](database-design/SKILL.md)
-*   [Estratégia de Sharding](sharding_strategy.md)
-
-## 🛡️ 6. Segurança, QA & DevOps
-*Proteção e entrega contínua.*
-
-*   [Security Checklist](security_checklist.md)
-*   [Web App Testing](webapp-testing/SKILL.md)
-*   [API Security Best Practices](api-security-best-practices/SKILL.md)
-*   [Deployment Procedures](deployment-procedures/SKILL.md)
-*   [CI/CD Automation](cicd-automation-workflow-automate/SKILL.md)
+1. **Ative a Skill Mestra**: Comece sempre com *"Quero iniciar um projeto com a skill `vibecode-crew`"*.
+2. **SSOT Automático**: O agente gerenciará o diretório `.context/` para você. Ele é a "fonte única de verdade" para qualquer IA ou IDE que você usar no projeto.
+3. **Indexação Cirúrgica**: Não carregue a pasta inteira. Aponte para o `INDEX.yaml` e deixe a IA buscar o que precisa via JIT (Just-In-Time).
 
 ---
 
-### 💡 Dica de Uso para AGENTES:
-Ao receber um prompt desta crew, você deve ler o arquivo de índice correspondente à sua tarefa (ex: um PM deve ler a seção 2, um Arquiteto a seção 1 e 5). Nunca tente ler a pasta inteira, foque nos arquivos listados aqui para economizar contexto.
+## 🎭 Jornadas e Skills Principais
+
+### 1. Maestro & Orquestração
+*O ponto de entrada e o cérebro que se auto-aprimora.*
+*   **[Maestro (vibecode-crew)](./vibecode-crew/SKILL.md)** - Triagem, Roteamento e Auto-Melhoria.
+
+### 2. Jornada Web App (SaaS, CRM, Dashboards)
+*Fluxo para aplicações complexas e escaláveis.*
+*   **[Arquiteto de Fundação (webapp-architect)](./webapp-architect/SKILL.md)** - Discovery, PRD e Database Design (RLS).
+*   **[Engenheiro Fullstack (webapp-fullstack-engineer)](./webapp-fullstack-engineer/SKILL.md)** - Implementação de Features e Telas (PRPs).
+*   [Tech Stack Mandate](./tech_stack_mandate.md) - Padrões tecnológicos.
+*   [Guia de Inventário de Dados](./guia_inventario.md) - SSOT do Banco de Dados.
+
+### 3. Jornada Landing Page (Conversão & Impacto)
+*Fluxo para páginas de vendas de alta performance.*
+*   **[Product Manager (lp-product-manager)](./lp-product-manager/SKILL.md)** - Estratégia, Copywriting e Visual Vibe.
+*   **[Engenheiro Frontend (lp-frontend-engineer)](./lp-frontend-engineer/SKILL.md)** - UI Imersiva, Hero 100vh e Animações.
+*   [Visual Strategy Workflow](./visual_strategy_workflow.md) - Filosofia Image-First.
+
+### 4. Conhecimento Transversal
+*Padrões aplicados em todas as jornadas.*
+*   [Framework de Validação de Ideias](./Framework de Validação de Ideias.md)
+*   [Clean Code](./clean_code.md)
+*   [UI Composition Patterns](./ui_composition_patterns.md)
+*   [WAT Workflow](./wat-workflow.md)
+
+---
+
+## 💡 Dica de Caching (Para Usuários)
+Para economizar tokens, adicione o caminho do `INDEX.yaml` nas configurações de "Docs" ou "Knowledge" do seu IDE (Cursor, Windsurf, Antigravity). Isso permite que a IA tenha o mapa completo sem consumir memória desnecessária.

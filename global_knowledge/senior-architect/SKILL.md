@@ -1,209 +1,126 @@
 ---
 name: senior-architect
-description: Comprehensive software architecture skill for designing scalable, maintainable systems using ReactJS, NextJS, NodeJS, Express, React Native, Swift, Kotlin, Flutter, Postgres, GraphQL, Go, Python. Includes architecture diagram generation, system design patterns, tech stack decision frameworks, and dependency analysis. Use when designing system architecture, making technical decisions, creating architecture diagrams, evaluating trade-offs, or defining integration patterns.
+description: "Complete software architecture toolkit. Use for: architectural decision-making (ADRs), system design trade-off analysis, Clean/Hexagonal/DDD architecture patterns, scalable system design, tech stack selection, architecture diagrams, and code quality-focused development guidance. Comprehensive senior architect reference for any backend or fullstack architectural challenge."
 ---
 
 # Senior Architect
 
-Complete toolkit for senior architect with modern tools and best practices.
+Comprehensive software architecture skill for designing scalable, maintainable systems.
 
-## Quick Start
+---
 
-### Main Capabilities
+## 1. Architectural Decision Framework
 
-This skill provides three core capabilities through automated scripts:
+When facing an architecture decision:
+1. **Define the requirement**: What problem are we solving? What are the constraints?
+2. **Identify options**: List 2-3 viable approaches.
+3. **Evaluate trade-offs**: Consider scalability, cost, complexity, team expertise, time.
+4. **Document as ADR**: Write an Architecture Decision Record.
 
-```bash
-# Script 1: Architecture Diagram Generator
-python scripts/architecture_diagram_generator.py [options]
+**ADR Template:**
+```markdown
+# ADR-{number}: {Short Title}
 
-# Script 2: Project Architect
-python scripts/project_architect.py [options]
+## Status
+Proposed | Accepted | Deprecated | Superseded
 
-# Script 3: Dependency Analyzer
-python scripts/dependency_analyzer.py [options]
+## Context
+{The situation forcing this decision}
+
+## Decision
+{What we decided}
+
+## Consequences
+**Good**: {Benefits}
+**Bad**: {Trade-offs and downsides}
 ```
 
-## Core Capabilities
+---
 
-### 1. Architecture Diagram Generator
+## 2. Architecture Patterns
 
-Automated tool for architecture diagram generator tasks.
+### Clean Architecture
+- **Layers**: Entities → Use Cases → Interface Adapters → Frameworks.
+- **Rule**: Dependencies point inward. No framework code in the domain layer.
+- **Use when**: Long-lived applications needing testability and team independence.
 
-**Features:**
-- Automated scaffolding
-- Best practices built-in
-- Configurable templates
-- Quality checks
+### Hexagonal Architecture (Ports & Adapters)
+- **Core**: Business logic is a hexagon with "ports" (interfaces).
+- **Adapters**: DB, HTTP, messaging all plug into ports.
+- **Use when**: Multi-channel I/O (API + CLI + events).
 
-**Usage:**
-```bash
-python scripts/architecture_diagram_generator.py <project-path> [options]
+### Domain-Driven Design (DDD)
+- **Bounded Contexts**: Partition the domain into explicit boundaries.
+- **Aggregates**: Cluster of domain objects with a single root.
+- **Use when**: Complex business domains with multiple teams.
+
+### Event-Driven Architecture
+- **Publish/Subscribe**: Decoupled services communicate via events.
+- **Event Sourcing**: Store state as a series of events, replay for current state.
+- **CQRS**: Separate read (Query) and write (Command) models.
+- **Use when**: High scalability needs, audit requirements, or loose coupling.
+
+---
+
+## 3. Tech Stack Decision Framework
+
+| Layer | Default (Web App) | Alternative |
+|-------|------------------|-------------|
+| Frontend | Next.js 15+ (App Router) | Remix, SvelteKit |
+| Styling | Tailwind CSS v4 | shadcn/ui + Radix |
+| Backend | Next.js API Routes / Node.js | FastAPI, Go |
+| Database | PostgreSQL (Supabase) | MySQL, MongoDB |
+| ORM | Drizzle ORM | Prisma |
+| Auth | Supabase Auth | Auth.js, Clerk |
+| Deploy | Vercel | AWS, Railway |
+| State | TanStack Query v5 | Zustand, Jotai |
+
+---
+
+## 4. SOLID Principles (Quick Reference)
+
+- **S**: Single Responsibility — one reason to change.
+- **O**: Open/Closed — open for extension, closed for modification.
+- **L**: Liskov Substitution — subtypes must be substitutable.
+- **I**: Interface Segregation — prefer small, specific interfaces.
+- **D**: Dependency Inversion — depend on abstractions, not concretions.
+
+---
+
+## 5. Architecture Diagram Generation
+
+Use ASCII for quick structural diagrams:
+
+```
+┌─────────────────────────────────────────────┐
+│                  Next.js App                │
+├─────────────┬───────────────────────────────┤
+│  App Router │        API Routes             │
+├─────────────┴───────────────────────────────┤
+│              TanStack Query                 │
+├─────────────────────────────────────────────┤
+│                Supabase                     │
+│  (PostgreSQL + Auth + Storage + Realtime)   │
+└─────────────────────────────────────────────┘
 ```
 
-### 2. Project Architect
+For detailed diagrams, use Mermaid:
 
-Comprehensive analysis and optimization tool.
-
-**Features:**
-- Deep analysis
-- Performance metrics
-- Recommendations
-- Automated fixes
-
-**Usage:**
-```bash
-python scripts/project_architect.py <target-path> [--verbose]
+```mermaid
+graph TD
+    A[Client] -->|HTTP| B[Next.js API]
+    B -->|SQL| C[PostgreSQL]
+    B -->|Auth| D[Supabase Auth]
 ```
 
-### 3. Dependency Analyzer
+---
 
-Advanced tooling for specialized tasks.
+## 6. Quality Checklist
 
-**Features:**
-- Expert-level automation
-- Custom configurations
-- Integration ready
-- Production-grade output
-
-**Usage:**
-```bash
-python scripts/dependency_analyzer.py [arguments] [options]
-```
-
-## Reference Documentation
-
-### Architecture Patterns
-
-Comprehensive guide available in `references/architecture_patterns.md`:
-
-- Detailed patterns and practices
-- Code examples
-- Best practices
-- Anti-patterns to avoid
-- Real-world scenarios
-
-### System Design Workflows
-
-Complete workflow documentation in `references/system_design_workflows.md`:
-
-- Step-by-step processes
-- Optimization strategies
-- Tool integrations
-- Performance tuning
-- Troubleshooting guide
-
-### Tech Decision Guide
-
-Technical reference guide in `references/tech_decision_guide.md`:
-
-- Technology stack details
-- Configuration examples
-- Integration patterns
-- Security considerations
-- Scalability guidelines
-
-## Tech Stack
-
-**Languages:** TypeScript, JavaScript, Python, Go, Swift, Kotlin
-**Frontend:** React, Next.js, React Native, Flutter
-**Backend:** Node.js, Express, GraphQL, REST APIs
-**Database:** PostgreSQL, Prisma, NeonDB, Supabase
-**DevOps:** Docker, Kubernetes, Terraform, GitHub Actions, CircleCI
-**Cloud:** AWS, GCP, Azure
-
-## Development Workflow
-
-### 1. Setup and Configuration
-
-```bash
-# Install dependencies
-npm install
-# or
-pip install -r requirements.txt
-
-# Configure environment
-cp .env.example .env
-```
-
-### 2. Run Quality Checks
-
-```bash
-# Use the analyzer script
-python scripts/project_architect.py .
-
-# Review recommendations
-# Apply fixes
-```
-
-### 3. Implement Best Practices
-
-Follow the patterns and practices documented in:
-- `references/architecture_patterns.md`
-- `references/system_design_workflows.md`
-- `references/tech_decision_guide.md`
-
-## Best Practices Summary
-
-### Code Quality
-- Follow established patterns
-- Write comprehensive tests
-- Document decisions
-- Review regularly
-
-### Performance
-- Measure before optimizing
-- Use appropriate caching
-- Optimize critical paths
-- Monitor in production
-
-### Security
-- Validate all inputs
-- Use parameterized queries
-- Implement proper authentication
-- Keep dependencies updated
-
-### Maintainability
-- Write clear code
-- Use consistent naming
-- Add helpful comments
-- Keep it simple
-
-## Common Commands
-
-```bash
-# Development
-npm run dev
-npm run build
-npm run test
-npm run lint
-
-# Analysis
-python scripts/project_architect.py .
-python scripts/dependency_analyzer.py --analyze
-
-# Deployment
-docker build -t app:latest .
-docker-compose up -d
-kubectl apply -f k8s/
-```
-
-## Troubleshooting
-
-### Common Issues
-
-Check the comprehensive troubleshooting section in `references/tech_decision_guide.md`.
-
-### Getting Help
-
-- Review reference documentation
-- Check script output messages
-- Consult tech stack documentation
-- Review error logs
-
-## Resources
-
-- Pattern Reference: `references/architecture_patterns.md`
-- Workflow Guide: `references/system_design_workflows.md`
-- Technical Guide: `references/tech_decision_guide.md`
-- Tool Scripts: `scripts/` directory
+Before shipping any architectural design:
+- [ ] Single points of failure identified and mitigated?
+- [ ] Data consistency strategy defined?
+- [ ] Observability: logging, metrics, tracing in place?
+- [ ] Security: auth, authz, secrets management defined?
+- [ ] Scalability: horizontal scaling possible?
+- [ ] Rollback strategy defined?

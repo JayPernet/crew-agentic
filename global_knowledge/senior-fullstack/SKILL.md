@@ -1,209 +1,160 @@
 ---
 name: senior-fullstack
-description: Comprehensive fullstack development skill for building complete web applications with React, Next.js, Node.js, GraphQL, and PostgreSQL. Includes project scaffolding, code quality analysis, architecture patterns, and complete tech stack guidance. Use when building new projects, analyzing code quality, implementing design patterns, or setting up development workflows.
+description: "Complete fullstack development toolkit. Use for: building full-stack web apps (React, Next.js, Node.js, GraphQL, PostgreSQL), project scaffolding, code quality analysis, backend architecture (layered services, API design, caching, queuing), feature development end-to-end, design patterns, and development workflows."
 ---
 
 # Senior Fullstack
 
-Complete toolkit for senior fullstack with modern tools and best practices.
+Complete reference for fullstack development across the entire stack.
 
-## Quick Start
+---
 
-### Main Capabilities
+## 1. Project Scaffolding
 
-This skill provides three core capabilities through automated scripts:
-
-```bash
-# Script 1: Fullstack Scaffolder
-python scripts/fullstack_scaffolder.py [options]
-
-# Script 2: Project Scaffolder
-python scripts/project_scaffolder.py [options]
-
-# Script 3: Code Quality Analyzer
-python scripts/code_quality_analyzer.py [options]
+**Next.js 15+ App Router (recommended structure):**
+```
+src/
+  app/                      # Routes (App Router)
+    (auth)/                 # Route groups
+    api/                    # API routes
+  features/                 # Feature-based modules
+    auth/
+      components/
+      hooks/
+      lib/
+      types.ts
+    dashboard/
+      ...
+  components/               # Global dumb components only
+  lib/                      # Shared utilities
+  types/                    # Global types
 ```
 
-## Core Capabilities
+---
 
-### 1. Fullstack Scaffolder
+## 2. Backend Architecture Standards
 
-Automated tool for fullstack scaffolder tasks.
+**Layered architecture:**
+```
+Route Handler → Service Layer → Repository Layer → Database
+```
+- **Route Handlers**: Validate input, call service, return response. No business logic.
+- **Service Layer**: All business logic. No DB calls.
+- **Repository Layer**: All DB calls. No business logic.
 
-**Features:**
-- Automated scaffolding
-- Best practices built-in
-- Configurable templates
-- Quality checks
-
-**Usage:**
-```bash
-python scripts/fullstack_scaffolder.py <project-path> [options]
+**Node.js + TypeScript stack:**
+```typescript
+// Route → Service → Repository pattern
+export async function POST(req: Request) {
+  const body = await req.json();
+  const validated = CreateOrderSchema.parse(body); // Validate at boundary
+  const order = await OrderService.create(validated); // Business logic
+  return NextResponse.json(order, { status: 201 });
+}
 ```
 
-### 2. Project Scaffolder
+---
 
-Comprehensive analysis and optimization tool.
+## 3. API Design Standards
 
-**Features:**
-- Deep analysis
-- Performance metrics
-- Recommendations
-- Automated fixes
+**REST conventions:**
+- `GET /resources` — list
+- `POST /resources` — create
+- `GET /resources/:id` — detail
+- `PATCH /resources/:id` — partial update
+- `DELETE /resources/:id` — delete
 
-**Usage:**
-```bash
-python scripts/project_scaffolder.py <target-path> [--verbose]
+**Response envelope:**
+```typescript
+// Success
+{ data: T, meta?: { page, total } }
+
+// Error
+{ error: { code: string, message: string, details?: unknown } }
 ```
 
-### 3. Code Quality Analyzer
+**Versioning**: prefer URL versioning (`/api/v1/`) for public APIs.
 
-Advanced tooling for specialized tasks.
+---
 
-**Features:**
-- Expert-level automation
-- Custom configurations
-- Integration ready
-- Production-grade output
+## 4. Caching Strategy
 
-**Usage:**
-```bash
-python scripts/code_quality_analyzer.py [arguments] [options]
+| Layer | Tool | TTL | Use For |
+|-------|------|-----|---------|
+| Browser | Browser cache / SWR | 5min | Static assets, user profile |
+| CDN | Vercel Edge | 1hr | Public pages, images |
+| Application | Redis + Upstash | 5-60min | DB query results, computed data |
+| Database | PostgreSQL materialized views | Manual | Expensive aggregations |
+
+```typescript
+// TanStack Query client-side cache
+const { data } = useQuery({
+  queryKey: ['dashboard-stats'],
+  queryFn: fetchStats,
+  staleTime: 5 * 60 * 1000, // 5 minutes
+});
 ```
 
-## Reference Documentation
+---
 
-### Tech Stack Guide
+## 5. Background Jobs & Queues
 
-Comprehensive guide available in `references/tech_stack_guide.md`:
+When to use: sending emails, image processing, webhooks, long-running imports.
 
-- Detailed patterns and practices
-- Code examples
-- Best practices
-- Anti-patterns to avoid
-- Real-world scenarios
+```typescript
+// Trigger.dev (recommended for Next.js)
+export const sendWelcomeEmail = task({
+  id: 'send-welcome-email',
+  run: async (payload: { userId: string }) => {
+    const user = await getUser(payload.userId);
+    await resend.emails.send({ to: user.email, ... });
+  }
+});
 
-### Architecture Patterns
-
-Complete workflow documentation in `references/architecture_patterns.md`:
-
-- Step-by-step processes
-- Optimization strategies
-- Tool integrations
-- Performance tuning
-- Troubleshooting guide
-
-### Development Workflows
-
-Technical reference guide in `references/development_workflows.md`:
-
-- Technology stack details
-- Configuration examples
-- Integration patterns
-- Security considerations
-- Scalability guidelines
-
-## Tech Stack
-
-**Languages:** TypeScript, JavaScript, Python, Go, Swift, Kotlin
-**Frontend:** React, Next.js, React Native, Flutter
-**Backend:** Node.js, Express, GraphQL, REST APIs
-**Database:** PostgreSQL, Prisma, NeonDB, Supabase
-**DevOps:** Docker, Kubernetes, Terraform, GitHub Actions, CircleCI
-**Cloud:** AWS, GCP, Azure
-
-## Development Workflow
-
-### 1. Setup and Configuration
-
-```bash
-# Install dependencies
-npm install
-# or
-pip install -r requirements.txt
-
-# Configure environment
-cp .env.example .env
+// Trigger from API route
+await sendWelcomeEmail.trigger({ userId: newUser.id });
 ```
 
-### 2. Run Quality Checks
+---
 
-```bash
-# Use the analyzer script
-python scripts/project_scaffolder.py .
+## 6. Error Handling (Global Strategy)
 
-# Review recommendations
-# Apply fixes
+```typescript
+// Centralized error types
+export class AppError extends Error {
+  constructor(
+    public code: string,
+    message: string,
+    public statusCode: number = 500,
+  ) { super(message); }
+}
+
+export class NotFoundError extends AppError {
+  constructor(resource: string) {
+    super('NOT_FOUND', `${resource} not found`, 404);
+  }
+}
+
+// Global handler in API route
+export function handleError(error: unknown) {
+  if (error instanceof AppError) {
+    return NextResponse.json({ error: { code: error.code, message: error.message } }, { status: error.statusCode });
+  }
+  console.error('Unexpected error:', error);
+  return NextResponse.json({ error: { code: 'INTERNAL', message: 'Internal server error' } }, { status: 500 });
+}
 ```
 
-### 3. Implement Best Practices
+---
 
-Follow the patterns and practices documented in:
-- `references/tech_stack_guide.md`
-- `references/architecture_patterns.md`
-- `references/development_workflows.md`
+## 7. Feature Development Workflow (End-to-End)
 
-## Best Practices Summary
-
-### Code Quality
-- Follow established patterns
-- Write comprehensive tests
-- Document decisions
-- Review regularly
-
-### Performance
-- Measure before optimizing
-- Use appropriate caching
-- Optimize critical paths
-- Monitor in production
-
-### Security
-- Validate all inputs
-- Use parameterized queries
-- Implement proper authentication
-- Keep dependencies updated
-
-### Maintainability
-- Write clear code
-- Use consistent naming
-- Add helpful comments
-- Keep it simple
-
-## Common Commands
-
-```bash
-# Development
-npm run dev
-npm run build
-npm run test
-npm run lint
-
-# Analysis
-python scripts/project_scaffolder.py .
-python scripts/code_quality_analyzer.py --analyze
-
-# Deployment
-docker build -t app:latest .
-docker-compose up -d
-kubectl apply -f k8s/
-```
-
-## Troubleshooting
-
-### Common Issues
-
-Check the comprehensive troubleshooting section in `references/development_workflows.md`.
-
-### Getting Help
-
-- Review reference documentation
-- Check script output messages
-- Consult tech stack documentation
-- Review error logs
-
-## Resources
-
-- Pattern Reference: `references/tech_stack_guide.md`
-- Workflow Guide: `references/architecture_patterns.md`
-- Technical Guide: `references/development_workflows.md`
-- Tool Scripts: `scripts/` directory
+1. **Define**: Read the feature spec / PRP from `.context/`.
+2. **Database**: Write migration SQL (with prefix + RLS).
+3. **Repository**: Create repository functions (typed).
+4. **Service**: Implement business logic.
+5. **API Route**: Create endpoint with input validation.
+6. **Frontend**: Build UI components + TanStack Query hooks.
+7. **Test**: Write at least one happy-path + one error-path test.
+8. **Review**: Run security checklist, visual checklist.
+9. **Document**: Update `.context/MASTER.md` changelog.

@@ -12,72 +12,58 @@
 
 **AI-Guided Software Development, Human-Structured.**
 
-This repository contains the **Prompt Crew** of the Vibe Code methodology, developed by StarIAup. An approach that combines the power of generative AI with rigorous software engineering processes to **minimize token costs, eliminate rework, and deliver quality products**.
+This repository contains **all the Skills** used in the Vibe Code methodology, developed by StarIAup. An approach that combines generative AI power with pragmatic and objective software engineering processes to **minimize token costs, eliminate rework, and deliver high-quality products**.
 
 ---
 
-## 🎯 The Problem We Solve
+## 🎯 What are "Skills"?
 
-**Traditional Vibe Coding** is expensive and chaotic:
-- Thousands of tokens wasted in re-executions
-- Lack of technical hierarchy generates inconsistent code
-- Outdated documentation causes AI hallucinations
-- Absence of automated QA results in production bugs
+In practice, a **Skill** is nothing more than a folder with files inside. It has a main file (`SKILL.md`) with the master instructions, and inside that folder, you can add references, data, examples, and whatever else the AI needs to perform that task exceptionally well.
 
-**Our Solution:** A "crew" of specialized prompts that transform the AI into a team of experts (PM, Architect, Designer, Dev), ensuring that every line of code has a strategic purpose.
+Examples of what makes up our Crew:
+- **Brand Identity Skill**
+- **Frontend Design Skill**
+- **SEO & Copywriting Skill**
+- **Immersive Web Design Skill**
 
----
+Since a skill is a folder, you can **version it on GitHub**. This means you will have the entire history of your AI's intelligence evolution over time. If you discover a better workflow, the AI can update its own skill (with your permission) and "learn" it forever.
 
-## ⚡ Agentic Workflow
+### ⚙️ Deterministic + Non-Deterministic
+The secret of skills is that they can also call **scripts as tools**.
+Imagine a branding skill that, besides having the brand colors and fonts (non-deterministic), has a Python script that performs the exact application of that branding to a specific file (deterministic). It's the precision of code combined with the creativity of AI, all within a single folder.
 
-Unlike a regular chat, here we work with **Agentic Flows**:
-1.  **Atomic Contexts:** Each prompt is designed for a new session.
-2.  **Sovereign Documentation:** We consolidate everything into a single `docs/AGENTE.md` file that serves as the brain and the "Single Source of Truth" for the AI.
-3.  **Defined Roles:** The AI assumes specific personalities (PM, CTO, Lead Dev) at each stage.
 
 ---
 
 ## 🛠 How to Use
 
-To start a project using this Crew, follow these steps:
+To start a project using our methodology, follow these steps:
 
-1.  **Clone the Repository**: Ensure your AI agent has access to the knowledge files in `/global_knowledge`.
-2.  **Choose the Workflow**: Decide whether to build a [Landing Page](./Landing%20Page/readme.md) or a [Web Application](./Aplicação%20Web/readme.md).
-3.  **Follow the Sequence**: Copy the content of the prompts (`prompt-01.md`, `prompt-02.md`, etc.) one by one into your favorite coding agent (Windsurf, Cursor, Lovable, etc.).
-4.  **Atomic Sessions**: We recommend opening a new conversation for each prompt to avoid context pollution.
-5.  **Trust the AGENTE.md**: After the initial prompts, your agent will create/update the `docs/AGENTE.md` file. Use this file as the central context for all subsequent iterations.
-6.  **Maintenance & Evolution**: Use `prompt-06.md` for bug fixes, refactoring, and polishing existing features.
+1. **Start your Agent**: Create your new project folder (e.g., `CRM-Nexus`).
+2. **Setup Base**: Clone this repository into your project folder.
+2.1. **Context Caching & Indexing**: For maximum token efficiency, point your agent to the `@global_knowledge/INDEX.yaml` file. It acts as the Crew's brain map; the AI will fetch other files via JIT (Just-In-Time) only when necessary.
+3. **Trigger the Master Skill**: In your AI chat, simply say:
+   > *"Hello! I want to start a new project using the `vibecode-crew` skill."*
+4. **Answer the Questions**: The agent will ask if you want to build a **Landing Page** or a **Web Application**. Once you answer, it will auto-dispatch to the correct skills (`webapp-architect` or `lp-product-manager`) and follow the workflow automatically, managing your `.context/` directory.
+
 
 ---
 
 ## 📚 Knowledge Base (KB)
 
-With over 2500 items, our Knowledge Base is the brain of the Crew. To facilitate navigation and save tokens, use the:
+With over 2500 items, our Knowledge Base is the brain of the methodology. To facilitate navigation and save tokens, use the:
 👉 **[KNOWLEDGE BASE INDEX](./global_knowledge/INDEX.yaml)**
 
 ---
 
-## 🏗 Workflow Structure
+## ⚡ SSOT: Multi-Agent Shared Brain
 
-Navigate through the directories below to access the specific prompts for each journey:
+To eliminate hallucinations and allow the parallel use of multiple tools, the Crew uses the `.context/` directory as the **Single Source of Truth (SSOT)**:
 
-### 🎨 [Landing Page](./Landing%20Page/readme.md)
-*Workflow focused on conversion and high-impact design.*
-- **Highlight**: Immersive Hero Section mandates (100vh) and astronomical visual composition.
+1.  **Universal Memory**: Whether you are using Antigravity, Cursor, Claude Code, or a terminal; all agents must read and write to the `.context/` to maintain total project synchronization.
+2.  **Automated Protocol**: Skills autonomously manage the creation of `MASTER.md`, PRD sharding, and Technical Changelog maintenance.
+3.  **Native JIT Loading**: The AI reads only the specific shard required for the current task, reducing costs and increasing precision.
 
-### 🚀 [Web Application](./Aplicação%20Web/readme.md)
-*Workflow focused on market validation and scalable architecture.*
-- **Highlight**: Idea validation framework (Hacks/Hate) and Feature-based structure.
-
----
-
-## ⚡ Protocol Integration
-
-To maximize efficiency and minimize "context loss", the Crew adopts this protocol:
-
-1.  **Living Brain (`AGENTE.md`):** A central document tracking briefing, PRD, architecture, and progress in one single place.
-2.  **Legacy Mapping:** "Recognition" protocol for existing projects.
-3.  **Atomic Commits:** Each completed task generates a verifiable commit.
 
 ---
 
@@ -85,9 +71,9 @@ To maximize efficiency and minimize "context loss", the Crew adopts this protoco
 
 This methodology is the result of **consuming, adapting, and versioning** the work of giants:
 
-- **[Antigravity Awesome Skills](https://github.com/sickn33/antigravity-awesome-skills):** A large part of our knowledge base was inspired and adapted from this incredible repository.
+- **[Antigravity Awesome Skills](https://github.com/sickn33/antigravity-awesome-skills):** Much of our knowledge base was inspired and adapted from this incredible repository.
 - **[Brian (BMAD Method)](https://github.com/bmadcode):** Agentic construction concept.
-- **[Deborah Folloni (DebGPT)](https://x.com/dfolloni):** Fundamental principles of KISS, DRY, and technical structuring.
+- **[Deborah Folloni (DebGPT)](https://x.com/dfolloni):** Fundamental KISS, DRY, and technical structuring principles we've learned from her.
 
 ---
 

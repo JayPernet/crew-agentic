@@ -1,79 +1,69 @@
 ---
 name: vercel-deployment
-description: "Expert knowledge for deploying to Vercel with Next.js Use when: vercel, deploy, deployment, hosting, production."
-source: vibeship-spawner-skills (Apache 2.0)
+description: "Deploy applications to Vercel. Use when deploying to production, creating preview deployments, configuring Next.js hosting, or requesting a deployment link. Covers best practices, environment variables, Edge vs Serverless, and claimable deployments."
 risk: safe
 ---
 
 # Vercel Deployment
 
-You are a Vercel deployment expert. You understand the platform's
-capabilities, limitations, and best practices for deploying Next.js
-applications at scale.
+Expert knowledge for deploying to Vercel with Next.js and any supported framework.
 
-## When to Use This Skill
+## When to Use
 
-Use this skill when:
-- Deploying to Vercel
-- Working with Vercel deployment
-- Hosting applications on Vercel
 - Deploying to production on Vercel
-- Configuring Vercel for Next.js applications
+- Creating preview deployments
+- Configuring environment variables per environment
+- Optimizing builds and reducing cold starts
+- Getting a live preview URL or claimable deployment link
 
-Your core principles:
-1. Environment variables - different for dev/preview/production
-2. Edge vs Serverless - choose the right runtime
-3. Build optimization - minimize cold starts and bundle size
-4. Preview deployments - use for testing before production
-5. Monitoring - set up analytics and error tracking
+---
 
-## Capabilities
+## Best Practices
 
-- vercel
-- deployment
-- edge-functions
-- serverless
-- environment-variables
+1. **Environment Variables**: Use different values for `development`, `preview`, and `production`. Never use `NEXT_PUBLIC_` for secrets.
+2. **Edge vs Serverless**: Use Edge for low-latency, stateless operations; use Serverless for Node.js-specific APIs.
+3. **Build Optimization**: Minimize bundle size, use `next/dynamic` for code splitting, and leverage build cache.
+4. **Preview Deployments**: Always test on preview before promoting to production.
+5. **Monitoring**: Set up Vercel Analytics and Sentry for error tracking.
 
-## Requirements
-
-- nextjs-app-router
-
-## Patterns
-
-### Environment Variables Setup
-
-Properly configure environment variables for all environments
-
-### Edge vs Serverless Functions
-
-Choose the right runtime for your API routes
-
-### Build Optimization
-
-Optimize build for faster deployments and smaller bundles
-
-## Anti-Patterns
-
-### ❌ Secrets in NEXT_PUBLIC_
-
-### ❌ Same Database for Preview
-
-### ❌ No Build Cache
-
-## ⚠️ Sharp Edges
+## ⚠️ Common Pitfalls
 
 | Issue | Severity | Solution |
 |-------|----------|----------|
-| NEXT_PUBLIC_ exposes secrets to the browser | critical | Only use NEXT_PUBLIC_ for truly public values: |
-| Preview deployments using production database | high | Set up separate databases for each environment: |
-| Serverless function too large, slow cold starts | high | Reduce function size: |
-| Edge runtime missing Node.js APIs | high | Check API compatibility before using edge: |
-| Function timeout causes incomplete operations | medium | Handle long operations properly: |
-| Environment variable missing at runtime but present at build | medium | Understand when env vars are read: |
-| CORS errors calling API routes from different domain | medium | Add CORS headers to API routes: |
-| Page shows stale data after deployment | medium | Control caching behavior: |
+| `NEXT_PUBLIC_` exposing secrets | critical | Only use for truly public values |
+| Preview using production DB | high | Separate DB per environment |
+| Serverless function too large | high | Tree-shake and reduce deps |
+| Edge runtime missing Node.js APIs | high | Check compatibility first |
+| Stale data after deploy | medium | Configure `revalidate` / ISR |
+
+---
+
+## Claimable Deployment (No Auth Required)
+
+For one-click deployments without authentication, use the deploy script:
+
+```bash
+bash /mnt/skills/user/vercel-deploy/scripts/deploy.sh [path]
+```
+
+**Examples:**
+```bash
+# Deploy current directory
+bash /mnt/skills/user/vercel-deploy/scripts/deploy.sh
+
+# Deploy specific project
+bash /mnt/skills/user/vercel-deploy/scripts/deploy.sh /path/to/project
+```
+
+**Output:**
+```
+✓ Deployment successful!
+
+Preview URL: https://skill-deploy-abc123.vercel.app
+Claim URL:   https://vercel.com/claim-deployment?code=...
+```
+
+Always present both URLs to the user. The Claim URL allows them to transfer the deployment to their Vercel account.
 
 ## Related Skills
-
-Works well with: `nextjs-app-router`, `supabase-backend`
+Works well with: `nextjs-app-router-patterns`, `nextjs-supabase-auth`

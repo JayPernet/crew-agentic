@@ -1,453 +1,390 @@
 metadata:
-  version: 2.0
-  last_updated: '2026-02-11'
-  total_indexed_files: 224
-  philosophy: 'Este INDEX é um MAPA MANDATÓRIO de leitura.
+  version: 5.0
+  last_updated: '2026-02-25'
+  total_skills: 115
+  philosophy: >
+    Este INDEX é a FONTE DE VERDADE da Crew. Carregue-o via Context Caching.
+    A Crew opera via JIT (Just-In-Time) Loading. Use grep_search; não leia tudo.
+    O diretório .context/ é o cérebro compartilhado para multi-agentes (SSOT).
 
-    Se um arquivo está listado para o seu role, você DEVE lê-lo.
+# ─────────────────────────────────────────────
+# 🎭 JORNADAS PRINCIPAIS (Nossa metodologia)
+# ─────────────────────────────────────────────
 
-    Não há leitura opcional ou "sugestões". Tudo é essencial.
-
-    '
 roles:
-  researcher:
-    description: Senior UX Researcher & Market Analyst especialista em Product Discovery
-    prompts:
-    - prompt-01
-    mandatory_reading:
-    - path: Framework de Validação de Ideias.md
-      purpose: Guia de investigação (Gambiarras, Ódio Tolerado, Customização)
-      read_order: 1
-    - path: readme.md
-      purpose: Template para documentação inicial
-      read_order: 2
-    knowledge_categories:
-      cro:
-        description: Auto-mapped knowledge for cro
-        files: &id001
-        - content-marketer/SKILL.md
-        - launch-strategy/SKILL.md
-        - micro-saas-launcher/SKILL.md
-        - startup-analyst/SKILL.md
-        - startup-business-analyst-business-case/SKILL.md
-        - startup-business-analyst-financial-projections/SKILL.md
-        - startup-financial-modeling/SKILL.md
-        - startup-metrics-framework/SKILL.md
-      marketing:
-        description: Auto-mapped knowledge for marketing
-        files: &id002
-        - content-creator/SKILL.md
-        - copy-editing/SKILL.md
-        - copywriting/SKILL.md
-        - hubspot-integration/SKILL.md
-        - seo-cannibalization-detector/SKILL.md
-        - seo-content-planner/SKILL.md
-        - seo-content-refresher/SKILL.md
-        - seo-content-writer/SKILL.md
-        - seo-fundamentals/SKILL.md
-        - seo-keyword-strategist/SKILL.md
-        - seo-meta-optimizer/SKILL.md
-        - seo-snippet-hunter/SKILL.md
-        - seo-structure-architect/SKILL.md
-        - social-content/SKILL.md
-  pm:
-    description: Product Manager Sênior award-winning
-    prompts:
-    - prompt-02
-    mandatory_reading:
-    - path: briefing_lp.md
-      purpose: Template para consolidação do Briefing (Landing Pages)
-      read_order: 1
-    - path: briefing_produto.md
-      purpose: Template para consolidação do Briefing (Produtos Web)
-      read_order: 1
-    - path: prd_master.md
-      purpose: Estrutura mandatória para o PRD
-      read_order: 2
-    - path: epico.md
-      purpose: Estrutura mandatória para Épicos
-      read_order: 3
-    - path: user_story.md
-      purpose: Estrutura mandatória para Histórias de Usuário
-      read_order: 4
-    - path: Framework de Validação de Ideias.md
-      purpose: Para definição de proposta de valor
-      read_order: 2
-    knowledge_categories:
-      cro:
-        description: Auto-mapped knowledge for cro
-        files: *id001
-      marketing:
-        description: Auto-mapped knowledge for marketing
-        files: *id002
-      devops_infra:
-        description: Auto-mapped knowledge for devops_infra
-        files: &id003
-        - address-github-comments/SKILL.md
-        - dependency-upgrade/SKILL.md
-        - deployment-engineer/SKILL.md
-        - deployment-pipeline-design/SKILL.md
-        - finishing-a-development-branch/SKILL.md
-        - github-actions-templates/SKILL.md
-        - github-workflow-automation/SKILL.md
-        - vercel-deploy-claimable/SKILL.md
-        - vercel-deployment/SKILL.md
-      documentation:
-        description: Auto-mapped knowledge for documentation
-        files: &id004
-        - documentation-generation-doc-generate/SKILL.md
-        - documentation-templates/SKILL.md
-        - legal-advisor/SKILL.md
-        - writing-plans/SKILL.md
-        - writing-skills/SKILL.md
-  designer:
-    description: Creative Director & Design System Architect
-    prompts:
-    - prompt-03
-    mandatory_reading:
-    - path: visual_strategy_workflow.md
-      purpose: Filosofia Image-First e Templates Modulares
-      read_order: 1
-    - path: IVaaS - Identidade Visual as a Service.md
-      purpose: Metodologia completa de IVaaS
-      read_order: 1
-    - path: design_system.tokens.js
-      purpose: Template sagrado para definição de tokens
-      read_order: 2
-    - path: ui_composition_patterns.md
-      purpose: Regras de Invisible Grid, Negative Margins
-      read_order: 3
-    - path: immersive_landing_pages.md
-      purpose: Mandates para Hero 100vh, Headers Transparentes
-      read_order: 3
-    - path: ui_standards.md
-      purpose: Regras de contraste e hierarquia
-      read_order: 4
-    - path: design_system_preview.html
-      purpose: Vitrine do design system
-      read_order: 5
-    - path: design_system_workflow.md
-      purpose: Workflow de criação de design systems
-      read_order: 6
-    - path: cta_visual_hierarchy.md
-      purpose: Hierarquia visual de CTAs para conversão
-      read_order: 7
-    - path: ux_principles.md
-      purpose: Princípios fundamentais de UX
-      read_order: 8
-    - path: brand_book.md
-      purpose: Estrutura de brand books
-      read_order: 9
-    - path: framer_motion_guide.md
-      purpose: Guia de animações com Framer Motion
-      read_order: 10
-    - path: lottie_guide.md
-      purpose: Animações ricas com Lottie
-      read_order: 11
-    - path: locomotive_scroll_guide.md
-      purpose: Scroll effects imersivos
-      read_order: 12
-    - path: swiper_guide.md
-      purpose: Carrosséis e sliders
-      read_order: 13
-    - path: tsparticles_guide.md
-      purpose: Efeitos de partículas
-      read_order: 14
-    - path: threejs_guide.md
-      purpose: 3D na web com Three.js
-      read_order: 15
-    - path: d3js_guide.md
-      purpose: Visualizações de dados com D3.js
-      read_order: 16
-    - path: curtainsjs_guide.md
-      purpose: WebGL effects
-      read_order: 17
-    - path: splittingjs_guide.md
-      purpose: Text animations
-      read_order: 18
-    knowledge_categories:
-      ux_ui:
-        description: Auto-mapped knowledge for ux_ui
-        files: &id007
-        - agent-tool-builder/SKILL.md
-        - app-builder/SKILL.md
-        - design-md/SKILL.md
-        - design-orchestration/SKILL.md
-        - enhance-prompt/SKILL.md
-        - frontend-design/SKILL.md
-        - frontend-dev-guidelines/SKILL.md
-        - frontend-developer/SKILL.md
-        - frontend-mobile-development-component-scaffold/SKILL.md
-        - frontend-slides/SKILL.md
-        - kpi-dashboard-design/SKILL.md
-        - mobile-design/SKILL.md
-        - nextjs-app-router-patterns/SKILL.md
-        - nextjs-best-practices/SKILL.md
-        - react-best-practices/SKILL.md
-        - react-components/SKILL.md
-        - react-modernization/SKILL.md
-        - react-native-architecture/SKILL.md
-        - react-patterns/SKILL.md
-        - react-state-management/SKILL.md
-        - react-ui-patterns/SKILL.md
-        - remotion/SKILL.md
-        - scroll-experience/SKILL.md
-        - shadcn-ui/SKILL.md
-        - slack-bot-builder/SKILL.md
-        - tailwind-design-system/SKILL.md
-        - tailwind-patterns/SKILL.md
-        - telegram-bot-builder/SKILL.md
-        - ui-skills/SKILL.md
-        - ui-ux-designer/SKILL.md
-        - ui-ux-pro-max/SKILL.md
-        - ui-visual-validator/SKILL.md
-        - viral-generator-builder/SKILL.md
-        - web-artifacts-builder/SKILL.md
-        - web-design-guidelines/SKILL.md
-  architect:
-    description: Software Architect & Database Designer
-    prompts:
-    - prompt-04
-    mandatory_reading:
-    - path: guia_inventario.md
-      purpose: Artefato soberano para Banco de Dados
-      read_order: 2
-    - path: component_workflow_detailed.md
-      purpose: Estrutura de diretórios para componentes
-      read_order: 3
-    - path: best_practices.md
-      purpose: Melhores práticas gerais do projeto
-      read_order: 4
-    - path: sharding_strategy.md
-      purpose: Estratégias de sharding para escala
-      read_order: 5
-    - path: guia-sharding.md
-      purpose: Guia completo de sharding
-      read_order: 5
-    knowledge_categories:
-      backend:
-        description: Auto-mapped knowledge for backend
-        files: &id005
-        - api-design-principles/SKILL.md
-        - api-documentation-generator/SKILL.md
-        - api-documenter/SKILL.md
-        - api-patterns/SKILL.md
-        - api-security-best-practices/SKILL.md
-        - app-store-optimization/SKILL.md
-        - application-performance-performance-optimization/SKILL.md
-        - backend-architect/SKILL.md
-        - backend-dev-guidelines/SKILL.md
-        - backend-development-feature-development/SKILL.md
-        - backend-security-coder/SKILL.md
-        - context-optimization/SKILL.md
-        - database-cloud-optimization-cost-optimize/SKILL.md
-        - file-uploads/SKILL.md
-        - firebase/SKILL.md
-        - full-stack-orchestration-full-stack-feature/SKILL.md
-        - python-development-python-scaffold/SKILL.md
-        - python-packaging/SKILL.md
-        - python-patterns/SKILL.md
-        - python-performance-optimization/SKILL.md
-        - python-pro/SKILL.md
-        - python-testing-patterns/SKILL.md
-        - salesforce-development/SKILL.md
-        - senior-fullstack/SKILL.md
-        - server-management/SKILL.md
-        - shopify-apps/SKILL.md
-        - shopify-development/SKILL.md
-        - spark-optimization/SKILL.md
-        - sql-optimization-patterns/SKILL.md
-        - stripe-integration/SKILL.md
-        - web-performance-optimization/SKILL.md
-      database:
-        description: Auto-mapped knowledge for database
-        files: &id006
-        - context7-auto-research/SKILL.md
-        - data-engineer/SKILL.md
-        - data-engineering-data-driven-feature/SKILL.md
-        - data-engineering-data-pipeline/SKILL.md
-        - data-quality-frameworks/SKILL.md
-        - data-scientist/SKILL.md
-        - data-storytelling/SKILL.md
-        - database-admin/SKILL.md
-        - database-architect/SKILL.md
-        - database-design/SKILL.md
-        - database-migration/SKILL.md
-        - database-migrations-migration-observability/SKILL.md
-        - database-migrations-sql-migrations/SKILL.md
-        - database-optimizer/SKILL.md
-        - deep-research/SKILL.md
-        - search-specialist/SKILL.md
-        - sql-injection-testing/SKILL.md
-        - sql-pro/SKILL.md
-        - sqlmap-database-pentesting/SKILL.md
-      devops_infra:
-        description: Auto-mapped knowledge for devops_infra
-        files: *id003
-      security:
-        description: Auto-mapped knowledge for security
-        files: &id010
-        - accessibility-compliance-accessibility-audit/SKILL.md
-        - anti-reversing-techniques/SKILL.md
-        - auth-implementation-patterns/SKILL.md
-        - defi-protocol-templates/SKILL.md
-        - dependency-management-deps-audit/SKILL.md
-        - file-path-traversal/SKILL.md
-        - frontend-mobile-security-xss-scan/SKILL.md
-        - frontend-security-coder/SKILL.md
-        - mobile-security-coder/SKILL.md
-        - nextjs-supabase-auth/SKILL.md
-        - protocol-reverse-engineering/SKILL.md
-        - secrets-management/SKILL.md
-        - security-auditor/SKILL.md
-        - security-bluebook-builder/SKILL.md
-        - security-compliance-compliance-check/SKILL.md
-        - security-requirement-extraction/SKILL.md
-        - security-scanning-security-dependencies/SKILL.md
-        - security-scanning-security-hardening/SKILL.md
-        - security-scanning-security-sast/SKILL.md
-        - seo-audit/SKILL.md
-        - seo-authority-builder/SKILL.md
-        - seo-content-auditor/SKILL.md
-        - smtp-penetration-testing/SKILL.md
-        - solidity-security/SKILL.md
-        - ssh-penetration-testing/SKILL.md
-        - vulnerability-scanner/SKILL.md
-        - wordpress-penetration-testing/SKILL.md
-      architecture:
-        description: Auto-mapped knowledge for architecture
-        files: &id008
-        - architecture/SKILL.md
-        - architecture-decision-records/SKILL.md
-        - architecture-patterns/SKILL.md
-        - docs-architect/SKILL.md
-        - senior-architect/SKILL.md
-        - software-architecture/SKILL.md
-      documentation:
-        description: Auto-mapped knowledge for documentation
-        files: *id004
-  developer:
-    description: Senior Full-Stack Developer
-    prompts:
-    - prompt-05
-    mandatory_reading:
-    - path: prompt-prp.md
-      purpose: Metodologia de Product Requirement Prompts
-      read_order: 1
-    - path: clean_code.md
-      purpose: Padrões de código limpo
-      read_order: 3
-    - path: component_implementation_workflow.md
-      purpose: Workflow de implementação de componentes
-      read_order: 4
-    knowledge_categories:
-      backend:
-        description: Auto-mapped knowledge for backend
-        files: *id005
-      database:
-        description: Auto-mapped knowledge for database
-        files: *id006
-      ux_ui:
-        description: Auto-mapped knowledge for ux_ui
-        files: *id007
-      mobile:
-        description: Auto-mapped knowledge for mobile
-        files:
-        - ios-developer/SKILL.md
-        - mobile-developer/SKILL.md
-      testing_qa:
-        description: Auto-mapped knowledge for testing_qa
-        files: &id009
-        - architect-review/SKILL.md
-        - find-bugs/SKILL.md
-        - verification-before-completion/SKILL.md
-        - webapp-testing/SKILL.md
-      tools:
-        description: Auto-mapped knowledge for tools
-        files:
-        - automate-whatsapp/SKILL.md
-        - customer-support/SKILL.md
-        - file-organizer/SKILL.md
-        - firecrawl-scraper/SKILL.md
-        - free-tool-strategy/SKILL.md
-        - git-advanced-workflows/SKILL.md
-        - last30days/SKILL.md
-        - pypict-skill/SKILL.md
-        - slack-gif-creator/SKILL.md
-        - stitch-loop/SKILL.md
-        - telegram-mini-app/SKILL.md
-      ai_engineering:
-        description: Auto-mapped knowledge for ai_engineering
-        files:
-        - agent-evaluation/SKILL.md
-        - agent-manager-skill/SKILL.md
-        - agent-memory-systems/SKILL.md
-        - agent-orchestration-improve-agent/SKILL.md
-        - agent-orchestration-multi-agent-optimize/SKILL.md
-        - ai-agents-architect/SKILL.md
-        - ai-engineer/SKILL.md
-        - ai-product/SKILL.md
-        - context-window-management/SKILL.md
-        - daily-news-report/SKILL.md
-        - paid-ads/SKILL.md
-        - prompt-engineer/SKILL.md
-        - prompt-engineering/SKILL.md
-        - prompt-engineering-patterns/SKILL.md
-        - prompt-library/SKILL.md
-        - rag-engineer/SKILL.md
-        - rag-implementation/SKILL.md
-        - voice-agents/SKILL.md
-        - voice-ai-development/SKILL.md
-        - voice-ai-engine-development/SKILL.md
-      game_dev:
-        description: Auto-mapped knowledge for game_dev
-        files:
-        - startup-business-analyst-market-opportunity/SKILL.md
-      architecture:
-        description: Auto-mapped knowledge for architecture
-        files: *id008
-  qa_engineer:
-    description: QA Lead & Maintenance Engineer
-    prompts:
-    - prompt-06 (Aplicação Web)
-    mandatory_reading:
-    - path: clean_code.md
-      purpose: Padrões de nomenclatura e estrutura
-      read_order: 2
-    - path: security_checklist.md
-      purpose: Checklist de segurança
-      read_order: 3
-    knowledge_categories:
-      testing_qa:
-        description: Auto-mapped knowledge for testing_qa
-        files: *id009
-      security:
-        description: Auto-mapped knowledge for security
-        files: *id010
-  cro_specialist:
-    description: Conversion Rate Optimization Specialist
-    prompts:
-    - prompt-06 (Landing Page)
-    mandatory_reading:
-    - path: immersive_landing_pages.md
-      purpose: Manter impacto visual astronômico
-      read_order: 1
-    - path: cta_visual_hierarchy.md
-      purpose: Garantir que mudanças não prejudiquem conversão
-      read_order: 2
-    - path: framer_motion_guide.md
-      purpose: Refinar animações existentes
-      read_order: 3
-    - path: content_strategy_copywriting.md
-      purpose: Estratégia de conteúdo e copywriting
-      read_order: 4
-    knowledge_categories:
-      cro:
-        description: Auto-mapped knowledge for cro
-        files: *id001
-      marketing:
-        description: Auto-mapped knowledge for marketing
-        files: *id002
+  maestro:
+    description: "Orquestrador. Ponto de entrada para qualquer projeto novo."
+    core_skill: vibecode-crew/SKILL.md
+    responsibilities:
+      - Triagem de projeto (Web App ou Landing Page)
+      - Criação de novas Skills sob demanda
+      - Auto-aprimoramento de Skills (com autorização do usuário)
+      - Gestão de SSOT via .context/
+
+  webapp_journey:
+    description: "Fluxo para Aplicações Web, CRM, SaaS, Dashboards"
+    foundation: webapp-architect/SKILL.md
+    implementation: webapp-fullstack-engineer/SKILL.md
+    core_reading:
+      - tech_stack_mandate.md
+      - guia_inventario.md
+      - clean_code.md
+      - principios_arquitetura.md
+
+  lp_journey:
+    description: "Fluxo para Landing Pages de Alta Conversão"
+    foundation: lp-product-manager/SKILL.md
+    implementation: lp-frontend-engineer/SKILL.md
+    core_reading:
+      - visual_strategy_workflow.md
+      - immersive_landing_pages.md
+      - ui_composition_patterns.md
+      - cta_visual_hierarchy.md
+
+# ─────────────────────────────────────────────
+# 🧠 SKILLS ESPECIALIZADAS (JIT — carregue conforme necessário)
+# ─────────────────────────────────────────────
+
+skills:
+
+  # :: Arquitetura & Engenharia
+  architecture:
+    - skill: senior-architect/SKILL.md
+      tags: [architecture, ADR, system-design, clean-arch, DDD, hexagonal]
+    - skill: senior-fullstack/SKILL.md
+      tags: [fullstack, next.js, node.js, react, api, feature-based, backend]
+    - skill: webapp-testing/SKILL.md
+      tags: [testing, playwright, e2e, integration]
+    - skill: architect-review/SKILL.md
+      tags: [code-review, architecture-review]
+    - skill: writing-plans/SKILL.md
+      tags: [planning, spec, pre-coding]
+    - skill: verification-before-completion/SKILL.md
+      tags: [verification, pre-commit, quality]
+
+  # :: Frontend & UI/UX
+  frontend:
+    - skill: frontend-master/SKILL.md
+      tags: [frontend, react, typescript, UI, UX, design-system, figma, stitch, visual-validation]
+    - skill: react-master/SKILL.md
+      tags: [react, hooks, state-management, tanstack-query, zustand, suspense, typescript]
+    - skill: lp-frontend-engineer/SKILL.md
+      tags: [landing-page, framer-motion, animation, hero, 100vh, immersive]
+    - skill: nextjs-app-router-patterns/SKILL.md
+      tags: [next.js, app-router, server-components, streaming, SSR, SSG]
+    - skill: nextjs-supabase-auth/SKILL.md
+      tags: [next.js, supabase, authentication, auth, session]
+    - skill: shadcn-ui/SKILL.md
+      tags: [shadcn, radix, component-library, UI]
+    - skill: tailwind-patterns/SKILL.md
+      tags: [tailwind, CSS, v4, design-tokens, container-queries]
+    - skill: scroll-experience/SKILL.md
+      tags: [scroll, parallax, immersive, locomotive-scroll, animation]
+    - skill: mobile-design/SKILL.md
+      tags: [mobile, iOS, android, react-native, responsive]
+    - skill: stitch-loop/SKILL.md
+      tags: [stitch, website-generation, multi-page, autonomous]
+    - skill: design-md/SKILL.md
+      tags: [design-system, stitch, semantic, DESIGN.md]
+    - skill: frontend-slides/SKILL.md
+      tags: [presentations, HTML, slides, animations]
+    - skill: web-artifacts-builder/SKILL.md
+      tags: [HTML, artifacts, claude, interactive]
+    - skill: remotion/SKILL.md
+      tags: [video, remotion, walkthrough, presentations]
+    - skill: frontend-mobile-development-component-scaffold/SKILL.md
+      tags: [mobile, scaffold, React-Native, component]
+    - skill: full-stack-orchestration-full-stack-feature/SKILL.md
+      tags: [fullstack, orchestration, feature]
+
+  # :: Database & Dados
+  database:
+    - skill: database-master/SKILL.md
+      tags: [database, postgresql, schema, migrations, RLS, indexing, optimization, cloud-db]
+    - skill: data-engineer/SKILL.md
+      tags: [data-engineering, ETL, pipeline, warehouse, dbt]
+    - skill: data-scientist/SKILL.md
+      tags: [data-science, ML, analytics, predictions, modeling]
+    - skill: data-storytelling/SKILL.md
+      tags: [data-visualization, storytelling, dashboards, presentation]
+    - skill: kpi-dashboard-design/SKILL.md
+      tags: [dashboard, KPI, metrics, visualization]
+    - skill: data-quality-frameworks/SKILL.md
+      tags: [data-quality, great-expectations, dbt-tests]
+    - skill: spark-optimization/SKILL.md
+      tags: [apache-spark, big-data, optimization, partitioning]
+    - skill: database-cloud-optimization-cost-optimize/SKILL.md
+      tags: [cloud, cost, database, optimization]
+
+  # :: API & Integrações
+  api:
+    - skill: api-master/SKILL.md
+      tags: [REST, GraphQL, tRPC, API-design, OpenAPI, versioning, pagination]
+    - skill: api-security-best-practices/SKILL.md
+      tags: [API, security, auth, rate-limiting, CORS]
+    - skill: stripe-integration/SKILL.md
+      tags: [stripe, payments, PCI, subscription]
+    - skill: firebase/SKILL.md
+      tags: [firebase, firestore, cloud-functions, auth, storage]
+    - skill: hubspot-integration/SKILL.md
+      tags: [hubspot, CRM, integration, OAuth]
+    - skill: salesforce-development/SKILL.md
+      tags: [salesforce, LWC, apex, CRM]
+    - skill: shopify-development/SKILL.md
+      tags: [shopify, e-commerce, liquid, theme]
+    - skill: shopify-apps/SKILL.md
+      tags: [shopify, apps, remix, extensions, billing]
+    - skill: auth-implementation-patterns/SKILL.md
+      tags: [authentication, JWT, OAuth2, session, auth]
+    - skill: file-uploads/SKILL.md
+      tags: [uploads, S3, R2, presigned-urls, storage]
+
+  # :: Segurança
+  security:
+    - skill: security-master/SKILL.md
+      tags: [security-audit, OWASP, SAST, scanning, hardening, compliance, GDPR, SOC2]
+    - skill: security-coder/SKILL.md
+      tags: [secure-coding, XSS, SQL-injection, CSP, input-validation, frontend-security, backend-security, mobile-security]
+    - skill: pentest-toolkit/SKILL.md
+      tags: [pentesting, SMTP, SSH, WordPress, SQLi, SQLMap, red-team]
+    - skill: secrets-management/SKILL.md
+      tags: [secrets, vault, AWS-secrets-manager, environment-variables]
+    - skill: dependency-management-deps-audit/SKILL.md
+      tags: [dependencies, vulnerabilities, SBOM, license, supply-chain]
+    - skill: dependency-upgrade/SKILL.md
+      tags: [upgrades, compatibility, breaking-changes]
+    - skill: anti-reversing-techniques/SKILL.md
+      tags: [reverse-engineering, obfuscation, protection]
+    - skill: protocol-reverse-engineering/SKILL.md
+      tags: [network, protocol, packet-analysis, wireshark]
+    - skill: solidity-security/SKILL.md
+      tags: [solidity, smart-contracts, web3, blockchain, security]
+    - skill: defi-protocol-templates/SKILL.md
+      tags: [DeFi, staking, AMM, governance, lending, blockchain]
+    - skill: file-path-traversal/SKILL.md
+      tags: [security, path-traversal, directory, vulnerability]
+
+  # :: DevOps & Deploy
+  devops:
+    - skill: vercel-deployment/SKILL.md
+      tags: [vercel, deploy, next.js, production, preview, edge]
+    - skill: deployment-engineer/SKILL.md
+      tags: [CI/CD, docker, kubernetes, deployment, infrastructure]
+    - skill: git-advanced-workflows/SKILL.md
+      tags: [git, rebase, cherry-pick, bisect, worktrees]
+    - skill: github-actions-templates/SKILL.md
+      tags: [github-actions, CI/CD, automation, workflows]
+    - skill: github-workflow-automation/SKILL.md
+      tags: [github, PR-review, issue-triage, automation]
+    - skill: server-management/SKILL.md
+      tags: [server, process-management, monitoring, scaling]
+
+  # :: AI & Agentes
+  ai_agents:
+    - skill: agent-engineering/SKILL.md
+      tags: [agent, evaluation, benchmarking, multi-agent, memory, orchestration]
+    - skill: prompt-master/SKILL.md
+      tags: [prompt-engineering, CoT, few-shot, LLM, optimization, templates]
+    - skill: ai-product/SKILL.md
+      tags: [AI-product, LLM, RAG, cost-optimization, AI-UX]
+    - skill: ai-engineer/SKILL.md
+      tags: [LLM, production, RAG, advanced, AI-engineering]
+    - skill: ai-agents-architect/SKILL.md
+      tags: [agent-architecture, tool-use, memory, autonomous]
+    - skill: rag-engineer/SKILL.md
+      tags: [RAG, embeddings, vector-db, semantic-search, chunking]
+    - skill: agent-tool-builder/SKILL.md
+      tags: [tools, agent-tools, MCP, function-calling]
+    - skill: agent-manager-skill/SKILL.md
+      tags: [tmux, multi-agent, CLI, session-management]
+    - skill: context-optimization/SKILL.md
+      tags: [context, compaction, caching, masking]
+    - skill: context-window-management/SKILL.md
+      tags: [context-window, summarization, trimming, token]
+    - skill: context7-auto-research/SKILL.md
+      tags: [context7, documentation, research, library]
+    - skill: deep-research/SKILL.md
+      tags: [research, Gemini, autonomous, multi-step]
+
+  # :: Python
+  python:
+    - skill: python-pro/SKILL.md
+      tags: [python, 3.12+, async, modern]
+    - skill: python-patterns/SKILL.md
+      tags: [python, framework-selection, async, type-hints, structure]
+    - skill: python-testing-patterns/SKILL.md
+      tags: [python, pytest, fixtures, mocking, TDD]
+    - skill: python-performance-optimization/SKILL.md
+      tags: [python, profiling, cProfile, performance, optimization]
+    - skill: python-packaging/SKILL.md
+      tags: [python, packaging, pyproject, distribution]
+    - skill: python-development-python-scaffold/SKILL.md
+      tags: [python, scaffolding, project-structure]
+    - skill: pypict-skill/SKILL.md
+      tags: [pairwise-testing, combinatorial]
+
+  # :: Mobile
+  mobile:
+    - skill: mobile-developer/SKILL.md
+      tags: [mobile, react-native, flutter, iOS, android]
+    - skill: ios-developer/SKILL.md
+      tags: [iOS, Swift, SwiftUI, Xcode]
+    - skill: react-native-architecture/SKILL.md
+      tags: [react-native, expo, navigation, offline, native-modules]
+    - skill: app-store-optimization/SKILL.md
+      tags: [ASO, app-store, play-store, keywords, ratings]
+
+  # :: Performance & Web Vitals
+  performance:
+    - skill: web-performance-optimization/SKILL.md
+      tags: [performance, Core-Web-Vitals, bundle-size, caching, LCP, CLS]
+    - skill: application-performance-performance-optimization/SKILL.md
+      tags: [performance, profiling, observability, backend, end-to-end]
+
+  # :: SEO & Conteúdo
+  seo_content:
+    - skill: seo-master/SKILL.md
+      tags: [SEO, audit, keywords, meta, content, E-E-A-T, snippets, cannibalization]
+    - skill: content-master/SKILL.md
+      tags: [copywriting, content-marketing, social-media, brand-voice, LinkedIn, Twitter]
+    - skill: content-creator/SKILL.md
+      tags: [content, SEO, brand-voice, marketing]
+
+  # :: Marketing & Growth
+  marketing:
+    - skill: paid-ads/SKILL.md
+      tags: [Google-Ads, Meta, paid-advertising, campaigns]
+    - skill: launch-strategy/SKILL.md
+      tags: [product-launch, go-to-market, release]
+    - skill: free-tool-strategy/SKILL.md
+      tags: [lead-generation, SEO, calculator, engineering-as-marketing]
+    - skill: viral-generator-builder/SKILL.md
+      tags: [viral, tools, generators, shareable]
+    - skill: micro-saas-launcher/SKILL.md
+      tags: [micro-SaaS, indie-hacker, launch, fast]
+
+  # :: Negócios & Startups
+  business:
+    - skill: startup-analyst/SKILL.md
+      tags: [startup, TAM, SAM, SOM, business-case, financial-model, SaaS-metrics, CAC, LTV]
+    - skill: customer-support/SKILL.md
+      tags: [customer-support, CX, AI-support]
+    - skill: legal-advisor/SKILL.md
+      tags: [legal, privacy-policy, GDPR, terms-of-service]
+    - skill: kpi-dashboard-design/SKILL.md
+      tags: [KPI, dashboard, metrics, business-intelligence]
+
+  # :: Automação & Bots
+  automation:
+    - skill: automate-whatsapp/SKILL.md
+      tags: [whatsapp, automation, chatbot, Kapso]
+    - skill: slack-bot-builder/SKILL.md
+      tags: [slack, bot, Bolt, Block-Kit]
+    - skill: telegram-bot-builder/SKILL.md
+      tags: [telegram, bot, API, automation]
+    - skill: telegram-mini-app/SKILL.md
+      tags: [telegram, mini-app, TWA, web-app]
+    - skill: voice-ai/SKILL.md
+      tags: [voice, TTS, STT, real-time, Deepgram, ElevenLabs, conversational-AI]
+    - skill: firecrawl-scraper/SKILL.md
+      tags: [scraping, crawling, Firecrawl, web-data]
+    - skill: github-workflow-automation/SKILL.md
+      tags: [github, PR, automation, CI/CD]
+
+  # :: Documentação & Qualidade
+  docs_quality:
+    - skill: documentation-templates/SKILL.md
+      tags: [documentation, README, API-docs, code-comments]
+    - skill: find-bugs/SKILL.md
+      tags: [debugging, code-review, security, quality]
+    - skill: finishing-a-development-branch/SKILL.md
+      tags: [PR, branch, integration, merge]
+    - skill: address-github-comments/SKILL.md
+      tags: [PR, code-review, github, comments]
+    - skill: writing-skills/SKILL.md
+      tags: [skill-creation, meta, skill-writing]
+    - skill: accessibility-compliance-accessibility-audit/SKILL.md
+      tags: [accessibility, WCAG, a11y, inclusive-design]
+
+  # :: Ferramentas Utilitárias
+  utilities:
+    - skill: file-organizer/SKILL.md
+      tags: [files, organization, duplicates, cleanup]
+    - skill: search-specialist/SKILL.md
+      tags: [web-research, search, advanced-queries]
+    - skill: last30days/SKILL.md
+      tags: [research, Reddit, Twitter, current-events, trends]
+    - skill: daily-news-report/SKILL.md
+      tags: [news, automated-report, scraping, digest]
+    - skill: app-builder/SKILL.md
+      tags: [scaffolding, full-stack, orchestration, new-project]
+    - skill: slack-gif-creator/SKILL.md
+      tags: [GIF, animation, slack, creative]
+
+  # :: Conhecimento Especializado (Nicho)
+  niche:
+    - skill: solidity-security/SKILL.md
+      tags: [web3, smart-contracts, solidity, blockchain]
+    - skill: defi-protocol-templates/SKILL.md
+      tags: [DeFi, staking, AMM, governance]
+    - skill: spark-optimization/SKILL.md
+      tags: [apache-spark, big-data, hadoop]
+    - skill: salesforce-development/SKILL.md
+      tags: [salesforce, CRM, LWC]
+
+# ─────────────────────────────────────────────
+# 📚 BASE DE CONHECIMENTO (Arquivos de Referência)
+# ─────────────────────────────────────────────
+
+knowledge_base:
+  project_context:
+    - tech_stack_mandate.md
+    - principios_arquitetura.md
+    - clean_code.md
+    - best_practices.md
+    - guia_inventario.md
+    - sharding_strategy.md
+
+  discovery:
+    - "Framework de Validação de Ideias.md"
+    - briefing_produto.md
+    - briefing_lp.md
+    - guia_mestre_briefings.md
+    - prompt-prp.md
+    - epico.md
+    - user_story.md
+    - prd_master.md
+
+  visual_design:
+    - "IVaaS - Identidade Visual as a Service.md"
+    - immersive_landing_pages.md
+    - ui_composition_patterns.md
+    - cta_visual_hierarchy.md
+    - visual_strategy_workflow.md
+    - design_system.tokens.js
+    - design_system_preview.html
+    - ui_standards.md
+    - ux_principles.md
+
+  component_workflows:
+    - component_implementation_workflow.md
+    - component_workflow_detailed.md
+    - design_system_workflow.md
+
+  animation_libraries:
+    - framer_motion_guide.md
+    - locomotive_scroll_guide.md
+    - lottie_guide.md
+    - tsparticles_guide.md
+    - curtainsjs_guide.md
+    - threejs_guide.md
+    - d3js_guide.md
+    - splittingjs_guide.md
+    - swiper_guide.md
+
+  methodology:
+    - wat-workflow.md
+
 aliases:
-  principios_arquitetura.md: Princípios de Arquitetura Para Vibe Coding.md
-  ivaas_methodology.md: IVaaS - Identidade Visual as a Service.md
+  principios_arquitetura.md: "Princípios de Arquitetura Para Vibe Coding.md"
+  ivaas_methodology.md: "IVaaS - Identidade Visual as a Service.md"
