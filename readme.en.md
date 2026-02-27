@@ -27,6 +27,24 @@ Examples of what makes up our Crew:
 - **Immersive Web Design Skill**
 
 Since a skill is a folder, you can **version it on GitHub**. This means you will have the entire history of your AI's intelligence evolution over time. If you discover a better workflow, the AI can update its own skill (with your permission) and "learn" it forever.
+### Anatomy of a Skill
+
+**Front Matter**: This section is located between two dotted lines at the beginning of the file and is written in YAML format. It includes the name and description of the skill, telling the AI what the skill is called and what it does.
+
+**Step-by-step rules**: These are the detailed instructions that Claude executes once it decides this is the appropriate skill for the task.
+
+*Minimal example*:
+
+```yaml
+--- 
+name: "Skill Name"
+description: "What this skill does"
+--- 
+
+# Instructions
+1. Do this
+2. Then do that
+```
 
 ### ⚙️ Deterministic + Non-Deterministic
 The secret of skills is that they can also call **scripts as tools**.
