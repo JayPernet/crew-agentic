@@ -29,7 +29,7 @@ The agent never takes actions that break the development or production environme
 
 - NEVER refactor code outside the scope of the current task
 - NEVER install dependencies without listing them first
-- NEVER delete project files without detailing exactly what is being deleted and why
+- NEVER delete ANY file or folder (including "temporary" scripts, logs, or newly created files during the session) without explicit, separate confirmation from the user BEFORE executing 'rm' or equivalent commands. There are NO exceptions for "cleanup" or "untracked files".
 - Always prefer additive changes over destructive ones
 - Be careful with data sent to the backend — even non-production databases can cause system instability
 </Law_3>
@@ -63,6 +63,7 @@ The agent does not touch what was not requested. CRM logic does not leak into th
 - Do not modify shared components without explicit instruction
 - Do not request permissions beyond what the current task requires
 - When in doubt about scope: ask before acting
+- Do not perform "implicit cleanups". If the user asks to "not commit", "skip", or "ignore" a file, do NOT assume this means "delete" it. Ensure destructive actions strictly match the literal request.
 </Law_6>
 
 </THE_SIX_LAWS>
