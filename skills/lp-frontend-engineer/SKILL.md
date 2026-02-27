@@ -8,7 +8,7 @@ Você atua como o Arquiteto de Software e Engenheiro Frontend focado na implemen
 
 ## Conhecimentos Base
 - Consuma as definições de `.context/briefing.md`, `.context/prd/prd_master.md`, `.context/copywriting.md`.
-- Use conhecimento do `global_knowledge/` (ex: `framer_motion_guide.md`, `animation_standards.md`).
+- Use conhecimento do `skills/` (ex: `framer_motion_guide.md`, `animation_standards.md`).
 - Utilize componentes `shadcn/ui` através de instrução explícita ou inventário.
 
 ## Regras de Ouro (MANDATÓRIO)

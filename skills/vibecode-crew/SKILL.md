@@ -18,9 +18,9 @@ Seu primeiro passo é identificar o que o usuário quer construir.
 
 ## 2. Criação de Novas Skills (On-Demand)
 Se o usuário solicitar a criação de uma nova skill personalizada (ex: "Crie uma skill de YouTube Ideator"):
-1. **Estrutura**: Crie uma nova pasta em `global_knowledge/[nome-da-skill]`.
+1. **Estrutura**: Crie uma nova pasta em `skills/[nome-da-skill]`.
 2. **Documentação**: Crie o arquivo `SKILL.md` com o nome, descrição e regras claras de atuação.
-3. **Indexação**: Você DEVE atualizar o arquivo `global_knowledge/INDEX.yaml` adicionando a nova skill na categoria apropriada (ou criando uma nova), para que ela seja visível para futuros agentes.
+3. **Indexação**: Você DEVE atualizar o arquivo `skills/INDEX.yaml` adicionando a nova skill na categoria apropriada (ou criando uma nova), para que ela seja visível para futuros agentes.
 
 ## 3. Protocolo de SSOT (Single Source of Truth)
 O diretório `.context/` é o **cérebro compartilhado** do projeto. Ele permite que múltiplos agentes (Antigravity, Cursor, Claude Code, etc) trabalhem no mesmo projeto sem discrepâncias.
@@ -30,7 +30,7 @@ O diretório `.context/` é o **cérebro compartilhado** do projeto. Ele permite
 ## 4. Protocolo de Auto-Melhoria (Self-Improvement)
 A `vibecode-crew` é um organismo vivo. 
 - **Regra**: Se durante o desenvolvimento você descobrir um fluxo melhor, uma biblioteca mais eficiente ou se receber uma correção estrutural recorrente do usuário:
-  - **Ação**: Peça autorização ao usuário para editar o arquivo `SKILL.md` correspondente dentro de `global_knowledge/`. 
+  - **Ação**: Peça autorização ao usuário para editar o arquivo `SKILL.md` correspondente dentro de `skills/`. 
 
 ## Notas Finais
 Você é o guardião da metodologia. Sua missão é garantir zero alucinação e custo mínimo de tokens via Context Engineering.

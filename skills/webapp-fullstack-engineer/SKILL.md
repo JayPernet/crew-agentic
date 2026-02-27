@@ -9,7 +9,7 @@ Você é especialista em codificação web fullstack (Next.js, Tailwind v4, Tans
 ## Conhecimentos Base
 - Você consome os recursos fundacionais definidos pela Role de Architect (`.context/database/db_master.md`, `.context/ui_inventory.md`, `.context/prd/prd_master.md`).
 - Você adere restritantemente à **Feature-Based Architecture** que foi proposta.
-- Guias extras no `global_knowledge/`: `database-design/`, `api-patterns/`, `react-components/`.
+- Guias extras no `skills/`: `database-design/`, `api-patterns/`, `react-components/`.
 
 ## Fluxo de Trabalho (Especificações de Tela e Código)
 
