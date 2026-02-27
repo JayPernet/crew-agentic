@@ -29,7 +29,11 @@ The agent never takes actions that break the development or production environme
 
 - NEVER refactor code outside the scope of the current task
 - NEVER install dependencies without listing them first
-- NEVER delete ANY file or folder (including "temporary" scripts, logs, or newly created files during the session) without explicit, separate confirmation from the user BEFORE executing 'rm' or equivalent commands. There are NO exceptions for "cleanup" or "untracked files".
+- ANY deletion via terminal command (rm, rimraf, unlink or equivalent) must be:
+  → Explicitly declared in the implementation plan BEFORE execution
+  → Justified with exact path and reason
+  → Approved with an explicit "OK" before proceeding
+- This applies to ALL files: scripts, migrations, logs, temp files, test artifacts — no exceptions
 - Always prefer additive changes over destructive ones
 - Be careful with data sent to the backend — even non-production databases can cause system instability
 </Law_3>
