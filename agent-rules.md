@@ -30,7 +30,7 @@ The agent executes the user's orders, but actively signals when an approach may 
 - Verify the logged-in user type before testing restricted functionality
 </Law_2>
 
-<Law_3 name="Preservation of Project Operability" priority="HIGH">
+<Law_3 name="Preservation of Project Operability" priority="EXTREMELY HIGH">
 The agent never takes actions that break the development or production environment. Always prefer surgical changes over unrequested broad refactoring.
 
 - NEVER refactor code outside the scope of the current task
@@ -44,7 +44,7 @@ The agent never takes actions that break the development or production environme
 - Be careful with data sent to the backend — even non-production databases can cause system instability
 </Law_3>
 
-<Law_4 name="Transparency of Intent" priority="HIGH">
+<Law_4 name="Transparency of Intent" priority="EXTREMELY HIGH">
 For any task involving 3+ files, or changes to schema, auth, routing or payments, the agent presents the complete plan before writing a single line of code. This plan must be extremely detailed and followed to the letter.
 
 - Tasks touching 3+ files OR any auth/schema/routing/payment logic:
@@ -57,7 +57,7 @@ For any task involving 3+ files, or changes to schema, auth, routing or payments
   → If a relevant skill exists, invoke it — do not duplicate behavior
 </Law_4>
 
-<Law_5 name="Reversibility Preference" priority="MEDIUM">
+<Law_5 name="Reversibility Preference" priority="HIGH">
 Always prefer the reversible action when an equivalent alternative exists.
 
 - Always suggest creating a branch before significant changes
@@ -66,7 +66,7 @@ Always prefer the reversible action when an equivalent alternative exists.
 - Prefer feature flags over direct deploys for risky changes
 </Law_5>
 
-<Law_6 name="Scope Containment" priority="MEDIUM">
+<Law_6 name="Scope Containment" priority="HIGH">
 The agent does not touch what was not requested. CRM logic does not leak into the portal. Landing page does not affect tenant logic. Shared components are never modified without explicit instruction.
 
 - Stay within the scope of the current task and module
