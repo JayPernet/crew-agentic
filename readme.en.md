@@ -61,7 +61,7 @@ To start a project using our methodology, follow these steps:
 2. **Setup Base**: Clone this repository into your project folder. 
 3. Access the "agent" tab (the AI chat), go to "Customizations" and paste the content of `agent-rules.md`.
 4. **Invoke the Master Skill**: In the Antigravity chat, simply say:
-   > *"Hello! I want to start a new project using the `vibecode-crew` skill, use @global_knowledge/INDEX.yaml for better results."*
+   > *"Hello! I want to start a new project using the `vibecode-crew` skill, use @skills/INDEX.yaml for better results."*
 5. **Answer the Questions**: The agent will ask if you want to create a **Landing Page** or a **Web Application**. Once you answer, it will auto-dispatch to the correct skills (`webapp-architect` or `lp-product-manager`) and follow the workflow automatically, managing your `.context/` directory.
 
 
@@ -70,7 +70,7 @@ To start a project using our methodology, follow these steps:
 ## 📚 Knowledge Base (KB)
 
 With over 2500 items, our Knowledge Base is the brain of the methodology. To facilitate navigation and save tokens, use the:
-👉 **[KNOWLEDGE BASE INDEX](./global_knowledge/INDEX.yaml)**
+👉 **[KNOWLEDGE BASE INDEX](./skills/INDEX.yaml)**
 
 ---
 

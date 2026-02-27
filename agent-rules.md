@@ -43,7 +43,7 @@ For any task involving 3+ files, or changes to schema, auth, routing or payments
 - The implementation plan must include: affected files, execution order, rollback strategy
 - Never start a multi-step task without a visible, approved execution plan
 - Before implementing any recurring task (document generation, code review, deployment, scaffolding, testing):
-  → Check ~/agentes/global_knowledge/index.yaml for an existing skill
+  → Check ~/agentes/skills/index.yaml for an existing skill
   → If a relevant skill exists, invoke it — do not duplicate behavior
 </Law_4>
 

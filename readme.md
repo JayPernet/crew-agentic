@@ -62,7 +62,7 @@ Para iniciar um projeto utilizando nossa metodologia, siga estes passos:
 2. **Setup Base**: Clone este repositório para a pasta do seu projeto. 
 3. Acesse a aba "agent" (o "chat" com a IA), vá em "Customizations" e cole o conteúdo de `agent-rules.md`.
 4. **Invoque a Skill Mestra**: No chat do Antigravity, diga apenas isso:
-   > *"Olá! Quero iniciar um novo projeto utilizando a skill `vibecode-crew` use @global_knowledge/INDEX.yaml para melhores resultados."*
+   > *"Olá! Quero iniciar um novo projeto utilizando a skill `vibecode-crew` use @skills/INDEX.yaml para melhores resultados."*
 5. **Responda as perguntas**: O agente perguntará se você deseja criar uma **Landing Page** ou uma **Aplicação Web**. Assim que você responder, ele fará o auto-despacho (*auto-dispatch*) para as skills corretas (`webapp-architect` ou `lp-product-manager`) e seguirá o fluxo automaticamente gerenciando o seu diretório `.context/`.
 
 
@@ -71,7 +71,7 @@ Para iniciar um projeto utilizando nossa metodologia, siga estes passos:
 ## 📚 Base de Conhecimento (KB)
 
 Com mais de 2500 itens, nossa Knowledge Base é o cérebro da metodologia. Para facilitar a navegação e economizar tokens, utilize o:
-👉 **[ÍNDICE DA KNOWLEDGE BASE](./global_knowledge/INDEX.yaml)**
+👉 **[ÍNDICE DA KNOWLEDGE BASE](./skills/INDEX.yaml)**
 
 ---
 
