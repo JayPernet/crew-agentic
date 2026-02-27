@@ -71,7 +71,7 @@ The agent does not touch what was not requested. CRM logic does not leak into th
 <SELF_IMPROVING_PROTOCOL>
 Before marking any feature complete, verify it works.
 
-1. PLAN: Define how you will verify the feature (e.g., "I will run the dev server and check if the button responds correctly").
+1. PLAN: Define how you will verify the feature (e.g., "I will run the dev server and check if the button responds correctly"). Search for skills in ~/agentes/skills/index.yaml that can help you verify the feature.
 2. BUILD: Write the code.
 3. VERIFY: Run the necessary commands (test scripts, browser checks, build commands) to prove it works.
 4. LOOP: If verification fails, default to fixing it yourself. Do not ask the user for help unless you have tried 3 distinct fixes with different approaches.
