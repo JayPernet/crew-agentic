@@ -40,11 +40,11 @@ Imagine uma skill de branding que, além de conter a identidade visual da marca 
 Para iniciar um projeto utilizando nossa metodologia, siga estes passos:
 
 1. **Inicie o seu Agente**: Crie a pasta do seu novo projeto (ex: `CRM-Pneulandia`).
-2. **Setup Base**: Clone este repositório para a pasta do seu projeto.
-2.1. **Context Caching & Indexing**: Para máxima eficiência de tokens, aponte seu agente para o arquivo `@global_knowledge/INDEX.yaml`. Ele funciona como o mapa cerebral da Crew; a IA buscará os outros arquivos via JIT (Just-In-Time) apenas quando necessário.
-3. **Invoque a Skill Mestra**: No chat do Antigravity, diga apenas isso:
-   > *"Olá! Quero iniciar um novo projeto utilizando a skill `vibecode-crew`."*
-4. **Responda as perguntas**: O agente perguntará se você deseja criar uma **Landing Page** ou uma **Aplicação Web**. Assim que você responder, ele fará o auto-despacho (*auto-dispatch*) para as skills corretas (`webapp-architect` ou `lp-product-manager`) e seguirá o fluxo automaticamente gerenciando o seu diretório `.context/`.
+2. **Setup Base**: Clone este repositório para a pasta do seu projeto. 
+3. Acesse a aba "agent" (o "chat" com a IA), vá em "Customizations" e cole o conteúdo de `agent-rules.md`.
+4. **Invoque a Skill Mestra**: No chat do Antigravity, diga apenas isso:
+   > *"Olá! Quero iniciar um novo projeto utilizando a skill `vibecode-crew` use @global_knowledge/INDEX.yaml para melhores resultados."*
+5. **Responda as perguntas**: O agente perguntará se você deseja criar uma **Landing Page** ou uma **Aplicação Web**. Assim que você responder, ele fará o auto-despacho (*auto-dispatch*) para as skills corretas (`webapp-architect` ou `lp-product-manager`) e seguirá o fluxo automaticamente gerenciando o seu diretório `.context/`.
 
 
 ---

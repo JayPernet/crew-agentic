@@ -39,12 +39,12 @@ Imagine a branding skill that, besides having the brand colors and fonts (non-de
 
 To start a project using our methodology, follow these steps:
 
-1. **Start your Agent**: Create your new project folder (e.g., `CRM-Nexus`).
-2. **Setup Base**: Clone this repository into your project folder.
-2.1. **Context Caching & Indexing**: For maximum token efficiency, point your agent to the `@global_knowledge/INDEX.yaml` file. It acts as the Crew's brain map; the AI will fetch other files via JIT (Just-In-Time) only when necessary.
-3. **Trigger the Master Skill**: In your AI chat, simply say:
-   > *"Hello! I want to start a new project using the `vibecode-crew` skill."*
-4. **Answer the Questions**: The agent will ask if you want to build a **Landing Page** or a **Web Application**. Once you answer, it will auto-dispatch to the correct skills (`webapp-architect` or `lp-product-manager`) and follow the workflow automatically, managing your `.context/` directory.
+1. **Start your Agent**: Create your new project folder (e.g., `CRM-Pneulandia`).
+2. **Setup Base**: Clone this repository into your project folder. 
+3. Access the "agent" tab (the AI chat), go to "Customizations" and paste the content of `agent-rules.md`.
+4. **Invoke the Master Skill**: In the Antigravity chat, simply say:
+   > *"Hello! I want to start a new project using the `vibecode-crew` skill, use @global_knowledge/INDEX.yaml for better results."*
+5. **Answer the Questions**: The agent will ask if you want to create a **Landing Page** or a **Web Application**. Once you answer, it will auto-dispatch to the correct skills (`webapp-architect` or `lp-product-manager`) and follow the workflow automatically, managing your `.context/` directory.
 
 
 ---
