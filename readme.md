@@ -26,7 +26,26 @@ Alguns exemplos do que compõe nossa Crew:
 - **Skill de SEO & Copywriting**
 - **Skill de Web Design Imersivo**
 
-Como a skill é uma pasta, você pode **versionar ela no GitHub**. Isso significa que você terá todo o histórico de evolução da sua inteligência ao longo do tempo. Se você aprender um fluxo melhor, a IA edita a própria skill (com sua permissão) e "aprende" para sempre.
+Como a skill é uma pasta, você pode **versionar ela**. Isso significa que você terá todo o histórico de evolução da sua inteligência ao longo do tempo. Se você aprender um fluxo melhor, a IA edita a própria skill (com sua permissão) e "aprende" para sempre.
+
+### Anatomia de uma Skill
+
+**Front Matter**: Esta seção está localizada entre duas linhas pontilhadas no início do arquivo e é escrita em formato YAML. Ela inclui o nome e a descrição da skill, informando para a IA como a skill é chamada e o que ela faz.
+
+**Regras passo a passo**: Estas são as instruções detalhadas que o Claude executa uma vez que decide que esta é a skill apropriada para a tarefa
+
+*Exemplo mínimo*:
+
+```yaml
+--- 
+name: "Nome da Skill"
+description: "O que essa skill faz"
+--- 
+
+# Instruções
+1. Faça isso
+2. Depois faça aquilo
+```
 
 ### ⚙️ Determinístico + Não-Determinístico
 O segredo das skills é que elas também podem chamar **scripts como ferramentas**.

@@ -1,7 +1,7 @@
 metadata:
   version: 5.0
   last_updated: '2026-02-25'
-  total_skills: 115
+  total_skills: 114
   philosophy: >
     Este INDEX é a FONTE DE VERDADE da Crew. Carregue-o via Context Caching.
     A Crew opera via JIT (Just-In-Time) Loading. Use grep_search; não leia tudo.
@@ -107,8 +107,6 @@ skills:
       tags: [data-science, ML, analytics, predictions, modeling]
     - skill: data-storytelling/SKILL.md
       tags: [data-visualization, storytelling, dashboards, presentation]
-    - skill: kpi-dashboard-design/SKILL.md
-      tags: [dashboard, KPI, metrics, visualization]
     - skill: data-quality-frameworks/SKILL.md
       tags: [data-quality, great-expectations, dbt-tests]
     - skill: spark-optimization/SKILL.md
@@ -128,8 +126,6 @@ skills:
       tags: [firebase, firestore, cloud-functions, auth, storage]
     - skill: hubspot-integration/SKILL.md
       tags: [hubspot, CRM, integration, OAuth]
-    - skill: salesforce-development/SKILL.md
-      tags: [salesforce, LWC, apex, CRM]
     - skill: shopify-development/SKILL.md
       tags: [shopify, e-commerce, liquid, theme]
     - skill: shopify-apps/SKILL.md
@@ -159,8 +155,6 @@ skills:
       tags: [network, protocol, packet-analysis, wireshark]
     - skill: solidity-security/SKILL.md
       tags: [solidity, smart-contracts, web3, blockchain, security]
-    - skill: defi-protocol-templates/SKILL.md
-      tags: [DeFi, staking, AMM, governance, lending, blockchain]
     - skill: file-path-traversal/SKILL.md
       tags: [security, path-traversal, directory, vulnerability]
 
@@ -174,8 +168,6 @@ skills:
       tags: [git, rebase, cherry-pick, bisect, worktrees]
     - skill: github-actions-templates/SKILL.md
       tags: [github-actions, CI/CD, automation, workflows]
-    - skill: github-workflow-automation/SKILL.md
-      tags: [github, PR-review, issue-triage, automation]
     - skill: server-management/SKILL.md
       tags: [server, process-management, monitoring, scaling]
 
@@ -247,8 +239,6 @@ skills:
       tags: [SEO, audit, keywords, meta, content, E-E-A-T, snippets, cannibalization]
     - skill: content-master/SKILL.md
       tags: [copywriting, content-marketing, social-media, brand-voice, LinkedIn, Twitter]
-    - skill: content-creator/SKILL.md
-      tags: [content, SEO, brand-voice, marketing]
 
   # :: Marketing & Growth
   marketing:
@@ -323,12 +313,8 @@ skills:
 
   # :: Conhecimento Especializado (Nicho)
   niche:
-    - skill: solidity-security/SKILL.md
-      tags: [web3, smart-contracts, solidity, blockchain]
     - skill: defi-protocol-templates/SKILL.md
       tags: [DeFi, staking, AMM, governance]
-    - skill: spark-optimization/SKILL.md
-      tags: [apache-spark, big-data, hadoop]
     - skill: salesforce-development/SKILL.md
       tags: [salesforce, CRM, LWC]
 
