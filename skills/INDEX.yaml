@@ -280,6 +280,8 @@ skills:
       tags: [scraping, crawling, Firecrawl, web-data]
     - skill: github-workflow-automation/SKILL.md
       tags: [github, PR, automation, CI/CD]
+    - skill: ai-video-creative-automation/SKILL.md
+      tags: [video, automation, veo3, music-video, storytelling, prompts, frame-to-end]
 
   # :: Documentação & Qualidade
   docs_quality:

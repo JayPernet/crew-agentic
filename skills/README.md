@@ -62,6 +62,7 @@ Skills for visual design, UI/UX, and artistic creation:
 - `@theme-factory` - Generate themes for documents and presentations
 - `@brand-guidelines` - Apply Anthropic brand design standards
 - `@slack-gif-creator` - Create high-quality GIFs for Slack
+- `@ai-video-creative-automation` - Automate VEO 3 stories and Music Video scripts (Frame-to-End)
 
 ### Development & Engineering
 Skills for coding, testing, debugging, and code review:
