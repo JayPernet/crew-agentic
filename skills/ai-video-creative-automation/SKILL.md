@@ -3,7 +3,7 @@ name: ai-video-creative-automation
 description: Use when creating cinematic historical stories (VEO 3) or technical music video scripts (Frame-to-End).
 metadata:
   category: automation
-  triggers: veo 3, historical story, music video, clipe musical, frame-to-end, consistency lock, video prompt
+  triggers: veo 3, historical story, music video, clipe musical, frame-to-end, consistency lock, video prompt, music clip
 ---
 
 # AI Video Creative Automation

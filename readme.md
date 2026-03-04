@@ -20,13 +20,7 @@ Este repositório contém a **todas as Skills** utilizadas na metodologia Vibe C
 
 Na prática, uma **Skill** nada mais é do que uma pastinha com arquivos dentro. Ela contém um arquivo principal (`SKILL.md`) com as instruções mestre, e dentro dessa pasta você pode colocar referências, dados, exemplos e o que for necessário para a IA executar bem aquela tarefa.
 
-Alguns exemplos do que compõe nossa Crew:
-- **Skill de Identidade de Marca**
-- **Skill de Frontend Design**
-- **Skill de SEO & Copywriting**
-- **Skill de Web Design Imersivo**
-
-Como a skill é uma pasta, você pode **versionar ela**. Isso significa que você terá todo o histórico de evolução da sua inteligência ao longo do tempo. Se você aprender um fluxo melhor, a IA edita a própria skill (com sua permissão) e "aprende" para sempre.
+Como a skill pode ser armazenada em uma pasta, você pode **versionar ela**. Isso significa que você terá todo o histórico de evolução da sua inteligência ao longo do tempo. Se você aprender um fluxo melhor, a IA edita a própria skill (com sua permissão) e "aprende" para sempre.
 
 ### Anatomia de uma Skill
 
@@ -45,6 +39,7 @@ description: "O que essa skill faz"
 # Instruções
 1. Faça isso
 2. Depois faça aquilo
+3. Então faça aquilo outro
 ```
 
 ### ⚙️ Determinístico + Não-Determinístico
@@ -54,35 +49,28 @@ Imagine uma skill de branding que, além de conter a identidade visual da marca 
 
 ---
 
-## 🛠 Como Usar
+## 🛠 Fluxo de Trabalho
 
-Para iniciar um projeto utilizando nossa metodologia, siga estes passos:
+A cada novo projeto, siga o seguinte passo a passo:
 
-1. **Inicie o seu Agente**: Crie a pasta do seu novo projeto (ex: `CRM-Pneulandia`).
-2. **Setup Base**: Clone este repositório para a pasta do seu projeto. 
-3. Acesse a aba "agent" (o "chat" com a IA), vá em "Customizations" e cole o conteúdo de `agent-rules.md`.
-4. **Invoque a Skill Mestra**: No chat do Antigravity, diga apenas isso:
-   > *"Olá! Quero iniciar um novo projeto utilizando a skill `vibecode-crew` use @skills/INDEX.yaml para melhores resultados."*
-5. **Responda as perguntas**: O agente perguntará se você deseja criar uma **Landing Page** ou uma **Aplicação Web**. Assim que você responder, ele fará o auto-despacho (*auto-dispatch*) para as skills corretas (`webapp-architect` ou `lp-product-manager`) e seguirá o fluxo automaticamente gerenciando o seu diretório `.context/`.
+1. Crie uma nova pasta o projeto
+2. Dentro da pasta do projeto, clone a pasta `skills` desse repositório
+3. Comece a usar as skills para construir seu projeto
 
-
----
-
-## 📚 Base de Conhecimento (KB)
-
-Com mais de 2500 itens, nossa Knowledge Base é o cérebro da metodologia. Para facilitar a navegação e economizar tokens, utilize o:
-👉 **[ÍNDICE DA KNOWLEDGE BASE](./skills/INDEX.yaml)**
+Ao final, sua pasta deve ficar mais ou menos assim:
+[ASCCI Art aqui]
 
 ---
 
-## ⚡ SSOT: Cérebro Compartilhado Multi-Agente
+## 🛠 **Meu** Fluxo de Trabalho
 
-Para eliminar alucinações e permitir o uso de múltiplas ferramentas em paralelo, a Crew utiliza o diretório `.context/` como **Single Source of Truth (SSOT)**:
+Como eu, criador dessa metodologia, trabalho:
 
-1.  **Memória Universal**: Não importa se você está usando Antigravity, Cursor, Claude Code ou terminal; todos os agentes devem ler e escrever no `.context/` para manter a sincronia total do projeto.
-2.  **Protocolo Automatizado**: As Skills gerenciam sozinhas a criação do `MASTER.md`, o sharding do PRD e a manutenção do Changelog técnica.
-3.  **JIT Loading Nativo**: A IA lê apenas o shard necessário para a tarefa atual, reduzindo custos e aumentando a precisão.
+1. Crio uma pasta para o projeto, já sabendo se será uma landing page ou um web app.
+2. Dentro da pasta do projeto, clone a pasta `skills` desse repositório
+3. Uso a skill `vibe-code` para ter toda a base estrutural do projeto
 
+Pronto. Se necessário, desenvolvo novas skills para atender necessidades específicas do projeto.
 
 ---
 
