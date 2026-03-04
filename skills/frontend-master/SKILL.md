@@ -51,6 +51,7 @@ Complete reference for frontend development, UI/UX design, and visual standards.
 - Primary palette: 50-950 shades.
 - Semantic tokens: `--color-background`, `--color-surface`, `--color-text-primary`, `--color-accent`.
 - Never use raw color values in components; always use tokens.
+- **Strict Adherence:** All design implementations must follow the structure of `resources/design_system.tokens.js` and `resources/design_system_preview.html`. Fill all blank values in the templates for each project, but **do not omit sections or invent arbitrary utility classes/structures** outside of the design system. Generate the completed files in their entirety.
 
 ---
 

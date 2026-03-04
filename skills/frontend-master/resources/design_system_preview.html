@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,22 +11,35 @@
            ========================================== */
         :root {
             /* CORES - Semântica obrigatória */
-            --color-background: ;           /* Cor dominante (60-70% da tela) */
-            --color-surface: ;              /* Cards, containers elevados */
-            --color-primary: ;              /* Ação principal, CTAs */
-            --color-secondary: ;            /* Ação secundária, highlights */
-            --color-accent: ;               /* Destaques, badges, alertas */
-            --color-text-primary: ;         /* Texto principal */
-            --color-text-secondary: ;       /* Texto secundário, labels */
-            --color-text-muted: ;           /* Placeholders, disabled */
-            --color-border: ;               /* Bordas, divisores */
-            --color-success: ;              /* Estados de sucesso */
-            --color-error: ;                /* Estados de erro */
-            
+            --color-background: ;
+            /* Cor dominante (60-70% da tela) */
+            --color-surface: ;
+            /* Cards, containers elevados */
+            --color-primary: ;
+            /* Ação principal, CTAs */
+            --color-secondary: ;
+            /* Ação secundária, highlights */
+            --color-accent: ;
+            /* Destaques, badges, alertas */
+            --color-text-primary: ;
+            /* Texto principal */
+            --color-text-secondary: ;
+            /* Texto secundário, labels */
+            --color-text-muted: ;
+            /* Placeholders, disabled */
+            --color-border: ;
+            /* Bordas, divisores */
+            --color-success: ;
+            /* Estados de sucesso */
+            --color-error: ;
+            /* Estados de erro */
+
             /* TIPOGRAFIA */
-            --font-display: ;      /* Títulos, headings */
-            --font-body: ;         /* Corpo, parágrafos */
-            
+            --font-display: ;
+            /* Títulos, headings */
+            --font-body: ;
+            /* Corpo, parágrafos */
+
             /* SPACING */
             --space-xs: ;
             --space-sm: ;
@@ -54,18 +68,46 @@
         /* ==========================================
            TYPOGRAPHY SCALE
            ========================================== */
-        h1, h2, h3, h4, h5, h6 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-family: var(--font-display);
             line-height: ;
             margin-bottom: var(--space-md);
         }
 
-        h1 { font-size: ; font-weight: ; }
-        h2 { font-size: ; font-weight: ; }
-        h3 { font-size: ; font-weight: ; }
-        h4 { font-size: ; font-weight: ; }
-        h5 { font-size: ; font-weight: ; }
-        h6 { font-size: ; font-weight: ; }
+        h1 {
+            font-size: ;
+            font-weight: ;
+        }
+
+        h2 {
+            font-size: ;
+            font-weight: ;
+        }
+
+        h3 {
+            font-size: ;
+            font-weight: ;
+        }
+
+        h4 {
+            font-size: ;
+            font-weight: ;
+        }
+
+        h5 {
+            font-size: ;
+            font-weight: ;
+        }
+
+        h6 {
+            font-size: ;
+            font-weight: ;
+        }
 
         p {
             margin-bottom: var(--space-md);
@@ -176,7 +218,8 @@
             font-weight: ;
         }
 
-        input, textarea {
+        input,
+        textarea {
             width: ;
             padding: var(--space-sm) var(--space-md);
             border: ;
@@ -187,7 +230,8 @@
             background: ;
         }
 
-        input:focus, textarea:focus {
+        input:focus,
+        textarea:focus {
             outline: none;
             border-color: var(--color-primary);
             box-shadow: ;
@@ -206,10 +250,25 @@
             font-weight: ;
         }
 
-        .badge-primary { background: var(--color-primary); color: ; }
-        .badge-accent { background: var(--color-accent); color: ; }
-        .badge-success { background: var(--color-success); color: ; }
-        .badge-error { background: var(--color-error); color: ; }
+        .badge-primary {
+            background: var(--color-primary);
+            color: ;
+        }
+
+        .badge-accent {
+            background: var(--color-accent);
+            color: ;
+        }
+
+        .badge-success {
+            background: var(--color-success);
+            color: ;
+        }
+
+        .badge-error {
+            background: var(--color-error);
+            color: ;
+        }
 
         /* Alerts */
         .alert {
@@ -274,6 +333,134 @@
             font-style: ;
         }
 
+        /* ==========================================
+           MODALS
+           ========================================== */
+
+        /* Overlay — bloqueia a página ao fundo */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: ;
+            /* Ex: rgba(0,0,0,0.6) */
+            backdrop-filter: ;
+            /* Ex: blur(4px) */
+            z-index: ;
+            /* Ex: 1000 */
+            align-items: center;
+            justify-content: center;
+            padding: var(--space-lg);
+        }
+
+        .modal-overlay.is-open {
+            display: flex;
+        }
+
+        /* Container principal */
+        .modal {
+            background: var(--color-surface);
+            border-radius: ;
+            box-shadow: ;
+            width: ;
+            /* Ex: 560px */
+            max-width: 100%;
+            max-height: 90vh;
+            /* Nunca estoura a viewport */
+            display: flex;
+            flex-direction: column;
+            /* Necessário para o sticky do header/footer funcionar */
+            z-index: ;
+            /* Ex: 1001 — acima do overlay */
+            animation: modalEnter;
+            /* Ex: 200ms ease-out */
+        }
+
+        @keyframes modalEnter {
+            from {
+                opacity: 0;
+                transform: translateY(16px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Header fixo no topo — permanece visível durante scroll do body */
+        .modal-header {
+            position: sticky;
+            top: 0;
+            background: var(--color-surface);
+            /* Mesmo valor que .modal — impede vazamento de conteúdo */
+            padding: ;
+            /* Ex: 24px 24px 16px */
+            border-bottom: ;
+            /* Ex: 1px solid var(--color-border) */
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-shrink: 0;
+            /* Não encolhe quando o body cresce */
+        }
+
+        .modal-title {
+            font-family: var(--font-display);
+            font-size: ;
+            font-weight: ;
+            color: var(--color-text-primary);
+            margin: 0;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--color-text-muted);
+            font-size: ;
+            /* Ex: 1.5rem */
+            line-height: 1;
+            padding: var(--space-xs);
+            border-radius: ;
+            transition: ;
+        }
+
+        .modal-close:hover {
+            color: var(--color-text-primary);
+            background: ;
+        }
+
+        /* Body rolável — o scroll fica aqui, não no container inteiro */
+        .modal-body {
+            padding: ;
+            /* Ex: 24px */
+            overflow-y: auto;
+            /* Scroll contido — viabiliza o sticky do header/footer */
+            flex: 1;
+            /* Ocupa o espaço restante entre header e footer */
+        }
+
+        /* Footer fixo na base — CTAs sempre visíveis mesmo com conteúdo longo */
+        .modal-footer {
+            position: sticky;
+            bottom: 0;
+            background: var(--color-surface);
+            /* Mesmo valor que .modal */
+            padding: ;
+            /* Ex: 16px 24px 24px */
+            border-top: ;
+            /* Ex: 1px solid var(--color-border) */
+            z-index: 10;
+            display: flex;
+            justify-content: ;
+            /* Ex: flex-end | space-between */
+            gap: var(--space-md);
+            flex-shrink: 0;
+            /* Não encolhe quando o body cresce */
+        }
+
         /* Hero Section */
         .hero {
             text-align: center;
@@ -296,6 +483,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <!-- Hero Section -->
@@ -314,8 +502,10 @@
             <h1>Heading 1 - Display Font</h1>
             <h2>Heading 2 - Display Font</h2>
             <h3>Heading 3 - Display Font</h3>
-            <p>Este é um parágrafo usando a fonte Body. Lorem ipsum dolor sit amet, consectetur adipiscing elit. A tipografia é a base de toda comunicação visual e precisa ser legível em diferentes tamanhos.</p>
-            <p style="color: var(--color-text-muted); font-size: ;">Texto secundário em tamanho menor para labels e metadados.</p>
+            <p>Este é um parágrafo usando a fonte Body. Lorem ipsum dolor sit amet, consectetur adipiscing elit. A
+                tipografia é a base de toda comunicação visual e precisa ser legível em diferentes tamanhos.</p>
+            <p style="color: var(--color-text-muted); font-size: ;">Texto secundário em tamanho menor para labels e
+                metadados.</p>
         </div>
 
         <!-- Buttons Section -->
@@ -333,7 +523,8 @@
             <h2 class="section-title">Cards & Containers</h2>
             <div class="card">
                 <h3 class="card-title">Card Title</h3>
-                <p class="card-text">Este card demonstra como o conteúdo fica organizado em containers elevados. A cor de surface contrasta sutilmente com o background.</p>
+                <p class="card-text">Este card demonstra como o conteúdo fica organizado em containers elevados. A cor
+                    de surface contrasta sutilmente com o background.</p>
                 <div style="display: flex; gap: var(--space-sm);">
                     <span class="badge badge-primary">Primary</span>
                     <span class="badge badge-accent">Accent</span>
@@ -375,14 +566,15 @@
         <div class="section">
             <h2 class="section-title">Paleta de Cores - Hierarquia Cromática</h2>
             <p style="margin-bottom: var(--space-lg);">Abaixo está a justificativa semântica de cada cor escolhida:</p>
-            
+
             <div class="color-grid">
                 <div class="color-swatch">
                     <div class="color-preview" style="background: var(--color-background);"></div>
                     <div class="color-info">
                         <div class="color-name">Background</div>
                         <div class="color-hex">[PREENCHER HEX]</div>
-                        <div class="color-usage">Cor dominante (60-70% da interface). Base neutra para todo conteúdo.</div>
+                        <div class="color-usage">Cor dominante (60-70% da interface). Base neutra para todo conteúdo.
+                        </div>
                     </div>
                 </div>
 
@@ -400,7 +592,8 @@
                     <div class="color-info">
                         <div class="color-name">Primary Action</div>
                         <div class="color-hex">[PREENCHER HEX]</div>
-                        <div class="color-usage">CTAs principais, links, estados ativos. Contraste 4.5:1 com background.</div>
+                        <div class="color-usage">CTAs principais, links, estados ativos. Contraste 4.5:1 com background.
+                        </div>
                     </div>
                 </div>
 
@@ -467,7 +660,8 @@
                 <div>
                     <h4>Body Font (Textos)</h4>
                     <p style="font-family: var(--font-body); font-size: ; color: var(--color-text-secondary);">
-                        The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Esta fonte foi escolhida para garantir legibilidade em blocos longos de texto.
+                        The quick brown fox jumps over the lazy dog. Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit. Esta fonte foi escolhida para garantir legibilidade em blocos longos de texto.
                     </p>
                     <p style="color: var(--color-text-muted); font-size: ;">
                         Usado para: Parágrafos, labels, botões, inputs, textos gerais
@@ -475,6 +669,113 @@
                 </div>
             </div>
         </div>
+        <!-- Modals Section -->
+        <div class="section">
+            <h2 class="section-title">Modais</h2>
+            <p style="margin-bottom: var(--space-lg);">
+                O modal é composto por overlay, container, header sticky, body rolável e footer sticky.
+                Header e footer permanecem fixos durante o scroll do conteúdo interno.
+            </p>
+            <div class="btn-group">
+                <button class="btn btn-primary" onclick="openModal('modal-default')">Abrir Modal Padrão</button>
+                <button class="btn btn-outline" onclick="openModal('modal-long')">Modal com Conteúdo Longo</button>
+            </div>
+        </div>
     </div>
+
+    <!-- Modal Padrão -->
+    <div class="modal-overlay" id="modal-default" onclick="handleOverlayClick(event, 'modal-default')">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-default-title">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modal-default-title">Título do Modal</h2>
+                <button class="modal-close" onclick="closeModal('modal-default')"
+                    aria-label="Fechar modal">&#x2715;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="modal-name">Nome</label>
+                    <input type="text" id="modal-name" placeholder="Digite seu nome">
+                </div>
+                <div class="form-group">
+                    <label for="modal-email">Email</label>
+                    <input type="email" id="modal-email" placeholder="seu@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="modal-msg">Mensagem</label>
+                    <textarea id="modal-msg" rows="3" placeholder="Escreva aqui..."></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline" onclick="closeModal('modal-default')">Cancelar</button>
+                <button class="btn btn-primary">Confirmar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal com Conteúdo Longo — demonstra header/footer sticky em ação -->
+    <div class="modal-overlay" id="modal-long" onclick="handleOverlayClick(event, 'modal-long')">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-long-title">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modal-long-title">Header Fixo — Role o Conteúdo</h2>
+                <button class="modal-close" onclick="closeModal('modal-long')"
+                    aria-label="Fechar modal">&#x2715;</button>
+            </div>
+            <div class="modal-body">
+                <p>Este modal demonstra o comportamento do <strong>header sticky</strong> e do <strong>footer
+                        sticky</strong>. Role o conteúdo abaixo para ver que ambos permanecem fixos enquanto o body faz
+                    scroll.</p>
+                <br>
+                <div class="alert alert-success">O scroll fica contido em .modal-body via overflow-y: auto. É isso que
+                    viabiliza o sticky funcionar corretamente.</div>
+                <br>
+                <div class="form-group"><label>Campo 1</label><input type="text" placeholder="Valor..."></div>
+                <div class="form-group"><label>Campo 2</label><input type="text" placeholder="Valor..."></div>
+                <div class="form-group"><label>Campo 3</label><input type="text" placeholder="Valor..."></div>
+                <div class="form-group"><label>Campo 4</label><input type="text" placeholder="Valor..."></div>
+                <div class="form-group"><label>Campo 5</label><input type="text" placeholder="Valor..."></div>
+                <div class="form-group"><label>Campo 6</label><input type="text" placeholder="Valor..."></div>
+                <div class="form-group"><label>Campo 7</label><input type="text" placeholder="Valor..."></div>
+                <br>
+                <p style="color: var(--color-text-muted); font-size: 0.875rem;">Fim do conteúdo. O footer abaixo está
+                    sempre visível.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline" onclick="closeModal('modal-long')">Cancelar</button>
+                <button class="btn btn-secondary">Salvar Rascunho</button>
+                <button class="btn btn-primary">Confirmar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal(id) {
+            const overlay = document.getElementById(id);
+            overlay.classList.add('is-open');
+            document.body.style.overflow = 'hidden'; // scroll lock
+        }
+
+        function closeModal(id) {
+            const overlay = document.getElementById(id);
+            overlay.classList.remove('is-open');
+            document.body.style.overflow = ''; // restaura scroll
+        }
+
+        function handleOverlayClick(event, id) {
+            // Fecha apenas se o clique foi no overlay, não no container do modal
+            if (event.target === event.currentTarget) {
+                closeModal(id);
+            }
+        }
+
+        // Fecha com Escape
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.modal-overlay.is-open').forEach(function (overlay) {
+                    closeModal(overlay.id);
+                });
+            }
+        });
+    </script>
 </body>
+
 </html>

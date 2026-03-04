@@ -225,6 +225,89 @@ export const tokens = {
             "padding": "",
             "focusBorder": "",
             "focusShadow": ""
+        },
+        // Modais. Defina aparência, estrutura e comportamento.
+        // header e footer são fixos (sticky) para evitar que sumam durante scroll do conteúdo.
+        "modals": {
+            // Camada de overlay que bloqueia a página ao fundo
+            "overlay": {
+                "background": "",       // Ex: rgba(0, 0, 0, 0.6)
+                "backdropFilter": "",   // Ex: blur(4px) — opcional, para glassmorphism
+                "zIndex": ""            // Ex: 1000 — deve estar acima de tudo
+            },
+            // Container principal do modal
+            "container": {
+                "background": "",
+                "borderRadius": "",
+                "shadow": "",
+                "width": {
+                    "default": "",      // Ex: 560px
+                    "small": "",        // Ex: 400px — confirmações, alertas
+                    "large": "",        // Ex: 800px — formulários complexos, previews
+                    "fullscreen": ""    // Ex: 100vw / 100vh — mobile ou conteúdo extenso
+                },
+                "maxHeight": "",        // Ex: 90vh — impede modal maior que a viewport
+                "zIndex": ""            // Ex: 1001 — acima do overlay
+            },
+            // Cabeçalho fixo no topo do modal (sticky)
+            // Permanece visível mesmo quando o body do modal tem scroll
+            "header": {
+                "position": "sticky",   // Não altere — é a razão de existir desta seção
+                "top": "0",             // Não altere
+                "background": "",       // Deve ser igual ao container.background para não vazar conteúdo por baixo
+                "padding": "",          // Ex: 24px 24px 16px
+                "borderBottom": "",     // Ex: 1px solid token border.subtle — separa visualmente do body
+                "zIndex": "",           // Ex: 10 — acima do conteúdo do body durante scroll
+                "title": {
+                    "fontSize": "",
+                    "fontWeight": "",
+                    "color": ""
+                },
+                "closeButton": {
+                    "size": "",         // Ex: 32px
+                    "color": "",
+                    "hover": ""
+                }
+            },
+            // Área de conteúdo rolável
+            "body": {
+                "padding": "",          // Ex: 24px
+                "overflowY": "auto",    // Não altere — scroll fica contido aqui, não no container inteiro
+                "gap": ""              // Espaço entre elementos internos, se usar flex/grid
+            },
+            // Rodapé fixo na base do modal (sticky)
+            // Permanece visível com os CTAs mesmo quando o body tem scroll longo
+            "footer": {
+                "position": "sticky",   // Não altere
+                "bottom": "0",          // Não altere
+                "background": "",       // Deve ser igual ao container.background
+                "padding": "",          // Ex: 16px 24px 24px
+                "borderTop": "",        // Ex: 1px solid token border.subtle
+                "zIndex": "",           // Ex: 10 — igual ao header
+                "layout": "",           // Ex: flex — alinhamento dos botões de ação
+                "alignment": "",        // Ex: flex-end | space-between
+                "gap": ""              // Espaço entre botões de ação
+            },
+            // Comportamento e acessibilidade
+            "behavior": {
+                "closeOnOverlayClick": "",  // Ex: true — fechar ao clicar fora
+                "closeOnEsc": "",           // Ex: true — fechar com tecla Escape
+                "trapFocus": "",            // Ex: true — foco preso dentro do modal (acessibilidade)
+                "scrollLockBody": ""        // Ex: true — impede scroll da página ao fundo
+            },
+            // Animação de entrada/saída
+            "animation": {
+                "enter": {
+                    "initial": "",      // Ex: opacity 0, translateY 16px
+                    "animate": "",      // Ex: opacity 1, translateY 0
+                    "duration": "",     // Ex: 200ms
+                    "easing": ""        // Ex: ease-out
+                },
+                "exit": {
+                    "duration": "",     // Ex: 150ms
+                    "easing": ""        // Ex: ease-in
+                }
+            }
         }
     },
     // Diretrizes para imagens, fotos e ilustrações
