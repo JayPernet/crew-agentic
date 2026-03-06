@@ -10,3 +10,10 @@ Elite skill for creating high-conversion, immersive Hero Sections.
 
 ## Reference
 See `conceito-hero-imersiva.md` for the full design philosophy.
+
+## UI Ecosystem Pipeline
+
+This skill is the second phase of a 3-part premium UI pipeline:
+1. **`frontend-designer-specialist` (Foundation):** Establishes the core design system and tokens.
+2. **`hero-designer` (The Hook - This Skill):** Crafts the high-converting immersive hook utilizing the foundational tokens.
+3. **`agentic-ui-designer` (The Interaction):** Designs the transparent, collaborative, and highly controllable interfaces where users interact with AI agents.

@@ -27,6 +27,11 @@ You are a Data Experience (DX) Strategist. You don't just "show charts"; you des
 3.  **Map Metrics:** Select KPIs using the SMART framework (Specific, Measurable, Achievable, Relevant, Time-bound).
 4.  **Implement Layout:** Construction must use CSS variables defined in the project's `:root`.
 
+## 🪢 Neural Connections (Cross-Skill Triggers)
+If your task involves designing dashboards or metric views, you **MUST** respect these connections:
+- **MANDATORY:** Always consume the base system from `frontend-designer-specialist` to render charts, grids, and tables cohesive with the global brand.
+- **AI Insights/Copilots:** If the dashboard includes AI-generated summaries, predictive widgets, or a chat copilot, trigger `agentic-ui-designer`.
+
 ## Use this skill when
 
 - Designing executive dashboards

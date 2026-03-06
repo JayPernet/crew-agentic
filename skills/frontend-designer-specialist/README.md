@@ -28,3 +28,10 @@ frontend-designer-specialist/
 ## Mandatory Constraints
   
 This skill is designed to prevent "AI-generic" designs. It will always suggest sophisticated font pairings and unique color palettes that respect semantic roles and high visual standards.
+
+## UI Ecosystem Pipeline
+
+This skill is the foundational layer of a 3-part premium UI pipeline:
+1. **`frontend-designer-specialist` (Foundation - This Skill):** Establishes the core design system and tokens.
+2. **`hero-designer` (The Hook):** Crafts the high-converting immersive hook based on the foundational tokens.
+3. **`agentic-ui-designer` (The Interaction):** Designs the transparent, collaborative, and highly controllable interfaces where users interact with AI agents.
